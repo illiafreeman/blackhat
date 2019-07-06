@@ -8,7 +8,35 @@
 body{
     background: linear-gradient(to right, #140E38, #194089);;
 }
-
+.loginform{
+    width: 400px;
+    .p-3{
+        padding-bottom: 20px !important;
+    }
+    button{
+        cursor: pointer;
+    }
+    .text-capitalize{
+        font-size: 22px;
+    }
+    form .form-control {
+        box-shadow: none !important;
+    }
+    .error-text{
+        display: none;
+    }
+    .has-error{
+        .form-control{
+            border-color: red;
+        }
+        .error-text{
+            display: block;
+            color: red;
+            font-size: 12px;
+            padding: 5px 0 0 10px;
+        }
+    }
+}
 
 
 

@@ -8,4 +8,24 @@
 body {
   background: linear-gradient(to right, #140E38, #194089); }
 
+.loginform {
+  width: 400px; }
+  .loginform .p-3 {
+    padding-bottom: 20px !important; }
+  .loginform button {
+    cursor: pointer; }
+  .loginform .text-capitalize {
+    font-size: 22px; }
+  .loginform form .form-control {
+    box-shadow: none !important; }
+  .loginform .error-text {
+    display: none; }
+  .loginform .has-error .form-control {
+    border-color: red; }
+  .loginform .has-error .error-text {
+    display: block;
+    color: red;
+    font-size: 12px;
+    padding: 5px 0 0 10px; }
+
 /*# sourceMappingURL=style.css.map */
