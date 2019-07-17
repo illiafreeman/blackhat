@@ -43,6 +43,9 @@
         right: 5px;
     }
 }
+.vertical-compact-menu .main-menu .navigation>li>a>span{
+    visibility: visible;
+}
 @media only screen and (max-width: 400px) {
     .loginform {
         .p-3 {
