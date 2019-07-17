@@ -33,8 +33,14 @@
     top: 10px;
     right: 5px; }
 
+.vertical-compact-menu .main-menu .navigation > li > a {
+  transition: all 0.2s ease-in-out; }
+
 .vertical-compact-menu .main-menu .navigation > li > a > span {
   visibility: visible; }
+
+.main-menu.menu-dark .navigation > li {
+  margin-bottom: 20px; }
 
 @media only screen and (max-width: 400px) {
   .loginform .p-3 {

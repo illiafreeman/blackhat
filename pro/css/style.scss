@@ -1,3 +1,4 @@
+$transition: all 0.2s ease-in-out;
 #particles-js{
     position: fixed;
     top: 0;
@@ -43,8 +44,14 @@
         right: 5px;
     }
 }
+.vertical-compact-menu .main-menu .navigation>li>a{
+    transition: $transition;
+}
 .vertical-compact-menu .main-menu .navigation>li>a>span{
     visibility: visible;
+}
+.main-menu.menu-dark .navigation > li{
+    margin-bottom: 20px;
 }
 @media only screen and (max-width: 400px) {
     .loginform {
