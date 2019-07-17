@@ -7,7 +7,7 @@ $transition: all 0.2s ease-in-out;
     left: 0;
 }
 .login-page{
-    background: linear-gradient(to right, #140E38, #194089);;
+    background: linear-gradient(to right, #140E38, #194089);
 }
 .loginform{
     width: 400px;
@@ -49,10 +49,58 @@ $transition: all 0.2s ease-in-out;
 }
 .vertical-compact-menu .main-menu .navigation>li>a>span{
     visibility: visible;
+    letter-spacing: .5px;
 }
 .main-menu.menu-dark .navigation > li{
     margin-bottom: 20px;
 }
+.header-navbar .navbar-container ul.nav li a.dropdown-user-link{
+    padding: 1.7rem 1rem 1.6rem 1rem;
+    .icon-user{
+        font-size: 1.5rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media only screen and (max-width: 400px) {
     .loginform {
         .p-3 {
