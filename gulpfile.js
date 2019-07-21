@@ -8,10 +8,19 @@ var gulp        = require('gulp'),
     del         = require('del'),
     imagemin    = require('gulp-imagemin'),
     pngquant    = require('imagemin-pngquant'),
-    autoprefixer= require('gulp-autoprefixer');
+    autoprefixer= require('gulp-autoprefixer'),
+    sourcemaps  = require('gulp-sourcemaps');
 
 
-
+gulp.task('sass', function(){
+    return gulp.src('pro/css/**/*.scss')
+        .pipe(sourcemaps.init())
+        .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
+        .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], {cascade: true}))
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest('pro/css'))
+        .pipe(browserSync.reload({stream: true}));
+});
 
 
 gulp.task('browser-sync', function(){
@@ -25,7 +34,8 @@ gulp.task('browser-sync', function(){
 
 
 
-gulp.task('watch', ['browser-sync'], function(){ // в [] таски которые должны выполниться до watch
+gulp.task('watch', ['browser-sync', 'sass'], function(){ // в [] таски которые должны выполниться до watch
+    gulp.watch('pro/css/**/*.scss', ['sass']);
     gulp.watch('pro/css/**/*.scss', browserSync.reload); // когда наступает изменение в файлах срабатывает таск sass
     gulp.watch('pro/*.html', browserSync.reload); // когда наступает изменение в файлах срабатывает reload
     gulp.watch('pro/js/**/*.js', browserSync.reload);
