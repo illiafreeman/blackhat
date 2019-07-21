@@ -3,6 +3,10 @@ $(document).ready(function() {
         var flag = $(this).find('i').attr('class');
         $('.loginform .dropdown-toggle.nav-link i').removeClass().addClass(flag);
     });
+    $('.dropdown-language .dropdown-item').click(function(){
+        var flag = $(this).find('i').attr('class');
+        $('.dropdown-language .dropdown-toggle.nav-link i').removeClass().addClass(flag);
+    });
 });
 
 
