@@ -248,10 +248,40 @@
                             <span>Oolong very faken long masternode name name name</span>
                         </div>
                         <div class="node-action">
-
+                            <label>
+                                Monitoring
+                                <input type="checkbox" id="qwe" class="switchery" data-size="sm" checked />
+                            </label>
                         </div>
                     </div>
-
+                    <a class="card-title lead collapsed" data-toggle="collapse" data-target="#collapse12" aria-expanded="false" aria-controls="collapse12" href="#">
+                        <i class="la la-angle-down"></i>&nbsp;More Info</a>
+                </div>
+                <div id="collapse12" class="collapse" aria-labelledby="heading12" data-parent="#accordion" style="">
+                    <div class="card-body">
+                        <table>
+                            <tr>
+                                <td>txID</td>
+                                <td>9d9f4eeac6e1a62962232ed7f600a3de426a627fcbf58900985a34b1ae41ba1d-1</td>
+                            </tr>
+                            <tr>
+                                <td>wallet</td>
+                                <td>address AJdm3u5oUEhVPaGWRXG9dv5edP4QT5tkz3</td>
+                            </tr>
+                            <tr>
+                                <td>last activity time</td>
+                                <td>2019-06-26 21:41:12</td>
+                            </tr>
+                            <tr>
+                                <td>version</td>
+                                <td>72010</td>
+                            </tr>
+                            <tr>
+                                <td>rank</td>
+                                <td>99999</td>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
             </div>
             <div class="node card pull-up">
@@ -278,8 +308,81 @@
 <script src="js/app.min.js" type="text/javascript"></script>
 <!--end except login-->
 <!--masternode-->
-<link rel="stylesheet" type="text/css" href="js/switchery.min.js">
+<script type="text/javascript" src="js/switchery.min.js"></script>
 <script src="js/custom.js"></script>
+
+<script>
+    (function (window, document, $) {
+        'use strict';
+
+        // var switchery = new Switchery('.switchery', { size: 'small' });
+        var $html = $('html');
+
+        // Switchery
+        var i = 0;
+        if (Array.prototype.forEach) {
+
+            var elems = $('.switchery');
+            $.each(elems, function (key, value) {
+                var $size = "", $color = "", $sizeClass = "", $colorCode = "";
+                $size = $(this).data('size');
+                var $sizes = {
+                    'lg': "large",
+                    'sm': "small",
+                    'xs': "xsmall"
+                };
+                if ($(this).data('size') !== undefined) {
+                    $sizeClass = "switchery switchery-" + $sizes[$size];
+                }
+                else {
+                    $sizeClass = "switchery";
+                }
+
+                $color = $(this).data('color');
+                var $colors = {
+                    'primary': "#967ADC",
+                    'success': "#37BC9B",
+                    'danger': "#DA4453",
+                    'warning': "#F6BB42",
+                    'info': "#3BAFDA"
+                };
+                if ($color !== undefined) {
+                    $colorCode = $colors[$color];
+                }
+                else {
+                    $colorCode = "#37BC9B";
+                }
+
+                var switchery = new Switchery($(this)[0], {className: $sizeClass, color: $colorCode});
+            });
+        } else {
+            var elems1 = document.querySelectorAll('.switchery');
+
+            for (i = 0; i < elems1.length; i++) {
+                var $size = elems1[i].data('size');
+                var $color = elems1[i].data('color');
+                var switchery = new Switchery(elems1[i], {color: '#37BC9B'});
+            }
+        }
+        /*  Toggle Ends   */
+
+    })(window, document, jQuery);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </body>
 </html>
