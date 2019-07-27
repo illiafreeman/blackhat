@@ -259,9 +259,24 @@ html body .content .content-wrapper{
         }
     }
 }
-
-
-
+.modal-confirm{
+    .modal-body{
+        text-align: center;
+        h4{
+            font-weight: 300;
+            margin: 20px 0;
+        }
+    }
+    .modal-footer{
+        justify-content: center;
+    }
+}
+.modal-backdrop{
+    z-index: 100001;
+}
+.modal{
+    z-index: 100002;
+}
 
 
 
