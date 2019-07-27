@@ -16,6 +16,7 @@
     <link rel="stylesheet" type="text/css" href="css/app.css">
     <!--masternode-->
     <link rel="stylesheet" type="text/css" href="css/switchery.min.css">
+    <link rel="stylesheet" type="text/css" href="css/cryptocoins.css">
     <!--all except login-->
     <link rel="stylesheet" type="text/css" href="css/vertical-compact-menu.min.css">
     <!--common styles-->
@@ -240,53 +241,128 @@
             </div>
         </div>
         <div class="content-body">
-            <div class="node card pull-up">
+            <div class="node card <!--pull-up-->">
                 <div class="card-body">
                     <div class="node-head">
                         <div class="node-name">
-                            <i class="icon-layers mr-2 font-large-1 warning"></i>
-                            <span>Oolong very faken long masternode name name name</span>
+                            <h3>
+                                <i class="cc BCN mr-1 font-large-1 Color-IOC" title="BTC"></i>
+                                Oolong very faken long masternode name name name<br>
+                                <span class="badge badge-pill badge-primary">Primary Status</span>
+                            </h3>
                         </div>
                         <div class="node-action">
                             <label>
                                 Monitoring
-                                <input type="checkbox" id="qwe" class="switchery" data-size="sm" checked />
+                                <input type="checkbox" class="switchery" data-size="xs" checked />
                             </label>
+                            <div class="btn-sm btn btn-outline-warning round ml-1"><i class="la la-pencil"></i></div>
+                            <div class="btn-sm btn btn-outline-danger round ml-1"><i class="la la-trash"></i></div>
                         </div>
                     </div>
-                    <a class="card-title lead collapsed" data-toggle="collapse" data-target="#collapse12" aria-expanded="false" aria-controls="collapse12" href="#">
-                        <i class="la la-angle-down"></i>&nbsp;More Info</a>
+                    <div class="node-body">
+                        <div class="node-table">
+                            <div class="node-table__row">
+                                <div>Active time:</div>
+                                <div>1y 5m 4d 1h</div>
+                            </div>
+                            <div class="node-table__row">
+                                <div>Last payment:</div>
+                                <div>2019-06-25 12:45:11</div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="lead collapsed" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1" href="#">
+                        <i class="la la-angle-down"></i>Details
+                    </a>
                 </div>
-                <div id="collapse12" class="collapse" aria-labelledby="heading12" data-parent="#accordion" style="">
+                <div id="collapse1" class="collapse collapse-inner" aria-labelledby="heading1" data-parent="#accordion" style="">
                     <div class="card-body">
-                        <table>
-                            <tr>
-                                <td>txID</td>
-                                <td>9d9f4eeac6e1a62962232ed7f600a3de426a627fcbf58900985a34b1ae41ba1d-1</td>
-                            </tr>
-                            <tr>
-                                <td>wallet</td>
-                                <td>address AJdm3u5oUEhVPaGWRXG9dv5edP4QT5tkz3</td>
-                            </tr>
-                            <tr>
-                                <td>last activity time</td>
-                                <td>2019-06-26 21:41:12</td>
-                            </tr>
-                            <tr>
-                                <td>version</td>
-                                <td>72010</td>
-                            </tr>
-                            <tr>
-                                <td>rank</td>
-                                <td>99999</td>
-                            </tr>
-                        </table>
+                        <div class="node-table">
+                            <div class="node-table__row">
+                                <div>txID:</div>
+                                <div>9d9f4eeac6e1a62962232ed7f600a3de426a627fcbf58900985a34b1ae41ba1d-1</div>
+                            </div>
+                            <div class="node-table__row">
+                                <div>Wallet:</div>
+                                <div>address AJdm3u5oUEhVPaGWRXG9dv5edP4QT5tkz3</div>
+                            </div>
+                            <div class="node-table__row">
+                                <div>Last activity time:</div>
+                                <div>2019-06-26 21:41:12</div>
+                            </div>
+                            <div class="node-table__row">
+                                <div>Version:</div>
+                                <div>72010</div>
+                            </div>
+                            <div class="node-table__row">
+                                <div>Rank:</div>
+                                <div>99999</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="node card pull-up">
+            <div class="node card <!--pull-up-->">
                 <div class="card-body">
-
+                    <div class="node-head">
+                        <div class="node-name">
+                            <h3>
+                                <i class="cc CLAM-alt mr-1 font-large-1 Color-KOBO" title="BTC"></i>
+                                masternode name<br>
+                                <span class="badge badge-pill badge-danger">Alarm</span>
+                            </h3>
+                        </div>
+                        <div class="node-action">
+                            <label>
+                                Monitoring
+                                <input type="checkbox" class="switchery" data-size="xs" />
+                            </label>
+                            <div class="btn-sm btn btn-outline-warning round ml-1"><i class="la la-pencil"></i></div>
+                            <div class="btn-sm btn btn-outline-danger round ml-1"><i class="la la-trash"></i></div>
+                        </div>
+                    </div>
+                    <div class="node-body">
+                        <div class="node-table">
+                            <div class="node-table__row">
+                                <div>Active time:</div>
+                                <div>1y 5m 4d 1h</div>
+                            </div>
+                            <div class="node-table__row">
+                                <div>Last payment:</div>
+                                <div>2019-06-25 12:45:11</div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="lead collapsed" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2" href="#">
+                        <i class="la la-angle-down"></i>Details
+                    </a>
+                </div>
+                <div id="collapse2" class="collapse collapse-inner" aria-labelledby="heading1" data-parent="#accordion" style="">
+                    <div class="card-body">
+                        <div class="node-table">
+                            <div class="node-table__row">
+                                <div>txID:</div>
+                                <div>9d9f4eeac6e1a62962232ed7f600a3de426a627fcbf58900985a34b1ae41ba1d-1</div>
+                            </div>
+                            <div class="node-table__row">
+                                <div>Wallet:</div>
+                                <div>address AJdm3u5oUEhVPaGWRXG9dv5edP4QT5tkz3</div>
+                            </div>
+                            <div class="node-table__row">
+                                <div>Last activity time:</div>
+                                <div>2019-06-26 21:41:12</div>
+                            </div>
+                            <div class="node-table__row">
+                                <div>Version:</div>
+                                <div>72010</div>
+                            </div>
+                            <div class="node-table__row">
+                                <div>Rank:</div>
+                                <div>99999</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -311,63 +387,7 @@
 <script type="text/javascript" src="js/switchery.min.js"></script>
 <script src="js/custom.js"></script>
 
-<script>
-    (function (window, document, $) {
-        'use strict';
 
-        // var switchery = new Switchery('.switchery', { size: 'small' });
-        var $html = $('html');
-
-        // Switchery
-        var i = 0;
-        if (Array.prototype.forEach) {
-
-            var elems = $('.switchery');
-            $.each(elems, function (key, value) {
-                var $size = "", $color = "", $sizeClass = "", $colorCode = "";
-                $size = $(this).data('size');
-                var $sizes = {
-                    'lg': "large",
-                    'sm': "small",
-                    'xs': "xsmall"
-                };
-                if ($(this).data('size') !== undefined) {
-                    $sizeClass = "switchery switchery-" + $sizes[$size];
-                }
-                else {
-                    $sizeClass = "switchery";
-                }
-
-                $color = $(this).data('color');
-                var $colors = {
-                    'primary': "#967ADC",
-                    'success': "#37BC9B",
-                    'danger': "#DA4453",
-                    'warning': "#F6BB42",
-                    'info': "#3BAFDA"
-                };
-                if ($color !== undefined) {
-                    $colorCode = $colors[$color];
-                }
-                else {
-                    $colorCode = "#37BC9B";
-                }
-
-                var switchery = new Switchery($(this)[0], {className: $sizeClass, color: $colorCode});
-            });
-        } else {
-            var elems1 = document.querySelectorAll('.switchery');
-
-            for (i = 0; i < elems1.length; i++) {
-                var $size = elems1[i].data('size');
-                var $color = elems1[i].data('color');
-                var switchery = new Switchery(elems1[i], {color: '#37BC9B'});
-            }
-        }
-        /*  Toggle Ends   */
-
-    })(window, document, jQuery);
-</script>
 
 
 

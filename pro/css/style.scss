@@ -158,6 +158,106 @@ html body .content .content-wrapper{
 .node{
     width: 100%;
     margin-bottom: 20px;
+    &-head{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    &-name{
+        h3{
+            font-weight: 300;
+            font-size: 20px;
+            margin-bottom: 10px;
+            padding-left: 35px;
+            position: relative;
+            line-height: 28px;
+            span{
+                padding: 6px 10px;
+                font-size: 10px;
+            }
+            .cc{
+                width: 28px;
+                height: 28px;
+                line-height: 22px;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+    }
+    &-body{
+        padding-left: 35px;
+        .node-table{
+            &__row{
+                display: flex;
+                div{
+                    padding: 1px 5px;
+                    color: #464855;
+                }
+                div:first-child{
+                    text-align: right;
+                    width: 110px;
+                    color: inherit;
+                    font-size: 13px;
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+    &-action{
+        display: flex;
+        align-items: flex-start;
+        padding-left: 30px;
+        label{
+            white-space: nowrap;
+            cursor: pointer;
+        }
+        .btn{
+            padding: 5px;
+            i{
+                font-size: 22px;
+            }
+        }
+    }
+    .lead{
+        margin: 17px 0 0 48px;
+        display: inline-block;
+        font-size: 16px;
+        .la{
+            margin-right: 10px;
+            transition: $transition;
+        }
+        &:not(.collapsed){
+            .la{
+                transform: rotate(180deg);
+            }
+        }
+    }
+    .collapse-inner{
+        .card-body{
+            padding-top: 0;
+            .node-table{
+                &__row{
+                    display: flex;
+                    div{
+                        padding: 1px 5px;
+                        color: #464855;
+                    }
+                    div:first-child{
+                        text-align: right;
+                        width: 142px;
+                        flex: 0 0 142px;
+                        color: inherit;
+                        font-size: 13px;
+                        font-weight: 300;
+                    }
+                    div:last-child{
+                        word-break: break-word;
+                    }
+                }
+            }
+        }
+    }
 }
 
 
