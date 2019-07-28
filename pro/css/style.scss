@@ -208,6 +208,7 @@ html body .content .content-wrapper{
                 div:first-child{
                     text-align: right;
                     width: 110px;
+                    flex: 0 0 110px;
                     color: inherit;
                     font-size: 13px;
                     font-weight: 300;
@@ -320,6 +321,11 @@ html body .content .content-wrapper{
         margin: 0;
     }
 }
+.hamb{
+    display: none;
+    border: 1px solid #9c9da6;
+    padding: 5px;
+}
 
 
 
@@ -338,8 +344,15 @@ html body .content .content-wrapper{
 
 
 
-
-
+@media only screen and (max-width: 1360px) {
+    .node {
+        width: 100%;
+        margin: 0 0 20px;
+    }
+    .nodelist{
+        margin: 0;
+    }
+}
 
 
 @media only screen and (max-width: 768px) {
@@ -490,7 +503,82 @@ html body .content .content-wrapper{
         flex-wrap: wrap;
         padding: 0 15px;
     }
-
+    .filterlist{
+        .col-md-4{
+            margin-bottom: 15px;
+            &:last-of-type{
+                margin-bottom: 0;
+            }
+        }
+    }
+    .hamb{
+        display: block;
+        background: #fff;
+    }
+    .node-action__wrap{
+        position: relative;
+        margin-left: 30px;
+    }
+    .node-action__wrap.vis .node-action {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0) translateY(0);
+    }
+    .node-action{
+        position: absolute;
+        top: 40px;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #E4E5EC;
+        border-radius: 0.35rem;
+        box-shadow: 0px 5px 75px 2px rgba(64, 70, 74, 0.2) !important;
+        padding: 10px;
+        align-items: flex-end;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(0) translateY(20px);
+        transition: all 0.2s ease-in-out;
+        background: #fff;
+        z-index: 10000;
+        .btn{
+            margin: 0 0 0.5rem !important;
+            position: relative;
+        }
+        .btn-outline-warning{
+            &:after{
+                content: 'Edit';
+                display: block;
+                position: absolute;
+                right: 40px;
+                top: 10px;
+                font-size: 14px;
+                color: #FF9149;
+            }
+            &:hover{
+                &:after{
+                    color: #FF9149;
+                }
+            }
+        }
+        .btn-outline-danger{
+            margin-bottom: 0 !important;
+            &:after{
+                content: 'Remove';
+                display: block;
+                position: absolute;
+                right: 40px;
+                top: 10px;
+                font-size: 14px;
+                color: #FF4961;
+            }
+            &:hover{
+                &:after{
+                    color: #FF4961;
+                }
+            }
+        }
+    }
 }
 
 @media only screen and (max-width: 600px) {

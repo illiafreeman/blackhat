@@ -67,9 +67,28 @@ $(document).ready(function() {
 })(window, document, jQuery);
 <!--end switcher init-->
 
-$(function () {
-    $('[data-toggle="tooltip"]').tooltip({ container: 'body' })
-})
+$('.node-action__wrap').click(function (e) {
+
+    if($(this).hasClass('vis')){
+        $('.node-action__wrap').removeClass('vis');
+        $(this).removeClass('vis');
+    }else {
+        $('.node-action__wrap').removeClass('vis');
+        $(this).addClass('vis');
+        //console.log('add')
+    }
+    //(e).stopPropagation();
+    //(e).preventDefault();
+});
+/*$('body').click(function () {
+    if($('.node-action__wrap').hasClass('vis')){
+        $('.node-action__wrap').removeClass('vis');
+    }
+});*/
+
+$('.node-action').click(function (e) {
+    //(e).stopPropagation();
+});
 
 
 
