@@ -16,7 +16,6 @@
     <link rel="stylesheet" type="text/css" href="css/app.css">
     <!--masternode-->
     <link rel="stylesheet" type="text/css" href="css/switchery.min.css">
-    <link rel="stylesheet" type="text/css" href="css/cryptocoins.css">
     <!--all except login-->
     <link rel="stylesheet" type="text/css" href="css/vertical-compact-menu.min.css">
     <!--common styles-->
@@ -221,7 +220,7 @@
 
 <div class="app-content content">
 
-    <!--block to reload-->
+
     <div class="content-wrapper">
         <div class="content-header row">
             <div class="content-header-left col-md-12 col-12 mb-2 breadcrumb-new">
@@ -241,7 +240,7 @@
             </div>
         </div>
         <div class="content-body">
-            <div class="node card <!--pull-up-->">
+            <div class="filterlist card <!--pull-up-->">
                 <div class="card-content collapse show">
                     <div class="card-body">
                         <form class="form-horizontal form-purchase-token row" action="buy-ico.html">
@@ -273,139 +272,145 @@
                     </div>
                 </div>
             </div>
-            <div class="node card <!--pull-up-->">
-                <div class="card-body">
-                    <div class="node-head">
-                        <div class="node-name">
-                            <h3>
-                                <i class="cc BCN mr-1 font-large-1 Color-IOC" title="BTC"></i>
-                                Oolong very faken long masternode name name name<br>
-                                <span class="badge badge-pill badge-primary">Primary Status</span>
-                            </h3>
-                        </div>
-                        <div class="node-action">
-                            <label>
-                                Monitoring
-                                <input type="checkbox" class="switchery" data-size="xs" checked />
-                            </label>
-                            <div class="btn-sm btn btn-outline-warning round ml-1"><i class="la la-pencil"></i></div>
-                            <div class="btn-sm btn btn-outline-danger round ml-1" data-toggle="modal" data-target="#exampleModal"><i class="la la-trash"></i></div>
-                        </div>
-                    </div>
-                    <div class="node-body">
-                        <div class="node-table">
-                            <div class="node-table__row">
-                                <div>Active time:</div>
-                                <div>1y 5m 4d 1h</div>
-                            </div>
-                            <div class="node-table__row">
-                                <div>Last payment:</div>
-                                <div>2019-06-25 12:45:11</div>
-                            </div>
-                        </div>
-                    </div>
-                    <a class="lead collapsed" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1" href="#">
-                        <i class="la la-angle-down"></i>Details
-                    </a>
-                </div>
-                <div id="collapse1" class="collapse collapse-inner" aria-labelledby="heading1" data-parent="#accordion" style="">
+            <!--block to reload only for masternodes-->
+            <div class="nodelist clearfix">
+                <div class="node card <!--pull-up-->">
                     <div class="card-body">
-                        <div class="node-table">
-                            <div class="node-table__row">
-                                <div>txID:</div>
-                                <div>9d9f4eeac6e1a62962232ed7f600a3de426a627fcbf58900985a34b1ae41ba1d-1</div>
+                        <div class="node-head">
+                            <div class="node-name">
+                                <h3>Oolong very faken long masternode name name name<span class="badge badge-pill badge-primary">Primary Status</span></h3>
+                                <div class="node-crypto">
+                                    <img src="img/btc.png" alt="">
+                                    Bytcoin
+                                </div>
                             </div>
-                            <div class="node-table__row">
-                                <div>Wallet:</div>
-                                <div>address AJdm3u5oUEhVPaGWRXG9dv5edP4QT5tkz3</div>
+                            <div class="node-action">
+                                <label>
+                                    Monitoring
+                                    <input type="checkbox" class="switchery" data-size="xs" checked />
+                                </label>
+                                <div class="btn-sm btn btn-outline-warning round ml-1"><i class="la la-pencil"></i></div>
+                                <div class="btn-sm btn btn-outline-danger round ml-1" data-toggle="modal" data-target="#exampleModal"><i class="la la-trash"></i></div>
                             </div>
-                            <div class="node-table__row">
-                                <div>Last activity time:</div>
-                                <div>2019-06-26 21:41:12</div>
+                        </div>
+                        <div class="node-body">
+                            <div class="node-table">
+                                <div class="node-table__row">
+                                    <div>Active time:</div>
+                                    <div>1y 5m 4d 1h</div>
+                                </div>
+                                <div class="node-table__row">
+                                    <div>Last payment:</div>
+                                    <div>2019-06-25 12:45:11</div>
+                                </div>
                             </div>
-                            <div class="node-table__row">
-                                <div>Version:</div>
-                                <div>72010</div>
-                            </div>
-                            <div class="node-table__row">
-                                <div>Rank:</div>
-                                <div>99999</div>
+                        </div>
+                        <a class="lead collapsed" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1" href="#">
+                            <i class="la la-angle-down"></i>Details
+                        </a>
+                    </div>
+                    <div id="collapse1" class="collapse collapse-inner" aria-labelledby="heading1" data-parent="#accordion" style="">
+                        <div class="card-body">
+                            <div class="node-table">
+                                <div class="node-table__row">
+                                    <div>txID:</div>
+                                    <div>9d9f4eeac6e1a62962232ed7f600a3de426a627fcbf58900985a34b1ae41ba1d-1</div>
+                                </div>
+                                <div class="node-table__row">
+                                    <div>Wallet:</div>
+                                    <div>address AJdm3u5oUEhVPaGWRXG9dv5edP4QT5tkz3</div>
+                                </div>
+                                <div class="node-table__row">
+                                    <div>Last activity time:</div>
+                                    <div>2019-06-26 21:41:12</div>
+                                </div>
+                                <div class="node-table__row">
+                                    <div>Version:</div>
+                                    <div>72010</div>
+                                </div>
+                                <div class="node-table__row">
+                                    <div>Rank:</div>
+                                    <div>99999</div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="node card <!--pull-up-->">
-                <div class="card-body">
-                    <div class="node-head">
-                        <div class="node-name">
-                            <h3>
-                                <i class="cc CLAM-alt mr-1 font-large-1 Color-KOBO" title="CLAM"></i>
-                                masternode name<br>
-                                <span class="badge badge-pill badge-danger">Alarm</span>
-                            </h3>
-                        </div>
-                        <div class="node-action">
-                            <label>
-                                Monitoring
-                                <input type="checkbox" class="switchery" data-size="xs" />
-                            </label>
-                            <div class="btn-sm btn btn-outline-warning round ml-1"><i class="la la-pencil"></i></div>
-                            <div class="btn-sm btn btn-outline-danger round ml-1"><i class="la la-trash"></i></div>
-                        </div>
-                    </div>
-                    <div class="node-body">
-                        <div class="node-table">
-                            <div class="node-table__row">
-                                <div>Active time:</div>
-                                <div>1y 5m 4d 1h</div>
-                            </div>
-                            <div class="node-table__row">
-                                <div>Last payment:</div>
-                                <div>2019-06-25 12:45:11</div>
-                            </div>
-                        </div>
-                    </div>
-                    <a class="lead collapsed" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2" href="#">
-                        <i class="la la-angle-down"></i>Details
-                    </a>
-                </div>
-                <div id="collapse2" class="collapse collapse-inner" aria-labelledby="heading1" data-parent="#accordion" style="">
+                <div class="node card <!--pull-up-->">
                     <div class="card-body">
-                        <div class="node-table">
-                            <div class="node-table__row">
-                                <div>txID:</div>
-                                <div>9d9f4eeac6e1a62962232ed7f600a3de426a627fcbf58900985a34b1ae41ba1d-1</div>
+                        <div class="node-head">
+                            <div class="node-name">
+                                <h3>
+                                    masternode name<span class="badge badge-pill badge-danger">Alarm</span>
+                                </h3>
+                                <div class="node-crypto">
+                                    <img src="img/xmr.png" alt="">
+                                    Monero
+                                </div>
                             </div>
-                            <div class="node-table__row">
-                                <div>Wallet:</div>
-                                <div>address AJdm3u5oUEhVPaGWRXG9dv5edP4QT5tkz3</div>
+                            <div class="node-action">
+                                <label>
+                                    Monitoring
+                                    <input type="checkbox" class="switchery" data-size="xs" />
+                                </label>
+                                <div class="btn-sm btn btn-outline-warning round ml-1"><i class="la la-pencil"></i></div>
+                                <div class="btn-sm btn btn-outline-danger round ml-1"><i class="la la-trash"></i></div>
                             </div>
-                            <div class="node-table__row">
-                                <div>Last activity time:</div>
-                                <div>2019-06-26 21:41:12</div>
+                        </div>
+                        <div class="node-body">
+                            <div class="node-table">
+                                <div class="node-table__row">
+                                    <div>Active time:</div>
+                                    <div>1y 5m 4d 1h</div>
+                                </div>
+                                <div class="node-table__row">
+                                    <div>Last payment:</div>
+                                    <div>2019-06-25 12:45:11</div>
+                                </div>
                             </div>
-                            <div class="node-table__row">
-                                <div>Version:</div>
-                                <div>72010</div>
-                            </div>
-                            <div class="node-table__row">
-                                <div>Rank:</div>
-                                <div>99999</div>
+                        </div>
+                        <a class="lead collapsed" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2" href="#">
+                            <i class="la la-angle-down"></i>Details
+                        </a>
+                    </div>
+                    <div id="collapse2" class="collapse collapse-inner" aria-labelledby="heading1" data-parent="#accordion" style="">
+                        <div class="card-body">
+                            <div class="node-table">
+                                <div class="node-table__row">
+                                    <div>txID:</div>
+                                    <div>9d9f4eeac6e1a62962232ed7f600a3de426a627fcbf58900985a34b1ae41ba1d-1</div>
+                                </div>
+                                <div class="node-table__row">
+                                    <div>Wallet:</div>
+                                    <div>address AJdm3u5oUEhVPaGWRXG9dv5edP4QT5tkz3</div>
+                                </div>
+                                <div class="node-table__row">
+                                    <div>Last activity time:</div>
+                                    <div>2019-06-26 21:41:12</div>
+                                </div>
+                                <div class="node-table__row">
+                                    <div>Version:</div>
+                                    <div>72010</div>
+                                </div>
+                                <div class="node-table__row">
+                                    <div>Rank:</div>
+                                    <div>99999</div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="node card <!--pull-up-->">
+                <div class="node card <!--pull-up-->">
                 <div class="card-body">
                     <div class="node-head">
                         <div class="node-name">
                             <h3>
-                                <i class="cc ETH mr-1 font-large-1 Color-PINK" title="ETH"></i>
-                                AJdm3u5oUEhVPaGWRXG9dv5edP4QT5tkz3<br>
-                                <span class="badge badge-pill badge-warning">Warning status</span>
+                                AJdm3u5oUEhVPaGWRX<span class="badge badge-pill badge-warning">Warning status</span>
                             </h3>
+                            <div class="node-crypto">
+                                <img src="img/eth.png" alt="">
+                                Ethereum Classic
+                            </div>
                         </div>
                         <div class="node-action">
                             <label>
@@ -458,6 +463,7 @@
                         </div>
                     </div>
                 </div>
+            </div>
             </div>
         </div>
     </div>

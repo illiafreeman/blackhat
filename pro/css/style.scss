@@ -155,9 +155,15 @@ html body .content .content-wrapper{
 .header-navbar .navbar-container ul.nav li a.nav-link-label{
     position: relative;
 }
+.nodelist{
+    //width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+}
 .node{
-    width: 100%;
-    margin-bottom: 20px;
+    width: calc(50% - 20px);
+    margin: 0 10px 20px;
     &-head{
         display: flex;
         justify-content: space-between;
@@ -167,22 +173,23 @@ html body .content .content-wrapper{
         h3{
             font-weight: 300;
             font-size: 20px;
-            margin-bottom: 10px;
-            padding-left: 35px;
-            position: relative;
+            margin-bottom: 5px;
             line-height: 28px;
-            span{
+            .badge{
                 padding: 6px 10px;
                 font-size: 10px;
+                margin-left: 10px;
+                transform: translateY(-5px);
             }
-            .cc{
-                width: 28px;
-                height: 28px;
-                line-height: 22px;
-                position: absolute;
-                top: 0;
-                left: 0;
-            }
+
+        }
+    }
+    &-crypto{
+        display: flex;
+        align-items: center;
+        img{
+            width: 30px;
+            margin-right: 10px;
         }
     }
     &-body{
@@ -220,7 +227,7 @@ html body .content .content-wrapper{
         }
     }
     .lead{
-        margin: 17px 0 0 48px;
+        margin: 17px 0 0 56px;
         display: inline-block;
         font-size: 16px;
         .la{
@@ -277,7 +284,9 @@ html body .content .content-wrapper{
 .modal{
     z-index: 100002;
 }
-
+.filterlist{
+    width: 100%;
+}
 
 
 
