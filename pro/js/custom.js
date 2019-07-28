@@ -7,6 +7,14 @@ $(document).ready(function() {
         var flag = $(this).find('i').attr('class');
         $('.dropdown-language .dropdown-toggle.nav-link i').removeClass().addClass(flag);
     });
+    $('.clear-list').click(function(e){
+        (e).stopPropagation();
+        $('.media-list a').slideUp();
+        $('.helper').slideDown();
+        $('.dropdown-notification .nav-link-label .badge').fadeOut();
+        $('.dropdown-notification .clear-list').fadeOut();
+    });
+
 });
 
 <!--switcher init-->

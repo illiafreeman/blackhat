@@ -326,10 +326,36 @@ html body .content .content-wrapper{
     border: 1px solid #9c9da6;
     padding: 5px;
 }
-
-
-
-
+.navbar-expand-md .navbar-nav .dropdown-menu{
+    display: block;
+    transform: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(0) translateY(20px);
+    transition: all 0.2s ease-in-out;
+}
+.show > .dropdown-menu{
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateX(0) translateY(0) !important;
+}
+.header-navbar .navbar-container ul.nav li .media-list {
+    .helper{
+        display: none;
+        padding: 60px 20px 15px;
+        text-align: center;
+    }
+}
+.clear-list{
+    padding: 5px;
+    position: relative;
+    top: -36px;
+    right: 15px;
+    border: 0;
+    .la{
+        margin: 0;
+    }
+}
 
 
 
