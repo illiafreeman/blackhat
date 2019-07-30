@@ -73,6 +73,22 @@ a.link:hover{
             font-size: 12px;
             padding: 5px 0 0 12px;
         }
+        .total-alarm{
+            padding: 15px;
+            height: 80px;
+            border: 1px solid red;
+            text-align: center;
+            border-radius: 0.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            background: #fff1f8;
+            .la{
+                font-size: 25px;
+                //transform: translateY(3px);
+            }
+        }
     }
     .dropdown-language{
         position: absolute;
