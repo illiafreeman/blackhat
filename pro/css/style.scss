@@ -100,6 +100,16 @@ a.link:hover{
         top: 10px;
         right: 5px;
     }
+    .form-label-group > label {
+        color: #989b9d;
+            -webkit-user-select: none; /* Chrome all / Safari all */
+            -moz-user-select: none;    /* Firefox all             */
+            -ms-user-select: none;     /* IE 10+                  */
+            user-select: none;        /* Likely future           */
+    }
+    .form-control{
+        color: #464855;
+    }
 }
 .vertical-compact-menu .main-menu .navigation>li>a{
     transition: $transition;
