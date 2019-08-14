@@ -7,7 +7,7 @@
     <meta name="description" content="Crypto">
     <meta name="keywords" content="Crypto">
     <meta name="author" content="Crypto">
-    <title>Coin</title>
+    <title>Coins</title>
     <link rel="apple-touch-icon" href="img/apple-icon-120.png">
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Muli:300,300i,400,400i,600,600i,700,700i|Comfortaa:300,400,500,700" rel="stylesheet">
@@ -199,14 +199,14 @@
                     <span class="menu-title" data-i18n="">Dashboard</span>
                 </a>
             </li>
-            <li class="nav-item active">
-                <a href="">
+            <li class="nav-item">
+                <a href="masternode.html" target="_blank">
                     <i class="icon-diamond"></i>
                     <span class="menu-title" data-i18n="">Masternodes</span>
                 </a>
             </li>
-            <li class="nav-item">
-                <a href="">
+            <li class="nav-item active">
+                <a href="#">
                     <i class="icon-info"></i>
                     <span class="menu-title" data-i18n="">Coin Info</span>
                 </a>
@@ -222,12 +222,10 @@
 </div>
 
 <div class="app-content content">
-
-    <!--block to reload only for masternodes-->
     <div class="content-wrapper">
         <div class="content-header row">
             <div class="content-header-left col-md-12 col-12 mb-2 breadcrumb-new">
-                <h3 class="content-header-title mb-0 d-inline-block">Masternodes</h3>
+                <h3 class="content-header-title mb-0 d-inline-block">Coins</h3>
                 <div class="row breadcrumbs-top d-inline-block">
                     <div class="breadcrumb-wrapper col-12">
                         <ol class="breadcrumb">
@@ -235,26 +233,27 @@
                                 <a class="link" href="">Dashboard</a>
                             </li>
                             <li class="breadcrumb-item active">
-                                Masternodes
+                                Coins
                             </li>
                         </ol>
                     </div>
                 </div>
             </div>
         </div>
+        <!--block to reload-->
         <div class="content-body">
             <div class="coinlist clearfix">
-                <div class="coin card <!--pull-up--> ">
+                <a href="" class="coin card pull-up">
                     <div class="card-body">
                         <div class="coin-head">
                             <img src="img/btc.png" alt="">
-                            Bytcoin
+                            <h3>Bitcoin Incognito<span>XBI</span></h3>
                         </div>
                         <div class="coin-body">
                             <div class="coin-table">
                                 <div class="coin-table__row">
                                     <div>Status:</div>
-                                    <div><span class="badge badge-pill badge-success">Active maintenance</span></div>
+                                    <div><span class="badge badge-pill badge-secondary">In maintenance</span></div>
                                 </div>
                                 <div class="coin-table__row">
                                     <div>Last block:</div>
@@ -276,18 +275,285 @@
                                     <div>Protocol Version:</div>
                                     <div>277</div>
                                 </div>
+                                <div class="coin-table__row">
+                                    <div>Active Masternodes:</div>
+                                    <div style="color: #28d094 !important;;">23</div>
+                                </div>
+                                <div class="coin-table__row">
+                                    <div>Inactive Masternodes:</div>
+                                    <div style="color: #FF4961 !important;">125</div>
+                                </div>
+                                <div class="coin-table__row coin-table__row_total">
+                                    <div>Total Masternodes:</div>
+                                    <div>100500</div>
+                                </div>
+                                <div class="coin-table__row_chart">
+                                    <input type="text" value="10" class="dial" data-thickness=".1" data-width="90" data-height="90">
+                                </div>
                             </div>
                         </div>
                     </div>
-
-                </div>
+                </a>
+                <a href="" class="coin card pull-up">
+                    <div class="card-body">
+                        <div class="coin-head">
+                            <img src="img/xmr.png" alt="">
+                            <h3>Monero<span>MNR</span></h3>
+                        </div>
+                        <div class="coin-body">
+                            <div class="coin-table">
+                                <div class="coin-table__row">
+                                    <div>Status:</div>
+                                    <div><span class="badge badge-pill badge-success">Active</span></div>
+                                </div>
+                                <div class="coin-table__row">
+                                    <div>Last block:</div>
+                                    <div>34567347 (1y 5m 4d 1h ago)</div>
+                                </div>
+                                <div class="coin-table__row">
+                                    <div>Connections:</div>
+                                    <div>345</div>
+                                </div>
+                                <div class="coin-table__row">
+                                    <div>Version:</div>
+                                    <div>67/9</div>
+                                </div>
+                                <div class="coin-table__row">
+                                    <div>Wallet Version:</div>
+                                    <div>45</div>
+                                </div>
+                                <div class="coin-table__row">
+                                    <div>Protocol Version:</div>
+                                    <div>277</div>
+                                </div>
+                                <div class="coin-table__row">
+                                    <div>Active Masternodes:</div>
+                                    <div style="color: #28d094 !important;">56723</div>
+                                </div>
+                                <div class="coin-table__row">
+                                    <div>Inactive Masternodes:</div>
+                                    <div style="color: #FF4961 !important;">8</div>
+                                </div>
+                                <div class="coin-table__row coin-table__row_total">
+                                    <div>Total Masternodes:</div>
+                                    <div>777</div>
+                                </div>
+                                <div class="coin-table__row_chart">
+                                    <input type="text" value="77" class="dial" data-thickness=".1" data-width="90" data-height="90">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="" class="coin card pull-up">
+                    <div class="card-body">
+                        <div class="coin-head">
+                            <img src="img/eth.png" alt="">
+                            <h3>Ethereum Classic<span>ETH</span></h3>
+                        </div>
+                        <div class="coin-body">
+                            <div class="coin-table">
+                                <div class="coin-table__row">
+                                    <div>Status:</div>
+                                    <div><span class="badge badge-pill badge-success">Active</span></div>
+                                </div>
+                                <div class="coin-table__row">
+                                    <div>Last block:</div>
+                                    <div>34567347 (1y 5m 4d 1h ago)</div>
+                                </div>
+                                <div class="coin-table__row">
+                                    <div>Connections:</div>
+                                    <div>345</div>
+                                </div>
+                                <div class="coin-table__row">
+                                    <div>Version:</div>
+                                    <div>67/9</div>
+                                </div>
+                                <div class="coin-table__row">
+                                    <div>Wallet Version:</div>
+                                    <div>45</div>
+                                </div>
+                                <div class="coin-table__row">
+                                    <div>Protocol Version:</div>
+                                    <div>277</div>
+                                </div>
+                                <div class="coin-table__row">
+                                    <div>Active Masternodes:</div>
+                                    <div style="color: #28d094 !important;">1</div>
+                                </div>
+                                <div class="coin-table__row">
+                                    <div>Inactive Masternodes:</div>
+                                    <div style="color: #FF4961 !important;">0</div>
+                                </div>
+                                <div class="coin-table__row coin-table__row_total">
+                                    <div>Total Masternodes:</div>
+                                    <div>1</div>
+                                </div>
+                                <div class="coin-table__row_chart">
+                                    <input type="text" value="50" class="dial" data-thickness=".1" data-width="90" data-height="90">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="" class="coin card pull-up">
+                    <div class="card-body">
+                        <div class="coin-head">
+                            <img src="img/btc.png" alt="">
+                            <h3>Bitcoin Incognito<span>XBI</span></h3>
+                        </div>
+                        <div class="coin-body">
+                            <div class="coin-table">
+                                <div class="coin-table__row">
+                                    <div>Status:</div>
+                                    <div><span class="badge badge-pill badge-secondary">In maintenance</span></div>
+                                </div>
+                                <div class="coin-table__row">
+                                    <div>Last block:</div>
+                                    <div>34567347 (1y 5m 4d 1h ago)</div>
+                                </div>
+                                <div class="coin-table__row">
+                                    <div>Connections:</div>
+                                    <div>100500</div>
+                                </div>
+                                <div class="coin-table__row">
+                                    <div>Version:</div>
+                                    <div>sgfndgfndgmhn</div>
+                                </div>
+                                <div class="coin-table__row">
+                                    <div>Wallet Version:</div>
+                                    <div>45</div>
+                                </div>
+                                <div class="coin-table__row">
+                                    <div>Protocol Version:</div>
+                                    <div>277</div>
+                                </div>
+                                <div class="coin-table__row">
+                                    <div>Active Masternodes:</div>
+                                    <div style="color: #28d094 !important;;">23</div>
+                                </div>
+                                <div class="coin-table__row">
+                                    <div>Inactive Masternodes:</div>
+                                    <div style="color: #FF4961 !important;">125</div>
+                                </div>
+                                <div class="coin-table__row coin-table__row_total">
+                                    <div>Total Masternodes:</div>
+                                    <div>100500</div>
+                                </div>
+                                <div class="coin-table__row_chart">
+                                    <input type="text" value="10" class="dial" data-thickness=".1" data-width="90" data-height="90">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="" class="coin card pull-up">
+                    <div class="card-body">
+                        <div class="coin-head">
+                            <img src="img/xmr.png" alt="">
+                            <h3>Monero<span>MNR</span></h3>
+                        </div>
+                        <div class="coin-body">
+                            <div class="coin-table">
+                                <div class="coin-table__row">
+                                    <div>Status:</div>
+                                    <div><span class="badge badge-pill badge-success">Active</span></div>
+                                </div>
+                                <div class="coin-table__row">
+                                    <div>Last block:</div>
+                                    <div>34567347 (1y 5m 4d 1h ago)</div>
+                                </div>
+                                <div class="coin-table__row">
+                                    <div>Connections:</div>
+                                    <div>345</div>
+                                </div>
+                                <div class="coin-table__row">
+                                    <div>Version:</div>
+                                    <div>67/9</div>
+                                </div>
+                                <div class="coin-table__row">
+                                    <div>Wallet Version:</div>
+                                    <div>45</div>
+                                </div>
+                                <div class="coin-table__row">
+                                    <div>Protocol Version:</div>
+                                    <div>277</div>
+                                </div>
+                                <div class="coin-table__row">
+                                    <div>Active Masternodes:</div>
+                                    <div style="color: #28d094 !important;">56723</div>
+                                </div>
+                                <div class="coin-table__row">
+                                    <div>Inactive Masternodes:</div>
+                                    <div style="color: #FF4961 !important;">8</div>
+                                </div>
+                                <div class="coin-table__row coin-table__row_total">
+                                    <div>Total Masternodes:</div>
+                                    <div>777</div>
+                                </div>
+                                <div class="coin-table__row_chart">
+                                    <input type="text" value="77" class="dial" data-thickness=".1" data-width="90" data-height="90">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="" class="coin card pull-up">
+                    <div class="card-body">
+                        <div class="coin-head">
+                            <img src="img/eth.png" alt="">
+                            <h3>Ethereum Classic<span>ETH</span></h3>
+                        </div>
+                        <div class="coin-body">
+                            <div class="coin-table">
+                                <div class="coin-table__row">
+                                    <div>Status:</div>
+                                    <div><span class="badge badge-pill badge-success">Active</span></div>
+                                </div>
+                                <div class="coin-table__row">
+                                    <div>Last block:</div>
+                                    <div>34567347 (1y 5m 4d 1h ago)</div>
+                                </div>
+                                <div class="coin-table__row">
+                                    <div>Connections:</div>
+                                    <div>345</div>
+                                </div>
+                                <div class="coin-table__row">
+                                    <div>Version:</div>
+                                    <div>67/9</div>
+                                </div>
+                                <div class="coin-table__row">
+                                    <div>Wallet Version:</div>
+                                    <div>45</div>
+                                </div>
+                                <div class="coin-table__row">
+                                    <div>Protocol Version:</div>
+                                    <div>277</div>
+                                </div>
+                                <div class="coin-table__row">
+                                    <div>Active Masternodes:</div>
+                                    <div style="color: #28d094 !important;">1</div>
+                                </div>
+                                <div class="coin-table__row">
+                                    <div>Inactive Masternodes:</div>
+                                    <div style="color: #FF4961 !important;">0</div>
+                                </div>
+                                <div class="coin-table__row coin-table__row_total">
+                                    <div>Total Masternodes:</div>
+                                    <div>1</div>
+                                </div>
+                                <div class="coin-table__row_chart">
+                                    <input type="text" value="50" class="dial" data-thickness=".1" data-width="90" data-height="90">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
+        <!--end block to reload-->
     </div>
-    <!--end block to reload-->
-
 </div>
-
 
 
 
@@ -302,18 +568,24 @@
 <script src="js/app-menu.min.js" type="text/javascript"></script>
 <script src="js/app.min.js" type="text/javascript"></script>
 <!--end except login-->
+<!--coins-->
+<script src="js/jquery.knob.min.js" type="text/javascript"></script>
+<script src="js/excanvas.js" type="text/javascript"></script>
+<!--end coins-->
 <script src="js/custom.js"></script>
 
-
-
-
-
-
-
-
-
-
-
+<script>
+    /*charts init*/
+    $(function() {
+        $(".dial").knob({
+            'readOnly': true,
+            'format': function (value) {
+                return value + '%';
+            },
+            'fgColor': '#28d094'
+        });
+    });
+</script>
 
 
 
