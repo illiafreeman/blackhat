@@ -182,6 +182,19 @@ html body .content .content-wrapper{
     align-items: center;
     padding: 0 18px;
     margin-bottom: 25px !important;
+    position: relative;
+    .add_btn{
+        font-weight: 300;
+        align-items: center;
+        font-size: 13px;
+        padding: 6px;
+        margin-left: 10px;
+        .la{
+        }
+        &:hover{
+            color: #fff;
+        }
+    }
 }
 .header-navbar .navbar-container ul.nav li a.nav-link-label{
     position: relative;
@@ -241,8 +254,8 @@ html body .content .content-wrapper{
                 }
                 div:first-child{
                     text-align: right;
-                    width: 110px;
-                    flex: 0 0 110px;
+                    width: 150px;
+                    flex: 0 0 150px;
                     color: inherit;
                     font-size: 13px;
                     font-weight: 300;
@@ -266,7 +279,7 @@ html body .content .content-wrapper{
         }
     }
     .lead{
-        margin: 17px 0 0 21px;
+        margin: 17px 0 0 152px;
         display: inline-block;
         font-size: 16px;
         .la{
@@ -291,8 +304,8 @@ html body .content .content-wrapper{
                     }
                     div:first-child{
                         text-align: right;
-                        width: 111px;
-                        flex: 0 0 111px;
+                        width: 150px;
+                        flex: 0 0 150px;
                         color: inherit;
                         font-size: 13px;
                         font-weight: 300;
@@ -528,6 +541,7 @@ html body .content .content-wrapper{
     }
     .nodelist{
         margin: 0;
+        width: 100%;
     }
 }
 
@@ -776,6 +790,34 @@ html body .content .content-wrapper{
             width: 100%;
             border: 0;
         }
+    }
+    .node .lead {
+        margin: 17px auto 0;
+    }
+    .node .collapse-inner .card-body .node-table__row{
+        flex-direction: column;
+    }
+    .node .collapse-inner .card-body .node-table__row div:first-child{
+        width: 100%;
+        flex: 0 0 auto;
+        text-align: left;
+        padding: 0;
+    }
+    .node .collapse-inner .card-body .node-table__row div:last-child{
+        padding: 0;
+        margin-bottom: 15px;
+    }
+    .node .collapse-inner .card-body .node-table__row:last-child{
+        div:last-child{
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .node-body .node-table__row div:first-child{
+        width: 125px;
+        flex: 0 0 125px;
     }
 }
 
