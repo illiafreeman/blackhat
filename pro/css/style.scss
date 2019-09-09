@@ -184,16 +184,24 @@ html body .content .content-wrapper{
     margin-bottom: 25px !important;
     position: relative;
     .add_btn{
-        font-weight: 300;
         align-items: center;
-        font-size: 13px;
+        font-size: 10px;
         padding: 6px;
         margin-left: 10px;
+        display: inline-flex;
+        font-weight: 400;
         .la{
+            font-size: 13px;
+            margin-right: 4px;
+
         }
         &:hover{
             color: #fff;
         }
+    }
+    .content-header-title{
+        display: inline-flex !important;
+        align-items: center;
     }
 }
 .header-navbar .navbar-container ul.nav li a.nav-link-label{
@@ -790,6 +798,7 @@ html body .content .content-wrapper{
             margin: 0 !important;
             width: 100%;
             border: 0;
+            padding-right: 0;
         }
     }
     .node .lead {
