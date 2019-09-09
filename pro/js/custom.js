@@ -96,6 +96,7 @@ $('.node-action__wrap').click(function (e) {
 
 $('.content-header-title').click(function (e) {
     $('.preload').toggleClass('vis');
+    $('body').toggleClass('oh');
 });
 
 
