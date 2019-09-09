@@ -94,8 +94,8 @@ $('.node-action__wrap').click(function (e) {
     }
 });*/
 
-$('.node-action').click(function (e) {
-    //(e).stopPropagation();
+$('.content-header-title').click(function (e) {
+    $('.preload').toggleClass('vis');
 });
 
 

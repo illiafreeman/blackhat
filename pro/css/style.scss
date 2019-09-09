@@ -204,6 +204,7 @@ html body .content .content-wrapper{
     display: flex;
     flex-wrap: wrap;
     margin: 0 -10px;
+    position: relative;
 }
 .node{
     width: calc(50% - 20px);
@@ -830,11 +831,95 @@ html body .content .content-wrapper{
     }
 }
 
+.preload{
+    position: absolute;
+    top: 0;
+    right: 10px;
+    bottom: 0;
+    left: 10px;
+    background: rgba(255, 255, 255, .9);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: $transition;
+    &.vis{
+        visibility: visible;
+        opacity: 1;
+    }
+}
+.filterlabel{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    label{
+        margin: 0;
+        cursor: pointer;
+    }
+}
+.button_wrap{
+    display: flex;
+    justify-content: space-between;
+    button{
+        width: calc(50% - 15px);
+        cursor: pointer;
+        margin-bottom: 0 !important;
+    }
 
-
-
-
-
+}
+.add_node{
+    .error-text {
+        display: none;
+    }
+    .form-label-group {
+        position: relative;
+        & > label{
+            color: #989b9d;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        .la{
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            color: #989b9d;
+            transition: $transition;
+            &:hover{
+                color: #6B6F82;
+            }
+        }
+    }
+    .form-control {
+        color: #464855;
+        padding-right: 50px;
+    }
+    .has-error  {
+        .error-text{
+            display: block;
+            color: red;
+            font-size: 12px;
+            padding: 5px 0 0 12px;
+        }
+        .form-control {
+            border-color: red;
+        }
+    }
+}
+.modal{
+    img{
+        width: 100%;
+    }
+}
 
 
 

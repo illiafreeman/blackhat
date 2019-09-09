@@ -37,8 +37,7 @@
                 </li>
                 <li class="nav-item d-md-none logo_min">
                     <a class="navbar-brand" href="index.html">
-                        <img class="brand-logo d-none d-md-block" alt="" src="img/logo.png">
-                        <img class="brand-logo d-sm-block d-md-none" alt="" src="img/logo-sm.png">
+                        <img class="brand-logo d-sm-block d-md-none" alt="" src="img/logo-sm.svg">
                     </a>
                 </li>
             </ul>
@@ -193,7 +192,7 @@
 <div class="main-menu menu-fixed menu-dark menu-bg-default rounded menu-accordion menu-shadow">
     <div class="main-menu-content">
         <a class="navigation-brand d-none d-md-block d-lg-block d-xl-block" href="">
-            <img class="brand-logo" alt="crypto ico admin logo" src="img/logo.png"/>
+            <img class="brand-logo" alt="crypto ico admin logo" src="img/logo.svg"/>
         </a>
         <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
             <li class="nav-item">
@@ -266,13 +265,11 @@
                                     <option value="3">Credit Card</option>
                                 </select>
                             </div>
-                            <div class="col-md-4">
-                                <select class="status-select custom-select" multiple="multiple" style="width: 100%">
-                                    <option value="1">BTC</option>
-                                    <option value="2">LTC</option>
-                                    <option value="3">USDT</option>
-                                    <option value="3">Credit Card</option>
-                                </select>
+                            <div class="col-md-4 filterlabel">
+                                <label class="">
+                                    Show only errors
+                                    <input type="checkbox" class="switchery" data-size="xs" checked />
+                                </label>
                             </div>
                         </form>
                     </div>
@@ -280,6 +277,9 @@
             </div>
             <!--block to reload only for masternodes-->
             <div class="nodelist clearfix">
+                <div class="preload">
+                    <img src="img/spin.svg" alt="">
+                </div>
                 <div class="node card pull-up">
                     <div class="card-body">
                         <div class="node-head">

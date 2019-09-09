@@ -7,7 +7,7 @@
     <meta name="description" content="Crypto">
     <meta name="keywords" content="Crypto">
     <meta name="author" content="Crypto">
-    <title>Masternode Empty</title>
+    <title>Masternode add</title>
     <link rel="apple-touch-icon" href="img/apple-icon-120.png">
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Muli:300,300i,400,400i,600,600i,700,700i|Comfortaa:300,400,500,700" rel="stylesheet">
@@ -239,13 +239,32 @@
         <div class="content-body justify-content-center">
             <div class="add_node card">
                 <div class="card-header">
-                    <h6 class="card-title text-center">You don't have Masternodes yet!</h6>
+                    <h6 class="card-title text-center">Create a Masternode</h6>
                 </div>
-                <div class="card-body text-center">
-                    <a href="#">
-                        <i class="la la-plus font-large-3 bg-warning bg-glow white rounded-circle p-3 d-inline-block"></i>
-                        Create One
-                    </a>
+                <div class="card-body">
+                    <form action="">
+                        <fieldset class="form-label-group">
+                            <input type="text" id="masternode-name" class="form-control" placeholder="Masternode Name" value="">
+                            <label for="masternode-name">Name</label>
+                            <div class="error-text">Name is invalid</div>
+                        </fieldset>
+                        <fieldset class="form-label-group has-error">
+                            <input type="text" id="transaction-id" class="form-control" placeholder="Transaction ID" value="">
+                            <label for="transaction-id">Transaction ID</label>
+                            <i class="la la-question-circle" data-toggle="modal" data-target="#exampleModal"></i>
+                            <div class="error-text">Transaction ID is invalid</div>
+                        </fieldset>
+                        <fieldset class="form-label-group">
+                            <input type="text" id="output-index" class="form-control" placeholder="Output Index" value="">
+                            <label for="output-index">Output Index</label>
+                            <i class="la la-question-circle" data-toggle="modal" data-target="#exampleModal"></i>
+                            <div class="error-text">Output Index is invalid</div>
+                        </fieldset>
+                        <div class="button_wrap">
+                            <button type="submit" class="btn-gradient-primary btn-block my-1">Cancel</button>
+                            <button type="submit" class="btn-gradient-secondary btn-block my-1">Add</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -253,7 +272,24 @@
     <!--end block to reload-->
 
 </div>
-
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Transaction ID</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <img src="img/1.jpg" alt="">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn-gradient-primary my-1" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 
