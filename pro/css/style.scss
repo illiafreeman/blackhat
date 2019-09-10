@@ -183,13 +183,15 @@ html body .content .content-wrapper{
     padding: 0 18px;
     margin-bottom: 25px !important;
     position: relative;
+
     .add_btn{
         align-items: center;
         font-size: 10px;
         padding: 6px;
         margin-left: 10px;
         display: inline-flex;
-        font-weight: 400;
+        text-shadow: 1px 2px #7d7d7d;
+        font-weight: 600;
         .la{
             font-size: 13px;
             margin-right: 4px;
