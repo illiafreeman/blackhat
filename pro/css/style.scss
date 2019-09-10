@@ -1031,11 +1031,16 @@ html body .content .content-wrapper{
                 right: 12px;
             }
             .select2-selection__clear{
-                top: 11px;
-                right: 41px;
+                top: 7px;
+                right: 34px;
                 float: none;
                 position: absolute;
                 color: #888;
+                width: 30px;
+                height: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
             }
         }
         &.select2-container--open+label{
