@@ -32,9 +32,6 @@ a.link:hover{
     }*/
 }
 
-
-
-
 #particles-js{
     position: fixed;
     top: 0;
@@ -44,6 +41,38 @@ a.link:hover{
 }
 .login-page{
     background: linear-gradient(to right, #140E38, #194089);
+}
+.has-error{
+    .form-control{
+        border-color: red;
+    }
+    .error-text{
+        display: block !important;
+        color: red;
+        font-size: 12px;
+        padding: 5px 0 0 12px;
+        &.total-alarm{
+            padding: 15px;
+            height: 80px;
+            border: 1px solid red;
+            text-align: center;
+            border-radius: 0.25rem;
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            background: #fff1f8;
+            margin-bottom: 1rem;
+
+            .la{
+                font-size: 25px;
+                //transform: translateY(3px);
+            }
+        }
+    }
+}
+.total-alarm_wrap{
+    margin: 0 !important;
 }
 .loginform{
     width: 400px;
@@ -62,38 +91,6 @@ a.link:hover{
     }
     .error-text{
         display: none;
-    }
-    .total-alarm_wrap{
-        margin: 0 !important;
-    }
-    .has-error{
-        .form-control{
-            border-color: red;
-        }
-        .error-text{
-            display: block;
-            color: red;
-            font-size: 12px;
-            padding: 5px 0 0 12px;
-        }
-        .total-alarm{
-            padding: 15px;
-            height: 80px;
-            border: 1px solid red;
-            text-align: center;
-            border-radius: 0.25rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 14px;
-            background: #fff1f8;
-            margin-bottom: 1rem;
-
-            .la{
-                font-size: 25px;
-                //transform: translateY(3px);
-            }
-        }
     }
     .dropdown-language{
         position: absolute;
@@ -137,7 +134,7 @@ a.link:hover{
 .add_node{
     width: 400px;
     .card-body{
-        padding-bottom: 40px;
+        padding-bottom: 30px;
         a{
             display: inline-flex;
             flex-direction: column;
@@ -907,14 +904,23 @@ html body .content .content-wrapper{
 .button_wrap{
     display: flex;
     justify-content: space-between;
-    button{
-        width: calc(50% - 15px);
+    .btn-block{
+        width: calc(50% - 15px) !important;
         cursor: pointer;
         margin-bottom: 0 !important;
+        text-align: center;
+        &:hover{
+            color: #fff;
+        }
     }
 
 }
 .add_node{
+    .custom-select{
+        option[type="hidden"]{
+            color: #fff;
+        }
+    }
     .error-text {
         display: none;
     }
@@ -954,6 +960,17 @@ html body .content .content-wrapper{
             color: red;
             font-size: 12px;
             padding: 5px 0 0 12px;
+            &.total-alarm{
+                padding: 0;
+                font-size: 14px;
+                .la{
+                    position: static;
+                    color: red;
+                    width: auto;
+                    height: auto;
+                    cursor: default;
+                }
+            }
         }
         .form-control {
             border-color: red;
@@ -977,7 +994,28 @@ html body .content .content-wrapper{
 .oh{
     overflow: hidden;
 }
-
+.select_fieldset{
+    label{
+        padding-top: -webkit-calc(var(--input-padding-y) / 3);
+        padding-top: -moz-calc(var(--input-padding-y) / 3);
+        padding-top: calc(var(--input-padding-y) / 3);
+        padding-bottom: -webkit-calc(var(--input-padding-y) / 3);
+        padding-bottom: -moz-calc(var(--input-padding-y) / 3);
+        padding-bottom: calc(var(--input-padding-y) / 3);
+        font-size: 11px;
+        color: #777 !important;
+        pointer-events: none;
+    }
+    select{
+        padding-top: -webkit-calc(var(--input-padding-y) + var(--input-padding-y) * (2 / 3));
+        padding-top: -moz-calc(var(--input-padding-y) + var(--input-padding-y) * (2 / 3));
+        padding-top: calc(var(--input-padding-y) + var(--input-padding-y) * (2 / 3));
+        padding-bottom: -webkit-calc(var(--input-padding-y) / 3);
+        padding-bottom: -moz-calc(var(--input-padding-y) / 3);
+        padding-bottom: calc(var(--input-padding-y) / 3);
+        padding-left: 7px;
+    }
+}
 
 
 

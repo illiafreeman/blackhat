@@ -248,6 +248,17 @@
                             <label for="masternode-name">Name</label>
                             <div class="error-text">Name is invalid</div>
                         </fieldset>
+                        <fieldset class="form-label-group select_fieldset">
+                            <select id="coin-type" class="type-select custom-select" style="width: 100%">
+                                <option value="" hidden>&mdash;</option>
+                                <option value="1">BTC</option>
+                                <option value="2">LTC</option>
+                                <option value="3">USDT</option>
+                                <option value="3">Credit Card</option>
+                            </select>
+                            <label for="coin-type">Coin Type</label>
+                            <div class="error-text">Coin Type is invalid</div>
+                        </fieldset>
                         <fieldset class="form-label-group has-error">
                             <input type="text" id="transaction-id" class="form-control" placeholder="Transaction ID" value="">
                             <label for="transaction-id">Transaction ID</label>
@@ -260,8 +271,11 @@
                             <i class="la la-question-circle" data-toggle="modal" data-target="#exampleModal"></i>
                             <div class="error-text">Output Index is invalid</div>
                         </fieldset>
+                        <fieldset class="form-label-group total-alarm_wrap has-error">
+                            <div class="error-text total-alarm"><i class="la la-exclamation-triangle"></i>&nbsp;Everyone must bleed</div>
+                        </fieldset>
                         <div class="button_wrap">
-                            <button type="submit" class="btn-gradient-primary btn-block my-1">Cancel</button>
+                            <a href="" class="btn-gradient-primary btn-block my-1">Cancel</a>
                             <button type="submit" class="btn-gradient-secondary btn-block my-1">Add</button>
                         </div>
                     </form>
