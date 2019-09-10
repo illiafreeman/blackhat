@@ -850,6 +850,9 @@ html body .content .content-wrapper{
             margin-bottom: 0;
         }
     }
+    .add_node.card .button_wrap .btn-block {
+        width: calc(100% - 15px) !important;
+    }
 }
 
 @media only screen and (max-width: 480px) {
@@ -969,6 +972,11 @@ html body .content .content-wrapper{
                     width: auto;
                     height: auto;
                     cursor: default;
+                }
+                span{
+                    width: 66%;
+                    text-align: left;
+                    padding-left: 15px;
                 }
             }
         }
