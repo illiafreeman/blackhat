@@ -551,15 +551,26 @@ html body .content .content-wrapper{
         margin: 0;
         width: 100%;
     }
-    .filterlabel label{
-        flex-direction: column;
-        .switchery{
-            height: 16px;
-            width: 32px;
-            & > small{
-                width: 16px;
-                height: 16px;
+    .filterlabel{
+        label{
+            flex-direction: column;
+            height: 100%;
+            div{
+                margin: 0 !important;
+                padding: 0;
             }
+            .slider{
+                height: 20px;
+                width: 40px;
+                &:before{
+                    width: 16px;
+                    height: 16px;
+                    bottom: 2px;
+                }
+            }
+        }
+        .switch input:checked + .slider::before {
+            transform: translateX(16px);
         }
     }
 
@@ -1060,18 +1071,25 @@ html body .content .content-wrapper{
 .switch {
     position: relative;
     display: inline-flex;
-
+    margin: 0;
     height: 34px;
+    align-items: center;
+    div{
+        padding-right: 5px;
+    }
     input {
         opacity: 0;
         width: 0;
         height: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
     }
     input:checked + .slider {
-        background-color: #2196F3;
+        background-color: #37bc9b;
     }
     input:focus + .slider {
-        box-shadow: 0 0 1px #2196F3;
+        box-shadow: 0 0 1px #37bc9b;
     }
     input:checked + .slider:before {
         -webkit-transform: translateX(26px);
@@ -1081,14 +1099,11 @@ html body .content .content-wrapper{
     .slider {
         position: relative;
         cursor: pointer;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
         background-color: #ccc;
         -webkit-transition: .4s;
         transition: .4s;
         width: 60px;
+        height: 100%;
         border-radius: 34px;
         &:before {
             position: absolute;
@@ -1102,7 +1117,6 @@ html body .content .content-wrapper{
             transition: .4s;
             border-radius: 50%;
         }
-
     }
 }
 
