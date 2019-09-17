@@ -794,26 +794,10 @@ html body .content .content-wrapper{
         .switch{
             margin: 0 0 0.5rem !important;
         }
-        .btn-outline-warning{
-            &:after{
-                content: 'Edit';
-                display: block;
-                position: absolute;
-                right: 40px;
-                top: 10px;
-                font-size: 14px;
-                color: #FF9149;
-            }
-            &:hover{
-                &:after{
-                    color: #FF9149;
-                }
-            }
-        }
+
         .btn-outline-danger{
             margin-bottom: 0 !important;
-            &:after{
-                content: 'Remove';
+            span{
                 display: block;
                 position: absolute;
                 right: 40px;
@@ -822,7 +806,7 @@ html body .content .content-wrapper{
                 color: #FF4961;
             }
             &:hover{
-                &:after{
+                span{
                     color: #FF4961;
                 }
             }
