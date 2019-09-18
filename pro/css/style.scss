@@ -536,9 +536,55 @@ html body .content .content-wrapper{
         }
     }
 }
-.ticketlist{
+.ticket-list{
     width: 100%;
+    &__head{
+        &-tab{
+            &-link{
 
+            }
+        }
+        .add_btn{
+            &:hover{
+
+            }
+        }
+    }
+    .ticketlist{
+        td{
+            a{
+
+            }
+            &.td_status{
+                span{
+                    &:before{
+
+                    }
+                }
+            }
+            &.status_wait_team{
+                span{
+                    &:before{
+
+                    }
+                }
+            }
+            &.status_wait{
+                span{
+                    &:before{
+
+                    }
+                }
+            }
+            &.status_closed{
+                span{
+                    &:before{
+
+                    }
+                }
+            }
+        }
+    }
 }
 
 
