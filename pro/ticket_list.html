@@ -250,39 +250,41 @@
         <div class="content-body">
             <div class="ticket-list card">
                 <div class="card-body">
-                    <div class="ticketlist__head">
-                        <div class="ticketlist__head-tab">
-                            <a href="" class="ticketlist__head-link">Open Tickets</a>
-                            <a href="" class="ticketlist__head-link">Closed Tickets</a>
+                    <div class="ticket-list__head">
+                        <div class="ticket-list__head-tab">
+                            <a href="" class="ticket-list__head-link active">Open Tickets</a>
+                            <a href="" class="ticket-list__head-link">Closed Tickets</a>
                         </div>
-                        <a href="#" class="btn-gradient-secondary add_btn btn-sm btn round"><i class="la la-plus"></i>Добавить тикет</a>
+                        <a href="#" class="btn-gradient-secondary add_btn btn-sm btn round"><i class="la la-plus"></i>Создать</a>
                     </div>
-                    <table class="ticketlist">
-                        <tr>
-                            <th>Ticket Name</th>
-                            <th>Created</th>
-                            <th>Last Update</th>
-                            <th>Status</th>
-                        </tr>
-                        <tr>
-                            <td><a href="">Как правильно докупить багаж в авиакомпании Победа?</a></td>
-                            <td>15 days ago</td>
-                            <td>today</td>
-                            <td class="td_status status_wait_team"><span>Awaiting Support team answer</span></td>
-                        </tr>
-                        <tr>
-                            <td><a href="">Change account data</a></td>
-                            <td>15 days ago</td>
-                            <td>today</td>
-                            <td class="td_status status_wait"><span>Awaiting Your answer</span></td>
-                        </tr>
-                        <tr>
-                            <td><a href="">Change account data</a></td>
-                            <td>15 days ago</td>
-                            <td>today</td>
-                            <td class="td_status status_closed"><span>Closed</span></td>
-                        </tr>
-                    </table>
+                    <div class="ticketlist-wrap">
+                        <table class="ticketlist">
+                            <tr>
+                                <th>Ticket Name</th>
+                                <th class="ac">Created</th>
+                                <th class="ac">Last Update</th>
+                                <th>Status</th>
+                            </tr>
+                            <tr>
+                                <td><a class="link" href="">Как правильно докупить багаж в авиакомпании Победа?</a></td>
+                                <td class="ac">15 days ago</td>
+                                <td class="ac">today</td>
+                                <td class="td_status status_wait_team"><span>Awaiting Support team answer</span></td>
+                            </tr>
+                            <tr>
+                                <td><a class="link" href="">В отчете об удобстве пользования браузером Chrome недостаточно</a></td>
+                                <td class="ac">15 days ago</td>
+                                <td class="ac">today</td>
+                                <td class="td_status status_wait"><span>Awaiting Your answer</span></td>
+                            </tr>
+                            <tr>
+                                <td><a class="link" href="">Change account data</a></td>
+                                <td class="ac">15 days ago</td>
+                                <td class="ac">today</td>
+                                <td class="td_status status_closed"><span>Closed</span></td>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>

@@ -539,54 +539,140 @@ html body .content .content-wrapper{
 .ticket-list{
     width: 100%;
     &__head{
+        display: flex;
+        justify-content: space-between;
+        height: 50px;
+        align-items: center;
+        border-bottom: 1px solid #cacfe7;
+        margin-bottom: 20px;
         &-tab{
-            &-link{
-
+            display: flex;
+            align-items: stretch;
+            height: 100%;
+        }
+        &-link{
+            display: flex;
+            align-items: center;
+            padding: 0 10px;
+            margin-right: 15px;
+            color: #6B6F82;
+            position: relative;
+            text-transform: uppercase;
+            white-space: nowrap;
+            &:after{
+                display: block;
+                content: '';
+                position: absolute;
+                bottom: -2px;
+                height: 3px;
+                left: 0;
+                right: 0;
+                background: transparent;
+            }
+            &.active{
+                color: #1B65D3;
+                &:after{
+                    background: #1B65D3;
+                }
             }
         }
         .add_btn{
+            align-items: center;
+            font-size: 10px;
+            padding: 6px 12px;
+            display: inline-flex;
+            text-shadow: 1px 2px #7d7d7d;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-family: "Comfortaa", Georgia, "Times New Roman", Times, serif;
+            .la{
+                margin-right: 5px;
+            }
             &:hover{
-
+                color: #fff;
             }
         }
     }
     .ticketlist{
+        &-wrap{
+            overflow: auto;
+        }
+        width: 100%;
+        th{
+            padding: 12px 8px;
+            border-bottom: 1px solid #E4E5EC;
+            text-transform: uppercase;
+            font-weight: 300;
+            font-size: 13px;
+            white-space: nowrap;
+        }
         td{
+            padding: 8px;
+            border-bottom: 1px solid #E4E5EC;
+            white-space: nowrap;
             a{
 
             }
             &.td_status{
                 span{
+                    display: block;
+                    position: relative;
+                    padding-left: 7px;
+                    margin-left: 7px;
                     &:before{
-
+                        display: block;
+                        content: '';
+                        position: absolute;
+                        left: -7px;
+                        height: 6px;
+                        width: 6px;
+                        top: 7px;
+                        border-radius: 50%;
                     }
                 }
             }
             &.status_wait_team{
                 span{
                     &:before{
-
+                        background: limegreen;
                     }
                 }
             }
             &.status_wait{
                 span{
                     &:before{
-
+                        background: red;
                     }
                 }
             }
             &.status_closed{
                 span{
                     &:before{
-
+                        background: grey;
                     }
+                }
+            }
+        }
+        tr:nth-child(even){
+            td{
+                background: #f4f5fa;
+            }
+        }
+        tr{
+            td:first-child{
+                white-space: normal;
+
+                a{
+                    display: inline-block;
+                    min-width: 200px;
                 }
             }
         }
     }
 }
-
+.ac{
+    text-align: center;
+}
 
 
 
@@ -902,6 +988,10 @@ html body .content .content-wrapper{
     .add_node.card .button_wrap .btn-block {
         width: calc(100% - 15px) !important;
     }
+    .ticket-list__head-link{
+        padding: 0;
+        font-size: 11px;
+    }
 }
 
 @media only screen and (max-width: 480px) {
@@ -917,6 +1007,23 @@ html body .content .content-wrapper{
         .p-3 {
             padding: 3rem 20px 20px !important;
         }
+    }
+    .ticket-list__head{
+        height: auto;
+        flex-wrap: wrap;
+    }
+    .ticket-list__head-tab{
+        width: 100%;
+        order: 2;
+        height: 40px;
+    }
+    .ticket-list__head .add_btn{
+        margin: 0 auto 15px;
+    }
+    .ticket-list__head-link{
+        margin: 0;
+        width: 50%;
+        justify-content: center;
     }
 }
 
