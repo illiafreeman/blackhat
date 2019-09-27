@@ -7,14 +7,13 @@
     <meta name="description" content="Crypto">
     <meta name="keywords" content="Crypto">
     <meta name="author" content="Crypto">
-    <title>Ticket List</title>
+    <title>Ticket</title>
     <link rel="apple-touch-icon" href="img/apple-icon-120.png">
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Muli:300,300i,400,400i,600,600i,700,700i|Comfortaa:300,400,500,700" rel="stylesheet">
     <!--common styles-->
     <link rel="stylesheet" type="text/css" href="css/vendors.css">
     <link rel="stylesheet" type="text/css" href="css/app.css">
-
     <!--all except login-->
     <link rel="stylesheet" type="text/css" href="css/vertical-compact-menu.min.css">
     <!--common styles-->
@@ -238,8 +237,11 @@
                             <li class="breadcrumb-item">
                                 <a class="link" href="">Dashboard</a>
                             </li>
+                            <li class="breadcrumb-item">
+                                <a class="link" href="">Support Center</a>
+                            </li>
                             <li class="breadcrumb-item active">
-                                Support Center
+                                Ticket
                             </li>
                         </ol>
                     </div>
@@ -247,42 +249,40 @@
             </div>
         </div>
         <div class="content-body">
-            <div class="ticket-list card">
+            <div class="ticket card">
                 <div class="card-body">
-                    <div class="ticket-list__head">
-                        <div class="ticket-list__head-tab">
-                            <a href="" class="ticket-list__head-link active">Open Tickets</a>
-                            <a href="" class="ticket-list__head-link">Closed Tickets</a>
+                    <a href="" class="ticket__name">Как летать в черном пакете в авиакомпании Победа?</a>
+                    <div class="message">
+                        <div class="message__ava">
+                            <img src="img/btc.png" alt="">
                         </div>
-                        <a href="#" class="btn-gradient-secondary add_btn btn-sm btn round"><i class="la la-plus"></i>Создать</a>
+                        <div class="message__body">
+                            <textarea class="message__text" name="" id="" cols="30" rows="10"></textarea>
+                            <div class="message__action">
+                                <a href="" class="btn-gradient-primary btn-block my-1">Close Ticket</a>
+                                <button type="submit" class="btn-gradient-secondary btn-block my-1">Reply</button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="ticketlist-wrap">
-                        <table class="ticketlist">
-                            <tr>
-                                <th>Ticket Name</th>
-                                <th class="ac">Created</th>
-                                <th class="ac">Last Update</th>
-                                <th>Status</th>
-                            </tr>
-                            <tr>
-                                <td><a class="link" href="">Как правильно докупить багаж в авиакомпании Победа?</a></td>
-                                <td class="ac">15 days ago</td>
-                                <td class="ac">today</td>
-                                <td class="td_status status_wait_team"><span>Awaiting Support team answer</span></td>
-                            </tr>
-                            <tr>
-                                <td><a class="link" href="">В отчете об удобстве пользования браузером Chrome недостаточно</a></td>
-                                <td class="ac">15 days ago</td>
-                                <td class="ac">today</td>
-                                <td class="td_status status_wait"><span>Awaiting Your answer</span></td>
-                            </tr>
-                            <tr>
-                                <td><a class="link" href="">Change account data</a></td>
-                                <td class="ac">15 days ago</td>
-                                <td class="ac">today</td>
-                                <td class="td_status status_closed"><span>Closed</span></td>
-                            </tr>
-                        </table>
+                    <div class="message__list">
+                        <div class="message__item">
+                            <div class="message__item-ava">
+                                <img src="img/xmr.png" alt="">
+                            </div>
+                            <div class="message__item-body">
+                                <div class="message__item-date">12:10</div>
+                                <div class="message__item-inner">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, libero, nam! Commodi distinctio ea incidunt magnam nemo quia quibusdam quidem quo ratione sunt ullam, velit vero voluptates? Iusto, libero, omnis.</div>
+                            </div>
+                        </div>
+                        <div class="message__item message__item_user">
+                            <div class="message__item-ava">
+                                <img src="img/eth.png" alt="">
+                            </div>
+                            <div class="message__item-body">
+                                <div class="message__item-date">Вчера 12:56</div>
+                                <div class="message__item-inner">а черные пакеты когда будут раздавать?</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -297,49 +297,12 @@
     Copyright&nbsp;&copy;&nbsp;2019 <a class="link" href="">CRYPTO</a>, All rights reserved.
 </footer>
 
-<div class="modal fade modal-confirm" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Confirm Removing</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                Are you sure want to remove<h4>Oolong very faken long masternode name name name</h4>masternode?
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-round btn-outline-black" data-dismiss="modal">Cancel</button>
-                <button type="button" class="btn btn-round btn-outline-danger">Remove</button>
-            </div>
-        </div>
-    </div>
-</div>
 
 <script src="js/vendors.min.js" type="text/javascript"></script>
 <!--except login-->
 <script src="js/app-menu.min.js" type="text/javascript"></script>
 <script src="js/app.min.js" type="text/javascript"></script>
 <!--end except login-->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </body>
 </html>

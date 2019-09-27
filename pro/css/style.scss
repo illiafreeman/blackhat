@@ -673,7 +673,33 @@ html body .content .content-wrapper{
 .ac{
     text-align: center;
 }
+.ticket{
+    width: 100%;
+    &__name{
 
+    }
+    .message{
+        &__ava{
+            img{
+
+            }
+        }
+        &__body{
+
+        }
+        &__text{
+
+        }
+        &__action{
+            .btn-gradient-primary{
+
+            }
+            .btn-gradient-secondary{
+
+            }
+        }
+    }
+}
 
 
 
