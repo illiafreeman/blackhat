@@ -675,27 +675,122 @@ html body .content .content-wrapper{
 }
 .ticket{
     width: 100%;
+    margin: 0 auto;
+    .card-body{
+        max-width: 600px;
+        margin: 0 auto;
+    }
     &__name{
+        font-weight: 400;
+        font-size: 20px;
+        margin-bottom: 15px;
+        line-height: 28px;
+        position: relative;
+        padding-left: 20px;
+        &:before {
+            display: block;
+            content: '';
+            position: absolute;
+            left: 0;
+            height: 6px;
+            width: 6px;
+            top: 12px;
+            border-radius: 50%;
+        }
+        &.status_wait_team{
+            &:before {
+                background: limegreen;
+            }
+        }
+        &.status_wait{
+            &:before {
+                background: red;
+            }
+        }
+        &.status_closed{
+            &:before {
+                background: grey;
+            }
+        }
 
     }
     .message{
+        display: flex;
+        margin-bottom: 50px;
         &__ava{
+            width: 40px;
+            flex: 0 0 40px;
+            margin-right: 10px;
             img{
-
+                width: 100%;
             }
         }
         &__body{
-
+            flex: 1 0 auto;
         }
         &__text{
-
+            width: 100%;
+            min-height: 100px;
         }
         &__action{
-            .btn-gradient-primary{
+            display: flex;
+            justify-content: space-between;
+            .btn-gradient-primary, .btn-gradient-secondary{
+                &:hover{
+                    color: #fff;
+                }
+            }
+        }
+        &__list{
+
+        }
+        &__item{
+            display: flex;
+            margin-bottom: 10px;
+            &-ava{
+                width: 40px;
+                flex: 0 0 40px;
+                margin-right: 10px;
+                img{
+                    width: 100%;
+                }
+            }
+            &-body{
 
             }
-            .btn-gradient-secondary{
+            &-date{
+                font-size: 10px;
+                margin-bottom: 4px;
+            }
+            &-inner{
+                background: #2a7ad7;
+                background: -moz-linear-gradient(left,  #2a7ad7 0%, #40bcf3 100%);
+                background: -webkit-linear-gradient(left,  #2a7ad7 0%,#40bcf3 100%);
+                background: linear-gradient(to right,  #2a7ad7 0%,#40bcf3 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2a7ad7', endColorstr='#40bcf3',GradientType=1 );
 
+                color: #fff;
+                padding: 10px;
+                border-radius: 10px;
+                border-top-left-radius: 0;
+            }
+            &_user{
+                justify-content: flex-end;
+                .message__item-ava{
+                    order: 2;
+                }
+                .message__item-inner{
+                    background: #f1f1f4;
+                    color: #464855;
+                    border-radius: 10px;
+                    border-bottom-right-radius: 0;
+                }
+                .message__item-ava{
+                    margin: 0 0 0 10px;
+                }
+                .message__item-date{
+                    text-align: right;
+                }
             }
         }
     }
@@ -1024,6 +1119,13 @@ html body .content .content-wrapper{
     .node-body .node-table__row div:first-child{
         width: 125px;
         flex: 0 0 125px;
+    }
+    .ticket .message__action .btn-gradient-primary, .ticket .message__action .btn-gradient-secondary{
+        padding: 8px 20px;
+        font-size: 12px;
+    }
+    .ticket .message__body{
+        flex: 1 1 auto;
     }
 }
 

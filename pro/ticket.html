@@ -251,20 +251,28 @@
         <div class="content-body">
             <div class="ticket card">
                 <div class="card-body">
-                    <a href="" class="ticket__name">Как летать в черном пакете в авиакомпании Победа?</a>
+
+                    <!--/*в зависимости от статуса добавляем класс status_wait_team || status_wait || status_closed*/-->
+                    <div class="ticket__name status_wait_team">Как можно докупить багаж и черный пакет в авиакомпании Победа?</div>
                     <div class="message">
                         <div class="message__ava">
                             <img src="img/btc.png" alt="">
                         </div>
                         <div class="message__body">
-                            <textarea class="message__text" name="" id="" cols="30" rows="10"></textarea>
+                            <textarea class="message__text form-control" placeholder="Enter text here..." name="" id=""></textarea>
                             <div class="message__action">
-                                <a href="" class="btn-gradient-primary btn-block my-1">Close Ticket</a>
-                                <button type="submit" class="btn-gradient-secondary btn-block my-1">Reply</button>
+                                <a href="" class="btn-gradient-primary my-1">Close Ticket</a>
+                                <button type="submit" class="btn-gradient-secondary my-1">Reply</button>
                             </div>
                         </div>
                     </div>
                     <div class="message__list">
+                        <div class="message__item message__item_user">
+                            <div class="message__item-body">
+                                <div class="message__item-date">Вчера 12:56</div>
+                                <div class="message__item-inner">а черные пакеты когда будут раздавать?</div>
+                            </div>
+                        </div>
                         <div class="message__item">
                             <div class="message__item-ava">
                                 <img src="img/xmr.png" alt="">
@@ -272,15 +280,6 @@
                             <div class="message__item-body">
                                 <div class="message__item-date">12:10</div>
                                 <div class="message__item-inner">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, libero, nam! Commodi distinctio ea incidunt magnam nemo quia quibusdam quidem quo ratione sunt ullam, velit vero voluptates? Iusto, libero, omnis.</div>
-                            </div>
-                        </div>
-                        <div class="message__item message__item_user">
-                            <div class="message__item-ava">
-                                <img src="img/eth.png" alt="">
-                            </div>
-                            <div class="message__item-body">
-                                <div class="message__item-date">Вчера 12:56</div>
-                                <div class="message__item-inner">а черные пакеты когда будут раздавать?</div>
                             </div>
                         </div>
                     </div>
