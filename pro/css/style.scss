@@ -795,6 +795,30 @@ html body .content .content-wrapper{
         }
     }
 }
+.ticket__create{
+
+}
+.ticket__create-wrap{
+    display: flex;
+    width: calc(600px - 3rem);
+    flex-direction: column;
+    .ticket__create{
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+    input{
+        margin-bottom: 1rem;
+    }
+    .message__action{
+        justify-content: flex-end;
+    }
+}
+
+
+
+
+
+
 
 
 
@@ -859,6 +883,18 @@ html body .content .content-wrapper{
         justify-content: center;
         .slider{
             margin-top: 5px;
+        }
+    }
+}
+
+@media only screen and (max-width: 800px){
+    .ticket-card__create{
+        width: 100%;
+        .card-body{
+            width: 100%;
+            .ticket__create-wrap{
+                width: 100%;
+            }
         }
     }
 }
