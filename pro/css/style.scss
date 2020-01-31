@@ -813,11 +813,43 @@ html body .content .content-wrapper{
         justify-content: flex-end;
     }
 }
-
-
-
-
-
+.settings{
+    align-items: flex-start;
+}
+.setting{
+    width: calc(33.333% - 20px);
+    margin: 0 10px;
+    .has-error{
+        .select2-container--default .select2-selection--single{
+            border-color: red;
+        }
+    }
+}
+.button_wrap.ac{
+    justify-content: center;
+}
+.btn-gradient-primary{
+    &:hover{
+        color: #fff;
+    }
+}
+.checkbox-group{
+    margin-top: 50px;
+    .switch{
+        cursor: pointer;
+        margin-bottom: 10px;
+        color: #777777;
+        line-height: 1.2;
+        .slider{
+            margin-right: 15px;
+            flex: 1 0 auto;
+        }
+    }
+}
+.or{
+    margin: 30px 0;
+    text-align: center;
+}
 
 
 
@@ -865,6 +897,14 @@ html body .content .content-wrapper{
 @media only screen and (max-width: 1280px) {
     .coin{
         width: calc(50% - 20px);
+    }
+    .settings{
+        flex-direction: column;
+        align-items: center;
+    }
+    .setting{
+        width: 400px;
+        margin: 15px 0;
     }
 }
 
@@ -1162,6 +1202,10 @@ html body .content .content-wrapper{
     }
     .ticket .message__body{
         flex: 1 1 auto;
+    }
+    .setting{
+        width: 100%;
+        margin: 15px 0;
     }
 }
 
