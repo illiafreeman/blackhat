@@ -926,6 +926,69 @@ html body .content .content-wrapper{
         }
     }
 }
+.invoice-amount{
+    margin: 10px 0 20px;
+    padding-left: 10px;
+    b{
+        padding-left: 15px;
+        font-size: 17px;
+    }
+}
+.invoice-page{
+    width: 100%;
+    .invoice-form{
+        margin: 0 auto 40px;
+    }
+    .invoice-table{
+        width: 100%;
+        table{
+            width: 100%;
+            border: 1px solid #ddd;
+            th,td{
+                border: 1px solid #ddd;
+                padding: 8px;
+                white-space: nowrap;
+                .btn {
+                    padding: 5px;
+                }
+            }
+        }
+        .card-body{
+            padding-top: 0;
+
+            &__inner{
+                overflow: auto;
+                width: 100%;
+            }
+        }
+    }
+}
+.wal{
+    width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    &+.la{
+        cursor: pointer;
+    }
+}
+.invoice-form .has-error .select2-container--default .select2-selection--single {
+    border-color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1310,6 +1373,9 @@ html body .content .content-wrapper{
     .setting{
         width: 100%;
         margin: 15px 0;
+    }
+    .invoice-form.add_node.card{
+        width: 100%;
     }
 }
 
