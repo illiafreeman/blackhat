@@ -1042,9 +1042,24 @@ html body .content .content-wrapper{
 .breadcrumb-new .add_btn.pay{
     padding: 6px 15px 6px 10px;
 }
-
-
-
+.faq{
+    max-width: 500px;
+    margin: 0 auto;
+    .card{
+        .card-body{
+            padding-top: 0;
+            padding-left: 50px;
+        }
+    }
+}
+.collapse-icon a[data-toggle="collapse"]::before, .collapse-icon a[data-toggle="collapse"]::after{
+    top: 29px;
+    font-weight: 600;
+}
+.collapse-icon.left a {
+    display: block;
+    font-weight: 400;
+}
 
 
 
