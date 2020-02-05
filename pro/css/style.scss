@@ -198,6 +198,9 @@ html body .content .content-wrapper{
             font-size: 13px;
             margin-right: 4px;
         }
+        .icon-question{
+            margin-right: 7px;
+        }
         &:hover{
             color: #fff;
         }
@@ -860,6 +863,7 @@ html body .content .content-wrapper{
     flex-wrap: wrap;
     margin: 0 -10px;
     justify-content: center;
+    width: calc(100% + 20px);
 }
 .billing{
     width: calc(16.666% - 20px);
@@ -969,6 +973,7 @@ html body .content .content-wrapper{
     text-transform: uppercase;
     .la{
         font-size: 12px;
+        margin-right: 4px;
     }
     &-wrap{
         position: absolute;
