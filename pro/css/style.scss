@@ -1065,7 +1065,7 @@ html body .content .content-wrapper{
     }
 }
 .wal{
-    width: 200px;
+    //width: 200px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -1073,6 +1073,19 @@ html body .content .content-wrapper{
     &+.la{
         cursor: pointer;
     }
+    &.max{
+        width: auto !important;
+    }
+}
+.row_empty{
+    .wal{
+        &+.la{
+            display: none;
+        }
+    }
+}
+.toast:hover{
+    box-shadow: 0 0 12px #999999 !important;
 }
 .invoice-form .has-error .select2-container--default .select2-selection--single {
     border-color: red;
@@ -1345,6 +1358,9 @@ button.toast-close-button {
     .billing {
         width: calc(25% - 20px);
     }
+    .wal {
+        width: 200px;
+    }
 }
 
 @media only screen and (max-width: 1360px) {
@@ -1398,6 +1414,9 @@ button.toast-close-button {
     .setting{
         width: 400px;
         margin: 15px 0;
+    }
+    .wal {
+        width: 100px;
     }
 
 }
@@ -1880,6 +1899,9 @@ button.toast-close-button {
     justify-content: center;
     .load-more-data{
         cursor: pointer;
+    }
+    &.pad{
+        padding: 25px 0 10px;
     }
 }
 .oh{

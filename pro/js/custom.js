@@ -41,7 +41,13 @@ $('.node-action__wrap').click(function (e) {
     $('.preload').toggleClass('vis');
     $('body').toggleClass('oh');
 });*/
-
+/*toastr options*/
+toastr.options = {
+    closeButton: true,
+    "positionClass": "toast-bottom-right",
+    "timeOut": "3000"/*too long timeout for test*/
+};
+/*end toastr options*/
 
 
 
