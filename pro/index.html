@@ -227,7 +227,7 @@
                             <h6 class="card-title text-center">You don't have Masternodes yet!</h6>
                         </div>
                         <div class="card-body text-center">
-                            <a href="#">
+                            <a href="javascript: void(0);" onclick="toastr.info('create one button clicked');">
                                 <i class="la la-plus font-large-3 bg-warning bg-glow white rounded-circle p-3 d-inline-block"></i>
                                 Create One
                             </a>
@@ -294,6 +294,22 @@
 <!--end except login-->
 <script src="js/custom.js"></script>
 
+
+<script type="text/javascript">
+    /*toastr options*/
+    toastr.options = {
+        closeButton: true,
+        "positionClass": "toast-bottom-right",
+        "timeOut": "1000000000"/*too long timeout for test*/
+    };
+    /*end toastr options*/
+    /*toastr demo init*/
+    toastr.info('Hi! I am info message.');
+    toastr.warning('Hi! I am info message.');
+    toastr.success('Hi! I am info message.');
+    toastr.error('Hi! I am info message.');
+    /*end toastr demo init*/
+</script>
 
 </body>
 </html>
