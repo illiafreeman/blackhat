@@ -1044,7 +1044,7 @@ html body .content .content-wrapper{
         width: 100%;
         table{
             width: 100%;
-            border: 1px solid #ddd;
+            //border: 1px solid #ddd;
             th,td{
                 border: 1px solid #ddd;
                 padding: 8px;
@@ -1339,6 +1339,62 @@ button.toast-close-button {
         padding: 15px 50px 15px 15px;
     }
 }
+
+.button-cell{
+    border: 0 !important;
+    padding: 65px 0 0 !important;
+    //position: relative;
+    .load-more-data__wrap{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
