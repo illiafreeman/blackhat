@@ -1405,8 +1405,13 @@ html body .content .content-wrapper {
     display: flex;
     flex-direction: column;
 }
-
-
+.tarif-info{
+    padding: 0 30px 30px;
+    text-align: center;
+}
+.graf{
+    width: 100%;
+}
 
 
 
@@ -1524,7 +1529,15 @@ html body .content .content-wrapper {
     .wal {
         width: 100px;
     }
-
+    .dash-empty__inner{
+        flex-wrap: wrap;
+        .card{
+            margin: 0 0 30px;
+            &:last-child{
+                margin: 0;
+            }
+        }
+    }
 }
 
 @media only screen and (max-width: 980px) {
@@ -1876,6 +1889,11 @@ html body .content .content-wrapper {
         margin: 0;
         width: 50%;
         justify-content: center;
+    }
+    .dash-empty__inner{
+        .card{
+            width: 100%;
+        }
     }
 }
 

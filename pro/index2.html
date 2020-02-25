@@ -7,7 +7,7 @@
     <meta name="description" content="Crypto">
     <meta name="keywords" content="Crypto">
     <meta name="author" content="Crypto">
-    <title>Dashboard</title>
+    <title>Dashboard2</title>
     <link rel="apple-touch-icon" href="img/apple-icon-120.png">
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Muli:300,300i,400,400i,600,600i,700,700i|Comfortaa:300,400,500,700" rel="stylesheet">
@@ -220,6 +220,14 @@
     <!--block to reload-->
     <div class="content-wrapper">
         <div class="content-body">
+            <div class="card graf">
+                <div class="card-header">
+                    <h6 class="card-title text-center">вы не подключили тариф</h6>
+                </div>
+                <div class="card-body fdc">
+                    <canvas id="canvas"></canvas>
+                </div>
+            </div>
             <div class="dash-empty">
                 <div class="dash-empty__inner">
                     <div class="add_node card">
@@ -233,19 +241,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="add_node card">
-                        <div class="card-header">
-                            <h6 class="card-title text-center">вы не подключили тариф</h6>
-                        </div>
-                        <div class="card-body fdc">
-                            <div class="tarif-info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cumque debitis ea esse expedita illo magni omnis, quam ratione recusandae, sapiente tenetur vitae. Atque dolore earum, nulla quam sit totam!</div>
-                            <div class="button_wrap ac">
-                                <div class="btn btn-gradient-primary">
-                                    Выбрать Тарифный План
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </div>
@@ -265,8 +261,171 @@
 <script src="js/app-menu.min.js" type="text/javascript"></script>
 <script src="js/app.min.js" type="text/javascript"></script>
 <!--end except login-->
+<script src="js/moment.js"></script>
+<script src="js/chart.js"></script>
 <script src="js/custom.js"></script>
+<script>
+    window.chartColors = {
+        red: 'rgb(255, 99, 132)',
+        orange: 'rgb(255, 159, 64)',
+        yellow: 'rgb(255, 205, 86)',
+        green: 'rgb(75, 192, 192)',
+        blue: 'rgb(54, 162, 235)',
+        purple: 'rgb(153, 102, 255)',
+        grey: 'rgb(201, 203, 207)'
+    };
 
+    function newDateString(days) {
+        return moment().add(days, 'd').format();
+    }
+
+    var color = Chart.helpers.color;
+    var config = {
+        type: 'line',
+        data: {
+            datasets: [{
+                label: 'Dataset with string point data',
+                backgroundColor: color(window.chartColors.red).alpha(0.5).rgbString(),
+                borderColor: window.chartColors.red,
+                fill: false,
+                data: [{
+                    x: newDateString(-30),
+                    y: null
+                }, {
+                    x: newDateString(-29),
+                    y: null
+                }, {
+                    x: newDateString(-28),
+                    y: null
+                }, {
+                    x: newDateString(-27),
+                    y: null
+                }, {
+                    x: newDateString(-26),
+                    y: null
+                }, {
+                    x: newDateString(-25),
+                    y: null
+                }, {
+                    x: newDateString(-24),
+                    y: null
+                }, {
+                    x: newDateString(-23),
+                    y: null
+                }, {
+                    x: newDateString(-22),
+                    y: null
+                }, {
+                    x: newDateString(-21),
+                    y: null
+                }, {
+                    x: newDateString(-20),
+                    y: null
+                }, {
+                    x: newDateString(-19),
+                    y: null
+                }, {
+                    x: newDateString(-18),
+                    y: 0
+                }, {
+                    x: newDateString(-17),
+                    y: 0
+                }, {
+                    x: newDateString(-16),
+                    y: 0
+                }, {
+                    x: newDateString(-15),
+                    y: 0
+                }, {
+                    x: newDateString(-14),
+                    y: 1
+                }, {
+                    x: newDateString(-13),
+                    y: 2
+                }, {
+                    x: newDateString(-12),
+                    y: 0
+                }, {
+                    x: newDateString(-11),
+                    y: 0
+                }, {
+                    x: newDateString(-10),
+                    y: 0
+                }, {
+                    x: newDateString(-9),
+                    y: 0
+                }, {
+                    x: newDateString(-8),
+                    y: 0
+                }, {
+                    x: newDateString(-7),
+                    y: 0
+                }, {
+                    x: newDateString(-6),
+                    y: 15
+                }, {
+                    x: newDateString(-5),
+                    y: 6
+                }, {
+                    x: newDateString(-4),
+                    y: 15
+                }, {
+                    x: newDateString(-3),
+                    y: 4
+                }, {
+                    x: newDateString(-2),
+                    y: 2
+                }, {
+                    x: newDateString(-1),
+                    y: 3
+                }, {
+                    x: newDateString(0),
+                    y: 5
+                }],
+            }]
+        },
+        options: {
+            responsive: true,
+            aspectRatio: 3,
+            maintainAspectRatio: false,
+            legend:{
+                display: false
+            },
+            title: {
+                display: false
+            },
+            scales: {
+                xAxes: {
+                    type: 'time',
+                    display: true,
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Date'
+                    },
+                    ticks: {
+                        major: {
+                            fontStyle: 'bold',
+                            fontColor: '#FF0000'
+                        }
+                    }
+                },
+                yAxes: {
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Число сбоев'
+                    },
+                    beginAtZero: true
+
+                }
+            }
+        }
+    };
+
+    window.onload = function() {
+        var ctx = document.getElementById('canvas').getContext('2d');
+        window.myLine = new Chart(ctx, config);
+    };
+</script>
 
 </body>
 </html>
