@@ -1393,6 +1393,7 @@ button.toast-close-button {
     &__inner{
         display: flex;
         justify-content: center;
+        width: calc(100% - 170px);
     }
 }
 html body .content .content-wrapper {
@@ -1409,14 +1410,52 @@ html body .content .content-wrapper {
     padding: 0 30px 30px;
     text-align: center;
 }
-.graf{
-    width: 100%;
+.coin-table__row_chart.chart-dash div input {
+    margin-top: 40px !important;
 }
+.coin-table__row_chart.chart-dash div::after{
+    display: none;
+}
+.coin-table__row_chart.chart-dash{
+    position: relative;
+    .dial{
+        font: bold 33px Arial !important;
+    }
+    .chart-dash__text{
+        position: absolute;
+        bottom: 30px;
+        left: 0;
+        right: 0;
+        color: rgb(40, 208, 148);
+    }
+}
+.tarif{
+    &-info{
+        height: 150px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        &__name{
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+        &__date{
+            b{
+                font-size: 20px !important;
+            }
+        }
+    }
+}
+.dash-empty__full{
+    .dash-empty__inner{
+        width: 100%;
+        .graf{
+            flex: 0 0 calc(50% - 20px);
+        }
+    }
 
-
-
-
-
+}
 
 
 

@@ -220,25 +220,46 @@
     <!--block to reload-->
     <div class="content-wrapper">
         <div class="content-body">
-            <div class="card graf">
-                <div class="card-header">
-                    <h6 class="card-title text-center">вы не подключили тариф</h6>
-                </div>
-                <div class="card-body fdc">
-                    <canvas id="canvas"></canvas>
-                </div>
-            </div>
-            <div class="dash-empty">
+
+            <div class="dash-empty dash-empty__full">
                 <div class="dash-empty__inner">
+                    <div class="add_node card tarif">
+                        <div class="card-header">
+                            <h6 class="card-title text-center">ваш текущий тариф</h6>
+                        </div>
+                        <div class="card-body fdc">
+                            <div class="tarif-info">
+                                <div class="tarif-info__name">Мамкин Трэйдер</div>
+                                <div class="tarif-info__date">истекает через<br><b>45</b>&nbsp;дней</div>
+                            </div>
+                            <div class="button_wrap ac">
+                                <div class="btn btn-gradient-primary">
+                                    Сменить Тарифный План
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="add_node card">
                         <div class="card-header">
-                            <h6 class="card-title text-center">You don't have Masternodes yet!</h6>
+                            <h6 class="card-title text-center">работоспособные ноды</h6>
                         </div>
-                        <div class="card-body text-center">
-                            <a href="javascript: void(0);" onclick="toastr.info('create one button clicked');">
-                                <i class="la la-plus font-large-3 bg-warning bg-glow white rounded-circle p-3 d-inline-block"></i>
-                                Create One
-                            </a>
+                        <div class="card-body">
+                            <div class="coin-body">
+                                <div class="coin-table">
+                                    <div class="coin-table__row_chart chart-dash">
+                                        <input type="text" value="90" class="dial" data-thickness=".1" data-width="130" data-height="130">
+                                        <div class="chart-dash__text">активных</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card graf add_node">
+                        <div class="card-header">
+                            <h6 class="card-title text-center">график сбоев</h6>
+                        </div>
+                        <div class="card-body fdc">
+                            <canvas id="canvas"></canvas>
                         </div>
                     </div>
 
@@ -263,8 +284,21 @@
 <!--end except login-->
 <script src="js/moment.js"></script>
 <script src="js/chart.js"></script>
+<script src="js/jquery.knob.min.js" type="text/javascript"></script>
+<script src="js/excanvas.js" type="text/javascript"></script>
 <script src="js/custom.js"></script>
 <script>
+    $(function() {
+        $(".dial").knob({
+            'readOnly': true,
+            'format': function (value) {
+                return value + '%';
+            },
+            'fgColor': '#28d094'
+        });
+    });
+
+
     window.chartColors = {
         red: 'rgb(255, 99, 132)',
         orange: 'rgb(255, 159, 64)',
