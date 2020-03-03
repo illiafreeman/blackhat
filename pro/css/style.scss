@@ -1095,6 +1095,7 @@ html body .content .content-wrapper{
 }
 .faq{
     max-width: 500px;
+    width: 500px;
     margin: 0 auto;
     .card{
         .card-body{
@@ -1460,9 +1461,27 @@ html body .content .content-wrapper {
         flex: 0 0 calc(50% - 20px);
     }
 }
+.err{
+    padding: 2px;
+    .la{
+        margin: 0 !important;
+        font-size: 15px;
+    }
+}
+.err_all{
+    position: relative;
+    bottom: 26px;
+    right: 33px;
+}
+.notify-list{
+    .card-header{
+        .icon-bg-circle{
+            transform: translateX(-10px);
+            display: inline-block;
+        }
+    }
 
-
-
+}
 
 
 
