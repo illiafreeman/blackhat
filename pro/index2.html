@@ -309,6 +309,7 @@
         return moment().add(days, 'd').format();
     }
 
+
     var color = Chart.helpers.color;
     var config = {
         type: 'line',
@@ -423,6 +424,9 @@
             },
             title: {
                 display: false
+            },
+            tooltips: {
+                position: 'average'
             },
             scales: {
                 xAxes: {
