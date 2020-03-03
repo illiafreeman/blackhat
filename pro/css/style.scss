@@ -1411,27 +1411,33 @@ html body .content .content-wrapper {
     text-align: center;
 }
 .coin-table__row_chart.chart-dash div input {
-    margin-top: 40px !important;
+    margin-top: 47px !important;
 }
 .coin-table__row_chart.chart-dash div::after{
     display: none;
 }
-.coin-table__row_chart.chart-dash{
+.chart-dash{
     position: relative;
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     .dial{
         font: bold 33px Arial !important;
     }
     .chart-dash__text{
-        position: absolute;
-        bottom: 30px;
-        left: 0;
-        right: 0;
+        transform: translateY(-50px);
         color: rgb(40, 208, 148);
+    }
+    &__body{
+        display: flex;
+        flex-direction: column;
     }
 }
 .tarif{
     &-info{
-        height: 150px;
+        height: 220px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -1447,15 +1453,15 @@ html body .content .content-wrapper {
         }
     }
 }
-.dash-empty__full{
-    .dash-empty__inner{
-        width: 100%;
-        .graf{
-            flex: 0 0 calc(50% - 20px);
-        }
-    }
 
+.dash-empty__inner{
+    width: 100%;
+    .graf{
+        flex: 0 0 calc(50% - 20px);
+    }
 }
+
+
 
 
 
@@ -1510,6 +1516,18 @@ html body .content .content-wrapper {
     }
     .wal {
         width: 200px;
+    }
+}
+@media only screen and (max-width: 1500px) {
+    .dash-empty__inner{
+        flex-wrap: wrap;
+        .add_node{
+            width: 300px;
+            &.graf{
+                flex: 0 0 calc(100% - 20px);
+                margin-top: 20px;
+            }
+        }
     }
 }
 
@@ -1571,10 +1589,7 @@ html body .content .content-wrapper {
     .dash-empty__inner{
         flex-wrap: wrap;
         .card{
-            margin: 0 0 30px;
-            &:last-child{
-                margin: 0;
-            }
+            margin: 0 10px;
         }
     }
 }
@@ -1598,6 +1613,9 @@ html body .content .content-wrapper {
         }
     }
     .billing {
+        width: calc(50% - 20px);
+    }
+    .dash-empty__inner .add_node {
         width: calc(50% - 20px);
     }
 }
@@ -1832,6 +1850,16 @@ html body .content .content-wrapper {
         padding-right: 0;
         display: flex !important;
         width: 100%;
+    }
+}
+
+@media only screen and (max-width: 700px){
+    .dash-empty__inner .add_node {
+        width: calc(100% - 20px);
+        margin-bottom: 20px;
+        &.graf{
+            margin-top: 0;
+        }
     }
 }
 
