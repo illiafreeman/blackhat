@@ -1527,7 +1527,20 @@ html body .content .content-wrapper {
 .toast-info{
     background-position: 15px 13px !important;
 }
-
+.notify-list{
+    .card-header{
+        text-transform: uppercase;
+    }
+    .media{
+        p{
+            margin-bottom: 5px;
+            span{
+                font-size: 0.9rem !important;
+                color: #98A4B8 !important;
+            }
+        }
+    }
+}
 
 
 
