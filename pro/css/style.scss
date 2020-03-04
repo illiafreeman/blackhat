@@ -1485,7 +1485,33 @@ html body .content .content-wrapper {
 .clear-all{
     padding: 3px;
 }
-
+.dropdown-notification{
+    .notification-text{
+        color: #464855;
+        line-height: 1.4;
+        p{
+            margin-bottom: 5px;
+            color: #464855;
+            span{
+                color: #6b6f82;
+                font-size: 12px;
+                font-weight: 300;
+            }
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+        ul{
+            padding: 0;
+            li{
+                line-height: 1.4;
+            }
+        }
+    }
+    .media-left{
+        padding: 2px 8px 0 0;
+    }
+}
 
 
 
