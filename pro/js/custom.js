@@ -45,7 +45,7 @@ $('.node-action__wrap').click(function (e) {
 toastr.options = {
     closeButton: true,
     "positionClass": "toast-bottom-right",
-    "timeOut": "3000"/*too long timeout for test*/
+    "timeOut": "300000"/*too long timeout for test*/
 };
 /*end toastr options*/
 

@@ -1512,8 +1512,21 @@ html body .content .content-wrapper {
         padding: 2px 8px 0 0;
     }
 }
-
-
+.toast-message{
+    .media-heading{
+        color: #fff;
+        margin-bottom: 10px;
+    }
+    p{
+        margin-bottom: 5px;
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+}
+.toast-info{
+    background-position: 15px 13px !important;
+}
 
 
 
