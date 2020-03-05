@@ -1400,8 +1400,11 @@ button.toast-close-button {
 html body .content .content-wrapper {
     min-height: calc(100vh - 115px);
 }
-.content-body, .dash-empty{
+.dash-empty{
     min-height: calc(100vh - 145px);
+}
+.content-body{
+    align-items: flex-start;
 }
 .fdc{
     display: flex;
