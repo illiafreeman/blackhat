@@ -407,6 +407,7 @@ html body .content .content-wrapper{
     transform: none;
     opacity: 0;
     visibility: hidden;
+    width: 320px;
     transform: translateX(0) translateY(20px);
     transition: all 0.2s ease-in-out;
 }
@@ -1859,8 +1860,12 @@ html body .content .content-wrapper {
     .logo_min{
         margin-left: 42px !important;
     }
+    .dropdown.dropdown-notification.nav-item{
+        position: static;
+    }
     .header-navbar .navbar-container .show .dropdown-menu{
         left: auto !important;
+        width: 320px !important;
     }
     .dropdown .dropdown-menu .dropdown-item {
         padding: 10px 11px;
