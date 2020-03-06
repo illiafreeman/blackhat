@@ -411,6 +411,11 @@ html body .content .content-wrapper{
     transform: translateX(0) translateY(20px);
     transition: all 0.2s ease-in-out;
 }
+.dropdown-user{
+    .dropdown-menu{
+        width: auto !important;
+    }
+}
 .loginform .dropdown-menu{
     top: 58px !important;
 }
@@ -1374,13 +1379,13 @@ button.toast-close-button {
 
 .button-cell{
     border: 0 !important;
-    padding: 65px 0 0 !important;
+    padding: 80px 0 0 !important;
     //position: relative;
     .load-more-data__wrap{
         position: absolute;
         left: 0;
         right: 0;
-        bottom: 20px;
+        bottom: 38px;
     }
 }
 .dash-empty{
@@ -1860,7 +1865,7 @@ html body .content .content-wrapper {
     .logo_min{
         margin-left: 42px !important;
     }
-    .dropdown.dropdown-notification.nav-item{
+    .dropdown.nav-item{
         position: static;
     }
     .header-navbar .navbar-container .show .dropdown-menu{
@@ -1947,6 +1952,9 @@ html body .content .content-wrapper {
         padding-right: 0;
         display: flex !important;
         width: 100%;
+    }
+    .header-navbar .navbar-container .show.dropdown-user .dropdown-menu{
+        width: auto !important;
     }
 }
 
