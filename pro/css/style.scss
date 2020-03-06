@@ -510,21 +510,21 @@ html body .content .content-wrapper{
             &_chart{
                 display: flex;
                 justify-content: center;
+                align-items: center;
                 text-align: center;
+                flex-direction: column;
                 margin: 25px 0 0;
                 div{
                     position: relative;
-                    &:after{
-                        content: 'active';
-                        display: block;
-                        color: #28d094;
-                        font-size: 12px;
-                        font-weight: 300;
-                        transform: translateY(-44px);
-                    }
+
                     input{
                         margin-top: 26px !important;
                     }
+                }
+                .chart-dash__text{
+                    transform: translateY(-40px);
+                    color: #28d094;
+                    font-size: 12px;
                 }
             }
             &_status{
@@ -1422,9 +1422,9 @@ html body .content .content-wrapper {
 }
 .chart-dash{
     position: relative;
-    flex: 1 0 auto;
+    //flex: 1 0 auto;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: column;
     .dial{
@@ -1449,6 +1449,15 @@ html body .content .content-wrapper {
         &__name{
             font-size: 30px;
             margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            span{
+                font-size: 16px;
+            }
+            div{
+                line-height: 1.1;
+                margin-bottom: 15px;
+            }
         }
         &__date{
             b{
@@ -1544,8 +1553,15 @@ html body .content .content-wrapper {
         }
     }
 }
-
-
+.chart-dash__body{
+    .coin-table__row div:first-child{
+        flex: 0 0 auto;
+        width: 67%;
+    }
+}
+.chart-dash{
+    margin-bottom: 20px;
+}
 
 
 
@@ -1937,6 +1953,11 @@ html body .content .content-wrapper {
             margin-top: 0;
         }
     }
+    .chart-dash__body{
+        .coin-table__row div:first-child{
+            width: 55%;
+        }
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -2005,6 +2026,11 @@ html body .content .content-wrapper {
         align-items: center;
         .btn-gradient-secondary.add_btn{
             margin: 25px 0 15px;
+        }
+    }
+    .chart-dash__body{
+        .coin-table__row div:first-child{
+            width: 67%;
         }
     }
 }
