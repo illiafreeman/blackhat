@@ -1568,7 +1568,11 @@ html body .content .content-wrapper {
 .chart-dash{
     margin-bottom: 20px;
 }
-
+.breadcrumb-new .content-header-title{
+    .clear-all{
+        margin-left: 30px;
+    }
+}
 
 
 
@@ -1732,7 +1736,7 @@ html body .content .content-wrapper {
 
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
     .main-menu.menu-dark .navigation > li > a {
         padding: 12px 36px 12px 20px;
     }
@@ -1956,6 +1960,48 @@ html body .content .content-wrapper {
     .header-navbar .navbar-container .show.dropdown-user .dropdown-menu{
         width: auto !important;
     }
+    .faq.notify-list{
+        width: 100%;
+        max-width: 100%;
+    }
+
+
+/*    .vertical-compact-menu.menu-open .content, .vertical-compact-menu.menu-open .footer, .vertical-compact-menu.menu-open .header-navbar {
+        margin-left: 0 !important;
+    }
+    .vertical-overlay-menu .main-menu, .vertical-overlay-menu.menu-hide .main-menu{
+        left: -260px;
+        opacity: 0;
+    }
+    .vertical-layout .main-menu{
+        left: -260px;
+        opacity: 0;
+    }
+    .navbar-container .collapse.navbar-collapse .nav.navbar-nav.mr-auto.float-left{
+        display: block;
+    }
+    .navbar-container{
+        width: 100% !important;
+        padding: 0 8px !important;
+    }
+    .vertical-layout .main-menu, .vertical-layout.menu-hide .main-menu{
+        width: 260px;
+    }
+    .vertical-layout.menu-open .main-menu {
+        opacity: 1;
+        transform: translate3d(260px,0,0);
+        -webkit-transition: width .25s,opacity .25s,-webkit-transform .25s;
+        -o-transition: width .25s,opacity .25s,-o-transform .25s;
+        -moz-transition: width .25s,opacity .25s,transform .25s,-moz-transform .25s;
+        transition: width .25s,opacity .25s,transform .25s;
+        transition: width .25s,opacity .25s,transform .25s,-webkit-transform .25s,-moz-transform .25s,-o-transform .25s;
+    }*/
+}
+
+
+
+@media only screen and (max-width: 767px){
+
 }
 
 @media only screen and (max-width: 700px){
@@ -2039,6 +2085,9 @@ html body .content .content-wrapper {
         align-items: center;
         .btn-gradient-secondary.add_btn{
             margin: 25px 0 15px;
+        }
+        .clear-all{
+            margin: 15px 0 0;
         }
     }
     .chart-dash__body{
