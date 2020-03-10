@@ -1876,6 +1876,18 @@ html body .content .content-wrapper {
         left: auto !important;
         width: 320px !important;
     }
+    .dropdown-menu{
+        left: auto;
+        right: 0;
+    }
+    .header-navbar .navbar-container{
+        .dropdown-language{
+            .dropdown-menu{
+                width: auto !important;
+            }
+        }
+    }
+
     .dropdown .dropdown-menu .dropdown-item {
         padding: 10px 11px;
     }
