@@ -1572,6 +1572,7 @@ html body .content .content-wrapper {
     .navbar.header-navbar{
         margin: 0;
         background: #000;
+        box-shadow: 0 -1px 3px 1px #424242 inset;
         &:before, &:after{
             display: block;
             content: '';
@@ -1603,7 +1604,7 @@ html body .content .content-wrapper {
     }
 }
 .header-navbar.navbar-shadow{
-    box-shadow: 0 -1px 3px 1px #424242 inset;
+
     .logo {
         width: 60px;
         height: 5rem;
