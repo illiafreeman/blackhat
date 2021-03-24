@@ -1581,11 +1581,15 @@ html body .content .content-wrapper {
     margin: 0;
 }
 .vertical-layout{
-    .navbar.header-navbar, .app-content.content, .footer.footer-static{
+    .navbar.header-navbar .navbar-wrapper, .app-content.content, .footer.footer-static{
         width: 1000px;
         margin: 0 auto;
-        border-left: 1px solid #ddd;
-        border-right: 1px solid #ddd;
+        //border-left: 1px solid #ddd;
+        //border-right: 1px solid #ddd;
+    }
+    .navbar.header-navbar{
+        margin: 0;
+        background: rgba(0, 0, 0, 0.4);
     }
 }
 .logo {
@@ -1611,15 +1615,17 @@ html body .content .content-wrapper {
             display: flex;
             height: 100%;
             align-items: center;
-            padding-left: 40px;
+            padding-left: 30px;
             height: 5rem;
         }
     }
 }
 .menu{
-    background-size: 30px 30px;
+    background-size: 20px auto;
     background-position: left center;
     background-repeat: no-repeat;
+    color: #9d9d9d;
+    filter: invert(66%) sepia(3%) saturate(0%) hue-rotate(358deg) brightness(97%) contrast(90%);
     &_ref{
         background-image: url("../img/icon_ref.svg");
     }
@@ -1638,6 +1644,17 @@ html body .content .content-wrapper {
 }
 html body.fixed-navbar {
     padding-top: 7rem;
+
+
+    background: #585858;
+    background: -moz-linear-gradient(left,  #585858 0%, #000000 100%);
+    background: -webkit-linear-gradient(left,  #585858 0%,#000000 100%);
+    background: linear-gradient(to right,  #585858 0%,#000000 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#585858', endColorstr='#000000',GradientType=1 );
+
+
+
+
 }
 .topnav{
     align-items: stretch;
@@ -1664,10 +1681,24 @@ html body.fixed-navbar {
         display: none;
     }
 }
+.card, .card-header{
+    background: rgba(0,0,0,.1)
+}
+.card{
+    box-shadow: -1px -1px 0px 0px #424242 inset;
+}
+.add_node .card-header {
+    padding: 1.5rem;
+}
+html body{
+    *, a{
+        color: #999;
+    }
 
-
-
-
+}
+.btn{
+    border-color: #999;
+}
 
 
 
