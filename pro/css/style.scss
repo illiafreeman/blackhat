@@ -1586,15 +1586,15 @@ html body .content .content-wrapper {
         margin: 0 auto;
     }
 }
-.nav{
-    .logo {
-        display: block;
-        width: 70px;
-
-        .brand-logo {
-            width: 100%;
-        }
+.logo {
+    display: block;
+    width: 70px;
+    .brand-logo {
+        width: 100%;
     }
+}
+.nav{
+
     &.navbar-nav{
         height: 100%;
         li{
@@ -1615,8 +1615,19 @@ html body .content .content-wrapper {
     &_ref{
         background-image: url("../img/icon_ref.svg");
     }
+    &_pur{
+        background-image: url("../img/icon_pur.svg");
+    }
+    &_cla{
+        background-image: url("../img/icon_cla.svg");
+    }
+    &_log{
+        background-image: url("../img/icon_logout.svg");
+    }
 }
-
+.fa-secondary{
+    opacity: .5;
+}
 
 
 
