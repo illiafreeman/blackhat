@@ -1596,7 +1596,7 @@ html body .content .content-wrapper {
     height: 140px;
     align-items: center;
     float: left;
-    margin-right: 60px;
+    margin-right: 40px;
     transition: all 0.2s ease-in-out;
     .brand-logo {
         width: 100%;
@@ -1616,6 +1616,9 @@ html body .content .content-wrapper {
         li{
             margin-right: 30px;
             display: block;
+            &:last-child{
+                margin-right: 0px;
+            }
         }
         .menu{
             display: flex;
@@ -1661,6 +1664,43 @@ html body .content .content-wrapper {
             }
         }
     }
+    &_bal{
+        svg {
+            width: 40px;
+            height: 40px;
+        }
+        &-val{
+            //text-align: center;
+            div{
+                font-size: 12px;
+            }
+            span{
+                font-weight: 700;
+            }
+        }
+        &:hover{
+            color: #919191;
+            svg{
+                path{
+                    fill: #919191;
+                }
+            }
+        }
+    }
+    &_log{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 8px;
+        svg {
+            width: 40px;
+            height: 20px;
+            margin-right: 0;
+        }
+    }
+}
+html body .content .content-wrapper {
+    padding: 0 18px;
 }
 .fa-secondary{
     opacity: .5;
@@ -1675,6 +1715,7 @@ html body.fixed-navbar {
     background: linear-gradient(to right,  #585858 0%,#000000 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#585858', endColorstr='#000000',GradientType=1 );*/
     background: #000 url("../img/wall_2.jpg") center top no-repeat;
+    background-attachment: fixed;
 
 
 
@@ -1694,7 +1735,7 @@ html body.fixed-navbar {
         margin-right: 0;
     }
     .dropdown-language{
-        margin-right: 15px;
+        margin: 0 0 0 10px;
     }
     .ft-menu{
         margin-right: 0;
@@ -1774,7 +1815,12 @@ html body .content .content-wrapper{
         }
     }
 }
-
+.logininfo{
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    margin-top: 30px;
+}
 
 
 
