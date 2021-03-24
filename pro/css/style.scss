@@ -1575,10 +1575,47 @@ html body .content .content-wrapper {
 }
 
 
+/*start hat*/
 
+.vertical-compact-menu .main-menu{
+    margin: 0;
+}
+.vertical-layout{
+    .navbar.header-navbar, .app-content.content, .footer.footer-static{
+        width: 1000px;
+        margin: 0 auto;
+    }
+}
+.nav{
+    .logo {
+        display: block;
+        width: 70px;
 
-
-
+        .brand-logo {
+            width: 100%;
+        }
+    }
+    &.navbar-nav{
+        height: 100%;
+        li{
+            margin-right: 15px;
+        }
+        .menu{
+            display: flex;
+            height: 100%;
+            align-items: center;
+            padding-left: 40px;
+        }
+    }
+}
+.menu{
+    background-size: 30px 30px;
+    background-position: left center;
+    background-repeat: no-repeat;
+    &_ref{
+        background-image: url("../img/icon_ref.svg");
+    }
+}
 
 
 
