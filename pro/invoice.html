@@ -42,7 +42,7 @@
                 <a class="logo" href="">
                     <img class="brand-logo" alt="" src="img/logo.png">
                 </a>
-                <ul class="nav navbar-nav mr-auto float-left">
+                <ul class="nav navbar-nav navleft mr-auto float-left">
                     <li>
                         <a class="menu menu_ref" href="">
                             <svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="ball-pile" role="img"
@@ -76,8 +76,31 @@
                             Claim Coins
                         </a>
                     </li>
+                    <li class="dropdown dropdown-language nav-item">
+                        <a class="dropdown-toggle nav-link" id="dropdown-flag" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="flag-icon flag-icon-gb"></i>
+                            <span class="selected-language"></span>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown-flag">
+                            <a class="dropdown-item" href="#"><i class="flag-icon flag-icon-gb"></i> English</a>
+                            <a class="dropdown-item" href="#"><i class="flag-icon flag-icon-fr"></i> French</a>
+                            <a class="dropdown-item" href="#"><i class="flag-icon flag-icon-cn"></i> Chinese</a>
+                            <a class="dropdown-item" href="#"><i class="flag-icon flag-icon-de"></i> German</a>
+                        </div>
+                    </li>
+                    <li class="logout">
+                        <a class="menu menu_log" href="">
+                            <svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="sign-out" role="img"
+                                 xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 512 512">
+                                <path fill="currentColor"
+                                      d="M48 64h132c6.6 0 12 5.4 12 12v8c0 6.6-5.4 12-12 12H48c-8.8 0-16 7.2-16 16v288c0 8.8 7.2 16 16 16h132c6.6 0 12 5.4 12 12v8c0 6.6-5.4 12-12 12H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48zm279 19.5l-7.1 7.1c-4.7 4.7-4.7 12.3 0 17l132 131.4H172c-6.6 0-12 5.4-12 12v10c0 6.6 5.4 12 12 12h279.9L320 404.4c-4.7 4.7-4.7 12.3 0 17l7.1 7.1c4.7 4.7 12.3 4.7 17 0l164.5-164c4.7-4.7 4.7-12.3 0-17L344 83.5c-4.7-4.7-12.3-4.7-17 0z"
+                                      class=""></path>
+                            </svg>
+                            Logout
+                        </a>
+                    </li>
                 </ul>
-                <ul class="nav navbar-nav float-right">
+                <ul class="nav navbar-nav navright float-right">
                     <li>
                         <div class="menu menu_bal">
                             <svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="wallet" role="img"
@@ -104,7 +127,7 @@
                             <a class="dropdown-item" href="#"><i class="flag-icon flag-icon-de"></i> German</a>
                         </div>
                     </li>
-                    <li>
+                    <li class="logout">
                         <a class="menu menu_log" href="">
                             <svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="sign-out" role="img"
                                  xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 512 512">
@@ -141,6 +164,15 @@
                         <h6 class="card-title text-center">LOG IN</h6>
                     </div>
                     <div class="card-body">
+
+                        <div id="nav-icon4">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+
+
                         <fieldset class="form-label-group button_wrap ac">
                             <a href="" class="btn">Simple btn</a>
                         </fieldset>

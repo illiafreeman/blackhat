@@ -1,5 +1,12 @@
 $(document).ready(function() {
-
+    $('.menu-toggle').click(function(){
+        $('.navleft').toggleClass('vis');
+        $('body').toggleClass('oh');
+        $(this).toggleClass('close');
+    });
+    $('#nav-icon4').click(function(){
+        $(this).toggleClass('open');
+    });
     /*toastr options*/
     toastr.options = {
         closeButton: true,
