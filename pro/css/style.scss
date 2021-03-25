@@ -2093,9 +2093,28 @@ html body .content .content-wrapper{
     top: 70px;
     bottom: 0;
     height: auto;
-    background: rgba(0,0,0,.5);
+    background: rgba(0,0,0,.9);
     opacity: 1;
     z-index: 1000;
+    flex-direction: column !important;
+    padding: 70px 0 0;
+    flex-wrap: nowrap !important;
+    align-items: center;
+    li, .dropdown-language, .logout{
+        display: flex;
+        margin: 0;
+        justify-content: center;
+        .menu{
+            justify-content: center;
+        }
+        &.logout{
+            padding-bottom: 140px;
+            .menu_log{
+                flex-direction: row;
+                font-size: 1rem;
+            }
+        }
+    }
 }
 #nav-icon4 {
     width: 24px;
@@ -2235,6 +2254,9 @@ html body .content .content-wrapper{
     .header-navbar .navbar-container ul.nav li a.menu-toggle {
         padding: 1.7rem 1rem 1.6rem 1rem;
     }
+    .dropdown.dropdown-language{
+        position: relative !important;
+    }
 }
 @media only screen and (max-width: 480px) {
     .nav.navbar-nav.float-right .hambu {
@@ -2242,7 +2264,6 @@ html body .content .content-wrapper{
         -ms-transform: translateX(18px);
         transform: translateX(18px);
         margin-left: 0;
-
     }
     .logo{
         margin-right: 0;
@@ -2250,6 +2271,9 @@ html body .content .content-wrapper{
     .menu_bal svg {
         width: 32px;
         height: 40px;
+    }
+    .add_node {
+        width: 100%;
     }
 }
 
