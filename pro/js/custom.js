@@ -1,11 +1,9 @@
 $(document).ready(function() {
-    $('.menu-toggle').click(function(){
+
+    $('.hambu').click(function(){
         $('.navleft').toggleClass('vis');
         $('body').toggleClass('oh');
-        $(this).toggleClass('close');
-    });
-    $('#nav-icon4').click(function(){
-        $(this).toggleClass('open');
+        $('#nav-icon4').toggleClass('open');
     });
     /*toastr options*/
     toastr.options = {

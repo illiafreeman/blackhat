@@ -2097,9 +2097,9 @@ html body .content .content-wrapper{
     opacity: 1;
     z-index: 1000;
 }
-#nav-icon1, #nav-icon2, #nav-icon3, #nav-icon4 {
-    width: 60px;
-    height: 45px;
+#nav-icon4 {
+    width: 24px;
+    height: 18px;
     position: relative;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
@@ -2112,13 +2112,13 @@ html body .content .content-wrapper{
     cursor: pointer;
 }
 
-#nav-icon1 span, #nav-icon3 span, #nav-icon4 span {
+#nav-icon4 span {
     display: block;
     position: absolute;
-    height: 9px;
+    height: 2px;
     width: 100%;
-    background: #d3531a;
-    border-radius: 9px;
+    background: #919191;
+    border-radius: 1px;
     opacity: 1;
     left: 0;
     -webkit-transform: rotate(0deg);
@@ -2131,39 +2131,6 @@ html body .content .content-wrapper{
     transition: .25s ease-in-out;
 }
 
-#nav-icon1 span:nth-child(1) {
-    top: 0px;
-}
-
-#nav-icon1 span:nth-child(2) {
-    top: 18px;
-}
-
-#nav-icon1 span:nth-child(3) {
-    top: 36px;
-}
-
-#nav-icon1.open span:nth-child(1) {
-    top: 18px;
-    -webkit-transform: rotate(135deg);
-    -moz-transform: rotate(135deg);
-    -o-transform: rotate(135deg);
-    transform: rotate(135deg);
-}
-
-#nav-icon1.open span:nth-child(2) {
-    opacity: 0;
-    left: -60px;
-}
-
-#nav-icon1.open span:nth-child(3) {
-    top: 18px;
-    -webkit-transform: rotate(-135deg);
-    -moz-transform: rotate(-135deg);
-    -o-transform: rotate(-135deg);
-    transform: rotate(-135deg);
-}
-
 #nav-icon4 span:nth-child(1) {
     top: 0px;
     -webkit-transform-origin: left center;
@@ -2173,7 +2140,7 @@ html body .content .content-wrapper{
 }
 
 #nav-icon4 span:nth-child(2) {
-    top: 18px;
+    top: 8px;
     -webkit-transform-origin: left center;
     -moz-transform-origin: left center;
     -o-transform-origin: left center;
@@ -2181,7 +2148,7 @@ html body .content .content-wrapper{
 }
 
 #nav-icon4 span:nth-child(3) {
-    top: 36px;
+    top: 16px;
     -webkit-transform-origin: left center;
     -moz-transform-origin: left center;
     -o-transform-origin: left center;
@@ -2193,8 +2160,8 @@ html body .content .content-wrapper{
     -moz-transform: rotate(45deg);
     -o-transform: rotate(45deg);
     transform: rotate(45deg);
-    top: -3px;
-    left: 8px;
+    top: 0px;
+    left: 4px;
 }
 
 #nav-icon4.open span:nth-child(2) {
@@ -2207,8 +2174,8 @@ html body .content .content-wrapper{
     -moz-transform: rotate(-45deg);
     -o-transform: rotate(-45deg);
     transform: rotate(-45deg);
-    top: 39px;
-    left: 8px;
+    top: 17px;
+    left: 4px;
 }
 
 @media only screen and (max-width: 1100px) {
@@ -2217,10 +2184,11 @@ html body .content .content-wrapper{
         height: 5rem;
     }
     .nav.navbar-nav.float-right .hambu {
-        display: block;
-        -webkit-transform: translateX(0px);
-        -ms-transform: translateX(0px);
-        transform: translateX(0px);
+        margin-left: 15px;
+        display: flex;
+        align-items: center;
+        width: 70px;
+        justify-content: center;
     }
     .vertical-layout .navbar.header-navbar .navbar-wrapper, .vertical-layout .app-content.content, .vertical-layout .footer.footer-static {
         width: 100%;
@@ -2244,9 +2212,7 @@ html body .content .content-wrapper{
             display: none;
         }
     }
-    .nav.navbar-nav.float-right .hambu{
-        margin-left: 15px;
-    }
+
 
 
 
@@ -2276,9 +2242,14 @@ html body .content .content-wrapper{
         -ms-transform: translateX(18px);
         transform: translateX(18px);
         margin-left: 0;
+
     }
     .logo{
         margin-right: 0;
+    }
+    .menu_bal svg {
+        width: 32px;
+        height: 40px;
     }
 }
 
