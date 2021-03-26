@@ -1037,9 +1037,6 @@ html body .content .content-wrapper{
                 border: 1px solid #ddd;
                 padding: 8px;
                 white-space: nowrap;
-                .btn {
-                    padding: 5px;
-                }
             }
         }
         .card-body{
@@ -1657,11 +1654,23 @@ html body .content .content-wrapper {
             transition: all 0.2s ease-in-out;
         }
     }
-    &:hover{
+    &:hover, &.act{
         color: #fff;
         svg{
             path{
                 fill: #fff;
+            }
+        }
+    }
+    &.dis, &.dis:hover{
+        opacity: .5;
+        cursor: not-allowed;
+        color: #919191;
+        pointer-events: none;
+        svg{
+            path{
+                opacity: .8;
+                fill: #919191;
             }
         }
     }
@@ -1698,6 +1707,14 @@ html body .content .content-wrapper {
             height: 20px;
             margin-right: 0;
         }
+    }
+}
+.a{
+    color: #bfbfbf;
+    text-decoration: underline;
+    &:hover{
+        color: #bfbfbf;
+        text-decoration: none;
     }
 }
 html body .content .content-wrapper {
@@ -1771,6 +1788,7 @@ html body{
     text-transform: none;
     display: flex;
     flex-direction: row;
+    background: #000;
     svg{
         width: 20px;
         height: 20px;
@@ -1802,7 +1820,7 @@ html body .content .content-wrapper{
     min-height: 0;
 }
 .dropdown .dropdown-menu{
-    background: rgba(0,0,0,.7);
+    background: rgba(0,0,0,1);
     border: 1px solid #000;
     box-shadow: -1px -1px 3px 1px #424242 inset !important;
     width: auto !important;
@@ -1825,7 +1843,7 @@ html body .content .content-wrapper{
 .card_error{
     background: rgba(198, 0, 0, 0.2);
     border: 1px solid #680000;
-    margin-bottom: 0;
+    margin: 30px 0 0;
     .card-body{
         display: flex;
         justify-content: center;
@@ -2218,6 +2236,46 @@ html body .content .content-wrapper{
     top: 17px;
     left: 4px;
 }
+.select2-container--default .select2-selection--single, .form-control, .select2-dropdown, .select2-container--default .select2-search--dropdown .select2-search__field {
+    &:focus, &:active{
+        background-color: #000;
+    }
+    background-color: #000;
+}
+.select2-container--default .select2-selection--single{
+    border-color: #999;
+}
+*, ::before, ::after{
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    &:focus, &:active{
+        outline: none !important;
+    }
+}
+a:active,
+a:focus,
+input:active,
+input:focus,
+textarea:active,
+textarea:focus,
+button:active,
+button:focus,
+label:active,
+label:focus{
+    outline: none !important;
+    outline-style: none !important;
+    -moz-outline-style: none !important;
+    text-decoration: none !important;
+}
+
+
+
+
+
+
+
+
+
 
 @media only screen and (max-width: 1000px) {
     .header-navbar .logo {
