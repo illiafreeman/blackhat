@@ -1815,6 +1815,28 @@ html body{
             fill: #8c9eff !important;
         }
     }
+    &_round{
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        display: flex;
+        width: 30px;
+        height: 30px;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #999;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        i{
+            transition: all 0.2s ease-in-out;
+        }
+        &:hover{
+            border-color: #fff;
+            i{
+                color: #fff;
+            }
+        }
+    }
 }
 html body .content .content-wrapper{
     min-height: 0;
@@ -1863,10 +1885,22 @@ html body .content .content-wrapper{
         }
     }
 }
-
-
-
-
+.modal-content{
+    background: #000;
+    //border: 1px solid #999;
+    //box-shadow: 1px 1px 1px #fff;
+}
+.modal-backdrop{
+    background-color: #aaa;
+}
+.btn-outline-danger:hover {
+    background: rgba(236, 100, 100, 0.2);
+    border: 1px solid #680000;
+    color: #e27070 !important;
+}
+.modal-header .close{
+    padding-top: 10px;
+}
 
 
 
@@ -2242,8 +2276,14 @@ html body .content .content-wrapper{
     }
     background-color: #000;
 }
-.select2-container--default .select2-selection--single{
+.select2-container--default .select2-selection--single, form .form-control{
     border-color: #999;
+}
+form .form-control:focus{
+    border-color: #fff;
+}
+.add_node .form-control, .select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: #fff;
 }
 *, ::before, ::after{
     box-sizing: border-box;
@@ -2267,6 +2307,35 @@ label:focus{
     -moz-outline-style: none !important;
     text-decoration: none !important;
 }
+.select2-container *:focus {
+    outline: none;
+}
+.invoice-amount b {
+    color: #fff;
+}
+.select2-container--default .select2-results__option[aria-selected="true"] {
+    background-color: #373737;
+    color: #fff;
+}
+.add_node .card-header {
+    padding-bottom: 10px;
+}
+.datetime{
+    font-size: 12px;
+    padding: 0 8px !important;
+    div:last-child{
+        font-size: 10px;
+    }
+}
+.toast-success {
+    background-color: #254f12;
+    border: 1px solid green;
+    box-shadow: none !important;
+    opacity: 1 !important;
+    .toast-message{
+        color: #fff;
+    }
+}
 
 
 
@@ -2276,6 +2345,13 @@ label:focus{
 
 
 
+
+
+@media only screen and (min-width: 1100px) {
+    .button-cell .load-more-data__wrap {
+        bottom: 57px;
+    }
+}
 
 @media only screen and (max-width: 1000px) {
     .header-navbar .logo {
