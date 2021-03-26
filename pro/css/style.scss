@@ -1885,6 +1885,26 @@ html body .content .content-wrapper{
         }
     }
 }
+.card_info{
+    margin: 0;
+    border: 0;
+    background: transparent;
+    .card-body{
+        padding-bottom: 0;
+        div{
+            color: #fff !important;
+        }
+        svg{
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            min-width: 30px;
+            path{
+                fill: #fff;
+            }
+        }
+    }
+}
 .modal-content{
     background: #000;
     //border: 1px solid #999;
@@ -2002,7 +2022,7 @@ html body .content .content-wrapper{
     .has-error  {
         .error-text{
             display: block;
-            color: red;
+            color: #c83535;
             font-size: 12px;
             padding: 5px 0 0 12px;
             &.total-alarm{
@@ -2010,7 +2030,7 @@ html body .content .content-wrapper{
                 font-size: 14px;
                 .la{
                     position: static;
-                    color: red;
+                    color: #680000;
                     width: auto;
                     height: auto;
                     cursor: default;
@@ -2023,7 +2043,7 @@ html body .content .content-wrapper{
             }
         }
         .form-control {
-            border-color: red;
+            border-color: #680000;
         }
     }
 }
@@ -2336,8 +2356,18 @@ label:focus{
         color: #fff;
     }
 }
-
-
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+    background-color: #8e8c8c;
+    color: white;
+}
+.claim{
+    .invoice-amount{
+        margin: 0;
+    }
+    .form_address{
+        margin-bottom: 30px;
+    }
+}
 
 
 

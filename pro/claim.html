@@ -9,7 +9,7 @@
     <meta name="keywords" content="Black Hat">
     <meta name="author" content="Black Hat">
 
-    <title>Black Hat Purchase</title>
+    <title>Black Hat Claim</title>
 
 
 
@@ -161,153 +161,57 @@
             <div class="invoice-page clearfix">
 
 
-                <div class="invoice-form add_node card">
+                <div class="invoice-form add_node claim card">
                     <div class="card-header">
-                        <h6 class="card-title text-center">create invoice</h6>
+                        <h6 class="card-title text-center">claim your coins</h6>
+                        <div class="card card_error card_info">
+                            <div class="card-body">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="exclamation-triangle" role="img"
+                                     xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 576 512">
+                                    <path fill="currentColor"
+                                          d="M270.2 160h35.5c3.4 0 6.1 2.8 6 6.2l-7.5 196c-.1 3.2-2.8 5.8-6 5.8h-20.5c-3.2 0-5.9-2.5-6-5.8l-7.5-196c-.1-3.4 2.6-6.2 6-6.2zM288 388c-15.5 0-28 12.5-28 28s12.5 28 28 28 28-12.5 28-28-12.5-28-28-28zm281.5 52L329.6 24c-18.4-32-64.7-32-83.2 0L6.5 440c-18.4 31.9 4.6 72 41.6 72H528c36.8 0 60-40 41.5-72zM528 480H48c-12.3 0-20-13.3-13.9-24l240-416c6.1-10.6 21.6-10.7 27.7 0l240 416c6.2 10.6-1.5 24-13.8 24z"
+                                          class=""></path>
+                                </svg>
+                                <div>Diar frend be caraful ne proebis' pri vvode inache pizda tvoim bitkam</div>
+                            </div>
+                        </div>
                     </div>
                     <div class="card-body">
+
                         <form action="">
-                            <fieldset class="form-label-group select_fieldset <!--has-error-->">
-                                <select id="coin-pay" class="type-select custom-select" style="width: 100%">
-                                    <option value="" hidden>&mdash;</option>
-                                    <option value="1">BTC</option>
-                                    <option value="2">ETH</option>
-                                    <option value="3">DFG</option>
-                                    <option value="3">GTY</option>
-                                </select>
-                                <label for="coin-pay">Coin</label>
-                                <div class="error-text">Coin is invalid</div>
-                            </fieldset>
-                            <fieldset class="form-label-group has-error">
-                                <input type="text" id="pay-amount" class="form-control" placeholder="Payment Amount ($)" value="">
-                                <label for="pay-amount">Payment Amount ($)</label>
-                                <div class="error-text">Payment Amount is invalid</div>
-                            </fieldset>
                             <fieldset class="form-label-group">
-                                <div class="invoice-amount">Invoice Amount:<b>35 XBI</b></div>
+                                <div class="invoice-amount">Amount:<b>35 XBI</b></div>
+                            </fieldset>
+                            <fieldset class="form-label-group form_address has-error">
+                                <input type="text" id="address" class="form-control" placeholder="Address" value="">
+                                <label for="address">Address</label>
+                                <div class="error-text">Address is invalid</div>
                             </fieldset>
                             <div class="button_wrap ac">
-                                <button type="submit" class="btn">Create Invoice</button>
+                                <button type="submit" class="btn">Claim</button>
                             </div>
                         </form>
                     </div>
                 </div>
                 <div class="invoice-table card">
                     <div class="card-header">
-                        <h6 class="card-title">pending invoices</h6>
+                        <h6 class="card-title">Claim history</h6>
                     </div>
                     <div class="card-body">
                         <div class="card-body__inner">
                             <table>
                                 <tr>
-                                    <th>Valid Until</th>
-                                    <th>Invoice Amount</th>
-                                    <th>Destination Wallet</th>
-                                    <th>TX id</th>
-                                    <th>TX confirmations</th>
-                                    <th></th>
+                                    <th>Operation id</th>
+                                    <th>Date</th>
+                                    <th>Transaction ID</th>
                                 </tr>
                                 <tr>
-                                    <td class="datetime">
-                                        <div>2020-01-30</div>
-                                        <div>12:34:12</div>
-                                    </td>
-                                    <td>23BTC</td>
                                     <td>
-                                        <div class="wal">
+                                        <div class="wal max">
                                             2B4jM9nGnXkxQhU71v4ERf9LZnKBwPWUaaa
                                         </div>
                                         <i class="la la-copy" onclick="toastr.success('Copied to clipboard');"></i>
                                     </td>
-                                    <td>
-                                        <div class="wal">
-                                            2B4jM9nGnXkxQhU71v4ERf9LZnKBwPWUaaa
-                                        </div>
-                                        <i class="la la-copy" onclick="toastr.success('Copied to clipboard');"></i>
-                                    </td>
-                                    <td>1</td>
-                                    <td class="text-center">
-                                        <div class="btn_round" data-toggle="modal" data-target="#exampleModal">
-                                            <i class="la la-trash"></i>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr class="row_empty">
-                                    <td class="datetime">
-                                        <div>2020-01-30</div>
-                                        <div>12:34:12</div>
-                                    </td>
-                                    <td>23BTC</td>
-                                    <td>
-                                        <div class="wal">
-                                            --
-                                        </div>
-                                        <i class="la la-copy" onclick="toastr.success('Copied to clipboard');"></i>
-                                    </td>
-                                    <td>
-                                        <div class="wal">
-                                            --
-                                        </div>
-                                        <i class="la la-copy" onclick="toastr.success('Copied to clipboard');"></i>
-                                    </td>
-                                    <td>1</td>
-                                    <td class="text-center">
-                                        <div class="btn_round" data-toggle="modal" data-target="#exampleModal">
-                                            <i class="la la-trash"></i>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="datetime">
-                                        <div>2020-01-30</div>
-                                        <div>12:34:12</div>
-                                    </td>
-                                    <td>23BTC</td>
-                                    <td>
-                                        <div class="wal">
-                                            2B4jM9nGnXkxQhU71v4ERf9LZnKBwPWUaaa
-                                        </div>
-                                        <i class="la la-copy" onclick="toastr.success('Copied to clipboard');"></i>
-                                    </td>
-                                    <td>
-                                        <div class="wal">
-                                            2B4jM9nGnXkxQhU71v4ERf9LZnKBwPWUaaa
-                                        </div>
-                                        <i class="la la-copy" onclick="toastr.success('Copied to clipboard');"></i>
-                                    </td>
-                                    <td>1</td>
-                                    <td class="text-center">
-                                        <div class="btn_round" data-toggle="modal" data-target="#exampleModal">
-                                            <i class="la la-trash"></i>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td colspan="7" class="button-cell">
-                                        <div class="load-more-data__wrap">
-                                            <button class="btn">Load More</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </table>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="invoice-table card">
-                    <div class="card-header">
-                        <h6 class="card-title">Payed invoices</h6>
-                    </div>
-                    <div class="card-body">
-                        <div class="card-body__inner">
-                            <table>
-                                <tr>
-                                    <th>Invoice Date</th>
-                                    <th>Invoice Amount</th>
-                                    <th>TX id</th>
-                                </tr>
-                                <tr>
-                                    <td>2020-01-30 12:34:12</td>
                                     <td>2020-01-30 12:34:12</td>
                                     <td>
                                         <div class="wal max">
