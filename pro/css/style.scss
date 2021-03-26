@@ -2368,7 +2368,28 @@ label:focus{
         margin-bottom: 30px;
     }
 }
-
+.ref{
+    margin-bottom: 25px;
+    &:last-child{
+        margin-bottom: 0;
+    }
+    .invoice-amount{
+        padding-left: 0;
+    }
+    .key{
+        .la-copy{
+            position: relative;
+            display: inline-flex;
+            top: 3px;
+            width: 30px;
+            height: 30px;
+        }
+    }
+    .val{
+        font-weight: 700;
+        color: #fff;
+    }
+}
 
 
 
