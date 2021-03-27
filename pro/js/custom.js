@@ -1,4 +1,8 @@
 $(document).ready(function() {
+    $('.card_error').click(function (e) {
+        $('.preload').toggleClass('vis');
+        $('body').toggleClass('oh');
+    });
 
     $('.hambu').click(function(){
         $('.navleft').toggleClass('vis');

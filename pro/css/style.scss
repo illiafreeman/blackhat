@@ -1934,13 +1934,13 @@ html body .content .content-wrapper{
 
 
 .preload{
-    position: absolute;
+    position: fixed;
     top: 0;
-    right: 10px;
+    right: 0;
     height: 100vh;
-    left: 10px;
-    background: rgba(255, 255, 255, .9);
-    z-index: 1000;
+    left: 0;
+    background: rgba(0,0,0, .9);
+    z-index: 10000;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1950,6 +1950,10 @@ html body .content .content-wrapper{
     &.vis{
         visibility: visible;
         opacity: 1;
+    }
+    img{
+        width: 64px;
+        height: 64px;
     }
 }
 .filterlabel{
