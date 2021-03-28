@@ -2412,6 +2412,24 @@ label:focus{
         }
     }
 }
+.login{
+    &_dis{
+        fieldset{
+            opacity: .5;
+            cursor: not-allowed;
+            *{
+                pointer-events: none;
+            }
+
+        }
+    }
+    .agree{
+        cursor: pointer;
+        text-align: center;
+        display: block;
+        margin: 35px 0;
+    }
+}
 
 
 

@@ -16,7 +16,24 @@ $(document).ready(function() {
         "timeOut": "300000"/*too long timeout for test*/
     };
     /*end toastr options*/
+    $('#agree').click(function(){
+        if($(this).prop("checked") == true){
+            $('.login').removeClass('login_dis')
+        }
+        else if($(this).prop("checked") == false){
+            $('.login').addClass('login_dis')
+        }
+    });
 })
+
+$('#terms_link').click(function () {
+    $.scrollTo($('#terms'), 1000, {axis:'y', offset:-140});
+
+
+});
+
+
+
 
 (function () {
     const second = 1000,
