@@ -1809,10 +1809,12 @@ html body{
         -webkit-border-radius: 22px;
         -moz-border-radius: 22px;
         border-radius: 22px;
-        color: #8c9eff !important;
+        background: #8c9eff !important;
+        color: #fff !important;
         border-color: #8c9eff !important;
+        height: 40px;
         path{
-            fill: #8c9eff !important;
+            fill: #fff !important;
         }
     }
     &_round{
