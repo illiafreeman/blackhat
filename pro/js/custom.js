@@ -9,6 +9,36 @@ $(document).ready(function() {
     $('.menu').click(function () {
         $.scrollTo($('#scroll_' + $(this).attr('id')), 1000, {axis:'y', offset:-100});
     });
+
+
+    $('.slider-for').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: '.slider-nav'
+    });
+
+    $('.slider-nav').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        asNavFor: '.slider-for',
+        dots: false,
+        focusOnSelect: true,
+        responsive: [{
+            breakpoint: 1199,
+            settings: {
+                slidesToShow: 1,
+                infinite: true
+            }
+
+        }, {
+
+            breakpoint: 300,
+            settings: "unslick" // destroys slick
+
+        }]
+    });
 })
 
 

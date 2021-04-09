@@ -2515,6 +2515,7 @@ ol{
     display: none;
 }
 .features{
+    margin-bottom: 80px;
     &__head{
         display: grid;
         grid-template-rows: 1fr 1fr;
@@ -2577,6 +2578,72 @@ body{
 html body.fixed-navbar{
     padding-top: 70px;
 }
+.slider-wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .slider-nav{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 260px;
+        margin: 0 auto;
+        position: relative;
+        .slick-list{
+            width: 100px;
+            height: 100px;
+            box-shadow: 0px 0px 6px -1px #424242 inset;
+            background: rgba(0, 0, 0, 0.4);
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            .slick-track{
+                height: 100px;
+                .tm-green-year{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100px;
+                    font-size: 24px;
+                }
+            }
+        }
+        .slick-arrow{
+            position: absolute;
+            display: block;
+            height: 54px;
+            width: 54px;
+            background-color: transparent;
+            border: none;
+            color: transparent;
+            top: 22px;
+            background-position: center center;
+            background-repeat: no-repeat;
+            cursor: pointer;
+            &.slick-prev{
+                left: 0;
+                background-image: url("../img/icon_left.svg");
+            }
+            &.slick-next{
+                right: 0;
+                background-image: url("../img/icon_right.svg");
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
