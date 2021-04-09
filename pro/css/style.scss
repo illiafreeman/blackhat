@@ -2439,6 +2439,73 @@ ol{
     height: 400px;
     overflow: auto;
 }
+.intro{
+    position: relative;
+    padding-top: 50px;
+    &__text{
+        width: 50%;
+        h1{
+            font-size: 40px;
+            margin-bottom: 30px;
+        }
+        h2{
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+        h3{
+            font-size: 20px;
+            margin-bottom: 50px;
+        }
+        *{
+            text-transform: none;
+        }
+        .soc{
+            display: flex;
+            a{
+                margin-right: 15px;
+                display: flex;
+                width: 30px;
+                height: 30px;
+                svg path{
+                    transition: $transition;
+                }
+                &:hover{
+                    svg path{
+                        fill: #fff;
+                    }
+                }
+            }
+        }
+    }
+    &__action{
+        display: flex;
+        margin-bottom: 50px;
+        a{
+            margin-right: 15px;
+            &:last-child{
+                margin-right: 0;
+            }
+
+        }
+    }
+    img{
+        position: absolute;
+        top: 50px;
+        right: 0;
+        width: 400px;
+    }
+}
+.topnav{
+    justify-content: space-between;
+    .navleft{
+        margin: 0 !important;
+    }
+}
+.navright{
+    display: none;
+}
+
+
 
 
 
