@@ -1,0 +1,84 @@
+
+Лого, название, слоган, кнопки, социалки (twitter, telegram, discord, github)
+(как на pivx.org)
+
+----------------
+
+Features - мелкие блоки с картинкой и небольшим описанием
+- Energy saving (POS)
+- High privacy level (zk-SNARK)
+- Low fees
+- Fast transactions
+- Governance / DAO
+- Community driven
+
+----------------
+
+Описание каждых функций: Заголовок, текст (с одной стороны), изображение - с другой
+Secure anonymous payments.
+The privacy layer of BlackHat coin implemented on zk-SNARK technology (from ZCash) which provides fast and anonymous untraceable payments.
+
+----------------
+
+- ProofOfStake - Staking.
+Keeping your wallet switched on and holding coins in it you not just receive rewards but also strengthen the network.
+
+----------------
+
+- Cold Staking
+Like usual staking but with some features.
+You can delegate your coins for staking to another wallet which is switched on 24/7 (hot wallet). Hot wallet stakes delegated coins on your behalf but have no access to them. The rewards go directly to your wallet. All coins remain under your full control in your wallet. Your wallet could be switched off keeping your private keys and coins safe while hot wallet stakes coins for you.
+It's possible to delegate coins from different multiple wallets to one hot wallet for cold staking.
+
+----------------
+
+- Masternodes
+Masternodes is the second layer of network security which provices additional blocks and transaction validations.
+Starting your own masternode you're also strengthen the network and receiving rewards.
+Anyone who started masternode can participate in Decentralized Governance voting for the proposals to determine if the proposal should be funded. This voting is decentralized and anonymous, since the owners and their masternodes are located in different parts of the world (see below at 5.).
+
+----------------
+
+- Decentralized Governance
+Decentralized Governance is the system of proposals which is submitted to the blockchain network to be voted by masternodes, to  to determine if the proposal should be funded.
+Each started masternode has an capability to vote for each proposal (a vote per masternode for each active proposal) thereby setting the vector of network development. Therefore, only community-validated initiatives will be funded.
+
+----------------
+
+- BlackHat Community Treasury
+A % of block value will be potentially allocated for the Community Treasury to fund an implementation of proposals that received sufficient % of Yes votes. This funds will be generated at each superblock (approx. each month).
+Note: The budget will not be allocated each month in full. Only valid proposals will be funded and only required amount of coins will be generated.
+
+----------------
+
+Roadmap
+
+----------------
+
+COIN SPECS (table)
+Consensus: PoS (Hot & Cold PoS)
+Total supply: 21m (premine 2m, which is approx. 10%)
+Block Time: ~1 minute
+Block Size: Max 2MB
+Transactions per second: 173 TPS (theoretical maximum)
+Master Node Collateral: 5000 BLKC
+
+BLOCK REWARDS (какой-нить блок)
+20 BLKC (40% PoS / 60% MN) + (potentially 0.5 BLKC for Community Treasury, see Features 6.)
+Block reward will be decreased every 3 months by 20% (about ~50% yearly). Minimal block reward 2 BLKC (approx. In ~ 4 years)
+
+----------------
+
+Wallet download links
+
+----------------
+
+Exchanges
+
+---------------------
+
+
+Contact form
+
+----------------
+
