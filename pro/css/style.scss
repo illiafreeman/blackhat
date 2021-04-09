@@ -2632,8 +2632,44 @@ html body.fixed-navbar{
         }
     }
 }
-
-
+.slider-for{
+    padding: 25px;
+}
+.specs{
+    &__wrap{
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1.5fr 1fr;
+        grid-gap: 15px;
+        .card-header{
+            padding-bottom: 0;
+        }
+        table{
+            tr{
+                td{
+                    &:first-child{
+                        text-align: right;
+                        padding-right: 10px;
+                    }
+                    &:last-child{
+                        font-size: 17px;
+                    }
+                }
+            }
+        }
+        ul{
+            margin: 0;
+            padding-left: 15px;
+            li{
+                margin-bottom: 15px;
+                line-height: 150%;
+                &:last-child{
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
 
 
 
