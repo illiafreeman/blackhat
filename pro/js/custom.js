@@ -40,6 +40,9 @@ $(document).ready(function() {
 
         }]
     });
+  /*  window.location.hash = '';//remove hash text
+    window.location.href.replace('#', '');//remove hash
+    history.replaceState(null, null, window.location.href);*/
 })
 
 
