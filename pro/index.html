@@ -28,20 +28,20 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <!--end common styles-->
 </head>
-<body class="vertical-layout vertical-compact-menu content-detached-right-sidebar   menu-expanded fixed-navbar"
+<body data-spy="scroll" data-target="#navigation" class="vertical-layout vertical-compact-menu content-detached-right-sidebar   menu-expanded fixed-navbar"
       data-open="click" data-menu="vertical-compact-menu" data-col="content-detached-right-sidebar">
 
 <!-- fixed-top-->
 <nav class="header-navbar navbar-expand-md navbar navbar-with-menu navbar-without-dd-arrow fixed-top navbar-light navbar-bg-color">
     <div class="navbar-wrapper">
         <div class="navbar-container">
-            <div class="collapse navbar-collapse topnav" id="navbar-mobile">
+            <div id="navigation" class="collapse navbar-collapse topnav">
                 <a class="logo" href="">
                     <img class="brand-logo" alt="" src="img/logo.png">
                 </a>
                 <ul class="nav navbar-nav navleft mr-auto float-left">
                     <li>
-                        <a class="menu menu_ref act" href="">
+                        <a id="link_home" class="menu menu_ref" href="#scroll_link_home">
                             <svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="home" role="img"
                                  xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 576 512">
                                 <path fill="currentColor"
@@ -52,7 +52,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="menu menu_ref" href="">
+                        <a id="link_features" class="menu menu_ref" href="#scroll_link_features">
                             <svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="star" role="img"
                                  xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 576 512">
                                 <path fill="currentColor"
@@ -129,7 +129,7 @@
     </div>
     <!--block to reload-->
     <div class="content-wrapper">
-        <div class="intro">
+        <div id="scroll_link_home" class="article intro">
             <div class="intro__text">
 
                 <h1>Black Hat</h1>
@@ -186,6 +186,65 @@
             </div>
             <img src="img/bg.svg" alt="">
         </div>
+        <div id="scroll_link_features" class="article features">
+            <h2 class="article__title">features</h2>
+            <div class="features__head">
+                <div class="features__head-item">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="sync" role="img"
+                         xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 512 512">
+                        <path fill="currentColor"
+                              d="M492 8h-10c-6.627 0-12 5.373-12 12v110.627C426.929 57.261 347.224 8 256 8 123.228 8 14.824 112.338 8.31 243.493 7.971 250.311 13.475 256 20.301 256h10.016c6.353 0 11.646-4.949 11.977-11.293C48.157 132.216 141.097 42 256 42c82.862 0 154.737 47.077 190.289 116H332c-6.627 0-12 5.373-12 12v10c0 6.627 5.373 12 12 12h160c6.627 0 12-5.373 12-12V20c0-6.627-5.373-12-12-12zm-.301 248h-10.015c-6.352 0-11.647 4.949-11.977 11.293C463.841 380.158 370.546 470 256 470c-82.608 0-154.672-46.952-190.299-116H180c6.627 0 12-5.373 12-12v-10c0-6.627-5.373-12-12-12H20c-6.627 0-12 5.373-12 12v160c0 6.627 5.373 12 12 12h10c6.627 0 12-5.373 12-12V381.373C85.071 454.739 164.777 504 256 504c132.773 0 241.176-104.338 247.69-235.493.339-6.818-5.165-12.507-11.991-12.507z"
+                              class=""></path>
+                    </svg>
+                    Energy saving (POS)
+                </div>
+                <div class="features__head-item">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="sync" role="img"
+                         xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 512 512">
+                        <path fill="currentColor"
+                              d="M492 8h-10c-6.627 0-12 5.373-12 12v110.627C426.929 57.261 347.224 8 256 8 123.228 8 14.824 112.338 8.31 243.493 7.971 250.311 13.475 256 20.301 256h10.016c6.353 0 11.646-4.949 11.977-11.293C48.157 132.216 141.097 42 256 42c82.862 0 154.737 47.077 190.289 116H332c-6.627 0-12 5.373-12 12v10c0 6.627 5.373 12 12 12h160c6.627 0 12-5.373 12-12V20c0-6.627-5.373-12-12-12zm-.301 248h-10.015c-6.352 0-11.647 4.949-11.977 11.293C463.841 380.158 370.546 470 256 470c-82.608 0-154.672-46.952-190.299-116H180c6.627 0 12-5.373 12-12v-10c0-6.627-5.373-12-12-12H20c-6.627 0-12 5.373-12 12v160c0 6.627 5.373 12 12 12h10c6.627 0 12-5.373 12-12V381.373C85.071 454.739 164.777 504 256 504c132.773 0 241.176-104.338 247.69-235.493.339-6.818-5.165-12.507-11.991-12.507z"
+                              class=""></path>
+                    </svg>
+                    High privacy level (zk-SNARK)
+                </div>
+                <div class="features__head-item">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="sync" role="img"
+                         xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 512 512">
+                        <path fill="currentColor"
+                              d="M492 8h-10c-6.627 0-12 5.373-12 12v110.627C426.929 57.261 347.224 8 256 8 123.228 8 14.824 112.338 8.31 243.493 7.971 250.311 13.475 256 20.301 256h10.016c6.353 0 11.646-4.949 11.977-11.293C48.157 132.216 141.097 42 256 42c82.862 0 154.737 47.077 190.289 116H332c-6.627 0-12 5.373-12 12v10c0 6.627 5.373 12 12 12h160c6.627 0 12-5.373 12-12V20c0-6.627-5.373-12-12-12zm-.301 248h-10.015c-6.352 0-11.647 4.949-11.977 11.293C463.841 380.158 370.546 470 256 470c-82.608 0-154.672-46.952-190.299-116H180c6.627 0 12-5.373 12-12v-10c0-6.627-5.373-12-12-12H20c-6.627 0-12 5.373-12 12v160c0 6.627 5.373 12 12 12h10c6.627 0 12-5.373 12-12V381.373C85.071 454.739 164.777 504 256 504c132.773 0 241.176-104.338 247.69-235.493.339-6.818-5.165-12.507-11.991-12.507z"
+                              class=""></path>
+                    </svg>
+                    Low fees
+                </div>
+                <div class="features__head-item">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="sync" role="img"
+                         xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 512 512">
+                        <path fill="currentColor"
+                              d="M492 8h-10c-6.627 0-12 5.373-12 12v110.627C426.929 57.261 347.224 8 256 8 123.228 8 14.824 112.338 8.31 243.493 7.971 250.311 13.475 256 20.301 256h10.016c6.353 0 11.646-4.949 11.977-11.293C48.157 132.216 141.097 42 256 42c82.862 0 154.737 47.077 190.289 116H332c-6.627 0-12 5.373-12 12v10c0 6.627 5.373 12 12 12h160c6.627 0 12-5.373 12-12V20c0-6.627-5.373-12-12-12zm-.301 248h-10.015c-6.352 0-11.647 4.949-11.977 11.293C463.841 380.158 370.546 470 256 470c-82.608 0-154.672-46.952-190.299-116H180c6.627 0 12-5.373 12-12v-10c0-6.627-5.373-12-12-12H20c-6.627 0-12 5.373-12 12v160c0 6.627 5.373 12 12 12h10c6.627 0 12-5.373 12-12V381.373C85.071 454.739 164.777 504 256 504c132.773 0 241.176-104.338 247.69-235.493.339-6.818-5.165-12.507-11.991-12.507z"
+                              class=""></path>
+                    </svg>
+                    Fast transactions
+                </div>
+                <div class="features__head-item">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="sync" role="img"
+                         xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 512 512">
+                        <path fill="currentColor"
+                              d="M492 8h-10c-6.627 0-12 5.373-12 12v110.627C426.929 57.261 347.224 8 256 8 123.228 8 14.824 112.338 8.31 243.493 7.971 250.311 13.475 256 20.301 256h10.016c6.353 0 11.646-4.949 11.977-11.293C48.157 132.216 141.097 42 256 42c82.862 0 154.737 47.077 190.289 116H332c-6.627 0-12 5.373-12 12v10c0 6.627 5.373 12 12 12h160c6.627 0 12-5.373 12-12V20c0-6.627-5.373-12-12-12zm-.301 248h-10.015c-6.352 0-11.647 4.949-11.977 11.293C463.841 380.158 370.546 470 256 470c-82.608 0-154.672-46.952-190.299-116H180c6.627 0 12-5.373 12-12v-10c0-6.627-5.373-12-12-12H20c-6.627 0-12 5.373-12 12v160c0 6.627 5.373 12 12 12h10c6.627 0 12-5.373 12-12V381.373C85.071 454.739 164.777 504 256 504c132.773 0 241.176-104.338 247.69-235.493.339-6.818-5.165-12.507-11.991-12.507z"
+                              class=""></path>
+                    </svg>
+                    Governance / DAO
+                </div>
+                <div class="features__head-item">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="sync" role="img"
+                         xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 512 512">
+                        <path fill="currentColor"
+                              d="M492 8h-10c-6.627 0-12 5.373-12 12v110.627C426.929 57.261 347.224 8 256 8 123.228 8 14.824 112.338 8.31 243.493 7.971 250.311 13.475 256 20.301 256h10.016c6.353 0 11.646-4.949 11.977-11.293C48.157 132.216 141.097 42 256 42c82.862 0 154.737 47.077 190.289 116H332c-6.627 0-12 5.373-12 12v10c0 6.627 5.373 12 12 12h160c6.627 0 12-5.373 12-12V20c0-6.627-5.373-12-12-12zm-.301 248h-10.015c-6.352 0-11.647 4.949-11.977 11.293C463.841 380.158 370.546 470 256 470c-82.608 0-154.672-46.952-190.299-116H180c6.627 0 12-5.373 12-12v-10c0-6.627-5.373-12-12-12H20c-6.627 0-12 5.373-12 12v160c0 6.627 5.373 12 12 12h10c6.627 0 12-5.373 12-12V381.373C85.071 454.739 164.777 504 256 504c132.773 0 241.176-104.338 247.69-235.493.339-6.818-5.165-12.507-11.991-12.507z"
+                              class=""></path>
+                    </svg>
+                    Community driven
+                </div>
+            </div>
+        </div>
     </div>
     <!--end block to reload-->
 
@@ -199,6 +258,7 @@
 <script src="js/vendors.min.js" type="text/javascript"></script>
 <script src="js/app-menu.min.js" type="text/javascript"></script>
 <script src="js/app.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.js" type="text/javascript"></script>
 <script src="js/jquery.scrollTo.min.js" type="text/javascript"></script>
 <script src="js/custom.js"></script>
 

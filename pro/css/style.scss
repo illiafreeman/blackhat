@@ -1626,6 +1626,16 @@ html body .content .content-wrapper {
         }
     }
 }
+.active{
+    .menu{
+        color: #fff;
+        svg{
+            path{
+                fill: #fff;
+            }
+        }
+    }
+}
 .menu{
 /*    background-size: 20px auto;
     background-position: left center;
@@ -2441,7 +2451,7 @@ ol{
 }
 .intro{
     position: relative;
-    padding-top: 50px;
+    padding-top: 150px;
     &__text{
         width: 50%;
         h1{
@@ -2490,7 +2500,7 @@ ol{
     }
     img{
         position: absolute;
-        top: 50px;
+        top: 150px;
         right: 0;
         width: 400px;
     }
@@ -2504,10 +2514,28 @@ ol{
 .navright{
     display: none;
 }
-
-
-
-
+.features{
+    &__head{
+        display: flex;
+        flex-wrap: wrap;
+        &-item{
+            width: 33%;
+        }
+    }
+}
+.article{
+    margin-bottom: 80px;
+    &__title{
+        text-align: center;
+        margin-bottom: 50px;
+    }
+}
+body{
+    position: relative;
+}
+html body.fixed-navbar{
+    padding-top: 70px;
+}
 
 
 
