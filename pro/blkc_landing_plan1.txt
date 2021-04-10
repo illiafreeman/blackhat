@@ -96,5 +96,9 @@ https://fontawesome.com/icons/vote-yea?style=duotone
 Decentralized Governance
 https://fontawesome.com/icons/clipboard-list-check?style=regular
 
+Roadmap (menu)
+https://fontawesome.com/icons/tasks-alt?style=light
+
+
 
 Скролл нужно какой-то другой юзать, без изменений урла страницы.
