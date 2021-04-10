@@ -82,3 +82,19 @@ Contact form
 
 ----------------
 
+
+Замечания по иконкам
+
+LOW FEES
+https://fontawesome.com/icons/coin?style=duotone
+
+Governance / DAO
+https://fontawesome.com/icons/vote-yea?style=duotone
+
+Иконка Decentralized Governance ее сделай в -> MASTERNODES
+
+Decentralized Governance
+https://fontawesome.com/icons/clipboard-list-check?style=regular
+
+
+Скролл нужно какой-то другой юзать, без изменений урла страницы.
