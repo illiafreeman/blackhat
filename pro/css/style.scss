@@ -2670,7 +2670,35 @@ html body.fixed-navbar{
         }
     }
 }
+.wallet{
+    &__wrap{
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 15px;
+        .card{
+            margin: 0;
+        }
+    }
+    &__inner{
 
+    }
+    &__install{
+        span{
+
+        }
+        ul{
+            li{
+                a{
+
+                }
+            }
+        }
+    }
+    &__help{
+
+    }
+}
 
 
 
