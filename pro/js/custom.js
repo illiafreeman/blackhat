@@ -10,7 +10,7 @@ $(document).ready(function() {
         $.scrollTo($('#scroll_' + $(this).attr('id')), 1000, {axis:'y', offset:-100});
     });*/
 
-    $(".menu").on('click', function(event) {
+/*    $(".menu").on('click', function(event) {
 
         // Make sure this.hash has a value before overriding default behavior
         if (this.hash !== "") {
@@ -34,7 +34,7 @@ $(document).ready(function() {
 
         } // End if
 
-    });
+    });*/
 
 
     $('.slider-for').slick({
