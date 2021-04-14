@@ -2671,6 +2671,20 @@ html body.fixed-navbar{
     }
 }
 .wallet{
+    .card-title{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        svg{
+            margin-right: 10px;
+        }
+    }
+    .card-body{
+        padding-top: 0;
+    }
+    .card-header {
+        padding: 3.5rem 1.5rem;
+    }
     &__wrap{
         display: grid;
         grid-template-rows: 1fr;
@@ -2683,20 +2697,72 @@ html body.fixed-navbar{
     &__inner{
 
     }
+    &__sub{
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 25px;
+    }
     &__install{
+        display: flex;
+        align-items: center;
+        justify-content: center;
         span{
 
         }
         ul{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+            margin: 0 0 0 10px;
+            //list-style-type: none;
             li{
+                padding: 0;
+                margin: 0 0 0 28px;
                 a{
-
+                    color: #bfbfbf;
+                    text-decoration: underline;
+                    line-height: 140%;
+                    display: inline-block;
+                    &:hover{
+                        text-decoration: none;
+                    }
                 }
             }
         }
     }
     &__help{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 15px;
+        font-style: italic;
+    }
+    &__table{
+        width: 100%;
+        tr{
+            &:first-child{
+                td{
+                    text-transform: uppercase;
+                    padding-bottom: 10px;
+                }
+            }
+            td{
+                text-align: center;
+                span{
 
+                }
+                a{
+                    color: #bfbfbf;
+                    text-decoration: underline;
+                    line-height: 140%;
+                    display: inline-block;
+                    &:hover{
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
     }
 }
 
