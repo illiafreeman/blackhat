@@ -5,7 +5,7 @@ $(document).ready(function() {
         $('body').toggleClass('oh');
         $('#nav-icon4').toggleClass('open');
     });
-    $("body").scrollspy({target: "#navigation", offset:130});
+
 /*    $('.menu').click(function () {
         $.scrollTo($('#scroll_' + $(this).attr('id')), 1000, {axis:'y', offset:-100});
     });*/
@@ -69,6 +69,7 @@ $(document).ready(function() {
   /*  window.location.hash = '';//remove hash text
     window.location.href.replace('#', '');//remove hash
     history.replaceState(null, null, window.location.href);*/
+    $("body").scrollspy({target: "#navigation", offset:150});
 })
 
 
