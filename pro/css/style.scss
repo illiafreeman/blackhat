@@ -2558,8 +2558,12 @@ ol{
         &-desc{
             flex: 1 0 auto;
             max-width: calc(100% - 190px);
+            font-size: 17px;
+            line-height: 160%;
+
             h4{
-                margin-bottom: 20px;
+                margin-bottom: 30px;
+                font-size: 20px;
             }
         }
 
@@ -2570,7 +2574,16 @@ ol{
     &__title{
         text-align: center;
         margin-bottom: 50px;
+        color: #fff;
     }
+}
+.tm-gr-yr{
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+.tm-gr-text{
+    margin-bottom: 20px;
 }
 body{
     position: relative;
@@ -2642,7 +2655,7 @@ html body.fixed-navbar{
         grid-template-columns: 1.5fr 1fr;
         grid-gap: 15px;
         .card-header{
-            padding-bottom: 0;
+            padding: 45px 1.5rem 20px;
         }
         table{
             tr{
@@ -2680,7 +2693,7 @@ html body.fixed-navbar{
         }
     }
     .card-body{
-        padding-top: 0;
+        padding: 0 1.5rem 40px;
     }
     .card-header {
         padding: 3.5rem 1.5rem 2.5rem;
@@ -2767,7 +2780,6 @@ html body.fixed-navbar{
     }
 }
 .exchanges{
-    margin-bottom: 1000px;
 }
 .exchanges__wrap{
     display: flex;
