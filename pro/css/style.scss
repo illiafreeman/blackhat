@@ -2683,7 +2683,7 @@ html body.fixed-navbar{
         padding-top: 0;
     }
     .card-header {
-        padding: 3.5rem 1.5rem;
+        padding: 3.5rem 1.5rem 2.5rem;
     }
     &__wrap{
         display: grid;
@@ -2744,11 +2744,12 @@ html body.fixed-navbar{
             &:first-child{
                 td{
                     text-transform: uppercase;
-                    padding-bottom: 10px;
+
                 }
             }
             td{
                 text-align: center;
+                padding-bottom: 10px;
                 span{
 
                 }
@@ -2763,6 +2764,17 @@ html body.fixed-navbar{
                 }
             }
         }
+    }
+}
+.exchanges__wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    a{
+        margin: 15px;
+        display: flex;
     }
 }
 
