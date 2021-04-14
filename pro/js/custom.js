@@ -5,6 +5,11 @@ $(document).ready(function() {
         $('body').toggleClass('oh');
         $('#nav-icon4').toggleClass('open');
     });
+    $('.menu').click(function () {
+        $('.navleft').removeClass('vis');
+        $('body').removeClass('oh');
+        $('#nav-icon4').removeClass('open');
+    });
 
 /*    $('.menu').click(function () {
         $.scrollTo($('#scroll_' + $(this).attr('id')), 1000, {axis:'y', offset:-100});
