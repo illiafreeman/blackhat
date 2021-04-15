@@ -2581,9 +2581,11 @@ ol{
     text-transform: uppercase;
     margin-bottom: 10px;
     font-weight: 700;
+    font-size: 16px;
 }
 .tm-gr-text{
     margin-bottom: 20px;
+    font-size: 16px;
 }
 body{
     position: relative;
@@ -2627,20 +2629,18 @@ html body.fixed-navbar{
             display: block;
             height: 54px;
             width: 54px;
-            background-color: transparent;
             border: none;
             color: transparent;
             top: 22px;
-            background-position: center center;
-            background-repeat: no-repeat;
+
             cursor: pointer;
             &.slick-prev{
                 left: 0;
-                background-image: url("../img/icon_left.svg");
+                background: transparent url("../img/icon_left.svg") center center no-repeat;
             }
             &.slick-next{
                 right: 0;
-                background-image: url("../img/icon_right.svg");
+                background: transparent url("../img/icon_right.svg") center center no-repeat;
             }
         }
     }
