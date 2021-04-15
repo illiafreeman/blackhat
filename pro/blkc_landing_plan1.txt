@@ -102,3 +102,31 @@ https://fontawesome.com/icons/tasks-alt?style=light
 
 
 Скролл нужно какой-то другой юзать, без изменений урла страницы.
+
+
+--------------------------------------
+
+EXPLORER
+
+--------------------------------------
+
+Типовые страницы:
+Главная: https://explorer.pivx.link/
+Список блоков: https://explorer.pivx.link/blocks
+Блок: https://explorer.pivx.link/block/2806025
+Транзакция: https://explorer.pivx.link/tx/5e07c890912dcb5439577afe5327ec4a6c4e13a2060f63300d82893f4f80841f
+Страница адреса (кошелька): https://explorer.pivx.link/address/DDhsPtuiFb14pyU2MouNoY4edeLJAySxRd
+Графики: https://explorer.pivx.link/charts/network
+Статус: https://explorer.pivx.link/status
+Send-TX: https://explorer.pivx.link/sendtx
+Не найдено в поиске: https://explorer.pivx.link/search/?q=sadsad
+
+
+Верхнее меню: Blocks Masternodes Governance Charts Status Send-TX
+Футер: blackhatco.in Forum (далее значками) Github Discord Telegram Twitter, центр и правая часть как на оригинале
+
+
+
+
+
+
