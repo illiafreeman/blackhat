@@ -2632,7 +2632,10 @@ html body.fixed-navbar{
             border: none;
             color: transparent;
             top: 22px;
-
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            border-radius: 0;
             cursor: pointer;
             &.slick-prev{
                 left: 0;
