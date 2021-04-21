@@ -19,7 +19,115 @@
     <meta name="msapplication-TileColor" content="#b91d47">
     <meta name="theme-color" content="#ffffff">
 
+    <style>
+        .preload {
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 100vh;
+            left: 0;
+            background: #000;
+            z-index: 10000;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            visibility: hidden;
+            opacity: 0;
+            -webkit-transition: all 0.2s ease-in-out;
+            -o-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
+        }
 
+        .preload.vis {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .preload .jump {
+            -webkit-animation: jump 1.5s infinite ease;
+            animation: jump 1.5s infinite ease;
+            position: relative;
+        }
+
+        @-webkit-keyframes jump {
+            0% {
+                top: 0;
+            }
+            50% {
+                top: -40px;
+            }
+            100% {
+                top: 0;
+            }
+        }
+
+        @keyframes jump {
+            0% {
+                top: 0;
+            }
+            50% {
+                top: -40px;
+            }
+            100% {
+                top: 0;
+            }
+        }
+
+        .preload .shadow {
+            width: 150px;
+            height: 15px;
+            background: #535353;
+            position: relative;
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+            z-index: -1;
+            margin-top: 15px;
+            -webkit-animation: swift 1.5s infinite ease;
+            animation: swift 1.5s infinite ease;
+        }
+
+        @-webkit-keyframes swift {
+            0% {
+                opacity: 0.8;
+            }
+            50% {
+                opacity: 0.4;
+                -webkit-transform: scale(0.8);
+                transform: scale(0.8);
+            }
+            100% {
+                opacity: 0.8;
+            }
+        }
+
+        @keyframes swift {
+            0% {
+                opacity: 0.8;
+            }
+            50% {
+                opacity: 0.4;
+                -webkit-transform: scale(0.8);
+                transform: scale(0.8);
+            }
+            100% {
+                opacity: 0.8;
+            }
+        }
+    </style>
     <link href="https://fonts.googleapis.com/css?family=Muli:300,300i,400,400i,600,600i,700,700i|Comfortaa:300,400,500,700"
           rel="stylesheet">
     <!--common styles-->
@@ -29,7 +137,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <!--end common styles-->
 </head>
-<body data-spy="scroll" data-target="#navigation" class="vertical-layout vertical-compact-menu content-detached-right-sidebar   menu-expanded fixed-navbar"
+<body data-spy="scroll" data-target="#navigation" class="vertical-layout vertical-compact-menu content-detached-right-sidebar menu-expanded fixed-navbar"
       data-open="click" data-menu="vertical-compact-menu" data-col="content-detached-right-sidebar">
 
 <!-- fixed-top-->
@@ -125,8 +233,19 @@
 <!--end fixed-top-->
 
 <div class="app-content content">
-    <div class="preload">
-        <img src="img/357.gif" alt="">
+    <div class="preload vis">
+        <svg class="jump" width="150" height="150" viewBox="0 0 640 442" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M120.258 171.447C121.213 167.197 113.742 228.776 115.174 215.434C124.641 163.128 120.667 106.441 141.738 56.6826C146.989 45.702 153.671 38.7357 162.263 39.208C284.461 42.9864 410.477 -83.5856 502.125 197.895C784.707 330.135 521.774 436.399 298.065 426.953C77.0103 417.699 -111.726 258.348 120.258 171.447Z"
+                  fill="black" stroke="white" stroke-width="5" stroke-linejoin="round"/>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M114.531 209.231C255.821 298.02 488.76 243.235 498.307 199.785C511.672 214.898 498.307 256.459 498.307 256.459C437.208 335.803 141.261 318.801 108.803 262.127C104.984 247.013 112.621 214.898 114.531 209.231Z"
+                  fill="white" stroke="black" stroke-width="6.55336"/>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M142.359 225.586C165.271 236.921 230.999 254.001 257.73 255.89C276.823 269.114 267.276 292.353 259.639 307.466C208.087 307.466 148.898 294.242 133.623 277.24C124.076 260.237 132.812 242.588 142.359 225.586Z"
+                  fill="white" fill-opacity="0.316667" stroke="black" stroke-width="2.46189"/>
+        </svg>
+        <div class="shadow"></div>
     </div>
     <!--block to reload-->
     <div class="content-wrapper">

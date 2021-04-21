@@ -75,7 +75,15 @@ $(document).ready(function() {
     window.location.href.replace('#', '');//remove hash
     history.replaceState(null, null, window.location.href);*/
     $("body").scrollspy({target: "#navigation", offset:150});
+
+
 })
 
 
 
+$( window ).on("load", function() {
+    setTimeout(function () {
+        $('body').removeClass('oh');
+        $('.preload').removeClass('vis');
+    }, 2000);
+});
