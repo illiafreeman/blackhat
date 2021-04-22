@@ -1,3 +1,16 @@
+@import 'plugins/app';
+@import 'plugins/bootstrap';
+@import 'plugins/bootstrap-extended';
+@import 'plugins/components';
+@import 'plugins/slick';
+@import 'plugins/vendors';
+@import 'plugins/vertical-compact-menu.min';
+
+
+
+
+
+
 $transition: all 0.2s ease-in-out;
 
 a.link{
@@ -2843,10 +2856,6 @@ html body.fixed-navbar{
             display: none;
         }
     }
-
-
-
-
 }
 @media only screen and (max-width: 768px) {
     .collapse:not(.show) {
