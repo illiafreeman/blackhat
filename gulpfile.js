@@ -31,10 +31,16 @@ gulp.task('browser-sync', function(){
         notify: false
     });
 });
+gulp.task('scripts', function(){
+    return gulp.src('pro/js/plugins/*.js')
+        .pipe(concat('main.min.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('pro/js/'))
+
+});
 
 
-
-gulp.task('watch', ['browser-sync', 'sass'], function(){ // в [] таски которые должны выполниться до watch
+gulp.task('watch', ['browser-sync', 'scripts', 'sass'], function(){ // в [] таски которые должны выполниться до watch
     gulp.watch('pro/css/**/*.scss', ['sass']);
     gulp.watch('pro/css/**/*.scss', browserSync.reload); // когда наступает изменение в файлах срабатывает таск sass
     gulp.watch('pro/*.html', browserSync.reload); // когда наступает изменение в файлах срабатывает reload
