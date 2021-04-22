@@ -56,33 +56,7 @@
     $(window).on('load', function () {
         $('#status').fadeOut();
         $('#preloader').delay(350).fadeOut('slow');
-        var owl = $('.owl-carousel');
-        owl.owlCarousel({
-            items: 10,
-            loop: true,
-            margin: 10,
-            nav: false,
-            autoplay: true,
-            autoplayTimeout: 2000,
-            autoplayHoverPause: true,
-            responsive:{
-                0:{
-                    items: 3
-                },
-                400:{
-                    items: 4
-                },
-                600:{
-                    items: 5
-                },
-                1000:{
-                    items: 7
-                },
-                1300:{
-                    items: 10
-                }
-            }
-        });
+
     });
     
 
