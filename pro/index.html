@@ -131,7 +131,7 @@
     <link href="https://fonts.googleapis.com/css?family=Muli:300,300i,400,400i,600,600i,700,700i|Comfortaa:300,400,500,700"
           rel="stylesheet">
 
-    <link rel="stylesheet" type="text/css" href="css/style.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 
 </head>
 <body data-spy="scroll" data-target="#navigation" class="vertical-layout vertical-compact-menu content-detached-right-sidebar menu-expanded fixed-navbar"
@@ -147,7 +147,7 @@
                 </a>
                 <ul class="nav navbar-nav navleft mr-auto float-left">
                     <li class="active">
-                        <a id="link_home" class="menu menu_ref" href="#scroll_link_home">
+                        <a id="link_home" class="menu" href="#scroll_link_home">
                             <svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="home" role="img"
                                  xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 576 512">
                                 <path fill="currentColor"
@@ -169,7 +169,7 @@
                         </a>
                     </li>
                     <li>
-                        <a id="link_roadmap" class="menu menu_pur" href="#scroll_link_roadmap">
+                        <a id="link_roadmap" class="menu" href="#scroll_link_roadmap">
                             <svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="map-marker-check"
                                  role="img" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 384 512">
                                 <path fill="currentColor"
@@ -180,7 +180,7 @@
                         </a>
                     </li>
                     <li>
-                        <a id="link_specs" class="menu menu_cla" href="#scroll_link_specs">
+                        <a id="link_specs" class="menu" href="#scroll_link_specs">
                             <svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="cog" role="img"
                                  xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 512 512">
                                 <path fill="currentColor"
@@ -191,7 +191,7 @@
                         </a>
                     </li>
                     <li>
-                        <a id="link_wallet" class="menu menu_cla" href="#scroll_link_wallet">
+                        <a id="link_wallet" class="menu" href="#scroll_link_wallet">
                             <svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="wallet" role="img"
                                  xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 512 512">
                                 <path fill="currentColor"
@@ -202,7 +202,7 @@
                         </a>
                     </li>
                     <li>
-                        <a id="link_exchanges" class="menu menu_cla" href="#scroll_link_exchanges">
+                        <a id="link_exchanges" class="menu" href="#scroll_link_exchanges">
                             <svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="sync" role="img"
                                  xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 512 512">
                                 <path fill="currentColor"
@@ -211,6 +211,21 @@
                             </svg>
                             Exchanges
                         </a>
+                    </li>
+                    <li class="menu_parent">
+                        <a class="menu menu-sub" href="">
+                            <svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="arrow-circle-down"
+                                 role="img" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 512 512">
+                                <path fill="currentColor"
+                                      d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm216 248c0 118.7-96.1 216-216 216-118.7 0-216-96.1-216-216 0-118.7 96.1-216 216-216 118.7 0 216 96.1 216 216zm-92.5-4.5l-6.9-6.9c-4.7-4.7-12.5-4.7-17.1.2L273 330.3V140c0-6.6-5.4-12-12-12h-10c-6.6 0-12 5.4-12 12v190.3l-82.5-85.6c-4.7-4.8-12.4-4.9-17.1-.2l-6.9 6.9c-4.7 4.7-4.7 12.3 0 17l115 115.1c4.7 4.7 12.3 4.7 17 0l115-115.1c4.7-4.6 4.7-12.2 0-16.9z"
+                                      class=""></path>
+                            </svg>
+                            Resources
+                        </a>
+                        <ul class="menu-subnav">
+                            <li class="menu-subnav__item"><a class="menu-subnav__link" href="">Block Explorer</a></li>
+                            <li class="menu-subnav__item"><a class="menu-subnav__link" href="">Forum</a></li>
+                        </ul>
                     </li>
                 </ul>
                 <ul class="nav navbar-nav navright float-right">
@@ -230,7 +245,7 @@
 <!--end fixed-top-->
 
 <div class="app-content content">
-    <div class="preload vis">
+    <!--<div class="preload vis">
         <svg class="jump" width="150" height="150" viewBox="0 0 640 442" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd"
                   d="M120.258 171.447C121.213 167.197 113.742 228.776 115.174 215.434C124.641 163.128 120.667 106.441 141.738 56.6826C146.989 45.702 153.671 38.7357 162.263 39.208C284.461 42.9864 410.477 -83.5856 502.125 197.895C784.707 330.135 521.774 436.399 298.065 426.953C77.0103 417.699 -111.726 258.348 120.258 171.447Z"
@@ -243,7 +258,7 @@
                   fill="white" fill-opacity="0.316667" stroke="black" stroke-width="2.46189"/>
         </svg>
         <div class="shadow"></div>
-    </div>
+    </div>-->
     <!--block to reload-->
     <div class="content-wrapper">
         <div id="scroll_link_home" class="article intro">
