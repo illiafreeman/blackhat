@@ -1,10 +1,10 @@
-@import 'plugins/app';
-@import 'plugins/bootstrap';
-@import 'plugins/bootstrap-extended';
-@import 'plugins/components';
-@import 'plugins/slick';
-@import 'plugins/vendors';
-@import 'plugins/vertical-compact-menu.min';
+@import 'plugins/app.css';
+@import 'plugins/bootstrap.css';
+@import 'plugins/bootstrap-extended.css';
+@import 'plugins/components.css';
+@import 'plugins/slick.css';
+@import 'plugins/vendors.css';
+@import 'plugins/vertical-compact-menu.min.css';
 
 
 
@@ -2687,7 +2687,7 @@ html body.fixed-navbar{
                     margin-bottom: 0;
                 }
                 a{
-                    color: #bfbfbf;
+                    color: #bfbfbf !important;
                     text-decoration: underline;
                     &:hover{
                         text-decoration: none;
