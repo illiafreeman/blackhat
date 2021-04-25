@@ -2686,6 +2686,13 @@ html body.fixed-navbar{
                 &:last-child{
                     margin-bottom: 0;
                 }
+                a{
+                    color: #bfbfbf;
+                    text-decoration: underline;
+                    &:hover{
+                        text-decoration: none;
+                    }
+                }
             }
         }
     }
