@@ -74,14 +74,14 @@ $(document).ready(function() {
   /*  window.location.hash = '';//remove hash text
     window.location.href.replace('#', '');//remove hash
     history.replaceState(null, null, window.location.href);*/
-    $("body").scrollspy({target: "#navigation", offset:150});
+
 
     if ($(window).width() < 1000) {
         $('.menu_parent').click(function(){
             $(this).toggleClass('open');
         });
     }
-
+    //$("body").scrollspy({target: "#navigation", offset:150});
 })
 
 
