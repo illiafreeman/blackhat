@@ -1654,28 +1654,48 @@ html body .content .content-wrapper {
                     .menu-subnav{
                         opacity: 1;
                         visibility: visible;
-                        top: 70px;
+                        top: 62px;
+                    }
+                }
+                &.open{
+                    .menu-subnav{
+                        opacity: 1;
+                        visibility: visible;
+                        margin-top: 16px;
+                        max-height: 500px;
                     }
                 }
             }
             &-sub{
-
+                display: flex;
+                -webkit-box-align: center;
+                -webkit-align-items: center;
+                -ms-flex-align: center;
+                align-items: center;
+                height: 5rem;
+                cursor: default;
+                svg {
+                    width: 20px;
+                    height: 20px;
+                    margin-right: 6px;
+                }
             }
             &-subnav{
                 position: absolute;
-                //top: 84px;
-                top: 58px;
-                background: rgba(0, 0, 0, 0.4) !important;
+                top: 84px;
+                background: rgba(0, 0, 0, 0.9) !important;
                 border: 1px solid #000;
-                box-shadow: 0px 0px 6px -1px #424242 inset;
+                box-shadow: 0px -1px 6px -1px #424242 inset;
                 border-radius: 0.35rem;
+                border-top-left-radius: 0;
+                border-top-right-radius: 0;
                 left: 50%;
                 transform: translateX(-50%);
                 transition: all 0.2s ease-in-out;
-                opacity: 1;
-                visibility: visible;
+                opacity: 0;
+                visibility: hidden;
                 z-index: 10000;
-                padding: 0 0 0 27px;
+                padding: 0 0 0 44px;
                 list-style-type: disc;
 
                 &__item{
@@ -1685,7 +1705,7 @@ html body .content .content-wrapper {
                 &__link{
                     white-space: nowrap;
                     display: block;
-                    padding: 10px 0;
+                    padding: 10px;
                     font-size: 12px;
                     transition: $transition;
                     &:hover{
@@ -1696,6 +1716,7 @@ html body .content .content-wrapper {
         }
     }
 }
+
 .navbar{
     padding: 0;
 }
@@ -2909,6 +2930,27 @@ html body.fixed-navbar{
         .dropdown-language, .logout{
             display: none;
         }
+    }
+    .menu_parent:hover .menu-subnav {
+        opacity: 0 !important;
+        visibility: hidden !important;
+        top: 84px !important;
+    }
+    .menu_parent.open .menu-subnav {
+        opacity: 1 !important;
+        visibility: visible !important;
+        top: 62px !important;
+        margin-top: 0 !important;
+    }
+    .menu_parent{
+        margin-bottom: 150px !important;
+    }
+    .menu_parent.open .menu-subnav__item{
+        justify-content: flex-start !important;
+        display: list-item !important;
+    }
+    .nav.navbar-nav .menu-subnav__link{
+        padding: 20px 10px;
     }
 }
 @media only screen and (max-width: 768px) {
