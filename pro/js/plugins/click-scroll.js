@@ -1,5 +1,3 @@
-//jquery-click-scroll
-//by syamsul'isul' Arifin
 
 var sectionArray = [1, 2, 3, 4, 5, 6];
 
@@ -12,20 +10,20 @@ $.each(sectionArray, function(index, value){
          
         
          if ( docScroll1 >= offsetSection ){
-             $('li a').removeClass('active');
-             $('li a:link').addClass('inactive');  
-             $('li a').eq(index).addClass('active');
-             $('li a:link').eq(index).removeClass('inactive');
+             $('.topnav li a').removeClass('active');
+             $('.topnav li a:link').addClass('inactive');
+             $('.topnav li a').eq(index).addClass('active');
+             $('.topnav li a:link').eq(index).removeClass('inactive');
          }
          
      });
     
-    $('li a').eq(index).click(function(e){
+    $('.topnav li a').eq(index).click(function(e){
         var offsetClick = $('#' + 'section_' + value).offset().top;
         e.preventDefault();
         $('html, body').animate({
             'scrollTop':offsetClick
-        }, 300)
+        }, 0)
         
         
     });
@@ -34,9 +32,9 @@ $.each(sectionArray, function(index, value){
 });
 
 $(document).ready(function(){
-    $('li a:link').addClass('inactive');    
-    $('li a').eq(0).addClass('active');
-    $('li a:link').eq(0).removeClass('inactive');
+    $('.topnav li a:link').addClass('inactive');
+    $('.topnav li a').eq(0).addClass('active');
+    $('.topnav li a:link').eq(0).removeClass('inactive');
     
 
 
