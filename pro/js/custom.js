@@ -90,5 +90,5 @@ $( window ).on("load", function() {
     setTimeout(function () {
         $('body').removeClass('oh');
         $('.preload').removeClass('vis');
-    }, 1000);
+    }, 2000);
 });

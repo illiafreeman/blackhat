@@ -24,8 +24,13 @@ $.each(sectionArray, function(index, value){
         $('html, body').animate({
             'scrollTop':offsetClick
         }, 0)
-        
-        
+    });
+    $('.btn_wallet').click(function(e){
+        var offsetClick = $('#section_5').offset().top;
+        e.preventDefault();
+        $('html, body').animate({
+            'scrollTop':offsetClick - 150
+        }, 500)
     });
  
     
@@ -35,7 +40,4 @@ $(document).ready(function(){
     $('.topnav li a:link').addClass('inactive');
     $('.topnav li a').eq(0).addClass('active');
     $('.topnav li a:link').eq(0).removeClass('inactive');
-    
-
-
 });
