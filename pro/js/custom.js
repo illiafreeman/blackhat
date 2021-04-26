@@ -75,10 +75,12 @@ $(document).ready(function() {
     window.location.href.replace('#', '');//remove hash
     history.replaceState(null, null, window.location.href);*/
     $("body").scrollspy({target: "#navigation", offset:150});
-    $('.menu_parent').click(function(){
-        $(this).toggleClass('open');
-    });
 
+    if ($(window).width() < 1000) {
+        $('.menu_parent').click(function(){
+            $(this).toggleClass('open');
+        });
+    }
 
 })
 
