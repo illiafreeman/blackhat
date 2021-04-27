@@ -1645,6 +1645,12 @@ html body .content .content-wrapper {
     }*/
     transition: all 0.2s ease-in-out;
     color: #919191;
+    &.menu_bl{
+        svg {
+            width: 22px;
+            height: 22px;
+        }
+    }
     svg{
         width: 20px;
         height: 20px;
@@ -1740,6 +1746,13 @@ html body.fixed-navbar {
 }
 .topnav{
     align-items: stretch;
+    justify-content: space-between;
+    .float-left{
+        margin-right: 0 !important;
+    }
+    .float-right{
+        display: none;
+    }
 }
 .dropdown-language{
     .nav-link{
