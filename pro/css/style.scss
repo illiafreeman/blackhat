@@ -1561,7 +1561,7 @@ html body .content .content-wrapper {
 }
 .vertical-layout{
     .navbar.header-navbar .navbar-wrapper, .app-content.content, .footer.footer-static{
-        width: 1000px;
+        width: 1300px;
         margin: 0 auto;
         //border-left: 1px solid #ddd;
         //border-right: 1px solid #ddd;
@@ -1596,6 +1596,9 @@ html body .content .content-wrapper {
     float: left;
     margin-right: 40px;
     transition: all 0.2s ease-in-out;
+    position: absolute;
+    left: 0;
+    top: 0;
     .brand-logo {
         width: 100%;
     }
@@ -1626,8 +1629,17 @@ html body .content .content-wrapper {
         }
     }
 }
-
+html body.fixed-navbar {
+    padding-top: 92px !important;
+}
+.app-content.content{
+    position: relative;
+    //z-index: 10000;
+}
 .search{
+    margin-left: 180px;
+    position: relative;
+    z-index: 1000;
     input{
         &::-webkit-input-placeholder {color:#999;}
         &::-moz-placeholder          {color:#999;}/* Firefox 19+ */
@@ -1817,7 +1829,8 @@ html body.fixed-navbar {
 }
 .topnav{
     align-items: stretch;
-    justify-content: space-between;
+    justify-content: flex-end;
+    position: relative;
     .float-left{
         margin-right: 0 !important;
     }
