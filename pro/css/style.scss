@@ -1737,6 +1737,21 @@ html body .content .content-wrapper {
         margin-right: 10px;
     }
 }
+.road{
+    background-size: 20px auto;
+    background-position: left top;
+    background-repeat: no-repeat;
+    padding-left: 30px;
+    &_1{
+        background-image: url("../img/road_1.svg");
+    }
+    &_2{
+        background-image: url("../img/road_2.svg");
+    }
+    &_3{
+        background-image: url("../img/road_3.svg");
+    }
+}
 .menu{
 /*    background-size: 20px auto;
     background-position: left center;
@@ -2658,12 +2673,13 @@ ol{
 }
 .tm-gr-yr{
     text-transform: uppercase;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
     font-weight: 700;
-    font-size: 16px;
+    font-size: 18px;
+    //justify-content: center;
 }
 .tm-gr-text{
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     font-size: 16px;
 }
 body{
