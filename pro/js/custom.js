@@ -86,7 +86,7 @@ $(document).ready(function() {
     });*/
     //$("body").scrollspy({target: "#navigation", offset:150});
 })
-if ($(window).width() < 1000) {
+if ($(window).width() < 1040) {
     $('.menu_parent').click(function(){
         $(this).toggleClass('open');
     });

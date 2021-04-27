@@ -2914,7 +2914,14 @@ html body.fixed-navbar{
         bottom: 57px;
     }
 }
-
+@media only screen and (max-width: 1040px) {
+    .menu_parent.open .menu-subnav {
+        opacity: 1 !important;
+        visibility: visible !important;
+        top: 62px !important;
+        margin-top: 0 !important;
+    }
+}
 @media only screen and (max-width: 1000px) {
     .header-navbar .logo {
         width: 60px;
@@ -2959,12 +2966,7 @@ html body.fixed-navbar{
         visibility: hidden !important;
         top: 84px !important;
     }
-    .menu_parent.open .menu-subnav {
-        opacity: 1 !important;
-        visibility: visible !important;
-        top: 62px !important;
-        margin-top: 0 !important;
-    }
+
     .menu_parent{
         margin-bottom: 150px !important;
     }
