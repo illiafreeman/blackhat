@@ -2560,7 +2560,7 @@ html body .content .content-wrapper {
     //padding: 0;
 }
 footer.footer {
-    padding: 18px;
+    padding: 40px 18px;
 }
 .table__oh{
     overflow: auto;
@@ -2590,7 +2590,23 @@ footer.footer {
 .table-hover tbody tr:hover {
     background-color: transparent;
 }
-
+.card-header .card-title{
+    display: flex;
+    align-items: center;
+    a{
+        color: #fff;
+        text-decoration: underline;
+        transition: $transition;
+        text-transform: none;
+        font-size: 12px;
+        display: flex;
+        margin-left: 10px;
+        &:hover{
+            color: #ddd;
+            text-decoration: none;
+        }
+    }
+}
 
 
 
