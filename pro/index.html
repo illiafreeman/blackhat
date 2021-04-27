@@ -150,80 +150,102 @@
                     <div class="card-body">
                         <div class="card-body__inner">
                             <div class="row">
-                                <div class="col-md-6 oh">
-                                    <table class="table data-table">
-                                        <tbody>
-                                        <tr>
-                                            <td style="width: 40%;">Last Indexed Block</td>
-                                            <td class="data">
-                                                {{- if .InternalExplorer -}}
-                                                <a href="/block/{{$bb.BestHeight}}">{{$bb.BestHeight}}</a>
-                                                {{else}}
-                                                {{$bb.BestHeight}}
-                                                {{- end -}}
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Best Block Hash</td>
-                                            <td class="data ellipsis">{{$be.Bestblockhash}}</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Last Block Update</td>
-                                            <td class="data">{{formatTime $bb.LastBlockTime}}</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Protocol Version</td>
-                                            <td class="data">{{$be.ProtocolVersion}}</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Masternode Count</td>
-                                            <td class="data ellipsis">{{$be.MasternodeCount}}</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Next Superblock</td>
-                                            <td class="data">{{$be.NextSuperBlock}}</td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
+                                <div class="col-md-6">
+                                    <div class="table__oh">
+                                        <table class="table data-table">
+                                            <tbody>
+                                            <tr>
+                                                <td style="width: 180px;">Last Indexed Block</td>
+                                                <td class="data ellipsis">
+<!--                                                    {{- if .InternalExplorer -}}
+                                                    <a href="/block/{{$bb.BestHeight}}">{{$bb.BestHeight}}</a>
+                                                    {{else}}
+                                                    {{$bb.BestHeight}}
+                                                    {{- end -}}-->
+                                                    <a href="">2823116</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Best Block Hash</td>
+                                                <td class="data ellipsis">
+                                                    <!--{{$be.Bestblockhash}}-->
+                                                    07b8487e668daa7110d56cd4446727fd20c484f055153b9cb9219753645b2122
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Last Block Update</td>
+                                                <td class="data ellipsis">
+                                                    <!--{{formatTime $bb.LastBlockTime}}-->
+                                                    Tue, 27 Apr 2021 15:25:03 UTC
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Protocol Version</td>
+                                                <td class="data ellipsis">
+                                                    <!--{{$be.ProtocolVersion}}-->
+                                                    70921
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Masternode Count</td>
+                                                <td class="data ellipsis">
+                                                    <!--{{$be.MasternodeCount}}-->
+                                                    1805
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Next Superblock</td>
+                                                <td class="data ellipsis">
+                                                    <!--{{$be.NextSuperBlock}}-->
+                                                    2851200
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
-                                <div class="col-md-6 oh">
-                                    <table class="table data-table">
-                                        <tbody>
-                                        <tr>
-                                            <td style="width: 40%;">Difficulty</td>
-                                            <td class="data">{{$be.Difficulty}}</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Mempool Size</td>
-                                            <td class="data">{{$bb.MempoolSize}}</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Last Mempool Update</td>
-                                            <td class="data">{{formatTime $bb.LastMempoolTime}}</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Total PIV Supply</td>
-                                            <td class="data ellipsis">{{formatSupply $be.MoneySupply}}&nbsp;{{$cs}}</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Transparent Supply</td>
-                                            <td>
-                                                <span class="data">{{formatSupply $be.TransparentSupply}}&nbsp;{{$cs}}</span>&nbsp;
-                                                <em>({{getPercent $be.TransparentSupply $be.MoneySupply}})
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Shield Supply</td>
-                                            <td>
-                                                <span class="data">{{formatSupply $be.ShieldSupply}}&nbsp;{{$cs}}</span>&nbsp;
-                                                <em>({{getPercent $be.ShieldSupply $be.MoneySupply}})
-                                            </td>
-                                        </tr>
+                                <div class="col-md-6">
+                                    <div class="table__oh">
+                                        <table class="table data-table">
+                                            <tbody>
+                                            <tr>
+                                                <td style="width: 180px;">Difficulty</td>
+                                                <td class="data ellipsis">{{$be.Difficulty}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Mempool Size</td>
+                                                <td class="data ellipsis">{{$bb.MempoolSize}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Last Mempool Update</td>
+                                                <td class="data ellipsis">{{formatTime $bb.LastMempoolTime}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Total PIV Supply</td>
+                                                <td class="data ellipsis">{{formatSupply $be.MoneySupply}}&nbsp;{{$cs}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Transparent Supply</td>
+                                                <td class="data ellipsis">
+                                                    <span class="data">
+                                                        65 299 359.80 PIV
+                                                    </span>&nbsp;
+                                                    <em>(99.13 %)</em>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Shield Supply</td>
+                                                <td class="data ellipsis">
+                                                    <span class="data">{{formatSupply $be.ShieldSupply}}&nbsp;{{$cs}}</span>&nbsp;
+                                                    <em>({{getPercent $be.ShieldSupply $be.MoneySupply}})
+                                                </td>
+                                            </tr>
 
-                                        <tr>
-                                        </tr>
-                                        </tbody>
-                                    </table>
+                                            <tr>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
                             </div>
                         </div>

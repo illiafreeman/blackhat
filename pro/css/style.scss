@@ -1043,7 +1043,7 @@ html body .content .content-wrapper{
             padding-top: 0;
 
             &__inner{
-                overflow: auto;
+                //overflow: auto;
                 width: 100%;
             }
         }
@@ -2538,6 +2538,15 @@ ol{
 }
 .table{
     max-width: 100%;
+    a{
+        color: #fff;
+        text-decoration: underline;
+        transition: $transition;
+        &:hover{
+            color: #ddd;
+            text-decoration: none;
+        }
+    }
 }
 .ellipsis {
     overflow: hidden;
@@ -2553,13 +2562,34 @@ html body .content .content-wrapper {
 footer.footer {
     padding: 18px;
 }
-
-
-
-
-
-
-
+.table__oh{
+    overflow: auto;
+}
+.invoice-page .invoice-table .table{
+    table-layout: fixed;
+}
+.card-header {
+    padding: 2.5rem 1.5rem;
+}
+.invoice-page .invoice-table table th, .invoice-page .invoice-table table td {
+    border: 1px solid #353434;
+}
+.invoice-page .invoice-table table tr td{
+    &:last-child{
+        font-weight: 700;
+    }
+    em{
+        font-weight: 400;
+        font-size: 11px;
+        font-style: italic;
+    }
+}
+.btn-outline-secondary:hover {
+    background-color: transparent;
+}
+.table-hover tbody tr:hover {
+    background-color: transparent;
+}
 
 
 
