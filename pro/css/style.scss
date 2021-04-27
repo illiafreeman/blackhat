@@ -1628,7 +1628,18 @@ html body .content .content-wrapper {
 }
 .footer{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    div{
+        display: flex;
+        align-items: center;
+    }
+    &__links{
+        a{
+            display: flex;
+            margin-right: 10px;
+        }
+    }
 }
 .menu{
 /*    background-size: 20px auto;
