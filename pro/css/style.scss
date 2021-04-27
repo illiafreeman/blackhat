@@ -1730,6 +1730,13 @@ html body .content .content-wrapper {
         }
     }
 }
+.tm-gr-yr{
+    display: flex;
+    align-items: center;
+    svg{
+        margin-right: 10px;
+    }
+}
 .menu{
 /*    background-size: 20px auto;
     background-position: left center;

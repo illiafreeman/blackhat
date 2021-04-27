@@ -81,6 +81,13 @@ $(document).ready(function() {
             $(this).toggleClass('open');
         });
     }
+    $(window).on('resize orientationchange', function() {
+        if ($(window).width() < 1000) {
+            $('.menu_parent').click(function(){
+                $(this).toggleClass('open');
+            });
+        }
+    });
     //$("body").scrollspy({target: "#navigation", offset:150});
 })
 
