@@ -1626,6 +1626,24 @@ html body .content .content-wrapper {
         }
     }
 }
+
+.search{
+    input{
+        &::-webkit-input-placeholder {color:#999;}
+        &::-moz-placeholder          {color:#999;}/* Firefox 19+ */
+        &:-moz-placeholder           {color:#999;}/* Firefox 18- */
+        &:-ms-input-placeholder      {color:#999;}
+        &:focus{
+            color: #fff;
+        }
+        color: #fff;
+    }
+}
+.h1-main{
+    display: flex;
+    justify-content: center;
+    margin: 80px 0 50px;
+}
 .footer{
     display: flex;
     justify-content: space-between;
@@ -1633,11 +1651,49 @@ html body .content .content-wrapper {
     div{
         display: flex;
         align-items: center;
+        a{
+            transition: $transition;
+            &:hover{
+                color: #fff;
+                text-decoration: underline;
+            }
+        }
+    }
+    &__link{
+        margin-right: 15px !important;
+        display: flex;
     }
     &__links{
         a{
             display: flex;
             margin-right: 10px;
+        }
+        .soc{
+            margin-left: 30px;
+            a{
+                display: block;
+                margin-right: 15px;
+                svg{
+                    width: 20px;
+                    height: 20px;
+                }
+                &:last-child{
+                    margin-right: 0px;
+                }
+                svg{
+                    path{
+                        transition: $transition;
+
+                    }
+                }
+                &:hover{
+                    svg{
+                        path{
+                            fill: #fff;
+                        }
+                    }
+                }
+            }
         }
     }
 }
@@ -2467,9 +2523,17 @@ ol{
     height: 400px;
     overflow: auto;
 }
-
-
-
+.table{
+    max-width: 100%;
+}
+.ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.table-striped tbody tr:nth-of-type(2n+1) {
+    background-color: transparent;
+}
 
 
 @media only screen and (min-width: 1100px) {

@@ -132,39 +132,178 @@
     <div class="content-wrapper">
         <div class="content-body justify-content-center">
             <div class="invoice-page clearfix">
-
-
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-body__inner">
+                            <form id="search" class="mx-2 my-auto d-inline w-100 search" action="/search" method="get">
+                                <div class="input-group"><label class="mr-sm-2 mb-0 sr-only"
+                                                                for="q">Search</label><input type="text"
+                                                                                             class="form-control rounded-left"
+                                                                                             name="q"
+                                                                                             placeholder="Search for block, transaction, address or xpub"><span
+                                        class="input-group-append"><button class="btn btn-outline-secondary"
+                                                                           type="submit" form="search"
+                                                                           value="GO">GO</button></span></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <h1 class="h1-main">BlackHat Block Explorer</h1>
                 <div class="invoice-table card">
                     <div class="card-header">
-                        <h6 class="card-title">Referal history</h6>
+                        <h6 class="card-title">Block index</h6>
                     </div>
                     <div class="card-body">
                         <div class="card-body__inner">
-                            <table>
+                            <div class="row">
+                                <div class="col-md-6 oh">
+                                    <table class="table data-table">
+                                        <tbody>
+                                        <tr>
+                                            <td style="width: 40%;">Last Indexed Block</td>
+                                            <td class="data">
+                                                {{- if .InternalExplorer -}}
+                                                <a href="/block/{{$bb.BestHeight}}">{{$bb.BestHeight}}</a>
+                                                {{else}}
+                                                {{$bb.BestHeight}}
+                                                {{- end -}}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Best Block Hash</td>
+                                            <td class="data ellipsis">{{$be.Bestblockhash}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Last Block Update</td>
+                                            <td class="data">{{formatTime $bb.LastBlockTime}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Protocol Version</td>
+                                            <td class="data">{{$be.ProtocolVersion}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Masternode Count</td>
+                                            <td class="data ellipsis">{{$be.MasternodeCount}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Next Superblock</td>
+                                            <td class="data">{{$be.NextSuperBlock}}</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="col-md-6 oh">
+                                    <table class="table data-table">
+                                        <tbody>
+                                        <tr>
+                                            <td style="width: 40%;">Difficulty</td>
+                                            <td class="data">{{$be.Difficulty}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Mempool Size</td>
+                                            <td class="data">{{$bb.MempoolSize}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Last Mempool Update</td>
+                                            <td class="data">{{formatTime $bb.LastMempoolTime}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Total PIV Supply</td>
+                                            <td class="data ellipsis">{{formatSupply $be.MoneySupply}}&nbsp;{{$cs}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Transparent Supply</td>
+                                            <td>
+                                                <span class="data">{{formatSupply $be.TransparentSupply}}&nbsp;{{$cs}}</span>&nbsp;
+                                                <em>({{getPercent $be.TransparentSupply $be.MoneySupply}})
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Shield Supply</td>
+                                            <td>
+                                                <span class="data">{{formatSupply $be.ShieldSupply}}&nbsp;{{$cs}}</span>&nbsp;
+                                                <em>({{getPercent $be.ShieldSupply $be.MoneySupply}})
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="invoice-table card">
+                    <div class="card-header">
+                        <h6 class="card-title">Last blocks</h6>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-body__inner">
+                            <table class="table table-striped data-table table-hover">
+                                <thead>
                                 <tr>
-                                    <th>Date</th>
-                                    <th>Amount</th>
-                                    <th>Type</th>
-                                    <th>Description</th>
+                                    <th style="width: 10%;">Height</th>
+                                    <th style="width: 48%;">Hash</th>
+                                    <th>Timestamp</th>
+                                    <th class="text-right" title="number of Transactions in block" style="width: 10%;">
+                                        TXs
+                                    </th>
+                                    <th class="text-right" title="size in Bytes" style="width: 10%;">Size</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td><a href="/block/2823116">2823116</a></td>
+                                    <td class="ellipsis">
+                                        07b8487e668daa7110d56cd4446727fd20c484f055153b9cb9219753645b2122
+                                    </td>
+                                    <td>Tue, 27 Apr 2021 15:25:00 UTC</td>
+                                    <td class="text-right">2</td>
+                                    <td class="text-right">484</td>
                                 </tr>
                                 <tr>
-                                    <td>2020-01-30 12:34:12</td>
-                                    <td>100</td>
-                                    <td>;ldksgj adklgj </td>
-                                    <td>js/app-menu.min.js" type="text/javascript</td>
+                                    <td><a href="/block/2823115">2823115</a></td>
+                                    <td class="ellipsis">
+                                        9ee440e797d7389d6edd8b9ac812a32fd90e74455179c17e8c4cc1cf8e714403
+                                    </td>
+                                    <td>Tue, 27 Apr 2021 15:24:30 UTC</td>
+                                    <td class="text-right">3</td>
+                                    <td class="text-right">684</td>
                                 </tr>
                                 <tr>
-                                    <td>2020-01-30 12:34:12</td>
-                                    <td>100</td>
-                                    <td>js/app-menu.min.js</td>
-                                    <td>;ldksgj adklgj </td>
+                                    <td><a href="/block/2823114">2823114</a></td>
+                                    <td class="ellipsis">
+                                        516500d6d6577b9bdfb3d0f86846bb7dc55bc05f9d34ca8ca1be09bf2d320fa6
+                                    </td>
+                                    <td>Tue, 27 Apr 2021 15:24:00 UTC</td>
+                                    <td class="text-right">2</td>
+                                    <td class="text-right">484</td>
                                 </tr>
+                                <tr>
+                                    <td><a href="/block/2823113">2823113</a></td>
+                                    <td class="ellipsis">
+                                        a68191e2234d79bf09e428c62844a48ff3fcaab6d837a890f347decdabbc47a7
+                                    </td>
+                                    <td>Tue, 27 Apr 2021 15:22:00 UTC</td>
+                                    <td class="text-right">2</td>
+                                    <td class="text-right">460</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="/block/2823112">2823112</a></td>
+                                    <td class="ellipsis">
+                                        dc4dec3f86912e03e9f757d7581ccf3033e69d523be0b4694b7683d3dc36e620
+                                    </td>
+                                    <td>Tue, 27 Apr 2021 15:21:30 UTC</td>
+                                    <td class="text-right">2</td>
+                                    <td class="text-right">483</td>
+                                </tr>
+                                </tbody>
                             </table>
                         </div>
                     </div>
                 </div>
-
-
             </div>
         </div>
     </div>
@@ -176,8 +315,8 @@
 
 <footer class="footer footer-static footer-transparent text-center">
     <div class="footer__links">
-        <a href="">blackhatco.in</a>
-        <a href="">forum</a>
+        <a class="footer__link" href="">BlackHatco.in</a>
+        <a href="">Forum</a>
         <div class="soc">
             <a href="">
                 <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="twitter" role="img"
