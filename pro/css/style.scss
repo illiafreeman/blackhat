@@ -2634,7 +2634,11 @@ footer.footer {
 
 
 
-
+@media only screen and (max-width: 1300px) {
+    .vertical-layout .navbar.header-navbar .navbar-wrapper, .vertical-layout .app-content.content, .vertical-layout .footer.footer-static {
+        width: 100%;
+    }
+}
 
 @media only screen and (min-width: 1100px) {
     .button-cell .load-more-data__wrap {
@@ -2643,9 +2647,19 @@ footer.footer {
 }
 
 @media only screen and (max-width: 1000px) {
-    .header-navbar .logo {
+    .topnav .float-right {
+        display: flex;
+        height: 70px;
+    }
+        .header-navbar .logo {
         width: 60px;
         height: 5rem;
+    }
+    .topnav{
+        justify-content: flex-end !important;
+    }
+    .search {
+        margin-left: 0px;
     }
     .nav.navbar-nav.float-right .hambu {
         margin-left: 15px;
@@ -2676,9 +2690,37 @@ footer.footer {
             display: none;
         }
     }
-
-
-
+    .double{
+        .col-md-6 {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+    .footer{
+        flex-direction: column;
+        div{
+            margin-bottom: 30px;
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+        .soc{
+            width: 100% !important;
+            margin: 30px 0 0;
+            justify-content: center;
+        }
+        &__links{
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+    .table__oh {
+        overflow: auto;
+        width: 100%;
+        .table {
+            table-layout: initial !important;
+        }
+    }
 
 }
 @media only screen and (max-width: 768px) {
