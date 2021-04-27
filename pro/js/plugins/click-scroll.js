@@ -6,7 +6,7 @@ $.each(sectionArray, function(index, value){
      $(document).scroll(function(){
          var offsetSection = $('#' + 'section_' + value).offset().top;
          var docScroll = $(document).scrollTop();
-         var docScroll1 = docScroll + 150;
+         var docScroll1 = docScroll + 380;
          
         
          if ( docScroll1 >= offsetSection ){
@@ -22,8 +22,8 @@ $.each(sectionArray, function(index, value){
         var offsetClick = $('#' + 'section_' + value).offset().top;
         e.preventDefault();
         $('html, body').animate({
-            'scrollTop':offsetClick
-        }, 0)
+            //'scrollTop':offsetClick
+        }, 2000)
     });
     $('.btn_wallet').click(function(e){
         var offsetClick = $('#section_5').offset().top;
