@@ -76,21 +76,21 @@ $(document).ready(function() {
     history.replaceState(null, null, window.location.href);*/
 
 
-    if ($(window).width() < 1000) {
-        $('.menu_parent').click(function(){
-            $(this).toggleClass('open');
-        });
-    }
-    $(window).on('resize orientationchange', function() {
+
+  /*  $(window).on('resize orientationchange', function() {
         if ($(window).width() < 1000) {
             $('.menu_parent').click(function(){
                 $(this).toggleClass('open');
             });
         }
-    });
+    });*/
     //$("body").scrollspy({target: "#navigation", offset:150});
 })
-
+if ($(window).width() < 1000) {
+    $('.menu_parent').click(function(){
+        $(this).toggleClass('open');
+    });
+}
 
 
 $( window ).on("load", function() {
