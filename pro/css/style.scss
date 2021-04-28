@@ -2593,6 +2593,8 @@ ol{
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    display: block;
+    max-width: 100%;
 }
 .table-striped tbody tr:nth-of-type(2n+1) {
     background-color: transparent;
@@ -2796,6 +2798,26 @@ footer.footer {
         }
     }
 
+}
+@media only screen and (max-width: 900px) {
+    .card-title_transaction{
+        flex-direction: column;
+    }
+    .card-title_link{
+        margin: 0 0 15px !important;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 100%;
+        display: block !important;
+    }
+    .card_transaction{
+        .line-top{
+            .text-right{
+                text-align: left !important;
+            }
+        }
+    }
 }
 @media only screen and (max-width: 768px) {
     .collapse:not(.show) {
