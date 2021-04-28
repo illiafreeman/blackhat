@@ -2751,7 +2751,9 @@ form .form-group {
         padding-top: 25px;
     }
 }
-
+html body .content {
+    min-height: calc(100% - 105px);
+}
 
 
 
