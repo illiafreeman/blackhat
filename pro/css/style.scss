@@ -2701,10 +2701,30 @@ pre {
 .number, .boolean {
     color: darkred;
 }
-
-
-
-
+.titlewrap{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    & > div{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        h3{
+            margin: 0 10px 0 0;
+        }
+    }
+}
+.tx-own{
+    background-color: #353535;
+}
+.tx-out .tx-own .tx-amt {
+    color: #329B76 !important;
+}
+#qrcode{
+    img{
+        width: 100%;
+    }
+}
 
 
 
@@ -2847,6 +2867,16 @@ pre {
     }
     .dropdown.dropdown-language{
         position: relative !important;
+    }
+    #qrcode{
+        width: 160px;
+        margin: 0 auto;
+    }
+    .titlewrap{
+        flex-wrap: wrap;
+        nav{
+            width: 100%;
+        }
     }
 }
 @media only screen and (max-width: 480px) {
