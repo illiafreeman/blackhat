@@ -1668,11 +1668,34 @@ html body.fixed-navbar {
         color: #fff;
     }
 }
+.page-link{
+    transition: $transition;
+    margin: 0;
+    &:hover{
+        color: #fff;
+    }
+}
+.tx-addr {
+    float: left !important;
+}
+.tx-amt {
+    float: right !important;
+}
 .page-item.active .page-link {
     z-index: 1;
     color: #fff;
     background-color: #333;
     border-color: #444;
+}
+.card-title_transaction{
+    display: flex;
+    justify-content: space-between;
+}
+.line-mid {
+    padding: 15px;
+}
+.card-title_time{
+    font-size: 11px;
 }
 .footer{
     display: flex;
@@ -2625,12 +2648,45 @@ footer.footer {
         }
     }
 }
-
-
-
-
-
-
+.txvalues:not(:last-child) {
+    margin-right: 5px;
+}
+.txvalues-success {
+    background-color: #4a4a4a;
+}
+.txvalues {
+    display: inline-block;
+    padding: .7em 2em;
+    font-size: 13px;
+    font-weight: 100;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
+    margin-top: 5px;
+}
+.txvalues-primary {
+    background-color: #000;
+    border: 1px solid #595959;
+}
+.txvalues-default {
+    background-color: #282828;
+    color: #999;
+}
+.float-left.text-muted{
+    text-decoration: none;
+    &:hover{
+        color: #fff !important;
+    }
+}
+.table a.text-danger{
+    text-decoration: none;
+    color: #A43140 !important;
+}
+.text-success *{
+    color: #329B76 !important;
+}
 
 
 
