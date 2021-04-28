@@ -2754,7 +2754,12 @@ form .form-group {
 html body .content {
     min-height: calc(100% - 105px);
 }
-
+.h1-main_error{
+    border: 1px solid #680000;
+    padding: 20px;
+    border-radius: 0.35rem;
+    background: #512f2f;
+}
 
 
 
