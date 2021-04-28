@@ -2689,10 +2689,18 @@ footer.footer {
 .text-success *{
     color: #329B76 !important;
 }
-
-
-
-
+pre {
+    background-color: transparent;
+}
+.key {
+    color: #EB65F8;
+}
+.string {
+    color: darkgreen;
+}
+.number, .boolean {
+    color: darkred;
+}
 
 
 
