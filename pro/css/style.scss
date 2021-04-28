@@ -1683,6 +1683,12 @@ html body.fixed-navbar {
     &:hover{
         color: #fff;
     }
+    &.disabled{
+        opacity: .5;
+        cursor: not-allowed;
+        color: #999 !important;
+        pointer-events: none;
+    }
 }
 .tx-addr {
     float: left !important;
