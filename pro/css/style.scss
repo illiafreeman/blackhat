@@ -2695,7 +2695,30 @@ html body.fixed-navbar{
     display: flex;
     justify-content: center;
     align-items: center;
-
+    flex-direction: column;
+    ul{
+        display: flex;
+        padding: 0;
+        margin: 20px 0;
+        li{
+            display: block;
+            background-size: 20px auto;
+            background-position: 0 0;
+            background-repeat: no-repeat;
+            padding-left: 25px;
+            margin-right: 15px;
+            &:nth-child(1){
+                background-image: url(../img/road_1.svg);
+            }
+            &:nth-child(2){
+                background-image: url(../img/road_2.svg);
+            }
+            &:nth-child(3){
+                background-image: url(../img/road_3.svg);
+                margin-right: 0;
+            }
+        }
+    }
     .slider-nav{
         display: flex;
         justify-content: center;
