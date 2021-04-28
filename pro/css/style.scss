@@ -2687,9 +2687,13 @@ footer.footer {
     background-color: #000;
     border: 1px solid #595959;
 }
-.txvalues-default {
-    background-color: #282828;
-    color: #999;
+.txvalues-primary {
+    background-color: #000;
+    border: 1px solid #595959;
+}
+.txvalues-danger {
+    background-color: #431a1f;
+    border: 1px solid #A43140 !important;
 }
 .float-left.text-muted{
     text-decoration: none;
