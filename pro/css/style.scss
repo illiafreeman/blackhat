@@ -1655,6 +1655,24 @@ html body.fixed-navbar {
     display: flex;
     justify-content: center;
     margin: 80px 0 50px;
+    span{
+        font-size: 12px;
+    }
+}
+.pagination .page-link{
+    background: transparent;
+    color: #999;
+    border-color: #444;
+    transition: $transition;
+    &:hover{
+        color: #fff;
+    }
+}
+.page-item.active .page-link {
+    z-index: 1;
+    color: #fff;
+    background-color: #333;
+    border-color: #444;
 }
 .footer{
     display: flex;
