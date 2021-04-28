@@ -1664,6 +1664,9 @@ html body.fixed-navbar {
         text-transform: none;
         font-size: 12px;
     }
+    div{
+        text-align: center;
+    }
 }
 .pagination .page-link{
     background: transparent;
@@ -2731,8 +2734,14 @@ pre {
         width: 100%;
     }
 }
-select.form-control{
+select.form-control, textarea.form-control{
     color: #999;
+}
+textarea.form-control:focus{
+      color: #999;
+  }
+textarea.form-control{
+    margin-bottom: 10px;
 }
 form .form-group {
     margin-bottom: 0;
