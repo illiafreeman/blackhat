@@ -2898,7 +2898,11 @@ html body .content {
         padding-top: 10px;
     }
 }
-
+.invoice-table.card.card_notitle{
+    .card-body{
+        padding-top: 1.5rem;
+    }
+}
 
 
 
