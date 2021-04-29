@@ -1692,6 +1692,9 @@ html body.fixed-navbar {
 }
 .tx-addr {
     float: left !important;
+    i{
+        font-weight: 300;
+    }
 }
 .tx-amt {
     float: right !important;
@@ -2734,7 +2737,7 @@ pre {
     }
 }
 .tx-own{
-    background-color: #353535;
+    background-color: #4d3c3c;
 }
 .tx-out .tx-own .tx-amt, .text-success {
     color: #329B76 !important;
@@ -2780,9 +2783,35 @@ html body .content {
     font-size: 16px;
     line-height: 155%;
 }
-
-
-
+.alert.alert-danger{
+    background: #512f2f !important;
+    border: 1px solid #680000 !important;
+    color: #ddd !important;
+    margin: 20px 0;
+    &:last-child{
+        margin-bottom: 0;
+    }
+}
+.alert.alert-success{
+    background: #1b2619 !important;
+    border: 1px solid #415937 !important;
+    color: #ddd !important;
+    margin: 20px 0;
+    &:last-child{
+        margin-bottom: 0;
+    }
+}
+.card_min{
+    width: 500px;
+    margin: 0 auto;
+    .card-body {
+        &__inner{
+            font-size: 18px;
+            line-height: 30px;
+        }
+        padding: 3.5rem;
+    }
+}
 
 
 
@@ -2896,6 +2925,8 @@ html body .content {
         }
     }
 }
+
+
 @media only screen and (max-width: 768px) {
     .collapse:not(.show) {
         display: flex;
@@ -2928,6 +2959,11 @@ html body .content {
         }
     }
 }
+@media only screen and (max-width: 600px) {
+    .card_min {
+        width: 100%;
+    }
+}
 @media only screen and (max-width: 480px) {
     .nav.navbar-nav.float-right .hambu {
         -webkit-transform: translateX(18px);
@@ -2944,6 +2980,11 @@ html body .content {
     }
     .add_node {
         width: 100%;
+    }
+    .card_min {
+        .card-body {
+            padding: 25px;
+        }
     }
 }
 
