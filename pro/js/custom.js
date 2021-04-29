@@ -24,6 +24,9 @@ $(document).ready(function() {
             $('.login').addClass('login_dis')
         }
     });
+    $('.menu_parent').click(function(){
+        $(this).toggleClass('open');
+    });
 })
 
 $('#terms_link').click(function () {
@@ -37,6 +40,18 @@ $( window ).on("load", function() {
         $('body').removeClass('oh');
         $('.preload').removeClass('vis');
     }, 2000);
+});
+
+
+
+const $menu = $('.menu_parent');
+
+$(document).mouseup(e => {
+    if (!$menu.is(e.target) // if the target of the click isn't the container...
+        && $menu.has(e.target).length === 0) // ... nor a descendant of the container
+    {
+        $menu.removeClass('open');
+    }
 });
 
 
