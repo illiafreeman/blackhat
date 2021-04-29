@@ -2903,7 +2903,11 @@ html body .content {
         padding-top: 1.5rem;
     }
 }
-
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
 
 
 
