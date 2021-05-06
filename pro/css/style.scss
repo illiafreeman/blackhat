@@ -2632,6 +2632,26 @@ footer.footer {
 .invoice-page .invoice-table .table{
     table-layout: fixed;
 }
+.invoice-page .invoice-table .table_long{
+    table-layout: initial;
+    td{
+        &.preenabled{
+            color: #ddd;
+        }
+        &.enabled{
+            color: #42824c;
+        }
+        &.expired{
+            color: #953f3f;
+        }
+        &.vinspent{
+            color: #6a6767;
+        }
+        &.remove{
+            color: #665f44;
+        }
+    }
+}
 .card-header {
     padding: 2.5rem 1.5rem;
 }
