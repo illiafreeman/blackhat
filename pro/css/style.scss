@@ -2437,9 +2437,31 @@ ol{
     height: 400px;
     overflow: auto;
 }
+.btn.btn_telega{
+    background-color: #54a9eb !important;
+    &:hover{
+        background-color: #336891 !important;
+    }
+}
+.reg{
+    text-align: center;
+    margin-top: 40px;
+}
+.und{
+    display: flex;
+    align-items: flex-start;
+    margin: 40px 0;
+    cursor: pointer;
+    div{
+        color: #bf6868;
+    }
 
-
-
+    input{
+        margin-right: 15px;
+        position: relative;
+        top: 5px;
+    }
+}
 
 
 @media only screen and (min-width: 1100px) {
