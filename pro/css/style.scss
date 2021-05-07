@@ -2633,7 +2633,7 @@ footer.footer {
     table-layout: fixed;
 }
 .invoice-page .invoice-table .table_long{
-    //table-layout: initial;
+    table-layout: initial;
     td{
         &.preenabled{
             color: #ddd;
@@ -2650,6 +2650,9 @@ footer.footer {
         &.remove{
             color: #665f44;
         }
+    }
+    .ellipsis{
+        max-width: 250px;
     }
 }
 .invoice-page .invoice-table.master_search{
