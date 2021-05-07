@@ -2633,7 +2633,7 @@ footer.footer {
     table-layout: fixed;
 }
 .invoice-page .invoice-table .table_long{
-    table-layout: initial;
+    //table-layout: initial;
     td{
         &.preenabled{
             color: #ddd;
