@@ -162,73 +162,78 @@
                                         <input style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;" type="text" id="balance" class="form-control" placeholder="My Balance" disabled value="100500 BLKC">
                                         <label for="balance">My Balance</label>
                                     </fieldset>
-
+                                    <div class="qrcode"
+                                         title="DDhsPtuiFb14pyU2MouNoY4edeLJAySxRd">
+                                        <canvas width="160" height="160" style="display: none;"></canvas>
+                                        <img style="display: block;"
+                                             src="data:image/png;base64,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">
+                                    </div>
 
 
                                 </div>
                                 <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="home-tab">
                                     <fieldset class="form-label-group">
-                                        <input type="text" id="destination1" class="form-control" placeholder="Destination address" value="">
-                                        <label for="destination1" >Destination address</label>
-                                        <div class="error-text">Destination address is invalid</div>
-                                        <svg class="help-icon" data-toggle="tooltip" title="Hooray! Destination addressDestination addressDestination address" aria-hidden="true" focusable="false" data-prefix="fal"
-                                             data-icon="question-circle" role="img" xmlns="http://www.w3.org/2000/svg"
-                                             width="24" height="24" viewBox="0 0 512 512">
+                                        <input style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;" type="text" id="address1" class="form-control" placeholder="My Transparent address" disabled value="2B4jxvxvdgXkxQhU71v4ERf9LZnKBwPWUaaa">
+                                        <label for="address1">My Transparent address</label>
+                                        <svg class="help-icon icon-copy" onclick="toastr.success('Copied to clipboard');" aria-hidden="true" focusable="false" data-prefix="fal" data-icon="copy"
+                                             role="img" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 448 512">
                                             <path fill="currentColor"
-                                                  d="M256 340c-15.464 0-28 12.536-28 28s12.536 28 28 28 28-12.536 28-28-12.536-28-28-28zm7.67-24h-16c-6.627 0-12-5.373-12-12v-.381c0-70.343 77.44-63.619 77.44-107.408 0-20.016-17.761-40.211-57.44-40.211-29.144 0-44.265 9.649-59.211 28.692-3.908 4.98-11.054 5.995-16.248 2.376l-13.134-9.15c-5.625-3.919-6.86-11.771-2.645-17.177C185.658 133.514 210.842 116 255.67 116c52.32 0 97.44 29.751 97.44 80.211 0 67.414-77.44 63.849-77.44 107.408V304c0 6.627-5.373 12-12 12zM256 40c118.621 0 216 96.075 216 216 0 119.291-96.61 216-216 216-119.244 0-216-96.562-216-216 0-119.203 96.602-216 216-216m0-32C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8z"
+                                                  d="M433.941 65.941l-51.882-51.882A48 48 0 0 0 348.118 0H176c-26.51 0-48 21.49-48 48v48H48c-26.51 0-48 21.49-48 48v320c0 26.51 21.49 48 48 48h224c26.51 0 48-21.49 48-48v-48h80c26.51 0 48-21.49 48-48V99.882a48 48 0 0 0-14.059-33.941zM352 32.491a15.88 15.88 0 0 1 7.431 4.195l51.882 51.883A15.885 15.885 0 0 1 415.508 96H352V32.491zM288 464c0 8.822-7.178 16-16 16H48c-8.822 0-16-7.178-16-16V144c0-8.822 7.178-16 16-16h80v240c0 26.51 21.49 48 48 48h112v48zm128-96c0 8.822-7.178 16-16 16H176c-8.822 0-16-7.178-16-16V48c0-8.822 7.178-16 16-16h144v72c0 13.2 10.8 24 24 24h72v240z"
                                                   class=""></path>
                                         </svg>
                                     </fieldset>
                                     <fieldset class="form-label-group">
-                                        <input type="text" id="Amount1" class="form-control" placeholder="Amount" value="">
-                                        <label for="Amount1">Amount</label>
-                                        <div class="error-text">Amount is invalid</div>
-                                        <svg class="help-icon" data-toggle="tooltip" title="Hooray! Amount" aria-hidden="true" focusable="false" data-prefix="fal"
-                                             data-icon="question-circle" role="img" xmlns="http://www.w3.org/2000/svg"
-                                             width="24" height="24" viewBox="0 0 512 512">
-                                            <path fill="currentColor"
-                                                  d="M256 340c-15.464 0-28 12.536-28 28s12.536 28 28 28 28-12.536 28-28-12.536-28-28-28zm7.67-24h-16c-6.627 0-12-5.373-12-12v-.381c0-70.343 77.44-63.619 77.44-107.408 0-20.016-17.761-40.211-57.44-40.211-29.144 0-44.265 9.649-59.211 28.692-3.908 4.98-11.054 5.995-16.248 2.376l-13.134-9.15c-5.625-3.919-6.86-11.771-2.645-17.177C185.658 133.514 210.842 116 255.67 116c52.32 0 97.44 29.751 97.44 80.211 0 67.414-77.44 63.849-77.44 107.408V304c0 6.627-5.373 12-12 12zM256 40c118.621 0 216 96.075 216 216 0 119.291-96.61 216-216 216-119.244 0-216-96.562-216-216 0-119.203 96.602-216 216-216m0-32C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8z"
-                                                  class=""></path>
-                                        </svg>
+                                        <input style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;" type="text" id="balance1" class="form-control" placeholder="My Balance" disabled value="2 BLKC">
+                                        <label for="balance1">My Balance</label>
                                     </fieldset>
-                                    <fieldset class="form-label-group">
-                                        <input type="text" id="Network_Fee1" class="form-control" placeholder="Network Fee" disabled value="12">
-                                        <label for="Network_Fee1">Network Fee</label>
-                                        <div class="error-text">Network Fee is invalid</div>
-                                        <svg class="help-icon" data-toggle="tooltip" title="Network Fee" aria-hidden="true" focusable="false" data-prefix="fal"
-                                             data-icon="question-circle" role="img" xmlns="http://www.w3.org/2000/svg"
-                                             width="24" height="24" viewBox="0 0 512 512">
-                                            <path fill="currentColor"
-                                                  d="M256 340c-15.464 0-28 12.536-28 28s12.536 28 28 28 28-12.536 28-28-12.536-28-28-28zm7.67-24h-16c-6.627 0-12-5.373-12-12v-.381c0-70.343 77.44-63.619 77.44-107.408 0-20.016-17.761-40.211-57.44-40.211-29.144 0-44.265 9.649-59.211 28.692-3.908 4.98-11.054 5.995-16.248 2.376l-13.134-9.15c-5.625-3.919-6.86-11.771-2.645-17.177C185.658 133.514 210.842 116 255.67 116c52.32 0 97.44 29.751 97.44 80.211 0 67.414-77.44 63.849-77.44 107.408V304c0 6.627-5.373 12-12 12zM256 40c118.621 0 216 96.075 216 216 0 119.291-96.61 216-216 216-119.244 0-216-96.562-216-216 0-119.203 96.602-216 216-216m0-32C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8z"
-                                                  class=""></path>
-                                        </svg>
-                                    </fieldset>
-                                    <fieldset class="form-label-group">
-                                        <div class="invoice-amount">Total:<b>100500 XBI</b></div>
-                                    </fieldset>
-                                    <label class="und und_send">
-                                        <input id="" type="checkbox">
-                                        <div>I checked address and amount and they are right</div>
-                                    </label>
-                                    <fieldset class="form-label-group">
-                                        <div class="button_wrap ac">
-                                            <button type="submit" class="btn">
-                                                <svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="upload" role="img"
-                                                     xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 512 512">
-                                                    <path fill="currentColor"
-                                                          d="M452 432c0 11-9 20-20 20s-20-9-20-20 9-20 20-20 20 9 20 20zm-84-20c-11 0-20 9-20 20s9 20 20 20 20-9 20-20-9-20-20-20zm144-48v104c0 24.3-19.7 44-44 44H44c-24.3 0-44-19.7-44-44V364c0-24.3 19.7-44 44-44h124v-99.3h-52.7c-35.6 0-53.4-43.1-28.3-68.3L227.7 11.7c15.6-15.6 40.9-15.6 56.6 0L425 152.4c25.2 25.2 7.3 68.3-28.3 68.3H344V320h124c24.3 0 44 19.7 44 44zM200 188.7V376c0 4.4 3.6 8 8 8h96c4.4 0 8-3.6 8-8V188.7h84.7c7.1 0 10.7-8.6 5.7-13.7L261.7 34.3c-3.1-3.1-8.2-3.1-11.3 0L109.7 175c-5 5-1.5 13.7 5.7 13.7H200zM480 364c0-6.6-5.4-12-12-12H344v24c0 22.1-17.9 40-40 40h-96c-22.1 0-40-17.9-40-40v-24H44c-6.6 0-12 5.4-12 12v104c0 6.6 5.4 12 12 12h424c6.6 0 12-5.4 12-12V364z"
-                                                          class=""></path>
-                                                </svg>
-                                                Send Coins
-                                            </button>
-                                        </div>
-                                    </fieldset>
+                                    <div class="qrcode"
+                                         title="DDhsPtuiFb14pyU2MouNoY4edeLJAySxRd">
+                                        <canvas width="160" height="160" style="display: none;"></canvas>
+                                        <img style="display: block;"
+                                             src="data:image/png;base64,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">
+                                    </div>
                                 </div>
                             </div>
 
                         </form>
                     </div>
                 </div>
+                <div class="invoice-form add_node claim card">
+                    <div class="card-header">
+                        <h6 class="card-title text-center">Payment request</h6>
+                    </div>
+                    <div class="card-body">
+                        <form action="">
+                            <fieldset class="form-label-group">
+                                <input type="text" id="Amount" class="form-control" placeholder="Amount" value="">
+                                <label for="Amount">Amount</label>
+                                <div class="error-text">Amount is invalid</div>
+                            </fieldset>
+                            <fieldset class="form-label-group">
+                                <div class="button_wrap button_wrap_padding ac">
+                                    <button type="submit" class="btn">Request</button>
+                                </div>
+                            </fieldset>
+                            <fieldset class="form-label-group">
+                                <input style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;" type="text" id="req" class="form-control" placeholder="Request for PC wallet" disabled value="2B4jM9nGnXkxQhU71v4ERf9LZnKBwPWUaaa">
+                                <label for="req">Request for PC wallet</label>
+                                <svg class="help-icon icon-copy" onclick="toastr.success('Copied to clipboard');" aria-hidden="true" focusable="false" data-prefix="fal" data-icon="copy"
+                                     role="img" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 448 512">
+                                    <path fill="currentColor"
+                                          d="M433.941 65.941l-51.882-51.882A48 48 0 0 0 348.118 0H176c-26.51 0-48 21.49-48 48v48H48c-26.51 0-48 21.49-48 48v320c0 26.51 21.49 48 48 48h224c26.51 0 48-21.49 48-48v-48h80c26.51 0 48-21.49 48-48V99.882a48 48 0 0 0-14.059-33.941zM352 32.491a15.88 15.88 0 0 1 7.431 4.195l51.882 51.883A15.885 15.885 0 0 1 415.508 96H352V32.491zM288 464c0 8.822-7.178 16-16 16H48c-8.822 0-16-7.178-16-16V144c0-8.822 7.178-16 16-16h80v240c0 26.51 21.49 48 48 48h112v48zm128-96c0 8.822-7.178 16-16 16H176c-8.822 0-16-7.178-16-16V48c0-8.822 7.178-16 16-16h144v72c0 13.2 10.8 24 24 24h72v240z"
+                                          class=""></path>
+                                </svg>
+                            </fieldset>
+                            <div class="qrcode"
+                                 title="DDhsPtuiFb14pyU2MouNoY4edeLJAySxRd">
+                                <canvas width="160" height="160" style="display: none;"></canvas>
+                                <img style="display: block;"
+                                     src="data:image/png;base64,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">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
