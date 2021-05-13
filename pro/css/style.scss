@@ -1740,6 +1740,7 @@ html body.fixed-navbar {
 }
 .topnav{
     align-items: stretch;
+    justify-content: space-between;
 }
 .dropdown-language{
     .nav-link{
@@ -1748,20 +1749,16 @@ html body.fixed-navbar {
         }
     }
 }
-.nav.navbar-nav.float-right{
-    li{
-        margin-right: 0;
-    }
-    .dropdown-language{
-        margin: 0 0 0 10px;
-    }
-    .ft-menu{
-        margin-right: 0;
-    }
-    .hambu{
-        transform: translateX(18px);
+.nav.navbar-nav{
+    .nav-item{
         display: none;
     }
+    .dropdown-language{
+        margin: 0;
+    }
+}
+.hambu{
+    display: none;
 }
 .card{
     background: rgba(0,0,0,.4);
@@ -1973,6 +1970,7 @@ html body .content .content-wrapper{
 .button_wrap{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     .btn-block{
         width: calc(50% - 15px) !important;
         cursor: pointer;
@@ -2030,8 +2028,14 @@ html body .content .content-wrapper{
             font-size: 12px;
             padding: 5px 0 0 12px;
             &.total-alarm{
-                padding: 0;
+                background: #220a0a;
                 font-size: 14px;
+                color: #e19494;
+                border-color: #680000;
+                padding: 15px;
+                svg path {
+                    fill: #e19494;
+                }
                 .la{
                     position: static;
                     color: #680000;
@@ -2055,6 +2059,9 @@ html body .content .content-wrapper{
     img{
         width: 100%;
     }
+}
+.form-label-group_telega{
+    margin: 40px 0 0;
 }
 .load-more-data__wrap{
     width: 100%;
@@ -2180,10 +2187,10 @@ html body .content .content-wrapper{
 
 .nav.navleft{
     .dropdown-language, .logout{
-        display: none;
+        //display: none;
     }
 }
-.nav.navbar-nav.mr-auto.float-left.vis{
+.nav.navbar-nav.vis{
     visibility: visible;
     overflow: visible;
     overflow-y: auto;
@@ -2485,7 +2492,7 @@ ol{
     .vertical-layout .navbar.header-navbar .navbar-wrapper, .vertical-layout .app-content.content, .vertical-layout .footer.footer-static {
         width: 100%;
     }
-    .nav.navbar-nav.mr-auto.float-left{
+    .nav.navbar-nav{
         visibility: hidden;
         overflow: hidden;
         position: absolute;
@@ -2504,7 +2511,13 @@ ol{
             display: none;
         }
     }
-
+    .hambu{
+        display: flex;
+        width: 70px;
+        height: 70px;
+        justify-content: center;
+        align-items: center;
+    }
 
 
 
