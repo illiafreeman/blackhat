@@ -2558,8 +2558,13 @@ ol{
 .und_send{
     margin: 30px 0;
 }
-
-
+.icon-copy{
+    cursor: pointer;
+}
+.form-label-group input:not(:placeholder-shown) ~ label {
+    color: #999;
+    padding-top: 1px;
+}
 
 
 
