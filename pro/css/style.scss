@@ -2078,6 +2078,17 @@ html body .content .content-wrapper{
         }
     }
 }
+.loginul{
+    //padding-left: 15px;
+    margin: 0;
+    li{
+        line-height: 16px;
+        margin-bottom: 10px;
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+}
 .modal{
     img{
         width: 100%;
