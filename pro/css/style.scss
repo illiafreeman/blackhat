@@ -2512,20 +2512,52 @@ ol{
 .tooltip{
     .arrow{
         &:before{
-            border-top: 5px solid red !important;
+            border-left: 5px solid #ddd !important;
         }
     }
 
     &-inner {
-        background-color: #f00;
-
+        background-color: #ddd;
+        color: #000;
     }
 
 }
-
-
-
-
+.card-body{
+    .tab-content{
+        padding-top: 30px;
+    }
+    .nav-tabs {
+        border-bottom: 1px solid #575B62;
+    }
+    .nav.nav-tabs .nav-item .nav-link{
+        padding: 12px 25px;
+        transition: $transition;
+        &:hover{
+            color: #fff;
+        }
+        &.active {
+            background-color: #000;
+            border-color: #575B62;
+            border-bottom-color: transparent;
+            color: #fff;
+            font-size: 16px;
+        }
+    }
+}
+.help-icon{
+    position: absolute;
+    top: 7px;
+    right: 6px;
+    display: block;
+}
+.form-control:disabled, .form-control[readonly] {
+    background-color: #2b2b2b;
+    cursor: not-allowed;
+    color: #ddd;
+}
+.und_send{
+    margin: 30px 0;
+}
 
 
 
@@ -2643,6 +2675,9 @@ ol{
     }
     .add_node {
         width: 100%;
+    }
+    .card-body .nav.nav-tabs .nav-item .nav-link {
+        padding: 12px;
     }
 }
 
