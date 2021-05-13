@@ -1606,6 +1606,9 @@ html body .content .content-wrapper {
         width: 60px;
         height: 5rem;
     }
+    .menu_devider {
+        margin-right: 280px;
+    }
 }
 .nav{
 
@@ -2503,6 +2506,50 @@ ol{
         top: 5px;
     }
 }
+.menu_devider{
+    margin-right: 200px;
+}
+.tooltip{
+    .arrow{
+        &:before{
+            border-top: 5px solid red !important;
+        }
+    }
+
+    &-inner {
+        background-color: #f00;
+
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @media only screen and (min-width: 1100px) {
@@ -2552,7 +2599,9 @@ ol{
         justify-content: center;
         align-items: center;
     }
-
+    .menu_devider{
+        margin-right: 0 !important;
+    }
 
 
 }
