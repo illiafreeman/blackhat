@@ -1763,11 +1763,19 @@ html body.fixed-navbar {
     }
 }
 .nav.navbar-nav{
-    .nav-item{
-        //display: none;
-    }
+    flex: 1 0 auto;
+    justify-content: space-between;
     .dropdown-language{
         margin: 0;
+    }
+    & >li{
+        ul{
+            display: flex;
+            padding: 0;
+            li{
+
+            }
+        }
     }
 }
 .hambu{
@@ -2670,6 +2678,7 @@ ol{
         height: 70px;
         justify-content: center;
         align-items: center;
+        transform: translateX(18px);
     }
     .menu_devider{
         margin-right: 0 !important;
@@ -2683,7 +2692,17 @@ ol{
         opacity: 1 !important;
         z-index: 10000;
     }
+    .nav.navbar-nav{
+        justify-content: flex-start;
+        & >li{
+            ul{
+                flex-direction: column;
+                li{
 
+                }
+            }
+        }
+    }
 }
 @media only screen and (max-width: 768px) {
     .collapse:not(.show) {
