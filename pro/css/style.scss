@@ -2623,9 +2623,41 @@ select.form-control{
     background: url("../img/select.png") calc(100% - 10px) center no-repeat;
     padding-left: 5px;
 }
-
-
-
+.balance_table{
+    table-layout: fixed;
+    width: 100%;
+    tr{
+        th{
+            text-align: center;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #575757;
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+        td{
+            text-align: center;
+            padding-top: 15px;
+            color: #fff;
+            font-weight: 800;
+            font-size: 17px;
+            span{
+                font-weight: 400 !important;
+                font-size: 12px;
+            }
+            svg{
+                path{
+                    fill: #fff;
+                }
+            }
+        }
+    }
+}
+.color_pos{
+    color: #388f46;
+}
+.color_neg{
+    color: #b54a4a;
+}
 
 
 
