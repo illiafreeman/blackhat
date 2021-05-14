@@ -1,5 +1,5 @@
 
-var sectionArray = [1, 2, 3, 4, 5, 6];
+var sectionArray = [1, 2, 3, 4, 5, 6, 7];
 
 $.each(sectionArray, function(index, value){
           
@@ -32,7 +32,13 @@ $.each(sectionArray, function(index, value){
             'scrollTop':offsetClick - 150
         }, 500)
     });
- 
+    $('#section_7_link').click(function(e){
+        var offsetClick = $('#section_7').offset().top;
+        e.preventDefault();
+        $('html, body').animate({
+            'scrollTop':offsetClick - 150
+        }, 500)
+    });
     
 });
 
