@@ -2927,10 +2927,12 @@ html body.fixed-navbar{
     display: flex;
     width: 700px;
     margin: 0 auto 100px;
+    align-items: flex-start;
     img{
         opacity: .4;
         width: 250px;
         margin-right: 40px;
+        display: block;
     }
     h4{
         i{
