@@ -1777,6 +1777,9 @@ html body.fixed-navbar {
             }
         }
     }
+    &.navlogin{
+        justify-content: flex-end;
+    }
 }
 .hambu{
     display: none;
@@ -2702,7 +2705,11 @@ ol{
                 }
             }
         }
+        &.navlogin{
+            justify-content: flex-start;
+        }
     }
+
 }
 @media only screen and (max-width: 768px) {
     .collapse:not(.show) {
