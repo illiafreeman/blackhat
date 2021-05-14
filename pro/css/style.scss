@@ -2541,10 +2541,25 @@ ol{
         border-bottom: 1px solid #575B62;
     }
     .nav.nav-tabs .nav-item .nav-link{
-        padding: 12px 25px;
+        padding: 12px 25px 12px 15px;
         transition: $transition;
+        display: flex;
+        align-items: center;
+        svg{
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            path{
+                transition: $transition;
+            }
+        }
         &:hover{
             color: #fff;
+            svg{
+                path{
+                    fill: #fff;
+                }
+            }
         }
         &.active {
             background-color: #000;
@@ -2552,6 +2567,11 @@ ol{
             border-bottom-color: transparent;
             color: #fff;
             font-size: 16px;
+            svg{
+                path{
+                    fill: #fff;
+                }
+            }
         }
     }
 }
@@ -2708,7 +2728,18 @@ ol{
         padding: 12px;
     }
 }
+@media only screen and (max-width: 360px) {
 
+    .card-body .nav.nav-tabs .nav-item .nav-link{
+        &.active {
+            font-size: 14px;
+        }
+        svg{
+            width: 16px;
+            height: 16px;
+        }
+    }
+}
 
 
 
