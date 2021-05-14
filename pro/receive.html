@@ -232,6 +232,12 @@
                     <div class="card-body">
                         <form action="">
                             <fieldset class="form-label-group">
+                                <select class="form-control">
+                                    <option value="" active="">Transparent</option>
+                                    <option value="">Shielded</option>
+                                 </select>
+                            </fieldset>
+                            <fieldset class="form-label-group">
                                 <input type="text" id="Amount" class="form-control" placeholder="Amount" value="">
                                 <label for="Amount">Amount</label>
                                 <div class="error-text">Amount is invalid</div>
@@ -241,22 +247,26 @@
                                     <button type="submit" class="btn">Request</button>
                                 </div>
                             </fieldset>
-                            <fieldset class="form-label-group">
-                                <input style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;" type="text" id="req" class="form-control" placeholder="Request for PC wallet" disabled value="2B4jM9nGnXkxQhU71v4ERf9LZnKBwPWUaaa">
-                                <label for="req">Request for PC wallet</label>
-                                <svg class="help-icon icon-copy" onclick="toastr.success('Copied to clipboard');" aria-hidden="true" focusable="false" data-prefix="fal" data-icon="copy"
-                                     role="img" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 448 512">
-                                    <path fill="currentColor"
-                                          d="M433.941 65.941l-51.882-51.882A48 48 0 0 0 348.118 0H176c-26.51 0-48 21.49-48 48v48H48c-26.51 0-48 21.49-48 48v320c0 26.51 21.49 48 48 48h224c26.51 0 48-21.49 48-48v-48h80c26.51 0 48-21.49 48-48V99.882a48 48 0 0 0-14.059-33.941zM352 32.491a15.88 15.88 0 0 1 7.431 4.195l51.882 51.883A15.885 15.885 0 0 1 415.508 96H352V32.491zM288 464c0 8.822-7.178 16-16 16H48c-8.822 0-16-7.178-16-16V144c0-8.822 7.178-16 16-16h80v240c0 26.51 21.49 48 48 48h112v48zm128-96c0 8.822-7.178 16-16 16H176c-8.822 0-16-7.178-16-16V48c0-8.822 7.178-16 16-16h144v72c0 13.2 10.8 24 24 24h72v240z"
-                                          class=""></path>
-                                </svg>
-                            </fieldset>
-                            <div class="qrcode"
-                                 title="DDhsPtuiFb14pyU2MouNoY4edeLJAySxRd">
-                                <canvas width="160" height="160" style="display: none;"></canvas>
-                                <img style="display: block;"
-                                     src="data:image/png;base64,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">
+                            <div>
+                                ajax here
+                                <fieldset class="form-label-group">
+                                    <input style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;" type="text" id="req" class="form-control" placeholder="Request for PC wallet" disabled value="2B4jM9nGnXkxQhU71v4ERf9LZnKBwPWUaaa">
+                                    <label for="req">Request for PC wallet</label>
+                                    <svg class="help-icon icon-copy" onclick="toastr.success('Copied to clipboard');" aria-hidden="true" focusable="false" data-prefix="fal" data-icon="copy"
+                                         role="img" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 448 512">
+                                        <path fill="currentColor"
+                                              d="M433.941 65.941l-51.882-51.882A48 48 0 0 0 348.118 0H176c-26.51 0-48 21.49-48 48v48H48c-26.51 0-48 21.49-48 48v320c0 26.51 21.49 48 48 48h224c26.51 0 48-21.49 48-48v-48h80c26.51 0 48-21.49 48-48V99.882a48 48 0 0 0-14.059-33.941zM352 32.491a15.88 15.88 0 0 1 7.431 4.195l51.882 51.883A15.885 15.885 0 0 1 415.508 96H352V32.491zM288 464c0 8.822-7.178 16-16 16H48c-8.822 0-16-7.178-16-16V144c0-8.822 7.178-16 16-16h80v240c0 26.51 21.49 48 48 48h112v48zm128-96c0 8.822-7.178 16-16 16H176c-8.822 0-16-7.178-16-16V48c0-8.822 7.178-16 16-16h144v72c0 13.2 10.8 24 24 24h72v240z"
+                                              class=""></path>
+                                    </svg>
+                                </fieldset>
+                                <div class="qrcode"
+                                     title="DDhsPtuiFb14pyU2MouNoY4edeLJAySxRd">
+                                    <canvas width="160" height="160" style="display: none;"></canvas>
+                                    <img style="display: block;"
+                                         src="data:image/png;base64,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">
+                                </div>
                             </div>
+
                         </form>
                     </div>
                 </div>

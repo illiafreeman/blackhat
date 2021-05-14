@@ -1659,6 +1659,10 @@ html body .content .content-wrapper {
     }
     &:hover, &.act{
         color: #fff;
+        *{
+            color: #fff;
+        }
+
         svg{
             path{
                 fill: #fff;
@@ -2611,6 +2615,13 @@ ol{
     margin: 0 auto;
     width: 160px;
     height: 160px;
+}
+select.form-control{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url("../img/select.png") calc(100% - 10px) center no-repeat;
+    padding-left: 5px;
 }
 
 
