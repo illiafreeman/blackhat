@@ -2665,7 +2665,9 @@ select.form-control{
 .color_neg{
     color: #b54a4a;
 }
-
+.wal.max {
+    max-width: 300px !important;
+}
 
 
 
@@ -2759,7 +2761,9 @@ select.form-control{
             justify-content: flex-start;
         }
     }
-
+    .wal.max {
+        max-width: 200px !important;
+    }
 }
 @media only screen and (max-width: 768px) {
     .collapse:not(.show) {
