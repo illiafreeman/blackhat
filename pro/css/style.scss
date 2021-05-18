@@ -2665,8 +2665,11 @@ select.form-control{
 .color_neg{
     color: #b54a4a;
 }
-.wal.max {
-    max-width: 300px !important;
+.over{
+    max-width: 300px;
+    .wal.max {
+        width: 100% !important;
+    }
 }
 
 
@@ -2761,9 +2764,7 @@ select.form-control{
             justify-content: flex-start;
         }
     }
-    .wal.max {
-        max-width: 200px !important;
-    }
+
 }
 @media only screen and (max-width: 768px) {
     .collapse:not(.show) {
@@ -2785,6 +2786,12 @@ select.form-control{
     }
     .dropdown.dropdown-language{
         position: relative !important;
+    }
+    .over{
+        max-width: 200px;
+        .wal.max {
+            width: 100% !important;
+        }
     }
 }
 @media only screen and (max-width: 480px) {
