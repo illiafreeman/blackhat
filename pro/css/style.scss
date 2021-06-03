@@ -3002,6 +3002,7 @@ select {
         img{
             transition: $transition;
             margin-right: 10px;
+            margin-top: 2px;
         }
         &:not(.collapsed){
             img{
@@ -3009,9 +3010,22 @@ select {
             }
         }
     }
+    .form-label-group {
+        margin-bottom: 0;
+    }
+    .card-header .card-title{
+        align-items: flex-start;
+    }
+
 }
-
-
+.coin-table__row_chart div input {
+    margin-top: 44px !important;
+    color: rgb(58, 145, 114) !important;
+}
+.coin-table__row_chart .chart-dash__text {
+    transform: translateY(-60px);
+    color: rgb(58, 145, 114) !important;
+}
 
 
 

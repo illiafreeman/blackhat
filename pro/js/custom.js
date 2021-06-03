@@ -86,6 +86,6 @@ $(function() {
         'format': function (value) {
             return value + '%';
         },
-        'fgColor': '#28d094'
+        'fgColor': '#3a9172'
     });
 });
