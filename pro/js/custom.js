@@ -61,11 +61,14 @@ var chart = c3.generate({
             ['data2 chart long', 120],
             ['data3', 200],
             ['data4', 550],
+            ['data5', 550],
+            ['data6', 550],
+            ['data7', 550],
         ],
         type : 'donut'
     },
     donut: {
-        title: "100,700 PHC Available"
+        title: "100500 Available"
     },
     color: {
         pattern: ['#1f77b4', '#aec7e8', '#ff7f0e', '#ffbb78', '#2ca02c', '#98df8a', '#d62728', '#ff9896', '#9467bd', '#c5b0d5', '#8c564b', '#c49c94', '#e377c2', '#f7b6d2', '#7f7f7f', '#c7c7c7', '#bcbd22', '#dbdb8d', '#17becf', '#9edae5']
@@ -78,6 +81,9 @@ var chart = c3.generate({
             y: 0,
             step: undefined
         }
+    },
+    padding: {
+        bottom: 40
     }
 });
 $(function() {
