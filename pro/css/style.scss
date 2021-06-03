@@ -2159,6 +2159,7 @@ html body .content .content-wrapper{
             -moz-user-select: none;
             -ms-user-select: none;
             user-select: none;
+            pointer-events: none;
         }
         .la{
             position: absolute;
@@ -2962,6 +2963,12 @@ select {
         color: #999;
     }
 }
+
+
+
+
+
+
 
 
 
