@@ -134,6 +134,7 @@
     <link rel="stylesheet" type="text/css" href="css/vendors.css">
     <link rel="stylesheet" type="text/css" href="css/app.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/c3.min.css">
     <!--end common styles-->
 </head>
 <body class="vertical-layout vertical-compact-menu content-detached-right-sidebar   menu-expanded fixed-navbar"
@@ -268,6 +269,7 @@
     <div class="content-wrapper">
         <div class="content-body justify-content-center">
             <div class="invoice-page clearfix">
+
                 <form id="search" class="search" action="/search" method="get">
                     <div class="input-group"><label class="mr-sm-2 mb-0 sr-only"
                                                     for="q">Search</label><input type="text"
@@ -279,6 +281,110 @@
                                                                value="GO">GO</button></span></div>
                 </form>
                 <h1 class="h1-main">masternodes</h1>
+
+                <div class="grid_13">
+                    <div class="add_node card">
+                        <div class="card-header">
+                            <h6 class="card-title text-center">chart</h6>
+                        </div>
+                        <div class="card-body">
+                            <div id="chart"></div>
+                        </div>
+                    </div>
+                    <div class="add_node card">
+                        <div class="card-header">
+                            <h6 class="card-title text-center">Gentarium Shared Maternodes</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="coin-table__row_chart">
+                                <input type="text" value="10" class="dial" data-thickness=".1" data-width="90" data-height="90">
+                                <div class="chart-dash__text">ready</div>
+                            </div>
+                            <fieldset class="form-label-group">
+                                <div class="invoice-amount">Coins left to start Shared MN:<b>35</b></div>
+                                <div class="invoice-amount">Total Shared MN started:<b>100500</b></div>
+                            </fieldset>
+                            <fieldset class="form-label-group">
+                                <div class="invoice-amount">Invest in shared masternodes:&nbsp;<a class="inline-link" href="">masternodes masternodes</a></div>
+                            </fieldset>
+                        </div>
+                    </div>
+                    <div class="add_node card">
+                        <div class="card-header">
+                            <h6 class="card-title text-center">FAQ</h6>
+                        </div>
+                        <div class="card-body faq-body">
+                            <fieldset class="form-label-group">
+                                <div class="card-header" id="heading1">
+                                    <a class="card-title lead collapsed" data-toggle="collapse" data-target="#collapse1"
+                                       aria-expanded="true" aria-controls="collapse1" href="#">
+                                        <img src="img/chevron.svg" alt="">
+                                        What are these addresses for?
+                                    </a>
+                                </div>
+                                <div id="collapse1" class="collapse" aria-labelledby="heading1" data-parent="#accordion" style="">
+                                    <div class="card-body">
+                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                                        richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
+                                        brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+                                        sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
+                                        shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson
+                                        cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo.
+                                        Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt
+                                        you probably haven't heard of them accusamus labore sustainable VHS.
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <fieldset class="form-label-group">
+                                <div class="card-header" id="heading2">
+                                    <a class="card-title lead collapsed" data-toggle="collapse" data-target="#collapse2"
+                                       aria-expanded="true" aria-controls="collapse2" href="#">
+                                        <img src="img/chevron.svg" alt="">
+                                        Maternodes
+                                    </a>
+                                </div>
+                                <div id="collapse2" class="collapse" aria-labelledby="heading1" data-parent="#accordion" style="">
+                                    <div class="card-body">
+                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                                        richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
+                                        brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+                                        sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
+                                        shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson
+                                        cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo.
+                                        Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt
+                                        you probably haven't heard of them accusamus labore sustainable VHS.
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <fieldset class="form-label-group">
+                                <div class="card-header" id="heading3">
+                                    <a class="card-title lead collapsed" data-toggle="collapse" data-target="#collapse3"
+                                       aria-expanded="true" aria-controls="collapse3" href="#">
+                                        <img src="img/chevron.svg" alt="">
+                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                                        richardson ad squid
+                                    </a>
+                                </div>
+                                <div id="collapse3" class="collapse" aria-labelledby="heading1" data-parent="#accordion" style="">
+                                    <div class="card-body">
+                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                                        richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
+                                        brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+                                        sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
+                                        shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson
+                                        cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo.
+                                        Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt
+                                        you probably haven't heard of them accusamus labore sustainable VHS.
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
                 <div class="invoice-table card master_search">
                     <div class="card-body">
                         <form action="/search" method="get">
@@ -452,6 +558,10 @@
 <script src="js/vendors.min.js" type="text/javascript"></script>
 <script src="js/app-menu.min.js" type="text/javascript"></script>
 <script src="js/app.min.js" type="text/javascript"></script>
+<script src="js/d3-5.8.2.min.js" type="text/javascript"></script>
+<script src="js/c3.min.js" type="text/javascript"></script>
+<script src="js/jquery.knob.min.js" type="text/javascript"></script>
+<script src="js/excanvas.js" type="text/javascript"></script>
 <script src="js/custom.js"></script>
 
 

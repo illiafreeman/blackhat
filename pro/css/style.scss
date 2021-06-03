@@ -2963,9 +2963,53 @@ select {
         color: #999;
     }
 }
-
-
-
+.grid_13{
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1.5fr;
+    grid-gap: 15px;
+    .add_node {
+        width: auto;
+        .c3-legend-item {
+            font-size: 14px;
+            fill: #999;
+            margin-right: 10px;
+        }
+        .c3-chart-arcs{
+            fill: #ddd;
+        }
+    }
+    .form-label-group{
+        .invoice-amount{
+            &:first-child{
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+.inline-link{
+    text-decoration: underline;
+    transition: $transition;
+    &:hover{
+        color: #fff;
+    }
+}
+.faq-body{
+    .card-title{
+        transition: $transition;
+        &:hover{
+            color: #fff;
+        }
+        img{
+            transition: $transition;
+            margin-right: 10px;
+        }
+        &:not(.collapsed){
+            img{
+                transform: rotate(180deg);
+            }
+        }
+    }
+}
 
 
 
