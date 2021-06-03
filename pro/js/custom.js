@@ -57,24 +57,27 @@ var chart = c3.generate({
     bindto: '#chart',
     data: {
         columns: [
-            ['data1 chart', 70],
-            ['data2 chart long', 120],
-            ['data3', 200],
-            ['data4', 550],
-            ['data5', 550],
-            ['data6', 550],
-            ['data7', 550],
+            ['PRE_ENABLED ', 270],
+            ['ENABLED', 320],
+            ['REMOVE', 200],
+            ['EXPIRED', 550],
+            ['VIN_SPENT', 550]
         ],
         type : 'donut'
     },
     donut: {
-        title: "100500 Available"
+        title: "100% ENABLED"
     },
     color: {
-        pattern: ['#1f77b4', '#aec7e8', '#ff7f0e', '#ffbb78', '#2ca02c', '#98df8a', '#d62728', '#ff9896', '#9467bd', '#c5b0d5', '#8c564b', '#c49c94', '#e377c2', '#f7b6d2', '#7f7f7f', '#c7c7c7', '#bcbd22', '#dbdb8d', '#17becf', '#9edae5']
+        pattern: [
+            'rgb(121, 115, 62)',
+            'rgb(69, 91, 58)',
+            'rgb(125, 68, 40)',
+            'rgb(102, 33, 33)',
+            '#404040']
     },
     legend: {
-        padding: 15,
+        padding: 20,
         inset: {
             anchor: 'top-left',
             x: 10,

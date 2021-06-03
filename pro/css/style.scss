@@ -2986,6 +2986,10 @@ select {
             }
         }
     }
+    .invoice-amount{
+        padding: 0;
+        text-align: center;
+    }
 }
 .inline-link{
     text-decoration: underline;
@@ -3013,6 +3017,11 @@ select {
     }
     .form-label-group {
         margin-bottom: 0;
+        &:first-child{
+            .card-header{
+                padding-top: 0;
+            }
+        }
     }
     .card-header .card-title{
         align-items: flex-start;
