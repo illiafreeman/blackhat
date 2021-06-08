@@ -3038,7 +3038,9 @@ select {
 }
 .grid_13 {
     grid-template-columns: 1.2fr 1fr 1.5fr;
-
+    .add_node.card{
+        margin: 0;
+    }
 }
 
 
@@ -3053,9 +3055,19 @@ select {
         width: 100%;
     }
     .grid_13 {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
-
+        grid-template-areas:
+            "chart cnob"
+            "faq faq";
+        .card:nth-child(1) {
+            grid-area: chart;
+        }
+        .card:nth-child(2) {
+            grid-area: cnob;
+        }
+        .card:nth-child(3) {
+            grid-area: faq;
+        }
+        grid-template-columns: auto;
     }
 }
 
@@ -3229,7 +3241,12 @@ select {
             display: none;
         }
     }
-
+    .grid_13 {
+        grid-template-areas:
+            "chart"
+            "cnob"
+            "faq";
+    }
 }
 @media only screen and (max-width: 600px) {
     .card_min {
