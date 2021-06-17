@@ -3144,6 +3144,12 @@ html body.fixed-navbar{
             }
         }
     }
+    .intro__action{
+        justify-content: center;
+        a{
+
+        }
+    }
 }
 @media only screen and (max-width: 480px) {
     .nav.navbar-nav.float-right .hambu {
@@ -3178,9 +3184,19 @@ html body.fixed-navbar{
 }
 
 
-
-
-
+@media only screen and (max-width: 400px) {
+    .intro__action{
+        a{
+            margin: 15px !important;
+        }
+    }
+    .intro__text .soc{
+        justify-content: center;
+        a:last-child{
+            margin-right: 0;
+        }
+    }
+}
 
 
 
