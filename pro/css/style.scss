@@ -3118,6 +3118,7 @@ select {
 }
 .title-center{
     justify-content: center;
+    text-align: center;
 }
 .countdown_center{
     justify-content: center;
@@ -3317,6 +3318,21 @@ td.expired {
             }
         }
     }
+    .grid_12{
+        grid-template-areas:
+            "info_1 info_2"
+            "count count";
+        .card:nth-child(1) {
+            grid-area: info_1;
+        }
+        .card:nth-child(2) {
+            grid-area: count;
+        }
+        .card:nth-child(3) {
+            grid-area: info_2;
+        }
+        grid-template-columns: auto;
+    }
 }
 
 
@@ -3370,6 +3386,9 @@ td.expired {
     .card_min {
         width: 100%;
     }
+    .grid_12 .val_bhc, .grid_12 .val_rub {
+        font-size: 15px;
+    }
 }
 @media only screen and (max-width: 480px) {
     .nav.navbar-nav.float-right .hambu {
@@ -3392,6 +3411,12 @@ td.expired {
         .card-body {
             padding: 25px;
         }
+    }
+    .grid_12 {
+        grid-template-areas:
+            "info_1"
+            "info_2"
+            "count";
     }
 }
 
