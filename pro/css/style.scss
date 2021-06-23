@@ -2632,6 +2632,9 @@ footer.footer {
 }
 .invoice-page .invoice-table .table{
     table-layout: fixed;
+    &.fluid{
+        table-layout: auto;
+    }
 }
 .invoice-page .invoice-table .table_long{
     table-layout: initial;
