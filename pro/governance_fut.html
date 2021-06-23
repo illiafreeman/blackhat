@@ -9,7 +9,7 @@
     <meta name="keywords" content="Black Hat">
     <meta name="author" content="Black Hat">
 
-    <title>Governance current</title>
+    <title>Governance future</title>
 
 
 
@@ -282,10 +282,10 @@
                 <h1 class="h1-main">Governance</h1>
                 <div class="gov-tab">
                     <a href="governance_past.html" class="gov-tab__item ">Past</a>
-                    <a href="governance_cur.html" class="gov-tab__item gov-tab__item_act">Current</a>
-                    <a href="governance_fut.html" class="gov-tab__item">Future</a>
+                    <a href="governance_cur.html" class="gov-tab__item ">Current</a>
+                    <a href="governance_fut.html" class="gov-tab__item gov-tab__item_act">Future</a>
                 </div>
-                <div class="grid_12">
+                <div class="grid_center">
                     <div class="invoice-table card">
                         <div class="card-header">
                             <h6 class="card-title title-center">Monthly Budget</h6>
@@ -295,27 +295,6 @@
                                 <div class="val_bhc"><span>75,000</span>&nbsp;PIV</div>
                                 <div class="val_rub">руб&nbsp;<span>1,338,250.00</span></div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="invoice-table card">
-                        <div class="card-header">
-                            <h6 class="card-title title-center">Next treasury payout</h6>
-                        </div>
-                        <div class="card-body">
-                            <ul class="countdown countdown_center">
-                                <li><span id="days"></span>
-                                    <div>days</div>
-                                </li>
-                                <li><span id="hours"></span>
-                                    <div>Hours</div>
-                                </li>
-                                <li><span id="minutes"></span>
-                                    <div>Minutes</div>
-                                </li>
-                                <li><span id="seconds"></span>
-                                    <div>Seconds</div>
-                                </li>
-                            </ul>
                         </div>
                     </div>
                     <div class="invoice-table card">
@@ -354,7 +333,6 @@
                                             <th class="text-center">Payment</th>
                                             <th class="text-center">Budget Usage</th>
                                             <th class="text-center">Votes</th>
-                                            <th class="text-center">copy vote</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -378,10 +356,6 @@
                                                 <div class="val_perc">98.3%</div>
                                                 <div class="val_par">687&nbsp;/&nbsp;10</div>
                                             </td>
-                                            <td class="text-center vam">
-                                                <a href="" class="btn btn_min">Yes</a>
-                                                <a href="" class="btn btn_min">No</a>
-                                            </td>
                                         </tr>
                                         <tr>
                                             <td class="vam ttu expired">
@@ -401,10 +375,6 @@
                                             <td class="text-center vam">
                                                 <div class="val_perc">98.3%</div>
                                                 <div class="val_par">687&nbsp;/&nbsp;10</div>
-                                            </td>
-                                            <td class="text-center vam">
-                                                <a href="" class="btn btn_min">Yes</a>
-                                                <a href="" class="btn btn_min">No</a>
                                             </td>
                                         </tr>
                                     </tbody>
@@ -476,35 +446,7 @@
 <script src="js/d3-5.8.2.min.js" type="text/javascript"></script>
 <script src="js/c3.min.js" type="text/javascript"></script>
 <script src="js/custom.js"></script>
-<script>
-    (function () {
-        const second = 1000,
-            minute = second * 60,
-            hour = minute * 60,
-            day = hour * 24;
 
-        let birthday = "Aug 30, 2021 00:00:00",
-            countDown = new Date(birthday).getTime(),
-            x = setInterval(function() {
-
-                let now = new Date().getTime(),
-                    distance = countDown - now;
-
-                document.getElementById("days").innerText = Math.floor(distance / (day)),
-                    document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
-                    document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
-                    document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
-
-                //do something later when date is reached
-                if (distance < 0) {
-
-
-                    clearInterval(x);
-                }
-                //seconds
-            }, 0)
-    }());
-</script>
 
 </body>
 </html>

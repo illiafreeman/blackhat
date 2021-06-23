@@ -605,7 +605,17 @@
 <script src="js/jquery.knob.min.js" type="text/javascript"></script>
 <script src="js/excanvas.js" type="text/javascript"></script>
 <script src="js/custom.js"></script>
-
+<script>
+    $(function() {
+        $(".dial").knob({
+            'readOnly': true,
+            'format': function (value) {
+                return value + '%';
+            },
+            'fgColor': '#3a9172'
+        });
+    });
+</script>
 
 </body>
 </html>

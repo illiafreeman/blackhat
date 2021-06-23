@@ -3158,6 +3158,20 @@ td.expired {
         font-size: 12px;
     }
 }
+.grid_center{
+    display: grid;
+    grid-gap: 15px;
+    margin-bottom: 40px;
+    grid-template-columns: 1fr 1fr;
+    //justify-items: end;
+    .card{
+        width: 320px;
+        margin-bottom: 0;
+        &:first-child{
+            justify-self: end;
+        }
+    }
+}
 
 
 
@@ -3380,6 +3394,17 @@ td.expired {
             "chart"
             "cnob"
             "faq";
+    }
+    .grid_center{
+        display: grid;
+        grid-gap: 15px;
+        margin-bottom: 40px;
+        grid-template-columns: 1fr;
+        //justify-items: end;
+        .card{
+            width: 100%;
+            margin-bottom: 0;
+        }
     }
 }
 @media only screen and (max-width: 600px) {
