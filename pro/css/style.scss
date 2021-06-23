@@ -3104,14 +3104,59 @@ select {
 .ttu{
     text-transform: uppercase;
 }
-
-
-
-
-
-
-
-
+.grid_12 {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-gap: 15px;
+    margin-bottom: 40px;
+    .val_bhc, .val_rub{
+        font-size: 18px;
+    }
+    .card{
+        margin-bottom: 0;
+    }
+}
+.title-center{
+    justify-content: center;
+}
+.countdown_center{
+    justify-content: center;
+    li{
+        padding: 0 15px;
+        span {
+            line-height: 21px;
+        }
+    }
+}
+.grid_13_full{
+    grid-template-columns: 1fr;
+}
+td.enabled {
+    color: #42824c;
+}
+td.expired {
+    color: #953f3f;
+}
+.note-line.long-line{
+    margin-top: 10px;
+    display: block;
+}
+.btn_min{
+    display: inline-block;
+    text-decoration: none !important;
+    padding: 6px 13px;
+}
+.status-mark{
+    text-transform: uppercase;
+    font-size: 11px;
+}
+.status-pers{
+    padding-top: 10px;
+    div{
+        text-transform: none;
+        font-size: 12px;
+    }
+}
 
 
 
