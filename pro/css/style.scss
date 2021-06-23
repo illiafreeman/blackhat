@@ -3042,6 +3042,79 @@ select {
         margin: 0;
     }
 }
+.gov-tab{
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #575B62;
+    margin-bottom: 30px;
+    &__item{
+        padding: 12px 25px;
+        transition: all 0.2s ease-in-out;
+        display: flex;
+        align-items: center;
+        border-top-left-radius: 0.25rem;
+        border-top-right-radius: 0.25rem;
+        margin-bottom: -1px;
+        font-size: 16px;
+        &:hover{
+            color: #fff;
+        }
+        &_act{
+            background: -moz-linear-gradient(top,  rgba(0,0,0,1) 0%, rgba(125,185,232,0) 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(top,  rgba(0,0,0,1) 0%,rgba(125,185,232,0) 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom,  rgba(0,0,0,1) 0%,rgba(125,185,232,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#007db9e8',GradientType=0 ); /* IE6-9 */
+
+            border: 1px solid #575B62;
+            border-bottom-color: transparent;
+            color: #fff;
+            font-size: 18px;
+        }
+    }
+}
+.card-body_empty{
+    padding-top: 1.5rem !important;
+    .table{
+        margin-bottom: 0;
+    }
+}
+.vam{
+    vertical-align: middle !important;
+}
+.val{
+    &_bhc{
+        span{
+            font-weight: bolder;
+            color: #d7d7d7;
+        }
+    }
+    &_rub{
+        span{
+            font-weight: bolder;
+            color: #d7d7d7;
+        }
+    }
+    &_perc{
+
+    }
+    &_par{
+
+    }
+}
+.ttu{
+    text-transform: uppercase;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
