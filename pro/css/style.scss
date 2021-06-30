@@ -3214,8 +3214,8 @@ td.expired {
     }
     .grid_13 {
         grid-template-areas:
-            "chart cnob"
-            "faq faq";
+            "chart cnob cnob2"
+            "faq faq faq";
         .card:nth-child(1) {
             grid-area: chart;
         }
@@ -3223,7 +3223,12 @@ td.expired {
             grid-area: cnob;
         }
         .card:nth-child(3) {
+            grid-area: cnob2;
+        }
+        .card:nth-child(4) {
             grid-area: faq;
+            width: 600px;
+            justify-self: center;
         }
         grid-template-columns: auto;
     }
@@ -3372,6 +3377,15 @@ td.expired {
         }
         grid-template-columns: auto;
     }
+    .grid_13 {
+        grid-template-areas:
+            "chart chart"
+            "cnob cnob2"
+            "faq faq";
+        .card:nth-child(4) {
+            width: 100%;
+        }
+    }
 }
 
 
@@ -3418,6 +3432,7 @@ td.expired {
         grid-template-areas:
             "chart"
             "cnob"
+            "cnob2"
             "faq";
     }
     .grid_center{
