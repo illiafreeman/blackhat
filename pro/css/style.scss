@@ -2968,7 +2968,7 @@ select {
 }
 .grid_13{
     display: grid;
-    grid-template-columns: 1.2fr 1fr 1.5fr;
+    grid-template-columns: 1.2fr 1fr 1fr 1.5fr;
     grid-gap: 15px;
     margin-bottom: 40px;
     .add_node {
@@ -2985,13 +2985,22 @@ select {
     .form-label-group{
         .invoice-amount{
             &:first-child{
-                margin-bottom: 10px;
+                margin-bottom: 20px;
+            }
+            b{
+                display: block;
+                color: #b5b5b5;
+                font-size: 21px;
+                padding-left: 0;
             }
         }
     }
     .invoice-amount{
         padding: 0;
         text-align: center;
+    }
+    .coin-table__row_chart{
+        margin-bottom: 25px;
     }
 }
 .inline-link{
@@ -3040,9 +3049,22 @@ select {
     color: rgb(58, 145, 114) !important;
 }
 .grid_13 {
-    grid-template-columns: 1.2fr 1fr 1.5fr;
+    grid-template-columns: 1.2fr 1fr 1fr 1.5fr;
     .add_node.card{
         margin: 0;
+    }
+}
+.card-body.card-body_nop{
+    padding: 1.5rem 0;
+    .form-label-group{
+        .invoice-amount:last-child{
+            margin-bottom: 0;
+        }
+    }
+}
+.card-body.card-body_chart, .card-body.card-body_nop{
+    .invoice-amount.datetime{
+        margin-bottom: 0;
     }
 }
 .gov-tab{
