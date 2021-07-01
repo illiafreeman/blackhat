@@ -2970,11 +2970,20 @@ select {
     padding-top: 10px;
     display: inline-block;
 }
+.add_node .card-header h6 span{
+    font-size: 12px;
+    display: inline-block;
+    line-height: 12px;
+    transform: translateY(-4px);
+}
 .grid_13{
     display: grid;
     grid-template-columns: 1.2fr 1fr 1fr 1.5fr;
     grid-gap: 15px;
     margin-bottom: 40px;
+    .card-header{
+        padding-top: 35px;
+    }
     .add_node {
         width: auto;
         .c3-legend-item {
