@@ -53,20 +53,37 @@ $(document).mouseup(e => {
         $menu.removeClass('open');
     }
 });
+var u = 768,
+    h = $(window).width() > u ? "right" : "bottom",
+    l = $(window).width() > u,
+    t = $(window).width() > u ? "3909 BLKC Available" : ''
+
 var chart = c3.generate({
     bindto: '#chart',
     data: {
         columns: [
-            ['PRE_ENABLED ', 270],
-            ['ENABLED', 320],
-            ['REMOVE', 200],
-            ['EXPIRED', 550],
-            ['VIN_SPENT', 550]
+            ['PIVX-Dev-Fuzz-Q321 (5000.0 BLKC) ', 270],
+            ['WebServers2021_Q3-Q4 (330.0 BLKC)', 320],
+            ['Core-Dev-Jul2021 (22500.0 BLKC)', 200],
+            ['Doc-Support-Website (1421.0 BLKC)', 550],
+            ['WebDevDes-2021-Q3 (5000.0 BLKC)', 550],
+            ['4th-MBD-MayOct2021 (1450.0 BLKC)', 550],
+            ['LB-MBD-JunNov2021 (600.0 BLKC)', 550],
+            ['PIVX-MF-JulDec2021 (2990.0 BLKC)', 550],
+            ['Available (3909 BLKC))', 550]
         ],
         type : 'donut'
     },
     donut: {
-        title: "100% ENABLED"
+        title: t,
+        //width: 300,
+        label: {
+            show: l
+        }
+    },
+    size: {
+        height: 600,
+        width: 300
     },
     color: {
         pattern: [
@@ -83,10 +100,73 @@ var chart = c3.generate({
             x: 10,
             y: 0,
             step: undefined
-        }
+        },
+        position: h
     },
     padding: {
         bottom: 40
     }
 });
+$(window).resize((function (e) {
+    var u = 768,
+        h = $(window).width() > u ? "right" : "bottom",
+        l = $(window).width() > u;
+        t = $(window).width() > u ? "3909 BLKC Available" : ''
+    var chart = c3.generate({
+        bindto: '#chart',
+        data: {
+            columns: [
+                ['PIVX-Dev-Fuzz-Q321 (5000.0 BLKC) ', 270],
+                ['WebServers2021_Q3-Q4 (330.0 BLKC)', 320],
+                ['Core-Dev-Jul2021 (22500.0 BLKC)', 200],
+                ['Doc-Support-Website (1421.0 BLKC)', 550],
+                ['WebDevDes-2021-Q3 (5000.0 BLKC)', 550],
+                ['4th-MBD-MayOct2021 (1450.0 BLKC)', 550],
+                ['LB-MBD-JunNov2021 (600.0 BLKC)', 550],
+                ['PIVX-MF-JulDec2021 (2990.0 BLKC)', 550],
+                ['Available (3909 BLKC))', 550]
+            ],
+            type : 'donut'
+        },
+        donut: {
+            title: t,
+            label: {
+                show: l
+            }
+        },
+        color: {
+            pattern: [
+                'rgb(121, 115, 62)',
+                'rgb(69, 91, 58)',
+                'rgb(125, 68, 40)',
+                'rgb(102, 33, 33)',
+                '#404040']
+        },
+        legend: {
+            padding: 20,
+            inset: {
+                anchor: 'top-left',
+                x: 10,
+                y: 0,
+                step: undefined
+            },
+            position: h
+        },
+        padding: {
+            bottom: 40
+        }
+    });
+}))
+/*$( window ).on("resize", function() {
+    console.log('zxc');
+    chart.transform('pie');
+    chart.load({
+        legend: {
+            position: 'bottom'
+        }
+    });
+});*/
+
+
+
 
