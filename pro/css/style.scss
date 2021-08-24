@@ -3210,9 +3210,50 @@ td.expired {
         }
     }
 }
-
-
-
+.card_min{
+    width: 400px !important;
+    .card-body{
+        padding: 40px 25px !important;
+        p:last-child{
+            margin-bottom: 0;
+        }
+        p{
+            margin-bottom: 35px;
+            span{
+                display: block;
+                margin-top: 5px;
+                b{
+                    font-size: 17px;
+                    color: #fff;
+                }
+            }
+            i{
+                text-transform: uppercase;
+                font-style: normal;
+                b{
+                    font-size: 17px;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+.modal-body_p{
+    padding: 40px 20px;
+    h3{
+        margin-bottom: 30px;
+    }
+    .card_min{
+        margin-bottom: 35px;
+        padding: 10px;
+    }
+    p{
+        margin-bottom: 0;
+    }
+}
+.modal-header, .modal-footer{
+    border-color: #37383A;
+}
 
 
 
@@ -3503,6 +3544,9 @@ td.expired {
             "info_1"
             "info_2"
             "count";
+    }
+    .card_min {
+        width: 100% !important;
     }
 }
 

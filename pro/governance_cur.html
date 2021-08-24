@@ -381,7 +381,7 @@
                                                 <div class="val_par">687&nbsp;/&nbsp;10</div>
                                             </td>
                                             <td class="text-center vam">
-                                                <a href="" class="btn btn_min">Yes</a>
+                                                <a href="" class="btn btn_min" data-toggle="modal" data-target="#exampleModal">Yes</a>
                                                 <a href="" class="btn btn_min">No</a>
                                             </td>
                                         </tr>
@@ -405,7 +405,7 @@
                                                 <div class="val_par">687&nbsp;/&nbsp;10</div>
                                             </td>
                                             <td class="text-center vam">
-                                                <a href="" class="btn btn_min">Yes</a>
+                                                <a href="" class="btn btn_min" data-toggle="modal" data-target="#exampleModal">Yes</a>
                                                 <a href="" class="btn btn_min">No</a>
                                             </td>
                                         </tr>
@@ -415,13 +415,46 @@
                         </div>
                     </div>
                 </div>
+                <div class="invoice-table card card_min">
+                    <div class="card-body">
+                        <div class="text-center">
+                            <p>
+                                <i>Positive votes required to pass:</i>
+                                <span><b>41</b> (10% of 418 masternodes online)</span>
+                            </p>
+                            <p>
+                                <i><b>NOTE:</b></i>
+                                <span>Due to difficulty and block time fluctuations presented counter may not be 100% accurate!<br>
+                                ~39456 blocks until next superblock, assuming stable 60 seconds per block.</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
     <!--end block to reload-->
 
 </div>
-
+<div class="modal fade modal-confirm" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body modal-body_p">
+                <h3>Vote Yes on Core-Dev-Jul2021</h3>
+                <div class="invoice-table card card_min">
+                    mnbudgetvote many a63542df9653a3344c1a8bea48bd19c93bdaf92f0a74c0cdd76f16f7af8a60c1 yes
+                </div>
+                <p><b>NOTE:</b> The voting command was automatically copied to clipboard.</p>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 <footer class="footer footer-static footer-transparent text-center">

@@ -58,7 +58,7 @@ var u = 768,
     l = $(window).width() > u,
     t = $(window).width() > u ? "3909 BLKC Available" : ''
     wi = $(window).width() < u ? 260 : '',
-    he = $(window).width() < u ? 600 : '',
+    he = $(window).width() < u ? 500 : '',
     pb = $(window).width() < u ? 0 : 40
 var chart = c3.generate({
     bindto: '#chart',
@@ -111,7 +111,7 @@ $(window).resize((function (e) {
         l = $(window).width() > u;
         t = $(window).width() > u ? "3909 BLKC Available" : '',
         wi = $(window).width() < u ? 260 : '',
-        he = $(window).width() < u ? 600 : ''
+        he = $(window).width() < u ? 500 : ''
         pb = $(window).width() < u ? 0 : 40
     var chart = c3.generate({
         bindto: '#chart',
