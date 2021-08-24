@@ -57,12 +57,14 @@ var u = 768,
     h = $(window).width() > u ? "right" : "bottom",
     l = $(window).width() > u,
     t = $(window).width() > u ? "3909 BLKC Available" : ''
-
+    wi = $(window).width() < u ? 260 : '',
+    he = $(window).width() < u ? 600 : '',
+    pb = $(window).width() < u ? 0 : 40
 var chart = c3.generate({
     bindto: '#chart',
     data: {
         columns: [
-            ['PIVX-Dev-Fuzz-Q321 (5000.0 BLKC) ', 270],
+            ['PIVX-Dev-Fuzz-Q321 (5000.0 BLKC)   ', 270],
             ['WebServers2021_Q3-Q4 (330.0 BLKC)', 320],
             ['Core-Dev-Jul2021 (22500.0 BLKC)', 200],
             ['Doc-Support-Website (1421.0 BLKC)', 550],
@@ -72,7 +74,10 @@ var chart = c3.generate({
             ['PIVX-MF-JulDec2021 (2990.0 BLKC)', 550],
             ['Available (3909 BLKC))', 550]
         ],
-        type : 'donut'
+        type : 'donut',
+        color: function (color) {
+            return d3.rgb(color).darker(2);
+        }
     },
     donut: {
         title: t,
@@ -82,17 +87,10 @@ var chart = c3.generate({
         }
     },
     size: {
-        height: 600,
-        width: 300
+        height: he,
+        width: wi
     },
-    color: {
-        pattern: [
-            'rgb(121, 115, 62)',
-            'rgb(69, 91, 58)',
-            'rgb(125, 68, 40)',
-            'rgb(102, 33, 33)',
-            '#404040']
-    },
+
     legend: {
         padding: 20,
         inset: {
@@ -104,20 +102,23 @@ var chart = c3.generate({
         position: h
     },
     padding: {
-        bottom: 40
+        bottom: pb
     }
 });
 $(window).resize((function (e) {
     var u = 768,
         h = $(window).width() > u ? "right" : "bottom",
         l = $(window).width() > u;
-        t = $(window).width() > u ? "3909 BLKC Available" : ''
+        t = $(window).width() > u ? "3909 BLKC Available" : '',
+        wi = $(window).width() < u ? 260 : '',
+        he = $(window).width() < u ? 600 : ''
+        pb = $(window).width() < u ? 0 : 40
     var chart = c3.generate({
         bindto: '#chart',
         data: {
             columns: [
-                ['PIVX-Dev-Fuzz-Q321 (5000.0 BLKC) ', 270],
-                ['WebServers2021_Q3-Q4 (330.0 BLKC)', 320],
+                ['PIVX-Dev-Fuzz-Q321 (5000.0 BLKC)', 270],
+                ['WebServers2021_Q3-Q4 (330.0 BLKC)   ', 320],
                 ['Core-Dev-Jul2021 (22500.0 BLKC)', 200],
                 ['Doc-Support-Website (1421.0 BLKC)', 550],
                 ['WebDevDes-2021-Q3 (5000.0 BLKC)', 550],
@@ -126,21 +127,20 @@ $(window).resize((function (e) {
                 ['PIVX-MF-JulDec2021 (2990.0 BLKC)', 550],
                 ['Available (3909 BLKC))', 550]
             ],
-            type : 'donut'
+            type : 'donut',
+            color: function (color) {
+                return d3.rgb(color).darker(2);
+            }
+        },
+        size: {
+            height: he,
+            width: wi
         },
         donut: {
             title: t,
             label: {
                 show: l
             }
-        },
-        color: {
-            pattern: [
-                'rgb(121, 115, 62)',
-                'rgb(69, 91, 58)',
-                'rgb(125, 68, 40)',
-                'rgb(102, 33, 33)',
-                '#404040']
         },
         legend: {
             padding: 20,
@@ -153,7 +153,7 @@ $(window).resize((function (e) {
             position: h
         },
         padding: {
-            bottom: 40
+            bottom: pb
         }
     });
 }))

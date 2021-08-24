@@ -3403,6 +3403,14 @@ td.expired {
 
 
 @media only screen and (max-width: 768px) {
+    #chart {
+        margin: 0 -20px;
+        svg{
+            margin: 0 auto;
+            display: block;
+            overflow: visible !important;
+        }
+    }
     .collapse:not(.show) {
         display: flex;
     }
