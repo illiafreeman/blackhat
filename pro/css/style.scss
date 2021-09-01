@@ -2659,6 +2659,11 @@ select.form-control{
             }
         }
     }
+    &.income{
+        td{
+            padding: 15px 15px 0;
+        }
+    }
 }
 .color_pos{
     color: #388f46;
@@ -2688,7 +2693,10 @@ input[type=number] {
         color: #fff;
     }
 }
-
+.h1-main {
+    margin: 0 0 50px;
+    text-align: center;
+}
 
 
 
