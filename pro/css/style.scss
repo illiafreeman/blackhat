@@ -2697,7 +2697,9 @@ input[type=number] {
     margin: 0 0 50px;
     text-align: center;
 }
-
+.w600.card{
+    width: 600px;
+}
 
 
 
@@ -2815,6 +2817,9 @@ input[type=number] {
         .wal.max {
             width: 100% !important;
         }
+    }
+    .w600.card{
+        width: 100%;
     }
 }
 @media only screen and (max-width: 480px) {
