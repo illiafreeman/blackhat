@@ -2948,9 +2948,35 @@ html body.fixed-navbar{
         }
     }
 }
-
-
-
+.intro_sub{
+    position: relative;
+    padding-top: 120px;
+    img{
+        width: 350px;
+        margin-right: 40px;
+    }
+    .card{
+        padding: 0;
+    }
+    h1{
+        margin-bottom: 50px;
+    }
+}
+.menu.menu_home{
+    color: #919191;
+    svg path{
+        fill: #919191;
+    }
+    &:hover{
+        color: #fff;
+        svg path{
+            fill: #fff;
+        }
+    }
+}
+.topnav_inner{
+    justify-content: flex-start;
+}
 
 
 
