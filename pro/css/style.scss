@@ -3016,8 +3016,14 @@ html body.fixed-navbar{
     margin: 0 auto;
 }
 
-
-
+.menu-icon {
+    fill: #919191;
+    display: block;
+    transition: $transition;
+}
+.menu.active .menu-icon, .menu:hover .menu-icon {
+    fill: #fff;
+}
 
 
 
