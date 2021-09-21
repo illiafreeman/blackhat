@@ -18,13 +18,13 @@ $.each(sectionArray, function(index, value){
          
      });
     
-    $('.topnav li a').eq(index).click(function(e){
+/*    $('.topnav li a').eq(index).click(function(e){
         var offsetClick = $('#' + 'section_' + value).offset().top;
         e.preventDefault();
         $('html, body').animate({
             //'scrollTop':offsetClick
         }, 2000)
-    });
+    });*/
     $('.btn_wallet').click(function(e){
         var offsetClick = $('#section_5').offset().top;
         e.preventDefault();
@@ -44,6 +44,9 @@ $.each(sectionArray, function(index, value){
 
 $(document).ready(function(){
     $('.topnav li a:link').addClass('inactive');
-    $('.topnav li a').eq(0).addClass('active');
+    if ( $(document).scrollTop() <= 100 ){
+        $('.topnav li a').eq(0).addClass('active');
+    }
+
     $('.topnav li a:link').eq(0).removeClass('inactive');
 });

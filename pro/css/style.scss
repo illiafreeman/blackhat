@@ -2977,8 +2977,17 @@ html body.fixed-navbar{
 .topnav_inner{
     justify-content: flex-start;
 }
-
-
+.article{
+    margin: 0;
+    padding-top: 120px;
+    &.intro{
+        padding-top: 150px;
+        margin-bottom: 80px;
+    }
+}
+.subsection {
+    margin: 0 auto;
+}
 
 
 
