@@ -2759,7 +2759,7 @@ html body.fixed-navbar{
         .slick-list{
             width: 100px;
             height: 100px;
-            box-shadow: 0px 0px 6px -1px #424242 inset;
+            box-shadow: inset -2px 1px 2px 0px #797575;
             background: rgba(0, 0, 0, 0.4);
             -webkit-border-radius: 50%;
             -moz-border-radius: 50%;
@@ -2817,6 +2817,8 @@ html body.fixed-navbar{
                     &:first-child{
                         text-align: right;
                         padding-right: 10px;
+                        color: #797777;
+                        font-size: 13px;
                     }
                     &:last-child{
                         font-size: 17px;
