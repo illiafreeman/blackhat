@@ -2594,6 +2594,13 @@ ol{
             }
 
         }
+        .btn{
+            border: 0;
+            box-shadow: inset -3px 0 5px -2px #797575,inset 1px 3px 4px -2px #797575;
+            &:hover{
+                box-shadow: inset 1px 1px 0px 0px #797575, inset -1px -1px 0px 0px #797575;
+            }
+        }
     }
     img{
         position: absolute;
@@ -2690,7 +2697,7 @@ ol{
             padding-bottom: 2px;
             &:hover{
                 color: #fff;
-                border-bottom-color: #fff;
+                border-bottom-color: #000;
             }
         }
     }
