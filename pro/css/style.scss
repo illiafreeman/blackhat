@@ -3059,6 +3059,19 @@ html body.fixed-navbar{
             margin-top: 40px;
         }
     }
+    .card-title{
+        padding-top: 30px;
+    }
+}
+.icon{
+    width: 20px;
+    height: 20px;
+    &_pos{
+        fill: #388f46;
+    }
+    &_neg{
+        fill: #b54a4a;
+    }
 }
 .menu.menu_home{
     color: #919191;
@@ -3095,6 +3108,45 @@ html body.fixed-navbar{
 .menu.active .menu-icon, .menu:hover .menu-icon {
     fill: #fff;
 }
+.tabl{
+    margin: 0 auto;
+    th, td{
+        border: 1px solid #424242;
+        padding: 8px;
+        white-space: nowrap;
+        text-align: center;
+        width: 80px;
+    }
+    tr{
+        td:first-child{
+            text-align: right;
+        }
+    }
+    th{
+        border-top: 0;
+        &:first-child{
+            border-left: 0;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
