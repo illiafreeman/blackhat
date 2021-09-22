@@ -2596,7 +2596,7 @@ ol{
         }
         .btn{
             border: 0;
-            box-shadow: inset -3px 3px 3px -1px #797575;
+            box-shadow: inset -3px 2px 3px -1px #797575, -1px 1px 1px -1px #797575;
             &:hover{
                 box-shadow: inset -3px 3px 0px -1px #797575;
             }
@@ -2607,6 +2607,28 @@ ol{
         top: 150px;
         right: 0;
         width: 400px;
+    }
+}
+.btn-icon{
+    width: 20px;
+    height: 20px;
+    fill: #919191;
+    display: block;
+    transition: all .2s ease-in-out;
+}
+.soc-icon{
+    width: 30px;
+    height: 30px;
+    fill: #919191;
+    display: block;
+    transition: all .2s ease-in-out;
+    &:hover{
+        fill: #fff;
+    }
+}
+.btn:hover{
+    .btn-icon{
+        fill: #fff;
     }
 }
 .topnav{
