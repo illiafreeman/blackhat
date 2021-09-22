@@ -2596,9 +2596,9 @@ ol{
         }
         .btn{
             border: 0;
-            box-shadow: inset -3px 0 5px -2px #797575,inset 1px 3px 4px -2px #797575;
+            box-shadow: inset -3px 3px 3px -1px #797575;
             &:hover{
-                box-shadow: inset 1px 1px 0px 0px #797575, inset -1px -1px 0px 0px #797575;
+                box-shadow: inset -3px 3px 0px -1px #797575;
             }
         }
     }
