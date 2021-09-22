@@ -2987,18 +2987,58 @@ html body.fixed-navbar{
         }
     }
 }
-.intro_sub{
+.article.intro_sub{
     position: relative;
-    padding-top: 120px;
+    padding-top: 80px;
+    width: 500px;
+    margin: 0 auto !important;
     img{
-        width: 350px;
-        margin-right: 40px;
+        width: 95%;
     }
     .card{
         padding: 0;
+        flex-direction: column;
+        box-shadow: inset 0 2px 6px 1px #424242;
+        .features__list-desc{
+            padding: 40px 20px 40px 0;
+        }
     }
     h1{
-        margin-bottom: 50px;
+        margin-bottom: 80px;
+        color: #fff;
+    }
+    h4{
+        margin: 50px 0;
+        font-size: 20px;
+        color: #bdbdbd;
+    }
+    .features__list-desc {
+        max-width: 100%;
+        padding: 50px !important;
+        ul{
+            padding-left: 10px;
+            margin-bottom: 18px;
+        }
+        li{
+            font-size: 14px;
+            color: #848484;
+            line-height: 18px;
+            margin-bottom: 8px;
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+        .up{
+            text-transform: uppercase;
+            margin-top: 30px;
+            font-size: 16px;
+        }
+        ul:last-child{
+            margin-bottom: 0;
+        }
+        .button_wrap{
+            margin-top: 40px;
+        }
     }
 }
 .menu.menu_home{
