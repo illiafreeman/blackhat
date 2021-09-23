@@ -99,3 +99,7 @@ $( window ).on("load", function() {
         $('.preload').removeClass('vis');
     }, 1);
 });
+$('[data-toggle="tooltip"]').tooltip({
+    //delay: { "show": 500, "hide": 100000 },
+    placement: 'left'
+});
