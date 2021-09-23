@@ -3012,7 +3012,7 @@ html body.fixed-navbar{
 .article.intro_sub{
     position: relative;
     padding-top: 80px;
-    width: 500px;
+    //width: 500px;
     margin: 0 auto !important;
     img{
         width: 95%;
@@ -3021,9 +3021,19 @@ html body.fixed-navbar{
         padding: 0;
         flex-direction: column;
         box-shadow: -1px -1px 3px 1px #424242 inset;
-        margin-bottom: 40px;
+        margin-bottom: 15px;
         .features__list-desc{
             padding: 40px 20px 40px 0;
+        }
+        &:nth-child(2){
+            img{
+                width: 320px;
+            }
+        }
+        &:nth-child(3){
+            img{
+                width: 148px;
+            }
         }
     }
     h1{
@@ -3034,6 +3044,11 @@ html body.fixed-navbar{
         margin: 50px 0;
         font-size: 20px;
         color: #bdbdbd;
+    }
+    .features__list{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 15px;
     }
     .features__list-desc {
         max-width: 100%;
@@ -3073,6 +3088,20 @@ html body.fixed-navbar{
             text-transform: uppercase;
             margin-top: 35px;
             font-size: 17px;
+            a{
+                color: #b0acac;
+                line-height: 22px;
+                display: inline-block;
+                border-bottom: 1px solid #717171;
+                margin: 0 5px;
+                transition: $transition;
+                text-transform: none;
+                font-size: 14px;
+                &:hover{
+                    color: #fff;
+                    border-bottom: 1px solid #fff;
+                }
+            }
         }
         ul:last-child{
             margin-bottom: 0;
@@ -3084,6 +3113,9 @@ html body.fixed-navbar{
     .card-title{
         padding-top: 30px;
     }
+}
+.content.full{
+    width: 90% !important;
 }
 .icon{
     width: 20px;
