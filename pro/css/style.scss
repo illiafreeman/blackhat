@@ -3120,6 +3120,16 @@ html body.fixed-navbar{
     .card-title{
         padding-top: 30px;
     }
+    &.ex{
+        .card{
+            margin-bottom: 0;
+            padding: 15px;
+            img{
+                height: 30px;
+                margin: 15px 0 30px;
+            }
+        }
+    }
 }
 .content.full{
     width: 90% !important;
