@@ -2596,11 +2596,11 @@ ol{
         }
         .btn{
             border: 0;
-            box-shadow: inset -1px 1px 2px 1px #979595;
+            box-shadow: inset -2px 2px 3px 0px #979595,inset 2px -2px 2px -1px #595959;
             display: inline-flex;
             align-items: center;
             &:hover{
-                box-shadow: inset 1px -1px 2px 1px #979595, inset -1px 1px 2px 1px #979595;
+                box-shadow: inset -2px 2px 3px 0 #ccc,inset 2px -2px 2px -1px #c4c4c4;
             }
         }
     }
