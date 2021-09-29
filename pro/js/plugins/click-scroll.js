@@ -33,6 +33,7 @@ $.each(sectionArray, function(index, value){
         }, 500)
     });
     $('#section_7_link').click(function(e){
+        $('.navleft').removeClass('vis');
         var offsetClick = $('#section_7').offset().top;
         e.preventDefault();
         $('html, body').animate({
