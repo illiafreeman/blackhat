@@ -3058,12 +3058,17 @@ html body.fixed-navbar{
         font-size: 20px;
         color: #bdbdbd;
     }
+    h4.h4-title{
+        margin-top: 70px;
+    }
     .features__list{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 15px;
         &.serv{
-            grid-template-columns: 1fr 1fr 1fr 1fr;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
             img{
                 width: auto !important;
                 margin: 30px 0 !important;
@@ -3073,6 +3078,35 @@ html body.fixed-navbar{
             }
             .card{
                 padding: 15px 20px;
+                width: calc(25% - 15px);
+                ul{
+                    padding-left: 16px;
+                    li{
+                        line-height: 18px;
+                        margin-bottom: 10px;
+                        &:last-child{
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+                a.lin{
+                    text-transform: uppercase;
+                    color: #b0acac;
+                    line-height: 22px;
+                    display: inline-block;
+                    border-bottom: 1px solid #717171;
+                    margin: 10px 0;
+                    transition: all .2s ease-in-out;
+                    font-size: 13px;
+                    &:after{
+                        display: none;
+                    }
+                    &:hover{
+                        color: #fff !important;
+                        border-bottom: 1px solid #fff;
+                        text-decoration: none !important;
+                    }
+                }
             }
         }
     }
@@ -3390,6 +3424,9 @@ html body.fixed-navbar{
     .nav.navbar-nav .menu-subnav__link{
         padding: 20px 10px;
     }
+    .article.intro_sub .features__list.serv .card {
+        width: calc(33% - 15px);
+    }
 }
 @media only screen and (max-width: 768px) {
     .collapse:not(.show) {
@@ -3479,6 +3516,9 @@ html body.fixed-navbar{
     .article.intro_sub .features__list.serv {
         grid-template-columns: 1fr;
     }
+    .article.intro_sub .features__list.serv .card {
+        width: calc(50% - 15px);
+    }
 }
 @media only screen and (max-width: 600px) {
     .features__head {
@@ -3548,6 +3588,9 @@ html body.fixed-navbar{
         img{
             width: 250px;
         }
+    }
+    .article.intro_sub .features__list.serv .card {
+        width: calc(100% - 0);
     }
 }
 @media only screen and (max-width: 480px) {
