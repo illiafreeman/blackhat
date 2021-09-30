@@ -2994,7 +2994,8 @@ html body.fixed-navbar{
 
     a{
         margin: 0 15px 25px;
-        display: flex;
+        display: block;
+        width: 120px;
     }
     img{
         width: 120px;
