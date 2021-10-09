@@ -2733,6 +2733,7 @@ input[type=number] {
 .otc-list{
     display: block;
     &_item{
+        margin-bottom: 20px;
         display: block;
         &:last-child{
             .otc-list_item-table{
@@ -2752,7 +2753,7 @@ input[type=number] {
         &-table{
             display: grid;
             grid-template-columns: 1fr 1fr 74px;
-            margin-bottom: 20px;
+
             div{
                 img{
                     width: 20px;
