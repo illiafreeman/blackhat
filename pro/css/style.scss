@@ -1596,8 +1596,21 @@ html body .content .content-wrapper {
     float: left;
     margin-right: 40px;
     transition: all 0.2s ease-in-out;
+    position: relative;
     .brand-logo {
         width: 100%;
+    }
+    span{
+        display: block;
+        position: absolute;
+        bottom: 18px;
+        left: 67px;
+        text-transform: uppercase;
+        transform: rotate(-32deg);
+        letter-spacing: 1px;
+        font-weight: 600;
+        font-size: 12px;
+        transition: all 0.2s ease-in-out;
     }
 }
 .header-navbar.navbar-shadow{
@@ -1605,6 +1618,17 @@ html body .content .content-wrapper {
     .logo {
         width: 60px;
         height: 5rem;
+        span{
+            bottom: -8px;
+            left: 3px;
+            width: 60px;
+            text-align: center;
+            transform: rotate(0deg);
+            letter-spacing: 1px;
+            font-weight: 600;
+            font-size: 9px;
+            background: #000;
+        }
     }
     .menu_devider {
         margin-right: 320px !important;
@@ -2726,6 +2750,13 @@ input[type=number] {
         width: 60px;
         height: 5rem;
     }
+    .header-navbar .logo span, .header-navbar.navbar-shadow .logo span{
+        bottom: 21px;
+        left: 79px;
+        width: auto;
+        font-size: 15px;
+        transform: none;
+    }
     .nav.navbar-nav.float-right .hambu {
         margin-left: 15px;
         display: flex;
@@ -2841,6 +2872,11 @@ input[type=number] {
     }
     .card-body .nav.nav-tabs .nav-item .nav-link {
         padding: 12px;
+    }
+    .header-navbar .logo span, .header-navbar.navbar-shadow .logo span{
+        bottom: 0px;
+        left: 10px;
+        font-size: 10px;
     }
 }
 @media only screen and (max-width: 360px) {
