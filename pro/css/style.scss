@@ -1603,8 +1603,8 @@ html body .content .content-wrapper {
     span{
         display: block;
         position: absolute;
-        bottom: 18px;
-        left: 67px;
+        bottom: 23px;
+        left: 83px;
         text-transform: uppercase;
         transform: rotate(-32deg);
         letter-spacing: 1px;
@@ -1650,6 +1650,12 @@ html body .content .content-wrapper {
             height: 100%;
             align-items: center;
             height: 5rem;
+            img{
+                //fill: red !important;
+                path{
+                    fill: red !important;
+                }
+            }
         }
     }
 }
@@ -2725,7 +2731,31 @@ input[type=number] {
     width: 600px;
 }
 .btn_min{
-    padding: 3px 10px;
+    padding: 3px 8px 3px 10px;
+    display: flex;
+    align-items: center;
+    svg{
+        margin: 0 0 0 7px;
+        width: 19px;
+        height: 19px;
+        display: block;
+        transition: $transition;
+    }
+    span{
+        transition: $transition;
+    }
+    &:focus{
+        border-color: #999;
+        color: #999;
+        path{
+            fill: #999;
+        }
+    }
+    &:hover{
+        span{
+            color: #fff;
+        }
+    }
 }
 .df{
     display: flex;
@@ -2735,6 +2765,8 @@ input[type=number] {
     &_item{
         margin-bottom: 20px;
         display: block;
+        border-bottom: 1px solid #535353;
+        padding-bottom: 14px;
         &:last-child{
             .otc-list_item-table{
                 margin-bottom: 0;
@@ -2742,23 +2774,28 @@ input[type=number] {
         }
         &_head{
             display: grid;
-            grid-template-columns: 1fr 1fr 74px;
-            margin-bottom: 30px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid #535353;
-            &_item{
-
+            grid-template-columns: 1fr 1fr 97px;
+            margin-bottom: 20px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #535353;
+            &-item{
+                text-transform: uppercase;
+                font-size: 0.8rem;
+                letter-spacing: 0.6px;
+                font-weight: 700;
             }
         }
         &-table{
             display: grid;
-            grid-template-columns: 1fr 1fr 74px;
+            grid-template-columns: 1fr 1fr 97px;
 
             div{
+                display: flex;
+                align-items: center;
                 img{
                     width: 20px;
                     opacity: .7;
-                    margin-right: 3px;
+                    margin-right: 6px;
                 }
             }
         }
@@ -2793,6 +2830,24 @@ input[type=number] {
                     color: #95804f !important;
                 }
             }
+        }
+        &.act{
+            .otc-list_item-inner {
+                display: block;
+                padding: 25px 0 30px;
+
+            }
+            .btn_min{
+                svg{
+                    transform: rotate(180deg);
+                }
+                *{
+                    opacity: 0;
+                }
+            }
+        }
+        &:last-child{
+            margin-bottom: 0;
         }
     }
 }
@@ -2943,7 +2998,7 @@ input[type=number] {
     }
     .header-navbar .logo span, .header-navbar.navbar-shadow .logo span{
         bottom: 0px;
-        left: 10px;
+        left: 21px;;
         font-size: 10px;
     }
 }
