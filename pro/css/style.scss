@@ -1616,7 +1616,7 @@ html body .content .content-wrapper {
     display: flex;
     //width: 60px;
     //height: 5rem;
-    width: 140px;
+    width: 130px;
     height: 140px;
     align-items: center;
     float: left;
@@ -1630,7 +1630,7 @@ html body .content .content-wrapper {
 
     .logo {
         width: 60px;
-        height: 5rem;
+        height: 70px;
     }
 }
 .nav{
@@ -3418,7 +3418,7 @@ footer.footer {
 @media only screen and (max-width: 1000px) {
     .header-navbar .logo {
         width: 60px;
-        height: 5rem;
+        height: 70px;
     }
     .navright {
         display: flex;

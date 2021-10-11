@@ -97,7 +97,7 @@ $( window ).on("load", function() {
     setTimeout(function () {
         $('body').removeClass('oh');
         $('.preload').removeClass('vis');
-    }, 1);
+    }, 1000);
 });
 $('[data-toggle="tooltip"]').tooltip({
     //delay: { "show": 500, "hide": 100000 },
