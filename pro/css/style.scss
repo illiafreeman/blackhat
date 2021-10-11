@@ -3012,10 +3012,10 @@ input[type=number] {
         }
     }
     .otc-list_item_head {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1.3fr 1fr;
     }
     .otc-list_item-table {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1.3fr 1fr;
         gap: 20px 0;
         div:last-child{
             grid-column: 1 / span 2;
@@ -3023,6 +3023,11 @@ input[type=number] {
             .btn{
                 margin: 0 auto;
             }
+        }
+    }
+    .otc-list_item-table{
+        .btn_min {
+            padding: 8px 13px 8px 17px;
         }
     }
 }
@@ -3046,11 +3051,7 @@ input[type=number] {
     .card-body .nav.nav-tabs .nav-item .nav-link {
         padding: 12px;
     }
-    .header-navbar .logo span, .header-navbar.navbar-shadow .logo span{
-        bottom: 0px;
-        left: 21px;;
-        font-size: 10px;
-    }
+
 }
 @media only screen and (max-width: 360px) {
 
