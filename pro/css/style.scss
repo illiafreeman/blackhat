@@ -2734,6 +2734,7 @@ input[type=number] {
     padding: 3px 8px 3px 10px;
     display: flex;
     align-items: center;
+    position: relative;
     svg{
         margin: 0 0 0 7px;
         width: 19px;
@@ -2755,6 +2756,28 @@ input[type=number] {
         span{
             color: #fff;
         }
+        path{
+            fill: #fff;
+        }
+        border-color: #fff;
+    }
+    .cog{
+        position: absolute;
+        animation:spin 2s linear infinite;
+        @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } };
+        opacity: 0;
+        margin-left: -10px;
+        left: 50%;
+    }
+    &.act{
+        border-color: #535353;
+
+        span, svg{
+            opacity: 0;
+        }
+        .cog{
+            opacity: 1 !important;
+        }
     }
 }
 .df{
@@ -2762,6 +2785,7 @@ input[type=number] {
 }
 .otc-list{
     display: block;
+    //min-width: 490px;
     &_item{
         margin-bottom: 20px;
         display: block;
@@ -2801,6 +2825,9 @@ input[type=number] {
         }
         &-inner{
             display: none;
+            .form-label-group input{
+                padding-right: 50px;
+            }
             .form-label-group{
                 margin-bottom: 20px;
             }
@@ -2829,6 +2856,7 @@ input[type=number] {
                 *{
                     color: #95804f !important;
                 }
+
             }
         }
         &.act{
@@ -2840,9 +2868,6 @@ input[type=number] {
             .btn_min{
                 svg{
                     transform: rotate(180deg);
-                }
-                *{
-                    opacity: 0;
                 }
             }
         }
@@ -2974,6 +2999,29 @@ input[type=number] {
     }
     .w600.card{
         width: 100%;
+    }
+    .otc-list_item-inner{
+        .df{
+            flex-direction: column;
+            align-items: center;
+        }
+        .qrcode{
+            margin: 0 0 15px;
+        }
+    }
+    .otc-list_item_head {
+        grid-template-columns: 1fr 1fr;
+    }
+    .otc-list_item-table {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px 0;
+        div:last-child{
+            grid-column: 1 / span 2;
+            grid-row: 2;
+            .btn{
+                margin: 0 auto;
+            }
+        }
     }
 }
 @media only screen and (max-width: 480px) {
