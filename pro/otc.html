@@ -324,11 +324,12 @@
 <script src="js/custom.js"></script>
 <script>
     $('.btn_deposit').click(function (e) {
-
+        var t = $(this);
         $(this).addClass('act');
+        console.log(t);
         setTimeout(function(e){
-                $('.btn_deposit').removeClass('act');
-                $('.btn_deposit').parents('.otc-list_item').toggleClass('act');
+                t.removeClass('act');
+                t.parents('.otc-list_item').toggleClass('act');
             }, 2000);
     });
 
