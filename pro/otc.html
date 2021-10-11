@@ -161,7 +161,7 @@
                                         </div>
                                         <div>125634545</div>
                                         <div>
-                                            <button type="submit" class="btn btn_min btn_deposit">
+                                            <button type="submit" class="btn btn_min btn_deposit-closed">
                                                 <span>Deposit</span>
                                                 <svg aria-hidden="true" focusable="false" data-prefix="fal"
                                                      data-icon="arrow-circle-down" role="img"
@@ -337,16 +337,19 @@
 <script src="js/jquery.scrollTo.min.js" type="text/javascript"></script>
 <script src="js/custom.js"></script>
 <script>
-    $('.btn_deposit').click(function (e) {
+    $(document).on("click", ".btn_deposit-closed", function(){
         var t = $(this);
-        $(this).addClass('act');
-        console.log(t);
+        t.addClass('btn_deposit-open act add');
         setTimeout(function(e){
-                t.removeClass('act');
-                t.parents('.otc-list_item').toggleClass('act');
+                t.removeClass('btn_deposit-closed act');
+                t.parents('.otc-list_item').addClass('act');
             }, 2000);
     });
-
+    $(document).on("click", ".add", function(){
+        var t = $(this);
+        t.removeClass('btn_deposit-open').addClass('btn_deposit-closed');
+        t.parents('.otc-list_item').removeClass('act');
+    });
 </script>
 </body>
 </html>

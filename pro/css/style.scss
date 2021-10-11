@@ -2779,7 +2779,13 @@ input[type=number] {
             opacity: 1 !important;
         }
     }
+    &.btn_deposit-open{
+        svg{
+            transform: rotate(180deg);
+        }
+    }
 }
+
 .df{
     display: flex;
 }
@@ -2865,11 +2871,7 @@ input[type=number] {
                 padding: 25px 0 30px;
 
             }
-            .btn_min{
-                svg{
-                    transform: rotate(180deg);
-                }
-            }
+
         }
         &:last-child{
             margin-bottom: 0;
