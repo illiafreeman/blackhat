@@ -35,4 +35,9 @@ $('[data-toggle="tooltip"]').tooltip({
     //delay: { "show": 500, "hide": 100000 },
     placement: 'left'
 });
-
+$( window ).on("load", function() {
+    setTimeout(function () {
+        $('body').removeClass('oh');
+        $('.preload').removeClass('vis');
+    }, 1000);
+});
