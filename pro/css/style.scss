@@ -2746,9 +2746,17 @@ input[type=number] {
 .w600.card{
     width: 600px;
 }
-
-
-
+.menu-icon {
+    fill: #919191;
+    display: block;
+    transition: all .2s ease-in-out;
+}
+.menu.active .menu-icon, .menu:hover .menu-icon {
+    fill: #fff;
+}
+.menu_bal .menu-icon{
+    fill: #fff;
+}
 
 
 
