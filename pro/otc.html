@@ -19,7 +19,115 @@
     <meta name="msapplication-TileColor" content="#b91d47">
     <meta name="theme-color" content="#ffffff">
 
+    <style>
+        .preload {
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 100vh;
+            left: 0;
+            background: #000;
+            z-index: 10000;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            visibility: hidden;
+            opacity: 0;
+            -webkit-transition: all 0.2s ease-in-out;
+            -o-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
+        }
 
+        .preload.vis {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .preload .jump {
+            -webkit-animation: jump 1.5s infinite ease;
+            animation: jump 1.5s infinite ease;
+            position: relative;
+        }
+
+        @-webkit-keyframes jump {
+            0% {
+                top: 0;
+            }
+            50% {
+                top: -40px;
+            }
+            100% {
+                top: 0;
+            }
+        }
+
+        @keyframes jump {
+            0% {
+                top: 0;
+            }
+            50% {
+                top: -40px;
+            }
+            100% {
+                top: 0;
+            }
+        }
+
+        .preload .shadow {
+            width: 150px;
+            height: 15px;
+            background: #535353;
+            position: relative;
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+            z-index: -1;
+            margin-top: 15px;
+            -webkit-animation: swift 1.5s infinite ease;
+            animation: swift 1.5s infinite ease;
+        }
+
+        @-webkit-keyframes swift {
+            0% {
+                opacity: 0.8;
+            }
+            50% {
+                opacity: 0.4;
+                -webkit-transform: scale(0.8);
+                transform: scale(0.8);
+            }
+            100% {
+                opacity: 0.8;
+            }
+        }
+
+        @keyframes swift {
+            0% {
+                opacity: 0.8;
+            }
+            50% {
+                opacity: 0.4;
+                -webkit-transform: scale(0.8);
+                transform: scale(0.8);
+            }
+            100% {
+                opacity: 0.8;
+            }
+        }
+    </style>
     <link href="https://fonts.googleapis.com/css?family=Muli:300,300i,400,400i,600,600i,700,700i|Comfortaa:300,400,500,700"
           rel="stylesheet">
     <!--common styles-->
@@ -135,8 +243,10 @@
 
 
 <div class="app-content content">
-    <div class="preload">
-        <img src="img/357.gif" alt="">
+    <div class="preload vis">
+        <img class="jump" src="data:image/jpeg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAABZAAD/4QMvaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjYtYzE0NSA3OS4xNjM0OTksIDIwMTgvMDgvMTMtMTY6NDA6MjIgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDQyAyMDE5IChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpDMzRFODVGQzJBQzYxMUVDOTI1NUZDRURBRTVDN0IzMiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpDMzRFODVGRDJBQzYxMUVDOTI1NUZDRURBRTVDN0IzMiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkMzNEU4NUZBMkFDNjExRUM5MjU1RkNFREFFNUM3QjMyIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkMzNEU4NUZCMkFDNjExRUM5MjU1RkNFREFFNUM3QjMyIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+/+4ADkFkb2JlAGTAAAAAAf/bAIQAAQEBAQEBAQEBAQIBAQEC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"
+             alt="">
+        <div class="shadow"></div>
     </div>
     <!--block to reload-->
     <div class="content-wrapper">
@@ -147,11 +257,497 @@
                     <div class="card-header">
                     </div>
                     <div class="card-body">
-                        <div class="card-body__inner">
+                        <div class="card-body__inner card-body__inner_otc">
                             <div class="otc-list">
                                 <div class="otc-list_item otc-list_item_head">
                                     <div class="otc-list_item_head-item">Coin</div>
                                     <div class="otc-list_item_head-item">Balance</div>
+                                </div>
+                                <div class="otc-list_item">
+                                    <div class="otc-list_item-table">
+                                        <div>
+                                            <img src="img/xmr.png" alt="">
+                                            BitCoin (BTC)
+                                        </div>
+                                        <div>125634545</div>
+                                        <div>
+                                            <button type="submit" class="btn btn_min btn_deposit-closed">
+                                                <span>Deposit</span>
+                                                <svg aria-hidden="true" focusable="false" data-prefix="fal"
+                                                     data-icon="arrow-circle-down" role="img"
+                                                     xmlns="http://www.w3.org/2000/svg" width="19" height="19"
+                                                     viewBox="0 0 512 512">
+                                                    <path fill="currentColor"
+                                                          d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm216 248c0 118.7-96.1 216-216 216-118.7 0-216-96.1-216-216 0-118.7 96.1-216 216-216 118.7 0 216 96.1 216 216zm-92.5-4.5l-6.9-6.9c-4.7-4.7-12.5-4.7-17.1.2L273 330.3V140c0-6.6-5.4-12-12-12h-10c-6.6 0-12 5.4-12 12v190.3l-82.5-85.6c-4.7-4.8-12.4-4.9-17.1-.2l-6.9 6.9c-4.7 4.7-4.7 12.3 0 17l115 115.1c4.7 4.7 12.3 4.7 17 0l115-115.1c4.7-4.6 4.7-12.2 0-16.9z"
+                                                          class=""></path>
+                                                </svg>
+                                                <svg aria-hidden="true" focusable="false" data-prefix="fal"
+                                                     data-icon="cog" role="img" xmlns="http://www.w3.org/2000/svg"
+                                                     width="30" height="30" viewBox="0 0 512 512" class="cog">
+                                                    <path fill="currentColor"
+                                                          d="M482.696 299.276l-32.61-18.827a195.168 195.168 0 0 0 0-48.899l32.61-18.827c9.576-5.528 14.195-16.902 11.046-27.501-11.214-37.749-31.175-71.728-57.535-99.595-7.634-8.07-19.817-9.836-29.437-4.282l-32.562 18.798a194.125 194.125 0 0 0-42.339-24.48V38.049c0-11.13-7.652-20.804-18.484-23.367-37.644-8.909-77.118-8.91-114.77 0-10.831 2.563-18.484 12.236-18.484 23.367v37.614a194.101 194.101 0 0 0-42.339 24.48L105.23 81.345c-9.621-5.554-21.804-3.788-29.437 4.282-26.36 27.867-46.321 61.847-57.535 99.595-3.149 10.599 1.47 21.972 11.046 27.501l32.61 18.827a195.168 195.168 0 0 0 0 48.899l-32.61 18.827c-9.576 5.528-14.195 16.902-11.046 27.501 11.214 37.748 31.175 71.728 57.535 99.595 7.634 8.07 19.817 9.836 29.437 4.283l32.562-18.798a194.08 194.08 0 0 0 42.339 24.479v37.614c0 11.13 7.652 20.804 18.484 23.367 37.645 8.909 77.118 8.91 114.77 0 10.831-2.563 18.484-12.236 18.484-23.367v-37.614a194.138 194.138 0 0 0 42.339-24.479l32.562 18.798c9.62 5.554 21.803 3.788 29.437-4.283 26.36-27.867 46.321-61.847 57.535-99.595 3.149-10.599-1.47-21.972-11.046-27.501zm-65.479 100.461l-46.309-26.74c-26.988 23.071-36.559 28.876-71.039 41.059v53.479a217.145 217.145 0 0 1-87.738 0v-53.479c-33.621-11.879-43.355-17.395-71.039-41.059l-46.309 26.74c-19.71-22.09-34.689-47.989-43.929-75.958l46.329-26.74c-6.535-35.417-6.538-46.644 0-82.079l-46.329-26.74c9.24-27.969 24.22-53.869 43.929-75.969l46.309 26.76c27.377-23.434 37.063-29.065 71.039-41.069V44.464a216.79 216.79 0 0 1 87.738 0v53.479c33.978 12.005 43.665 17.637 71.039 41.069l46.309-26.76c19.709 22.099 34.689 47.999 43.929 75.969l-46.329 26.74c6.536 35.426 6.538 46.644 0 82.079l46.329 26.74c-9.24 27.968-24.219 53.868-43.929 75.957zM256 160c-52.935 0-96 43.065-96 96s43.065 96 96 96 96-43.065 96-96-43.065-96-96-96zm0 160c-35.29 0-64-28.71-64-64s28.71-64 64-64 64 28.71 64 64-28.71 64-64 64z"
+                                                          class=""></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="otc-list_item-inner">
+                                        <p>Use the following data to credit your account:</p>
+                                        <fieldset class="form-label-group">
+                                            <input style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;" type="text" id="address" class="form-control" placeholder="My Transparent address" disabled="" value="2B4jM9nGnXkxQhU71v4ERf9LZnKBwPWUaaa">
+                                            <label for="address">My Transparent address</label>
+                                            <svg class="help-icon icon-copy" onclick="toastr.success('Copied to clipboard');" aria-hidden="true" focusable="false" data-prefix="fal" data-icon="copy" role="img" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 448 512">
+                                                <path fill="currentColor" d="M433.941 65.941l-51.882-51.882A48 48 0 0 0 348.118 0H176c-26.51 0-48 21.49-48 48v48H48c-26.51 0-48 21.49-48 48v320c0 26.51 21.49 48 48 48h224c26.51 0 48-21.49 48-48v-48h80c26.51 0 48-21.49 48-48V99.882a48 48 0 0 0-14.059-33.941zM352 32.491a15.88 15.88 0 0 1 7.431 4.195l51.882 51.883A15.885 15.885 0 0 1 415.508 96H352V32.491zM288 464c0 8.822-7.178 16-16 16H48c-8.822 0-16-7.178-16-16V144c0-8.822 7.178-16 16-16h80v240c0 26.51 21.49 48 48 48h112v48zm128-96c0 8.822-7.178 16-16 16H176c-8.822 0-16-7.178-16-16V48c0-8.822 7.178-16 16-16h144v72c0 13.2 10.8 24 24 24h72v240z" class=""></path>
+                                            </svg>
+                                        </fieldset>
+                                        <div class="df">
+                                            <div class="qrcode" title="DDhsPtuiFb14pyU2MouNoY4edeLJAySxRd">
+                                                <canvas style="display: none;" width="160" height="160"></canvas>
+                                                <img style="display: block;" src="data:image/png;base64,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">
+                                            </div>
+                                            <fieldset class="form-label-group total-alarm_wrap has-error" id="error">
+                                                <div class="error-text alert-text total-alarm">
+                                                    <h6>Warning!</h6>
+                                                    <div>Please only transfer BTC to this address.
+                                                        Deposits into other currencies made to this address will be lost!
+                                                        BTC will be credited to your account after 1 confirmations!
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="otc-list_item">
+                                    <div class="otc-list_item-table">
+                                        <div>
+                                            <img src="img/eth.png" alt="">
+                                            Efir (BTC)
+                                        </div>
+                                        <div>123434534535</div>
+                                        <div>
+                                            <button type="submit" class="btn btn_min btn_deposit-closed">
+                                                <span>Deposit</span>
+                                                <svg aria-hidden="true" focusable="false" data-prefix="fal"
+                                                     data-icon="arrow-circle-down" role="img"
+                                                     xmlns="http://www.w3.org/2000/svg" width="19" height="19"
+                                                     viewBox="0 0 512 512">
+                                                    <path fill="currentColor"
+                                                          d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm216 248c0 118.7-96.1 216-216 216-118.7 0-216-96.1-216-216 0-118.7 96.1-216 216-216 118.7 0 216 96.1 216 216zm-92.5-4.5l-6.9-6.9c-4.7-4.7-12.5-4.7-17.1.2L273 330.3V140c0-6.6-5.4-12-12-12h-10c-6.6 0-12 5.4-12 12v190.3l-82.5-85.6c-4.7-4.8-12.4-4.9-17.1-.2l-6.9 6.9c-4.7 4.7-4.7 12.3 0 17l115 115.1c4.7 4.7 12.3 4.7 17 0l115-115.1c4.7-4.6 4.7-12.2 0-16.9z"
+                                                          class=""></path>
+                                                </svg>
+                                                <svg aria-hidden="true" focusable="false" data-prefix="fal"
+                                                     data-icon="cog" role="img" xmlns="http://www.w3.org/2000/svg"
+                                                     width="30" height="30" viewBox="0 0 512 512" class="cog">
+                                                    <path fill="currentColor"
+                                                          d="M482.696 299.276l-32.61-18.827a195.168 195.168 0 0 0 0-48.899l32.61-18.827c9.576-5.528 14.195-16.902 11.046-27.501-11.214-37.749-31.175-71.728-57.535-99.595-7.634-8.07-19.817-9.836-29.437-4.282l-32.562 18.798a194.125 194.125 0 0 0-42.339-24.48V38.049c0-11.13-7.652-20.804-18.484-23.367-37.644-8.909-77.118-8.91-114.77 0-10.831 2.563-18.484 12.236-18.484 23.367v37.614a194.101 194.101 0 0 0-42.339 24.48L105.23 81.345c-9.621-5.554-21.804-3.788-29.437 4.282-26.36 27.867-46.321 61.847-57.535 99.595-3.149 10.599 1.47 21.972 11.046 27.501l32.61 18.827a195.168 195.168 0 0 0 0 48.899l-32.61 18.827c-9.576 5.528-14.195 16.902-11.046 27.501 11.214 37.748 31.175 71.728 57.535 99.595 7.634 8.07 19.817 9.836 29.437 4.283l32.562-18.798a194.08 194.08 0 0 0 42.339 24.479v37.614c0 11.13 7.652 20.804 18.484 23.367 37.645 8.909 77.118 8.91 114.77 0 10.831-2.563 18.484-12.236 18.484-23.367v-37.614a194.138 194.138 0 0 0 42.339-24.479l32.562 18.798c9.62 5.554 21.803 3.788 29.437-4.283 26.36-27.867 46.321-61.847 57.535-99.595 3.149-10.599-1.47-21.972-11.046-27.501zm-65.479 100.461l-46.309-26.74c-26.988 23.071-36.559 28.876-71.039 41.059v53.479a217.145 217.145 0 0 1-87.738 0v-53.479c-33.621-11.879-43.355-17.395-71.039-41.059l-46.309 26.74c-19.71-22.09-34.689-47.989-43.929-75.958l46.329-26.74c-6.535-35.417-6.538-46.644 0-82.079l-46.329-26.74c9.24-27.969 24.22-53.869 43.929-75.969l46.309 26.76c27.377-23.434 37.063-29.065 71.039-41.069V44.464a216.79 216.79 0 0 1 87.738 0v53.479c33.978 12.005 43.665 17.637 71.039 41.069l46.309-26.76c19.709 22.099 34.689 47.999 43.929 75.969l-46.329 26.74c6.536 35.426 6.538 46.644 0 82.079l46.329 26.74c-9.24 27.968-24.219 53.868-43.929 75.957zM256 160c-52.935 0-96 43.065-96 96s43.065 96 96 96 96-43.065 96-96-43.065-96-96-96zm0 160c-35.29 0-64-28.71-64-64s28.71-64 64-64 64 28.71 64 64-28.71 64-64 64z"
+                                                          class=""></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="otc-list_item-inner">
+                                        <p>Use the following data to credit your account:</p>
+                                        <fieldset class="form-label-group">
+                                            <input style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;" type="text" id="address" class="form-control" placeholder="My Transparent address" disabled="" value="2B4jM9nGnXkxQhU71v4ERf9LZnKBwPWUaaa">
+                                            <label for="address">My Transparent address</label>
+                                            <svg class="help-icon icon-copy" onclick="toastr.success('Copied to clipboard');" aria-hidden="true" focusable="false" data-prefix="fal" data-icon="copy" role="img" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 448 512">
+                                                <path fill="currentColor" d="M433.941 65.941l-51.882-51.882A48 48 0 0 0 348.118 0H176c-26.51 0-48 21.49-48 48v48H48c-26.51 0-48 21.49-48 48v320c0 26.51 21.49 48 48 48h224c26.51 0 48-21.49 48-48v-48h80c26.51 0 48-21.49 48-48V99.882a48 48 0 0 0-14.059-33.941zM352 32.491a15.88 15.88 0 0 1 7.431 4.195l51.882 51.883A15.885 15.885 0 0 1 415.508 96H352V32.491zM288 464c0 8.822-7.178 16-16 16H48c-8.822 0-16-7.178-16-16V144c0-8.822 7.178-16 16-16h80v240c0 26.51 21.49 48 48 48h112v48zm128-96c0 8.822-7.178 16-16 16H176c-8.822 0-16-7.178-16-16V48c0-8.822 7.178-16 16-16h144v72c0 13.2 10.8 24 24 24h72v240z" class=""></path>
+                                            </svg>
+                                        </fieldset>
+                                        <div class="df">
+                                            <div class="qrcode" title="DDhsPtuiFb14pyU2MouNoY4edeLJAySxRd">
+                                                <canvas style="display: none;" width="160" height="160"></canvas>
+                                                <img style="display: block;" src="data:image/png;base64,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">
+                                            </div>
+                                            <fieldset class="form-label-group total-alarm_wrap has-error" id="error">
+                                                <div class="error-text alert-text total-alarm">
+                                                    <h6>Warning!</h6>
+                                                    <div>Please only transfer BTC to this address.
+                                                        Deposits into other currencies made to this address will be lost!
+                                                        BTC will be credited to your account after 1 confirmations!
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="otc-list_item">
+                                    <div class="otc-list_item-table">
+                                        <div>
+                                            <img src="img/xrp.png" alt="">
+                                            Transparent (BTC)
+                                        </div>
+                                        <div>345</div>
+                                        <div>
+                                            <button type="submit" class="btn btn_min btn_deposit-closed">
+                                                <span>Deposit</span>
+                                                <svg aria-hidden="true" focusable="false" data-prefix="fal"
+                                                     data-icon="arrow-circle-down" role="img"
+                                                     xmlns="http://www.w3.org/2000/svg" width="19" height="19"
+                                                     viewBox="0 0 512 512">
+                                                    <path fill="currentColor"
+                                                          d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm216 248c0 118.7-96.1 216-216 216-118.7 0-216-96.1-216-216 0-118.7 96.1-216 216-216 118.7 0 216 96.1 216 216zm-92.5-4.5l-6.9-6.9c-4.7-4.7-12.5-4.7-17.1.2L273 330.3V140c0-6.6-5.4-12-12-12h-10c-6.6 0-12 5.4-12 12v190.3l-82.5-85.6c-4.7-4.8-12.4-4.9-17.1-.2l-6.9 6.9c-4.7 4.7-4.7 12.3 0 17l115 115.1c4.7 4.7 12.3 4.7 17 0l115-115.1c4.7-4.6 4.7-12.2 0-16.9z"
+                                                          class=""></path>
+                                                </svg>
+                                                <svg aria-hidden="true" focusable="false" data-prefix="fal"
+                                                     data-icon="cog" role="img" xmlns="http://www.w3.org/2000/svg"
+                                                     width="30" height="30" viewBox="0 0 512 512" class="cog">
+                                                    <path fill="currentColor"
+                                                          d="M482.696 299.276l-32.61-18.827a195.168 195.168 0 0 0 0-48.899l32.61-18.827c9.576-5.528 14.195-16.902 11.046-27.501-11.214-37.749-31.175-71.728-57.535-99.595-7.634-8.07-19.817-9.836-29.437-4.282l-32.562 18.798a194.125 194.125 0 0 0-42.339-24.48V38.049c0-11.13-7.652-20.804-18.484-23.367-37.644-8.909-77.118-8.91-114.77 0-10.831 2.563-18.484 12.236-18.484 23.367v37.614a194.101 194.101 0 0 0-42.339 24.48L105.23 81.345c-9.621-5.554-21.804-3.788-29.437 4.282-26.36 27.867-46.321 61.847-57.535 99.595-3.149 10.599 1.47 21.972 11.046 27.501l32.61 18.827a195.168 195.168 0 0 0 0 48.899l-32.61 18.827c-9.576 5.528-14.195 16.902-11.046 27.501 11.214 37.748 31.175 71.728 57.535 99.595 7.634 8.07 19.817 9.836 29.437 4.283l32.562-18.798a194.08 194.08 0 0 0 42.339 24.479v37.614c0 11.13 7.652 20.804 18.484 23.367 37.645 8.909 77.118 8.91 114.77 0 10.831-2.563 18.484-12.236 18.484-23.367v-37.614a194.138 194.138 0 0 0 42.339-24.479l32.562 18.798c9.62 5.554 21.803 3.788 29.437-4.283 26.36-27.867 46.321-61.847 57.535-99.595 3.149-10.599-1.47-21.972-11.046-27.501zm-65.479 100.461l-46.309-26.74c-26.988 23.071-36.559 28.876-71.039 41.059v53.479a217.145 217.145 0 0 1-87.738 0v-53.479c-33.621-11.879-43.355-17.395-71.039-41.059l-46.309 26.74c-19.71-22.09-34.689-47.989-43.929-75.958l46.329-26.74c-6.535-35.417-6.538-46.644 0-82.079l-46.329-26.74c9.24-27.969 24.22-53.869 43.929-75.969l46.309 26.76c27.377-23.434 37.063-29.065 71.039-41.069V44.464a216.79 216.79 0 0 1 87.738 0v53.479c33.978 12.005 43.665 17.637 71.039 41.069l46.309-26.76c19.709 22.099 34.689 47.999 43.929 75.969l-46.329 26.74c6.536 35.426 6.538 46.644 0 82.079l46.329 26.74c-9.24 27.968-24.219 53.868-43.929 75.957zM256 160c-52.935 0-96 43.065-96 96s43.065 96 96 96 96-43.065 96-96-43.065-96-96-96zm0 160c-35.29 0-64-28.71-64-64s28.71-64 64-64 64 28.71 64 64-28.71 64-64 64z"
+                                                          class=""></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="otc-list_item-inner">
+                                        <p>Use the following data to credit your account:</p>
+                                        <fieldset class="form-label-group">
+                                            <input style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;" type="text" id="address" class="form-control" placeholder="My Transparent address" disabled="" value="2B4jM9nGnXkxQhU71v4ERf9LZnKBwPWUaaa">
+                                            <label for="address">My Transparent address</label>
+                                            <svg class="help-icon icon-copy" onclick="toastr.success('Copied to clipboard');" aria-hidden="true" focusable="false" data-prefix="fal" data-icon="copy" role="img" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 448 512">
+                                                <path fill="currentColor" d="M433.941 65.941l-51.882-51.882A48 48 0 0 0 348.118 0H176c-26.51 0-48 21.49-48 48v48H48c-26.51 0-48 21.49-48 48v320c0 26.51 21.49 48 48 48h224c26.51 0 48-21.49 48-48v-48h80c26.51 0 48-21.49 48-48V99.882a48 48 0 0 0-14.059-33.941zM352 32.491a15.88 15.88 0 0 1 7.431 4.195l51.882 51.883A15.885 15.885 0 0 1 415.508 96H352V32.491zM288 464c0 8.822-7.178 16-16 16H48c-8.822 0-16-7.178-16-16V144c0-8.822 7.178-16 16-16h80v240c0 26.51 21.49 48 48 48h112v48zm128-96c0 8.822-7.178 16-16 16H176c-8.822 0-16-7.178-16-16V48c0-8.822 7.178-16 16-16h144v72c0 13.2 10.8 24 24 24h72v240z" class=""></path>
+                                            </svg>
+                                        </fieldset>
+                                        <div class="df">
+                                            <div class="qrcode" title="DDhsPtuiFb14pyU2MouNoY4edeLJAySxRd">
+                                                <canvas style="display: none;" width="160" height="160"></canvas>
+                                                <img style="display: block;" src="data:image/png;base64,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">
+                                            </div>
+                                            <fieldset class="form-label-group total-alarm_wrap has-error" id="error">
+                                                <div class="error-text alert-text total-alarm">
+                                                    <h6>Warning!</h6>
+                                                    <div>Please only transfer BTC to this address.
+                                                        Deposits into other currencies made to this address will be lost!
+                                                        BTC will be credited to your account after 1 confirmations!
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="otc-list_item">
+                                    <div class="otc-list_item-table">
+                                        <div>
+                                            <img src="img/xmr.png" alt="">
+                                            BitCoin (BTC)
+                                        </div>
+                                        <div>125634545</div>
+                                        <div>
+                                            <button type="submit" class="btn btn_min btn_deposit-closed">
+                                                <span>Deposit</span>
+                                                <svg aria-hidden="true" focusable="false" data-prefix="fal"
+                                                     data-icon="arrow-circle-down" role="img"
+                                                     xmlns="http://www.w3.org/2000/svg" width="19" height="19"
+                                                     viewBox="0 0 512 512">
+                                                    <path fill="currentColor"
+                                                          d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm216 248c0 118.7-96.1 216-216 216-118.7 0-216-96.1-216-216 0-118.7 96.1-216 216-216 118.7 0 216 96.1 216 216zm-92.5-4.5l-6.9-6.9c-4.7-4.7-12.5-4.7-17.1.2L273 330.3V140c0-6.6-5.4-12-12-12h-10c-6.6 0-12 5.4-12 12v190.3l-82.5-85.6c-4.7-4.8-12.4-4.9-17.1-.2l-6.9 6.9c-4.7 4.7-4.7 12.3 0 17l115 115.1c4.7 4.7 12.3 4.7 17 0l115-115.1c4.7-4.6 4.7-12.2 0-16.9z"
+                                                          class=""></path>
+                                                </svg>
+                                                <svg aria-hidden="true" focusable="false" data-prefix="fal"
+                                                     data-icon="cog" role="img" xmlns="http://www.w3.org/2000/svg"
+                                                     width="30" height="30" viewBox="0 0 512 512" class="cog">
+                                                    <path fill="currentColor"
+                                                          d="M482.696 299.276l-32.61-18.827a195.168 195.168 0 0 0 0-48.899l32.61-18.827c9.576-5.528 14.195-16.902 11.046-27.501-11.214-37.749-31.175-71.728-57.535-99.595-7.634-8.07-19.817-9.836-29.437-4.282l-32.562 18.798a194.125 194.125 0 0 0-42.339-24.48V38.049c0-11.13-7.652-20.804-18.484-23.367-37.644-8.909-77.118-8.91-114.77 0-10.831 2.563-18.484 12.236-18.484 23.367v37.614a194.101 194.101 0 0 0-42.339 24.48L105.23 81.345c-9.621-5.554-21.804-3.788-29.437 4.282-26.36 27.867-46.321 61.847-57.535 99.595-3.149 10.599 1.47 21.972 11.046 27.501l32.61 18.827a195.168 195.168 0 0 0 0 48.899l-32.61 18.827c-9.576 5.528-14.195 16.902-11.046 27.501 11.214 37.748 31.175 71.728 57.535 99.595 7.634 8.07 19.817 9.836 29.437 4.283l32.562-18.798a194.08 194.08 0 0 0 42.339 24.479v37.614c0 11.13 7.652 20.804 18.484 23.367 37.645 8.909 77.118 8.91 114.77 0 10.831-2.563 18.484-12.236 18.484-23.367v-37.614a194.138 194.138 0 0 0 42.339-24.479l32.562 18.798c9.62 5.554 21.803 3.788 29.437-4.283 26.36-27.867 46.321-61.847 57.535-99.595 3.149-10.599-1.47-21.972-11.046-27.501zm-65.479 100.461l-46.309-26.74c-26.988 23.071-36.559 28.876-71.039 41.059v53.479a217.145 217.145 0 0 1-87.738 0v-53.479c-33.621-11.879-43.355-17.395-71.039-41.059l-46.309 26.74c-19.71-22.09-34.689-47.989-43.929-75.958l46.329-26.74c-6.535-35.417-6.538-46.644 0-82.079l-46.329-26.74c9.24-27.969 24.22-53.869 43.929-75.969l46.309 26.76c27.377-23.434 37.063-29.065 71.039-41.069V44.464a216.79 216.79 0 0 1 87.738 0v53.479c33.978 12.005 43.665 17.637 71.039 41.069l46.309-26.76c19.709 22.099 34.689 47.999 43.929 75.969l-46.329 26.74c6.536 35.426 6.538 46.644 0 82.079l46.329 26.74c-9.24 27.968-24.219 53.868-43.929 75.957zM256 160c-52.935 0-96 43.065-96 96s43.065 96 96 96 96-43.065 96-96-43.065-96-96-96zm0 160c-35.29 0-64-28.71-64-64s28.71-64 64-64 64 28.71 64 64-28.71 64-64 64z"
+                                                          class=""></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="otc-list_item-inner">
+                                        <p>Use the following data to credit your account:</p>
+                                        <fieldset class="form-label-group">
+                                            <input style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;" type="text" id="address" class="form-control" placeholder="My Transparent address" disabled="" value="2B4jM9nGnXkxQhU71v4ERf9LZnKBwPWUaaa">
+                                            <label for="address">My Transparent address</label>
+                                            <svg class="help-icon icon-copy" onclick="toastr.success('Copied to clipboard');" aria-hidden="true" focusable="false" data-prefix="fal" data-icon="copy" role="img" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 448 512">
+                                                <path fill="currentColor" d="M433.941 65.941l-51.882-51.882A48 48 0 0 0 348.118 0H176c-26.51 0-48 21.49-48 48v48H48c-26.51 0-48 21.49-48 48v320c0 26.51 21.49 48 48 48h224c26.51 0 48-21.49 48-48v-48h80c26.51 0 48-21.49 48-48V99.882a48 48 0 0 0-14.059-33.941zM352 32.491a15.88 15.88 0 0 1 7.431 4.195l51.882 51.883A15.885 15.885 0 0 1 415.508 96H352V32.491zM288 464c0 8.822-7.178 16-16 16H48c-8.822 0-16-7.178-16-16V144c0-8.822 7.178-16 16-16h80v240c0 26.51 21.49 48 48 48h112v48zm128-96c0 8.822-7.178 16-16 16H176c-8.822 0-16-7.178-16-16V48c0-8.822 7.178-16 16-16h144v72c0 13.2 10.8 24 24 24h72v240z" class=""></path>
+                                            </svg>
+                                        </fieldset>
+                                        <div class="df">
+                                            <div class="qrcode" title="DDhsPtuiFb14pyU2MouNoY4edeLJAySxRd">
+                                                <canvas style="display: none;" width="160" height="160"></canvas>
+                                                <img style="display: block;" src="data:image/png;base64,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">
+                                            </div>
+                                            <fieldset class="form-label-group total-alarm_wrap has-error" id="error">
+                                                <div class="error-text alert-text total-alarm">
+                                                    <h6>Warning!</h6>
+                                                    <div>Please only transfer BTC to this address.
+                                                        Deposits into other currencies made to this address will be lost!
+                                                        BTC will be credited to your account after 1 confirmations!
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="otc-list_item">
+                                    <div class="otc-list_item-table">
+                                        <div>
+                                            <img src="img/eth.png" alt="">
+                                            Efir (BTC)
+                                        </div>
+                                        <div>123434534535</div>
+                                        <div>
+                                            <button type="submit" class="btn btn_min btn_deposit-closed">
+                                                <span>Deposit</span>
+                                                <svg aria-hidden="true" focusable="false" data-prefix="fal"
+                                                     data-icon="arrow-circle-down" role="img"
+                                                     xmlns="http://www.w3.org/2000/svg" width="19" height="19"
+                                                     viewBox="0 0 512 512">
+                                                    <path fill="currentColor"
+                                                          d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm216 248c0 118.7-96.1 216-216 216-118.7 0-216-96.1-216-216 0-118.7 96.1-216 216-216 118.7 0 216 96.1 216 216zm-92.5-4.5l-6.9-6.9c-4.7-4.7-12.5-4.7-17.1.2L273 330.3V140c0-6.6-5.4-12-12-12h-10c-6.6 0-12 5.4-12 12v190.3l-82.5-85.6c-4.7-4.8-12.4-4.9-17.1-.2l-6.9 6.9c-4.7 4.7-4.7 12.3 0 17l115 115.1c4.7 4.7 12.3 4.7 17 0l115-115.1c4.7-4.6 4.7-12.2 0-16.9z"
+                                                          class=""></path>
+                                                </svg>
+                                                <svg aria-hidden="true" focusable="false" data-prefix="fal"
+                                                     data-icon="cog" role="img" xmlns="http://www.w3.org/2000/svg"
+                                                     width="30" height="30" viewBox="0 0 512 512" class="cog">
+                                                    <path fill="currentColor"
+                                                          d="M482.696 299.276l-32.61-18.827a195.168 195.168 0 0 0 0-48.899l32.61-18.827c9.576-5.528 14.195-16.902 11.046-27.501-11.214-37.749-31.175-71.728-57.535-99.595-7.634-8.07-19.817-9.836-29.437-4.282l-32.562 18.798a194.125 194.125 0 0 0-42.339-24.48V38.049c0-11.13-7.652-20.804-18.484-23.367-37.644-8.909-77.118-8.91-114.77 0-10.831 2.563-18.484 12.236-18.484 23.367v37.614a194.101 194.101 0 0 0-42.339 24.48L105.23 81.345c-9.621-5.554-21.804-3.788-29.437 4.282-26.36 27.867-46.321 61.847-57.535 99.595-3.149 10.599 1.47 21.972 11.046 27.501l32.61 18.827a195.168 195.168 0 0 0 0 48.899l-32.61 18.827c-9.576 5.528-14.195 16.902-11.046 27.501 11.214 37.748 31.175 71.728 57.535 99.595 7.634 8.07 19.817 9.836 29.437 4.283l32.562-18.798a194.08 194.08 0 0 0 42.339 24.479v37.614c0 11.13 7.652 20.804 18.484 23.367 37.645 8.909 77.118 8.91 114.77 0 10.831-2.563 18.484-12.236 18.484-23.367v-37.614a194.138 194.138 0 0 0 42.339-24.479l32.562 18.798c9.62 5.554 21.803 3.788 29.437-4.283 26.36-27.867 46.321-61.847 57.535-99.595 3.149-10.599-1.47-21.972-11.046-27.501zm-65.479 100.461l-46.309-26.74c-26.988 23.071-36.559 28.876-71.039 41.059v53.479a217.145 217.145 0 0 1-87.738 0v-53.479c-33.621-11.879-43.355-17.395-71.039-41.059l-46.309 26.74c-19.71-22.09-34.689-47.989-43.929-75.958l46.329-26.74c-6.535-35.417-6.538-46.644 0-82.079l-46.329-26.74c9.24-27.969 24.22-53.869 43.929-75.969l46.309 26.76c27.377-23.434 37.063-29.065 71.039-41.069V44.464a216.79 216.79 0 0 1 87.738 0v53.479c33.978 12.005 43.665 17.637 71.039 41.069l46.309-26.76c19.709 22.099 34.689 47.999 43.929 75.969l-46.329 26.74c6.536 35.426 6.538 46.644 0 82.079l46.329 26.74c-9.24 27.968-24.219 53.868-43.929 75.957zM256 160c-52.935 0-96 43.065-96 96s43.065 96 96 96 96-43.065 96-96-43.065-96-96-96zm0 160c-35.29 0-64-28.71-64-64s28.71-64 64-64 64 28.71 64 64-28.71 64-64 64z"
+                                                          class=""></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="otc-list_item-inner">
+                                        <p>Use the following data to credit your account:</p>
+                                        <fieldset class="form-label-group">
+                                            <input style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;" type="text" id="address" class="form-control" placeholder="My Transparent address" disabled="" value="2B4jM9nGnXkxQhU71v4ERf9LZnKBwPWUaaa">
+                                            <label for="address">My Transparent address</label>
+                                            <svg class="help-icon icon-copy" onclick="toastr.success('Copied to clipboard');" aria-hidden="true" focusable="false" data-prefix="fal" data-icon="copy" role="img" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 448 512">
+                                                <path fill="currentColor" d="M433.941 65.941l-51.882-51.882A48 48 0 0 0 348.118 0H176c-26.51 0-48 21.49-48 48v48H48c-26.51 0-48 21.49-48 48v320c0 26.51 21.49 48 48 48h224c26.51 0 48-21.49 48-48v-48h80c26.51 0 48-21.49 48-48V99.882a48 48 0 0 0-14.059-33.941zM352 32.491a15.88 15.88 0 0 1 7.431 4.195l51.882 51.883A15.885 15.885 0 0 1 415.508 96H352V32.491zM288 464c0 8.822-7.178 16-16 16H48c-8.822 0-16-7.178-16-16V144c0-8.822 7.178-16 16-16h80v240c0 26.51 21.49 48 48 48h112v48zm128-96c0 8.822-7.178 16-16 16H176c-8.822 0-16-7.178-16-16V48c0-8.822 7.178-16 16-16h144v72c0 13.2 10.8 24 24 24h72v240z" class=""></path>
+                                            </svg>
+                                        </fieldset>
+                                        <div class="df">
+                                            <div class="qrcode" title="DDhsPtuiFb14pyU2MouNoY4edeLJAySxRd">
+                                                <canvas style="display: none;" width="160" height="160"></canvas>
+                                                <img style="display: block;" src="data:image/png;base64,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">
+                                            </div>
+                                            <fieldset class="form-label-group total-alarm_wrap has-error" id="error">
+                                                <div class="error-text alert-text total-alarm">
+                                                    <h6>Warning!</h6>
+                                                    <div>Please only transfer BTC to this address.
+                                                        Deposits into other currencies made to this address will be lost!
+                                                        BTC will be credited to your account after 1 confirmations!
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="otc-list_item">
+                                    <div class="otc-list_item-table">
+                                        <div>
+                                            <img src="img/xrp.png" alt="">
+                                            Transparent (BTC)
+                                        </div>
+                                        <div>345</div>
+                                        <div>
+                                            <button type="submit" class="btn btn_min btn_deposit-closed">
+                                                <span>Deposit</span>
+                                                <svg aria-hidden="true" focusable="false" data-prefix="fal"
+                                                     data-icon="arrow-circle-down" role="img"
+                                                     xmlns="http://www.w3.org/2000/svg" width="19" height="19"
+                                                     viewBox="0 0 512 512">
+                                                    <path fill="currentColor"
+                                                          d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm216 248c0 118.7-96.1 216-216 216-118.7 0-216-96.1-216-216 0-118.7 96.1-216 216-216 118.7 0 216 96.1 216 216zm-92.5-4.5l-6.9-6.9c-4.7-4.7-12.5-4.7-17.1.2L273 330.3V140c0-6.6-5.4-12-12-12h-10c-6.6 0-12 5.4-12 12v190.3l-82.5-85.6c-4.7-4.8-12.4-4.9-17.1-.2l-6.9 6.9c-4.7 4.7-4.7 12.3 0 17l115 115.1c4.7 4.7 12.3 4.7 17 0l115-115.1c4.7-4.6 4.7-12.2 0-16.9z"
+                                                          class=""></path>
+                                                </svg>
+                                                <svg aria-hidden="true" focusable="false" data-prefix="fal"
+                                                     data-icon="cog" role="img" xmlns="http://www.w3.org/2000/svg"
+                                                     width="30" height="30" viewBox="0 0 512 512" class="cog">
+                                                    <path fill="currentColor"
+                                                          d="M482.696 299.276l-32.61-18.827a195.168 195.168 0 0 0 0-48.899l32.61-18.827c9.576-5.528 14.195-16.902 11.046-27.501-11.214-37.749-31.175-71.728-57.535-99.595-7.634-8.07-19.817-9.836-29.437-4.282l-32.562 18.798a194.125 194.125 0 0 0-42.339-24.48V38.049c0-11.13-7.652-20.804-18.484-23.367-37.644-8.909-77.118-8.91-114.77 0-10.831 2.563-18.484 12.236-18.484 23.367v37.614a194.101 194.101 0 0 0-42.339 24.48L105.23 81.345c-9.621-5.554-21.804-3.788-29.437 4.282-26.36 27.867-46.321 61.847-57.535 99.595-3.149 10.599 1.47 21.972 11.046 27.501l32.61 18.827a195.168 195.168 0 0 0 0 48.899l-32.61 18.827c-9.576 5.528-14.195 16.902-11.046 27.501 11.214 37.748 31.175 71.728 57.535 99.595 7.634 8.07 19.817 9.836 29.437 4.283l32.562-18.798a194.08 194.08 0 0 0 42.339 24.479v37.614c0 11.13 7.652 20.804 18.484 23.367 37.645 8.909 77.118 8.91 114.77 0 10.831-2.563 18.484-12.236 18.484-23.367v-37.614a194.138 194.138 0 0 0 42.339-24.479l32.562 18.798c9.62 5.554 21.803 3.788 29.437-4.283 26.36-27.867 46.321-61.847 57.535-99.595 3.149-10.599-1.47-21.972-11.046-27.501zm-65.479 100.461l-46.309-26.74c-26.988 23.071-36.559 28.876-71.039 41.059v53.479a217.145 217.145 0 0 1-87.738 0v-53.479c-33.621-11.879-43.355-17.395-71.039-41.059l-46.309 26.74c-19.71-22.09-34.689-47.989-43.929-75.958l46.329-26.74c-6.535-35.417-6.538-46.644 0-82.079l-46.329-26.74c9.24-27.969 24.22-53.869 43.929-75.969l46.309 26.76c27.377-23.434 37.063-29.065 71.039-41.069V44.464a216.79 216.79 0 0 1 87.738 0v53.479c33.978 12.005 43.665 17.637 71.039 41.069l46.309-26.76c19.709 22.099 34.689 47.999 43.929 75.969l-46.329 26.74c6.536 35.426 6.538 46.644 0 82.079l46.329 26.74c-9.24 27.968-24.219 53.868-43.929 75.957zM256 160c-52.935 0-96 43.065-96 96s43.065 96 96 96 96-43.065 96-96-43.065-96-96-96zm0 160c-35.29 0-64-28.71-64-64s28.71-64 64-64 64 28.71 64 64-28.71 64-64 64z"
+                                                          class=""></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="otc-list_item-inner">
+                                        <p>Use the following data to credit your account:</p>
+                                        <fieldset class="form-label-group">
+                                            <input style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;" type="text" id="address" class="form-control" placeholder="My Transparent address" disabled="" value="2B4jM9nGnXkxQhU71v4ERf9LZnKBwPWUaaa">
+                                            <label for="address">My Transparent address</label>
+                                            <svg class="help-icon icon-copy" onclick="toastr.success('Copied to clipboard');" aria-hidden="true" focusable="false" data-prefix="fal" data-icon="copy" role="img" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 448 512">
+                                                <path fill="currentColor" d="M433.941 65.941l-51.882-51.882A48 48 0 0 0 348.118 0H176c-26.51 0-48 21.49-48 48v48H48c-26.51 0-48 21.49-48 48v320c0 26.51 21.49 48 48 48h224c26.51 0 48-21.49 48-48v-48h80c26.51 0 48-21.49 48-48V99.882a48 48 0 0 0-14.059-33.941zM352 32.491a15.88 15.88 0 0 1 7.431 4.195l51.882 51.883A15.885 15.885 0 0 1 415.508 96H352V32.491zM288 464c0 8.822-7.178 16-16 16H48c-8.822 0-16-7.178-16-16V144c0-8.822 7.178-16 16-16h80v240c0 26.51 21.49 48 48 48h112v48zm128-96c0 8.822-7.178 16-16 16H176c-8.822 0-16-7.178-16-16V48c0-8.822 7.178-16 16-16h144v72c0 13.2 10.8 24 24 24h72v240z" class=""></path>
+                                            </svg>
+                                        </fieldset>
+                                        <div class="df">
+                                            <div class="qrcode" title="DDhsPtuiFb14pyU2MouNoY4edeLJAySxRd">
+                                                <canvas style="display: none;" width="160" height="160"></canvas>
+                                                <img style="display: block;" src="data:image/png;base64,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">
+                                            </div>
+                                            <fieldset class="form-label-group total-alarm_wrap has-error" id="error">
+                                                <div class="error-text alert-text total-alarm">
+                                                    <h6>Warning!</h6>
+                                                    <div>Please only transfer BTC to this address.
+                                                        Deposits into other currencies made to this address will be lost!
+                                                        BTC will be credited to your account after 1 confirmations!
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="otc-list_item">
+                                    <div class="otc-list_item-table">
+                                        <div>
+                                            <img src="img/xmr.png" alt="">
+                                            BitCoin (BTC)
+                                        </div>
+                                        <div>125634545</div>
+                                        <div>
+                                            <button type="submit" class="btn btn_min btn_deposit-closed">
+                                                <span>Deposit</span>
+                                                <svg aria-hidden="true" focusable="false" data-prefix="fal"
+                                                     data-icon="arrow-circle-down" role="img"
+                                                     xmlns="http://www.w3.org/2000/svg" width="19" height="19"
+                                                     viewBox="0 0 512 512">
+                                                    <path fill="currentColor"
+                                                          d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm216 248c0 118.7-96.1 216-216 216-118.7 0-216-96.1-216-216 0-118.7 96.1-216 216-216 118.7 0 216 96.1 216 216zm-92.5-4.5l-6.9-6.9c-4.7-4.7-12.5-4.7-17.1.2L273 330.3V140c0-6.6-5.4-12-12-12h-10c-6.6 0-12 5.4-12 12v190.3l-82.5-85.6c-4.7-4.8-12.4-4.9-17.1-.2l-6.9 6.9c-4.7 4.7-4.7 12.3 0 17l115 115.1c4.7 4.7 12.3 4.7 17 0l115-115.1c4.7-4.6 4.7-12.2 0-16.9z"
+                                                          class=""></path>
+                                                </svg>
+                                                <svg aria-hidden="true" focusable="false" data-prefix="fal"
+                                                     data-icon="cog" role="img" xmlns="http://www.w3.org/2000/svg"
+                                                     width="30" height="30" viewBox="0 0 512 512" class="cog">
+                                                    <path fill="currentColor"
+                                                          d="M482.696 299.276l-32.61-18.827a195.168 195.168 0 0 0 0-48.899l32.61-18.827c9.576-5.528 14.195-16.902 11.046-27.501-11.214-37.749-31.175-71.728-57.535-99.595-7.634-8.07-19.817-9.836-29.437-4.282l-32.562 18.798a194.125 194.125 0 0 0-42.339-24.48V38.049c0-11.13-7.652-20.804-18.484-23.367-37.644-8.909-77.118-8.91-114.77 0-10.831 2.563-18.484 12.236-18.484 23.367v37.614a194.101 194.101 0 0 0-42.339 24.48L105.23 81.345c-9.621-5.554-21.804-3.788-29.437 4.282-26.36 27.867-46.321 61.847-57.535 99.595-3.149 10.599 1.47 21.972 11.046 27.501l32.61 18.827a195.168 195.168 0 0 0 0 48.899l-32.61 18.827c-9.576 5.528-14.195 16.902-11.046 27.501 11.214 37.748 31.175 71.728 57.535 99.595 7.634 8.07 19.817 9.836 29.437 4.283l32.562-18.798a194.08 194.08 0 0 0 42.339 24.479v37.614c0 11.13 7.652 20.804 18.484 23.367 37.645 8.909 77.118 8.91 114.77 0 10.831-2.563 18.484-12.236 18.484-23.367v-37.614a194.138 194.138 0 0 0 42.339-24.479l32.562 18.798c9.62 5.554 21.803 3.788 29.437-4.283 26.36-27.867 46.321-61.847 57.535-99.595 3.149-10.599-1.47-21.972-11.046-27.501zm-65.479 100.461l-46.309-26.74c-26.988 23.071-36.559 28.876-71.039 41.059v53.479a217.145 217.145 0 0 1-87.738 0v-53.479c-33.621-11.879-43.355-17.395-71.039-41.059l-46.309 26.74c-19.71-22.09-34.689-47.989-43.929-75.958l46.329-26.74c-6.535-35.417-6.538-46.644 0-82.079l-46.329-26.74c9.24-27.969 24.22-53.869 43.929-75.969l46.309 26.76c27.377-23.434 37.063-29.065 71.039-41.069V44.464a216.79 216.79 0 0 1 87.738 0v53.479c33.978 12.005 43.665 17.637 71.039 41.069l46.309-26.76c19.709 22.099 34.689 47.999 43.929 75.969l-46.329 26.74c6.536 35.426 6.538 46.644 0 82.079l46.329 26.74c-9.24 27.968-24.219 53.868-43.929 75.957zM256 160c-52.935 0-96 43.065-96 96s43.065 96 96 96 96-43.065 96-96-43.065-96-96-96zm0 160c-35.29 0-64-28.71-64-64s28.71-64 64-64 64 28.71 64 64-28.71 64-64 64z"
+                                                          class=""></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="otc-list_item-inner">
+                                        <p>Use the following data to credit your account:</p>
+                                        <fieldset class="form-label-group">
+                                            <input style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;" type="text" id="address" class="form-control" placeholder="My Transparent address" disabled="" value="2B4jM9nGnXkxQhU71v4ERf9LZnKBwPWUaaa">
+                                            <label for="address">My Transparent address</label>
+                                            <svg class="help-icon icon-copy" onclick="toastr.success('Copied to clipboard');" aria-hidden="true" focusable="false" data-prefix="fal" data-icon="copy" role="img" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 448 512">
+                                                <path fill="currentColor" d="M433.941 65.941l-51.882-51.882A48 48 0 0 0 348.118 0H176c-26.51 0-48 21.49-48 48v48H48c-26.51 0-48 21.49-48 48v320c0 26.51 21.49 48 48 48h224c26.51 0 48-21.49 48-48v-48h80c26.51 0 48-21.49 48-48V99.882a48 48 0 0 0-14.059-33.941zM352 32.491a15.88 15.88 0 0 1 7.431 4.195l51.882 51.883A15.885 15.885 0 0 1 415.508 96H352V32.491zM288 464c0 8.822-7.178 16-16 16H48c-8.822 0-16-7.178-16-16V144c0-8.822 7.178-16 16-16h80v240c0 26.51 21.49 48 48 48h112v48zm128-96c0 8.822-7.178 16-16 16H176c-8.822 0-16-7.178-16-16V48c0-8.822 7.178-16 16-16h144v72c0 13.2 10.8 24 24 24h72v240z" class=""></path>
+                                            </svg>
+                                        </fieldset>
+                                        <div class="df">
+                                            <div class="qrcode" title="DDhsPtuiFb14pyU2MouNoY4edeLJAySxRd">
+                                                <canvas style="display: none;" width="160" height="160"></canvas>
+                                                <img style="display: block;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAACgCAYAAACLz2ctAAAGRUlEQVR4nO2X0Y4TUQxD+/8/DQ+sBIKWcVwnudM9keaJie14Tlfi8Xg8fmw8f4+z42hUNdVJ3JfINtVb8AHAxAAgAALgCx9nBwABMJLjdgB2TFe5ik/Hh9+EKdGBstMxAAiAAAiA/r0AGDRO6Cg+AHhzABNln/SRU5Ceco/ik9jp4gAAARAA1VIA0LsvsQOAAGjfl9j5eAAbD4xnU0bZSQA4BS0AAqDtU9UAQAAEwG7jwQMBsKgBgAAIgN3GHaWkZqKTlI+yU70XAM1SUgOAAAiAoo+yU70XAM1SUgOABwGYmK5SElkSGpu9bf2BSN0DgAENAPTvAcCABgD69wBgQAMA/Xv+AXDquQqnHKAciE/Pf6qCDwDiA4C3/2Cf5gOAN/tgn+YDgDf7YJ/mM/Y8TXzAKOVPelc/csePNJF9skdlzkrzxwAgAK4OAALg6gAgAP56oan8LR9HU5nqfW4HiekC3dkBQACMaAAgAMoDgAAIgL+fenEdMHX4dmU7ebpA74IWAI1sJw8AimEBsGcAUAwLgD0DgGJYAOwZAGzcqWoquiftKJpVDWXUvFUdxQcAD9pRNKsaygCguHMnmAAQACXdk3YUzaqGMqsAVkUSQVI7iWwu2FXdk/N3/VGR7rkyskQBEADVe66MLFEABED1nisjSxQAAVC/pybqBEmV1gVP1Sel6dzXcU+Xj7gDgFWflKZzX8c9AAiA8n0d9wAgAMr3ddwDgAAo39dxzyqACdFE+CvNyfLvdI/i03GPM0/zVJfcdxJhUzoAuDMACIAA+E7YlA4A7owEoBM28VGndpz5jj/CKw3FR8rhGE0cCIAACIAvfNx33vUFwMEDAfCbAjg1CdCv/l3RdT7OlI+jc7cBQABcHQAEwNUBQABcHQAEwNV5dByU+GCKbmInBZPyzgQsjm/Xj0P0AUAABEBLN7EDgABo6yZ2APAwALdms7iqrrLj+Cg5nJnyqfp+vQOAVV1lx/FRcjgDgMIAIAACoKir7Dg+Sg5njgbwXVEl7OaBiWwOgF0/DifbVFZL692DAfC1DgACYCQbAAKgpJvQAEAAtLMkNABwGcDqx5gqtquUVJbETqKD1PeY6g0AQ1kSO4kOABAA7Z1EBwAIgPZOooPbAdgBXFdJW0UqmgmdhE/qxzGVDQCNAUAABMA3sgEgAD7VSfjcDsDLLWMSMLmQJnyqmskf2bs+jk7XSJknjJ13ABAAY8bOOwAIgDFj5x0ABMCYsfMOAH4TABOlmMYrME2As+kz1VvwZgAEQAC89FVKAEAAtIMoA4D1Trp6i93ccaBTpHOMo9OVZQvSrWyx+6oiXWGd8I5OVxYANO+rinSFdcI7Ol1ZANC8ryrSFdYJ7+h0ZQFA+748PGaQ8tFdO45GR0+pnYlOnKwACIBP/x0AARAAARAAARAAIztHA2gpHTKJoqYgdnTdvAl4xnaktw4dAATA1QFAAFwdAPwAABNlV4O5H/lkn44dRUfx6fhBOVlfPAAIgAAo7Zzs07Gj6Cg+AAiAAPjqqS45pTg7XcVN/aCc3qa6PumbAiAAtvlIOe4UtpoVAHd9pBx3ClvNCoC7PlKOO4WtZgXAXR8xR23JOTD1kRO+TrHOdPls/Sgbf1AA2DEACIAACIAACIAXO7Fm3pzN4hJZrjRSvhMaim5C4/F4AGAqy5VGyndCQ9FNaABgMMuVRsp3QkPRTWgAYDDLlUbKd0JD0U1ofD0zH76jyMZSSnCp72zB1HFPygcAARAAlWMAEAAB8D87Cd0OjWc6iXtSPgAIgGcB2DFdH6wLUkfjTj7OdNwHgIW8AAiA7oG3AQMAAVDSVXZO9nFmDcDER3beSR3ozBZMWz+oLl8xBwBOZHHzAyAARrK4+QEQACNZ3PwAOARg8KC370lkcXxP6rorCwACoHUPAJolJXacLI7vSV0DYKikxI6TxfE9qWsADJWU2HGyOL4ndf3tAEz4TBWb8k1kS3wPpydlR9QEQACs96TsiJoACID1npQdURMAAbDek7IjaubLVoxTOlXNiXvVmQKy6jt139c7ALg1AAiAVo7UACAAWjlSA4BPAJx6quGdYlPlJu5xdJWdrqwdoL94ALAjS0JX2enKCoAAKO10ZQVAAJR2urICIABKO11ZpwD8CfxThDapiqZ0AAAAAElFTkSuQmCC">
+                                            </div>
+                                            <fieldset class="form-label-group total-alarm_wrap has-error" id="error">
+                                                <div class="error-text alert-text total-alarm">
+                                                    <h6>Warning!</h6>
+                                                    <div>Please only transfer BTC to this address.
+                                                        Deposits into other currencies made to this address will be lost!
+                                                        BTC will be credited to your account after 1 confirmations!
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="otc-list_item">
+                                    <div class="otc-list_item-table">
+                                        <div>
+                                            <img src="img/eth.png" alt="">
+                                            Efir (BTC)
+                                        </div>
+                                        <div>123434534535</div>
+                                        <div>
+                                            <button type="submit" class="btn btn_min btn_deposit-closed">
+                                                <span>Deposit</span>
+                                                <svg aria-hidden="true" focusable="false" data-prefix="fal"
+                                                     data-icon="arrow-circle-down" role="img"
+                                                     xmlns="http://www.w3.org/2000/svg" width="19" height="19"
+                                                     viewBox="0 0 512 512">
+                                                    <path fill="currentColor"
+                                                          d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm216 248c0 118.7-96.1 216-216 216-118.7 0-216-96.1-216-216 0-118.7 96.1-216 216-216 118.7 0 216 96.1 216 216zm-92.5-4.5l-6.9-6.9c-4.7-4.7-12.5-4.7-17.1.2L273 330.3V140c0-6.6-5.4-12-12-12h-10c-6.6 0-12 5.4-12 12v190.3l-82.5-85.6c-4.7-4.8-12.4-4.9-17.1-.2l-6.9 6.9c-4.7 4.7-4.7 12.3 0 17l115 115.1c4.7 4.7 12.3 4.7 17 0l115-115.1c4.7-4.6 4.7-12.2 0-16.9z"
+                                                          class=""></path>
+                                                </svg>
+                                                <svg aria-hidden="true" focusable="false" data-prefix="fal"
+                                                     data-icon="cog" role="img" xmlns="http://www.w3.org/2000/svg"
+                                                     width="30" height="30" viewBox="0 0 512 512" class="cog">
+                                                    <path fill="currentColor"
+                                                          d="M482.696 299.276l-32.61-18.827a195.168 195.168 0 0 0 0-48.899l32.61-18.827c9.576-5.528 14.195-16.902 11.046-27.501-11.214-37.749-31.175-71.728-57.535-99.595-7.634-8.07-19.817-9.836-29.437-4.282l-32.562 18.798a194.125 194.125 0 0 0-42.339-24.48V38.049c0-11.13-7.652-20.804-18.484-23.367-37.644-8.909-77.118-8.91-114.77 0-10.831 2.563-18.484 12.236-18.484 23.367v37.614a194.101 194.101 0 0 0-42.339 24.48L105.23 81.345c-9.621-5.554-21.804-3.788-29.437 4.282-26.36 27.867-46.321 61.847-57.535 99.595-3.149 10.599 1.47 21.972 11.046 27.501l32.61 18.827a195.168 195.168 0 0 0 0 48.899l-32.61 18.827c-9.576 5.528-14.195 16.902-11.046 27.501 11.214 37.748 31.175 71.728 57.535 99.595 7.634 8.07 19.817 9.836 29.437 4.283l32.562-18.798a194.08 194.08 0 0 0 42.339 24.479v37.614c0 11.13 7.652 20.804 18.484 23.367 37.645 8.909 77.118 8.91 114.77 0 10.831-2.563 18.484-12.236 18.484-23.367v-37.614a194.138 194.138 0 0 0 42.339-24.479l32.562 18.798c9.62 5.554 21.803 3.788 29.437-4.283 26.36-27.867 46.321-61.847 57.535-99.595 3.149-10.599-1.47-21.972-11.046-27.501zm-65.479 100.461l-46.309-26.74c-26.988 23.071-36.559 28.876-71.039 41.059v53.479a217.145 217.145 0 0 1-87.738 0v-53.479c-33.621-11.879-43.355-17.395-71.039-41.059l-46.309 26.74c-19.71-22.09-34.689-47.989-43.929-75.958l46.329-26.74c-6.535-35.417-6.538-46.644 0-82.079l-46.329-26.74c9.24-27.969 24.22-53.869 43.929-75.969l46.309 26.76c27.377-23.434 37.063-29.065 71.039-41.069V44.464a216.79 216.79 0 0 1 87.738 0v53.479c33.978 12.005 43.665 17.637 71.039 41.069l46.309-26.76c19.709 22.099 34.689 47.999 43.929 75.969l-46.329 26.74c6.536 35.426 6.538 46.644 0 82.079l46.329 26.74c-9.24 27.968-24.219 53.868-43.929 75.957zM256 160c-52.935 0-96 43.065-96 96s43.065 96 96 96 96-43.065 96-96-43.065-96-96-96zm0 160c-35.29 0-64-28.71-64-64s28.71-64 64-64 64 28.71 64 64-28.71 64-64 64z"
+                                                          class=""></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="otc-list_item-inner">
+                                        <p>Use the following data to credit your account:</p>
+                                        <fieldset class="form-label-group">
+                                            <input style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;" type="text" id="address" class="form-control" placeholder="My Transparent address" disabled="" value="2B4jM9nGnXkxQhU71v4ERf9LZnKBwPWUaaa">
+                                            <label for="address">My Transparent address</label>
+                                            <svg class="help-icon icon-copy" onclick="toastr.success('Copied to clipboard');" aria-hidden="true" focusable="false" data-prefix="fal" data-icon="copy" role="img" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 448 512">
+                                                <path fill="currentColor" d="M433.941 65.941l-51.882-51.882A48 48 0 0 0 348.118 0H176c-26.51 0-48 21.49-48 48v48H48c-26.51 0-48 21.49-48 48v320c0 26.51 21.49 48 48 48h224c26.51 0 48-21.49 48-48v-48h80c26.51 0 48-21.49 48-48V99.882a48 48 0 0 0-14.059-33.941zM352 32.491a15.88 15.88 0 0 1 7.431 4.195l51.882 51.883A15.885 15.885 0 0 1 415.508 96H352V32.491zM288 464c0 8.822-7.178 16-16 16H48c-8.822 0-16-7.178-16-16V144c0-8.822 7.178-16 16-16h80v240c0 26.51 21.49 48 48 48h112v48zm128-96c0 8.822-7.178 16-16 16H176c-8.822 0-16-7.178-16-16V48c0-8.822 7.178-16 16-16h144v72c0 13.2 10.8 24 24 24h72v240z" class=""></path>
+                                            </svg>
+                                        </fieldset>
+                                        <div class="df">
+                                            <div class="qrcode" title="DDhsPtuiFb14pyU2MouNoY4edeLJAySxRd">
+                                                <canvas style="display: none;" width="160" height="160"></canvas>
+                                                <img style="display: block;" src="data:image/png;base64,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">
+                                            </div>
+                                            <fieldset class="form-label-group total-alarm_wrap has-error" id="error">
+                                                <div class="error-text alert-text total-alarm">
+                                                    <h6>Warning!</h6>
+                                                    <div>Please only transfer BTC to this address.
+                                                        Deposits into other currencies made to this address will be lost!
+                                                        BTC will be credited to your account after 1 confirmations!
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="otc-list_item">
+                                    <div class="otc-list_item-table">
+                                        <div>
+                                            <img src="img/xrp.png" alt="">
+                                            Transparent (BTC)
+                                        </div>
+                                        <div>345</div>
+                                        <div>
+                                            <button type="submit" class="btn btn_min btn_deposit-closed">
+                                                <span>Deposit</span>
+                                                <svg aria-hidden="true" focusable="false" data-prefix="fal"
+                                                     data-icon="arrow-circle-down" role="img"
+                                                     xmlns="http://www.w3.org/2000/svg" width="19" height="19"
+                                                     viewBox="0 0 512 512">
+                                                    <path fill="currentColor"
+                                                          d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm216 248c0 118.7-96.1 216-216 216-118.7 0-216-96.1-216-216 0-118.7 96.1-216 216-216 118.7 0 216 96.1 216 216zm-92.5-4.5l-6.9-6.9c-4.7-4.7-12.5-4.7-17.1.2L273 330.3V140c0-6.6-5.4-12-12-12h-10c-6.6 0-12 5.4-12 12v190.3l-82.5-85.6c-4.7-4.8-12.4-4.9-17.1-.2l-6.9 6.9c-4.7 4.7-4.7 12.3 0 17l115 115.1c4.7 4.7 12.3 4.7 17 0l115-115.1c4.7-4.6 4.7-12.2 0-16.9z"
+                                                          class=""></path>
+                                                </svg>
+                                                <svg aria-hidden="true" focusable="false" data-prefix="fal"
+                                                     data-icon="cog" role="img" xmlns="http://www.w3.org/2000/svg"
+                                                     width="30" height="30" viewBox="0 0 512 512" class="cog">
+                                                    <path fill="currentColor"
+                                                          d="M482.696 299.276l-32.61-18.827a195.168 195.168 0 0 0 0-48.899l32.61-18.827c9.576-5.528 14.195-16.902 11.046-27.501-11.214-37.749-31.175-71.728-57.535-99.595-7.634-8.07-19.817-9.836-29.437-4.282l-32.562 18.798a194.125 194.125 0 0 0-42.339-24.48V38.049c0-11.13-7.652-20.804-18.484-23.367-37.644-8.909-77.118-8.91-114.77 0-10.831 2.563-18.484 12.236-18.484 23.367v37.614a194.101 194.101 0 0 0-42.339 24.48L105.23 81.345c-9.621-5.554-21.804-3.788-29.437 4.282-26.36 27.867-46.321 61.847-57.535 99.595-3.149 10.599 1.47 21.972 11.046 27.501l32.61 18.827a195.168 195.168 0 0 0 0 48.899l-32.61 18.827c-9.576 5.528-14.195 16.902-11.046 27.501 11.214 37.748 31.175 71.728 57.535 99.595 7.634 8.07 19.817 9.836 29.437 4.283l32.562-18.798a194.08 194.08 0 0 0 42.339 24.479v37.614c0 11.13 7.652 20.804 18.484 23.367 37.645 8.909 77.118 8.91 114.77 0 10.831-2.563 18.484-12.236 18.484-23.367v-37.614a194.138 194.138 0 0 0 42.339-24.479l32.562 18.798c9.62 5.554 21.803 3.788 29.437-4.283 26.36-27.867 46.321-61.847 57.535-99.595 3.149-10.599-1.47-21.972-11.046-27.501zm-65.479 100.461l-46.309-26.74c-26.988 23.071-36.559 28.876-71.039 41.059v53.479a217.145 217.145 0 0 1-87.738 0v-53.479c-33.621-11.879-43.355-17.395-71.039-41.059l-46.309 26.74c-19.71-22.09-34.689-47.989-43.929-75.958l46.329-26.74c-6.535-35.417-6.538-46.644 0-82.079l-46.329-26.74c9.24-27.969 24.22-53.869 43.929-75.969l46.309 26.76c27.377-23.434 37.063-29.065 71.039-41.069V44.464a216.79 216.79 0 0 1 87.738 0v53.479c33.978 12.005 43.665 17.637 71.039 41.069l46.309-26.76c19.709 22.099 34.689 47.999 43.929 75.969l-46.329 26.74c6.536 35.426 6.538 46.644 0 82.079l46.329 26.74c-9.24 27.968-24.219 53.868-43.929 75.957zM256 160c-52.935 0-96 43.065-96 96s43.065 96 96 96 96-43.065 96-96-43.065-96-96-96zm0 160c-35.29 0-64-28.71-64-64s28.71-64 64-64 64 28.71 64 64-28.71 64-64 64z"
+                                                          class=""></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="otc-list_item-inner">
+                                        <p>Use the following data to credit your account:</p>
+                                        <fieldset class="form-label-group">
+                                            <input style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;" type="text" id="address" class="form-control" placeholder="My Transparent address" disabled="" value="2B4jM9nGnXkxQhU71v4ERf9LZnKBwPWUaaa">
+                                            <label for="address">My Transparent address</label>
+                                            <svg class="help-icon icon-copy" onclick="toastr.success('Copied to clipboard');" aria-hidden="true" focusable="false" data-prefix="fal" data-icon="copy" role="img" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 448 512">
+                                                <path fill="currentColor" d="M433.941 65.941l-51.882-51.882A48 48 0 0 0 348.118 0H176c-26.51 0-48 21.49-48 48v48H48c-26.51 0-48 21.49-48 48v320c0 26.51 21.49 48 48 48h224c26.51 0 48-21.49 48-48v-48h80c26.51 0 48-21.49 48-48V99.882a48 48 0 0 0-14.059-33.941zM352 32.491a15.88 15.88 0 0 1 7.431 4.195l51.882 51.883A15.885 15.885 0 0 1 415.508 96H352V32.491zM288 464c0 8.822-7.178 16-16 16H48c-8.822 0-16-7.178-16-16V144c0-8.822 7.178-16 16-16h80v240c0 26.51 21.49 48 48 48h112v48zm128-96c0 8.822-7.178 16-16 16H176c-8.822 0-16-7.178-16-16V48c0-8.822 7.178-16 16-16h144v72c0 13.2 10.8 24 24 24h72v240z" class=""></path>
+                                            </svg>
+                                        </fieldset>
+                                        <div class="df">
+                                            <div class="qrcode" title="DDhsPtuiFb14pyU2MouNoY4edeLJAySxRd">
+                                                <canvas style="display: none;" width="160" height="160"></canvas>
+                                                <img style="display: block;" src="data:image/png;base64,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">
+                                            </div>
+                                            <fieldset class="form-label-group total-alarm_wrap has-error" id="error">
+                                                <div class="error-text alert-text total-alarm">
+                                                    <h6>Warning!</h6>
+                                                    <div>Please only transfer BTC to this address.
+                                                        Deposits into other currencies made to this address will be lost!
+                                                        BTC will be credited to your account after 1 confirmations!
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="otc-list_item">
                                     <div class="otc-list_item-table">
@@ -343,7 +939,7 @@
         setTimeout(function(e){
                 t.removeClass('btn_deposit-closed act');
                 t.parents('.otc-list_item').addClass('act');
-            }, 2000);
+            }, 2);
     });
     $(document).on("click", ".add", function(){
         var t = $(this);
