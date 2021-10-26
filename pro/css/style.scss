@@ -1868,15 +1868,17 @@ html body{
         width: 20px;
         height: 20px;
         margin-right: 10px;
+        fill: #919191;
+        transition: all 0.2s ease-in-out;
         path{
             fill: #919191;
-            transition: all 0.2s ease-in-out;
+
         }
     }
     &:hover, &:focus{
         border-color: #fff;
         color: #fff;
-        path{
+        svg{
             fill: #fff;
         }
     }
@@ -1888,7 +1890,7 @@ html body{
         color: #fff !important;
         border-color: #8c9eff !important;
         height: 40px;
-        path{
+        svg{
             fill: #fff !important;
         }
     }
@@ -2115,7 +2117,11 @@ html body .content .content-wrapper{
                 height: auto;
                 svg{
                     margin-right: 10px;
+                    width: 20px;
                     min-width: 20px;
+                    height: 20px;
+                    min-height: 20px;
+                    fill: #e19494;
                     path {
                         fill: #e19494;
                     }
