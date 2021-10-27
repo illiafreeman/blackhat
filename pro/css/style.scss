@@ -1783,6 +1783,9 @@ html body .content .content-wrapper {
         transition: all .2s ease-in-out;
     }
 }
+.menu.active {
+    color: #fff;
+}
 .menu.active .menu-icon, .menu:hover .menu-icon {
     fill: #fff;
 }
@@ -2768,6 +2771,17 @@ input[type=number] {
         display: block;
         transition: $transition;
     }
+    b{
+        border-color: #888 transparent transparent transparent;
+        border-style: solid;
+        border-width: 5px 4px 0 4px;
+        height: 0;
+        left: 50%;
+        margin-left: 5px;
+        transition: $transition;
+        top: 50%;
+        width: 0;
+    }
     span{
         transition: $transition;
     }
@@ -2786,6 +2800,9 @@ input[type=number] {
             fill: #fff;
         }
         border-color: #fff;
+        b {
+            border-color: #fff transparent transparent transparent;
+        }
     }
     .cog{
         position: absolute;
@@ -2806,7 +2823,7 @@ input[type=number] {
         }
     }
     &.btn_deposit-open{
-        svg{
+        b{
             transform: rotate(180deg);
         }
     }
@@ -2898,10 +2915,10 @@ input[type=number] {
         &.act{
             //margin: 50px 0;
             //box-shadow: 0 0 18px #fff;
-            box-shadow: 0px 0px 11px 1px #fff;
+            box-shadow: 0px 0px 11px 1px #979797;
             padding: 20px;
             background: #000;
-            margin-bottom: 40px;
+            margin: 0 -20px 40px;
             border-radius: 10px;
             .otc-list_item-inner {
                 display: block;
