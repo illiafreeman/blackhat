@@ -3052,7 +3052,9 @@ input[type=number] {
             justify-content: flex-start;
         }
     }
-
+    .w800.card {
+        width: 100%;
+    }
 }
 @media only screen and (max-width: 768px) {
     .collapse:not(.show) {
@@ -3099,12 +3101,16 @@ input[type=number] {
     .otc-list_item-table {
         grid-template-columns: 1.3fr 1fr;
         gap: 20px 0;
-        div:last-child{
+/*        div:last-child{
             grid-column: 1 / span 2;
             grid-row: 2;
             .btn{
                 margin: 0 auto;
             }
+        }*/
+        div:nth-child(3){
+            justify-content: right;
+            padding-right: 15px;
         }
     }
     .otc-list_item-table{
@@ -3113,6 +3119,20 @@ input[type=number] {
         }
     }
 }
+
+
+
+@media only screen and (max-width: 540px) {
+    .add_node {
+        width: 100%;
+    }
+    .amount_fee {
+        grid-template-columns: 2fr 1fr;
+    }
+}
+
+
+
 @media only screen and (max-width: 480px) {
     .nav.navbar-nav.float-right .hambu {
         -webkit-transform: translateX(18px);
@@ -3133,7 +3153,18 @@ input[type=number] {
     .card-body .nav.nav-tabs .nav-item .nav-link {
         padding: 12px;
     }
-
+    .otc-list_item-table {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .amount_fee {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    .otc-list_item-table .btn_min{
+        padding: 3px 8px 3px 10px;
+    }
 }
 @media only screen and (max-width: 360px) {
 
