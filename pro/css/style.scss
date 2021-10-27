@@ -1590,7 +1590,7 @@ html body .content .content-wrapper {
     display: flex;
     //width: 60px;
     //height: 5rem;
-    width: 140px;
+    width: 130px;
     height: 140px;
     align-items: center;
     float: left;
@@ -1599,18 +1599,40 @@ html body .content .content-wrapper {
     position: relative;
     .brand-logo {
         width: 100%;
+        position: relative;
+        z-index: -1;
     }
     span{
-        display: block;
+        display: flex;
+        align-items: center;
         position: absolute;
-        bottom: 23px;
-        left: 83px;
+        bottom: 24px;
+        left: 104px;
+        padding: 2px 30px 0 10px;
+        border-top-left-radius: 12px;
+        border-bottom-left-radius: 12px;
         text-transform: uppercase;
-        transform: rotate(-32deg);
         letter-spacing: 1px;
         font-weight: 600;
         font-size: 12px;
         transition: all 0.2s ease-in-out;
+        line-height: 12px;
+        background: #000;
+        background-clip: border-box;
+        box-sizing: border-box;
+        height: 24px;
+        &:before{
+            content: '';
+            position: absolute;
+            top: 0; right: 0; bottom: 0; left: 0;
+            margin: -1px; /* !importanté */
+            border-radius: inherit; /* !importanté */
+            background: -moz-linear-gradient(left,  rgba(159,159,159,1) 0%, rgba(125,185,232,0) 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(left,  rgba(159,159,159,1) 0%,rgba(125,185,232,0) 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to right,  rgba(159,159,159,1) 0%,rgba(125,185,232,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9f9f9f', endColorstr='#007db9e8',GradientType=1 ); /* IE6-9 */
+            z-index: -1;
+        }
     }
 }
 .header-navbar.navbar-shadow{
@@ -1755,6 +1777,14 @@ html body .content .content-wrapper {
             margin-right: 0;
         }
     }
+    &-icon{
+        fill: #919191;
+        display: block;
+        transition: all .2s ease-in-out;
+    }
+}
+.menu.active .menu-icon, .menu:hover .menu-icon {
+    fill: #fff;
 }
 .a{
     color: #bfbfbf;
