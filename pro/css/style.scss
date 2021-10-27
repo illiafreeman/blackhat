@@ -2811,6 +2811,7 @@ input[type=number] {
         opacity: 0;
         margin-left: -10px;
         left: 50%;
+        fill: #999;
     }
     &.act{
         border-color: #535353;
@@ -2821,6 +2822,9 @@ input[type=number] {
         .cog{
             opacity: 1 !important;
         }
+        b{
+            opacity: 0 !important;
+        }
     }
     &.btn_deposit-open{
         b{
@@ -2828,7 +2832,21 @@ input[type=number] {
         }
     }
 }
-
+.centered{
+    margin: 0 auto;
+}
+.btn svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    fill: #919191;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+.btn:hover svg, .btn:focus svg {
+    fill: #fff !important;
+}
 .df{
     display: flex;
 }
@@ -2863,7 +2881,7 @@ input[type=number] {
         }
         &-table{
             display: grid;
-            grid-template-columns: 1fr 1fr 97px;
+            grid-template-columns: 1fr 1fr 97px 97px;
 
             div{
                 display: flex;
