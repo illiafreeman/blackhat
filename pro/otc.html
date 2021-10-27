@@ -238,7 +238,7 @@
         <div class="content-body justify-content-center">
             <div class="invoice-page clearfix">
                 <h1 class="h1-main">Balances</h1>
-                <div class="invoice-form invoice-table w600 card">
+                <div class="invoice-form invoice-table w800 card">
                     <div class="card-header">
                     </div>
                     <div class="card-body">
@@ -300,7 +300,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="otc-list_item act">
+                                <div class="otc-list_item">
                                     <div class="otc-list_item-table">
                                         <div>
                                             <img src="img/eth.png" alt="">
@@ -347,7 +347,7 @@
                                                 <fieldset class="form-label-group">
                                                     <div class="invoice-amount">To withdraw:<b>35 BTC</b></div>
                                                 </fieldset>
-                                                <fieldset class="form-label-group">
+                                                <fieldset class="form-label-group mb-0">
                                                     <div class="button_wrap ac">
                                                         <button type="submit" class="btn">
                                                             <svg>
@@ -389,7 +389,7 @@
         setTimeout(function(e){
                 t.removeClass('btn_deposit-closed act');
                 t.parents('.otc-list_item').addClass('act');
-            }, 500);
+            }, 10);
     });
     $(document).on("click", ".add", function(){
         var t = $(this);
