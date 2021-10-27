@@ -2764,6 +2764,11 @@ input[type=number] {
 }
 .menu.active{
     color: #fff;
+    .menu_bal-val{
+        div, span{
+            color: #fff;
+        }
+    }
 }
 .menu_bal .menu-icon{
     //fill: #fff;
