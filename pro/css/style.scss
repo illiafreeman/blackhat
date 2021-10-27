@@ -2853,11 +2853,16 @@ input[type=number] {
 .card-body__inner_otc{
     overflow: visible !important;
 }
+.amount_fee{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 15px;
+}
 .otc-list{
     display: block;
     //min-width: 490px;
     &_item{
-        margin-bottom: 20px;
+        margin-bottom: 14px;
         display: block;
         border-bottom: 1px solid #535353;
         padding: 0 20px 14px;
@@ -2896,7 +2901,7 @@ input[type=number] {
         &-inner{
             display: none;
             .form-label-group input{
-                padding-right: 50px;
+                padding-right: 10px;
             }
             .form-label-group{
                 margin-bottom: 20px;
@@ -2951,7 +2956,12 @@ input[type=number] {
 .w800.card{
     width: 800px;
 }
-
+.form-control.address{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-right: 50px !important;
+}
 
 
 
