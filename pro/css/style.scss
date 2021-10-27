@@ -1643,13 +1643,15 @@ html body .content .content-wrapper {
         span{
             bottom: -8px;
             left: 3px;
-            width: 60px;
             text-align: center;
-            transform: rotate(0deg);
             letter-spacing: 1px;
             font-weight: 600;
             font-size: 9px;
             background: #000;
+            height: 16px;
+            width: 60px;
+            padding-right: 4px;
+            padding-left: 16px;
         }
     }
     .menu_devider {
@@ -2962,7 +2964,9 @@ input[type=number] {
     text-overflow: ellipsis;
     padding-right: 50px !important;
 }
+.header-navbar.navbar-shadow .logo span {
 
+}
 
 
 
@@ -2982,12 +2986,19 @@ input[type=number] {
         width: 60px;
         height: 5rem;
     }
-    .header-navbar .logo span, .header-navbar.navbar-shadow .logo span{
+    .header-navbar .logo span, .header-navbar.navbar-shadow .logo span {
         bottom: 21px;
         left: 79px;
         width: auto;
+        height: 24px;
         font-size: 15px;
+        -webkit-transform: none;
+        -ms-transform: none;
         transform: none;
+        padding-left: 10px;
+    }
+    .header-navbar .logo span::before, .header-navbar.navbar-shadow .logo span::before {
+        opacity: 0;
     }
     .nav.navbar-nav.float-right .hambu {
         margin-left: 15px;
@@ -3155,6 +3166,18 @@ input[type=number] {
     }
     .otc-list_item-table {
         grid-template-columns: 1fr 1fr;
+    }
+    .header-navbar .logo span, .header-navbar.navbar-shadow .logo span {
+        bottom: -8px;
+        left: 3px;
+        font-size: 10px;
+        height: 16px;
+        width: 60px;
+        padding-right: 4px;
+        padding-left: 15px;
+    }
+    .header-navbar .logo span::before, .header-navbar.navbar-shadow .logo span::before {
+        opacity: 1;
     }
 }
 @media only screen and (max-width: 400px) {
