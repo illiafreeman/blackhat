@@ -3322,8 +3322,18 @@ td.expired {
         font-size: 10px;
     }
 }
-
-
+.btn svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    fill: #919191;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+.btn:hover svg, .btn:focus svg {
+    fill: #fff;
+}
 
 
 
