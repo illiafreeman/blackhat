@@ -1888,7 +1888,7 @@ html body{
             transition: all 0.2s ease-in-out;
         }
     }
-    &:hover, &:focus{
+    &:hover{
         border-color: #fff;
         color: #fff;
         path{
@@ -2834,6 +2834,22 @@ input[type=number] {
         }
     }
 }
+.has-error .error-text.total-alarm {
+    background: #220a0a;
+    font-size: 14px;
+    color: #e19494;
+    border-color: #680000;
+    padding: 15px;
+    height: auto;
+    svg {
+        margin-right: 10px;
+        width: 20px;
+        min-width: 20px;
+        height: 20px;
+        min-height: 20px;
+        fill: #e19494;
+    }
+}
 .centered{
     margin: 0 auto;
 }
@@ -2846,7 +2862,7 @@ input[type=number] {
     -o-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
 }
-.btn:hover svg, .btn:focus svg {
+.btn:hover svg{
     fill: #fff !important;
 }
 .df{

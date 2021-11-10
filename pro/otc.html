@@ -248,6 +248,18 @@
                                     <div class="otc-list_item_head-item">Coin</div>
                                     <div class="otc-list_item_head-item">Balance</div>
                                 </div>
+                                <fieldset class="form-label-group total-alarm_wrap has-error">
+                                    <div class="error-text total-alarm">
+                                        <svg>
+                                            <use xlink:href="img/sprite.svg#icon-exclamation-triangle"></use>
+                                        </svg>
+                                        Ошибка
+                                        проверки ReCaptcha. Пожалуйста, обновите страницу и попробуйте еще раз.
+                                        Please only transfer BTC to this address.
+                                        Deposits into other currencies made to this address will be lost!
+                                        BTC will be credited to your account after 1 confirmations!
+                                    </div>
+                                </fieldset>
                                 <div class="otc-list_item">
                                     <div class="otc-list_item-table">
                                         <div>
@@ -275,6 +287,18 @@
                                         </div>
                                     </div>
                                     <div class="otc-list_item-inner">
+                                        <fieldset class="form-label-group total-alarm_wrap has-error">
+                                            <div class="error-text total-alarm">
+                                                <svg>
+                                                    <use xlink:href="img/sprite.svg#icon-exclamation-triangle"></use>
+                                                </svg>
+                                                Ошибка
+                                                проверки ReCaptcha. Пожалуйста, обновите страницу и попробуйте еще раз.
+                                                Please only transfer BTC to this address.
+                                                Deposits into other currencies made to this address will be lost!
+                                                BTC will be credited to your account after 1 confirmations!
+                                            </div>
+                                        </fieldset>
                                         <p>Use the following data to credit your account:</p>
                                         <fieldset class="form-label-group">
                                             <input type="text" id="address" class="form-control address" placeholder="My Transparent address" disabled="" value="2B4jM9nGnXkxQhU71v4ERf9LZnKBwPWUaaa">
@@ -434,7 +458,7 @@
         setTimeout(function(e){
                 t.removeClass('btn_deposit-closed act');
                 t.parents('.otc-list_item').addClass('act');
-            }, 10);
+            }, 100);
     });
     $(document).on("click", ".add", function(){
         var t = $(this);
