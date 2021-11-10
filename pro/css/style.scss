@@ -1007,7 +1007,7 @@ html body .content .content-wrapper{
 }
 
 .invoice-amount{
-    margin: 10px 0 20px;
+    margin: 10px 0;
     padding-left: 10px;
     b{
         padding-left: 15px;
@@ -2582,7 +2582,7 @@ ol{
 .und{
     display: flex;
     align-items: flex-start;
-    margin: 0;
+    margin: 0 0 20px;
     cursor: pointer;
     div{
         color: #95804f;
