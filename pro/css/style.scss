@@ -2732,6 +2732,9 @@ select.form-control{
 .color_pos{
     color: #388f46;
 }
+.color_neu{
+    color: #777777;
+}
 .color_neg{
     color: #b54a4a;
 }
@@ -2989,9 +2992,66 @@ input[type=number] {
 .btn_login svg{
     fill: #fff !important;
 }
-
-
-
+.exchange-group{
+    display: grid;
+    grid-template-columns: 1fr 30px 1fr;
+    grid-gap: 15px;
+    margin-bottom: 1rem;
+    div{
+        svg{
+            width: 20px;
+            height: 20px;
+            fill: #919191;
+        }
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    fieldset{
+        margin: 0;
+    }
+}
+.dif{
+    display: inline-flex;
+}
+.btn_min{
+    .btn_min-svg{
+        width: 16px;
+        height: 16px;
+    }
+    &.pos{
+        opacity: .7;
+        .btn_min-svg {
+            fill: #388f46;
+        }
+        color: #388f46;
+        border-color: #388f46;
+        &:hover{
+            opacity: 1;
+            .btn_min-svg {
+                fill: #388f46 !important;
+            }
+            color: #388f46;
+            border-color: #388f46;
+        }
+    }
+    &.neg{
+        opacity: .7;
+        .btn_min-svg {
+            fill: #b54a4a;
+        }
+        color: #b54a4a;
+        border-color: #b54a4a;
+        &:hover{
+            opacity: 1;
+            .btn_min-svg {
+                fill: #b54a4a !important;
+            }
+            color: #b54a4a;
+            border-color: #b54a4a;
+        }
+    }
+}
 
 
 
