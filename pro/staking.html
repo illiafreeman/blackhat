@@ -360,10 +360,9 @@
                                     <td class="ac">100.654654550</td>
                                 </tr>
                                 <tr>
-                                    <td colspan="2" class="button-cell">
+                                    <td colspan="6" class="button-cell">
                                         <div class="load-more-data__wrap">
-                                            <input type="button" class="btn load-more-data" value="Load More"
-                                                   data-offset="1637265602" data-processed="1">
+                                            <input type="button" class="btn load-more-data" value="Load More" data-offset="1637265602" data-processed="1">
                                             <svg class="load-icon hidden">
                                                 <use xlink:href="img/sprite.svg#icon-cog"></use>
                                             </svg>
@@ -393,7 +392,14 @@
 <script src="js/app-menu.min.js" type="text/javascript"></script>
 <script src="js/app.min.js" type="text/javascript"></script>
 <script src="js/custom.js"></script>
-
+<script>
+    $(document).on("click", ".load-more-data", function(){
+        var t = $(this);
+        t.remove();
+        $('.td_button').toggleClass('act');
+        $('.load-more-data__wrap .load-icon').toggleClass('hidden');
+    });
+</script>
 
 </body>
 </html>

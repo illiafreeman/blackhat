@@ -2729,6 +2729,12 @@ select.form-control{
     max-width: 300px;
     .wal.max {
         width: 100% !important;
+        a{
+            transition: $transition;
+            &:hover{
+                color: #fff
+            }
+        }
     }
 }
 /* Chrome, Safari, Edge, Opera */
@@ -2779,9 +2785,38 @@ input[type=number] {
     fill: #919191;
     animation: spin 2s linear infinite;
 }
-
-
-
+.footer a {
+    transition: all 0.2s ease-in-out;
+    &:before{
+        width: 100%;
+        left: 0;
+        background: #8e8e8e;
+        bottom: -2px;
+    }
+    &:hover{
+        color: #fff;
+        &:before {
+            background: #fff;
+        }
+    }
+}
+.td_button{
+    justify-content: center;
+    .btn{
+        margin: 0 3px;
+    }
+    &.act{
+        .btn{
+            display: none;
+        }
+        .load-icon_td{
+            display: block;
+        }
+    }
+}
+.button-cell .load-more-data__wrap {
+    margin: 10px 0;
+}
 
 
 
