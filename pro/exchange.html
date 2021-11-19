@@ -246,23 +246,29 @@
                     <div class="card-body">
                         <div class="exchange-group">
                             <fieldset class="form-label-group select_fieldset">
-                                <select id="sell-select" class="custom-select" style="width: 100%">
+                                <select id="sell-select" class="custom-select"  style="width: 100%">
                                     <option value="" hidden>&mdash;</option>
-                                    <option value="1">BTC</option>
+                                    <option selected value="1">BTC</option>
                                     <option value="2">LTC</option>
                                     <option value="3">USDT</option>
                                     <option value="3">Credit Card</option>
                                 </select>
                                 <label for="sell-select">You Sell Coins</label>
                                 <div class="error-text">You Sell Coins is invalid</div>
+                                <div class="available">
+                                    0.369532658
+                                </div>
                             </fieldset>
-                            <div>
-                                <svg class="menu-icon">
+                            <div class="show-cog">
+                                <svg class="icon-arr">
                                     <use xlink:href="img/sprite.svg#icon-chevron-double-right"></use>
+                                </svg>
+                                <svg class="icon-cog">
+                                    <use xlink:href="img/sprite.svg#icon-cog"></use>
                                 </svg>
                             </div>
                             <fieldset class="form-label-group select_fieldset">
-                                <select id="buy-select" class="custom-select" style="width: 100%">
+                                <select id="buy-select" class="custom-select" disabled style="width: 100%">
                                     <option value="" hidden>&mdash;</option>
                                     <option value="1">BTC</option>
                                     <option value="2">LTC</option>
@@ -273,17 +279,20 @@
                                 <div class="error-text">You Sell Coins is invalid</div>
                             </fieldset>
                         </div>
-                        <fieldset class="form-label-group">
+                        <fieldset class="form-label-group input_cog">
                             <input type="text" id="amount" class="form-control" placeholder="Amount" value="0.369532658">
                             <label for="amount">Amount</label>
                             <div class="error-text">Amount is invalid</div>
+                            <svg class="icon-cog_input">
+                                <use xlink:href="img/sprite.svg#icon-cog"></use>
+                            </svg>
                         </fieldset>
                         <fieldset class="form-label-group">
                             <div class="invoice-amount">You Get:<b>35 BTC</b></div>
                         </fieldset>
                         <fieldset class="form-label-group">
                             <div class="button_wrap button_wrap_padding ac">
-                                <button type="submit" class="btn">
+                                <button type="submit" class="btn" onclick="showCog();">
                                     <svg class="menu-icon">
                                         <use xlink:href="img/sprite.svg#icon-sync"></use>
                                     </svg>
@@ -405,6 +414,9 @@
         placeholder: "Buy",
         allowClear: true
     });
+    function showCog(){
+        $('.show-cog, .input_cog').toggleClass('act')
+    }
 
 </script>
 
