@@ -369,18 +369,23 @@
                                         <td>36 BLKC</td>
                                         <td>0.01 BTC</td>
                                         <td class="color_neu ac">
-                                            <button type="submit" class="btn dif btn_min pos">
-                                                <svg class="btn_min-svg">
-                                                    <use xlink:href="img/sprite.svg#icon-check"></use>
+                                            <div class="df td_button">
+                                                <button type="submit" class="btn btn_min pos">
+                                                    <svg class="btn_min-svg">
+                                                        <use xlink:href="img/sprite.svg#icon-check"></use>
+                                                    </svg>
+                                                    Approve
+                                                </button>
+                                                <button type="submit" class="btn btn_min neg">
+                                                    <svg class="btn_min-svg">
+                                                        <use xlink:href="img/sprite.svg#icon-cross"></use>
+                                                    </svg>
+                                                    Cancel
+                                                </button>
+                                                <svg class="load-icon_td">
+                                                    <use xlink:href="img/sprite.svg#icon-cog"></use>
                                                 </svg>
-                                                Approve
-                                            </button>
-                                            <button type="submit" class="btn dif btn_min neg">
-                                                <svg class="btn_min-svg">
-                                                    <use xlink:href="img/sprite.svg#icon-cross"></use>
-                                                </svg>
-                                                Cancel
-                                            </button>
+                                            </div>
                                         </td>
                                     </tr>
                                     <tr>
@@ -427,6 +432,15 @@
     function showCog(){
         $('.show-cog, .input_cog').toggleClass('act')
     }
+    function showCogTd(){
+
+    }
+    $(document).on("click", ".load-more-data", function(){
+        var t = $(this);
+        t.remove();
+        $('.td_button').toggleClass('act');
+        $('.load-more-data__wrap .load-icon').toggleClass('hidden');
+    });
 
 </script>
 
