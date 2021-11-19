@@ -2774,7 +2774,10 @@ input[type=number] {
     //fill: #fff;
 }
 .load-icon{
-
+    width: 40px;
+    height: 40px;
+    fill: #919191;
+    animation: spin 2s linear infinite;
 }
 
 
