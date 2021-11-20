@@ -1034,9 +1034,12 @@ html body .content .content-wrapper{
             width: 100%;
             //border: 1px solid #ddd;
             th,td{
-                border: 1px solid #ddd;
+                border: 1px solid #4d4d4d;
                 padding: 8px;
                 white-space: nowrap;
+            }
+            th{
+                border-bottom: 2px solid #6f6f6f;
             }
         }
         .card-body{
@@ -1358,10 +1361,14 @@ button.toast-close-button {
 
 .button-cell{
     border: 0 !important;
-    padding: 30px 0 0 !important;
+    padding: 94px 0 0 !important;
     //position: relative;
     .load-more-data__wrap{
+        position: absolute;
         margin: 10px 0;
+        bottom: 27px;
+        left: 0;
+        right: 0;
     }
 }
 .dash-empty{
@@ -3177,7 +3184,10 @@ input[type=number] {
 .invoice-page .invoice-table .card-body {
     padding-top: 1.5rem;
 }
-
+.btn.btn_min{
+    font-size: 1rem;
+    line-height: 1.25;
+}
 
 
 
