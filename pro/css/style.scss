@@ -2840,6 +2840,11 @@ input[type=number] {
         }
     }
 }
+.card a.nav-link{
+    &:before{
+        display: none;
+    }
+}
 .invoice-page .invoice-table table th, .invoice-page .invoice-table table td {
     border: 1px solid #4d4d4d;
 }
@@ -2869,7 +2874,9 @@ input[type=number] {
         text-align: center;
     }
 }
-
+.btn.btn_telega {
+    font-size: 14px;
+}
 
 
 
