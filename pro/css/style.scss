@@ -2575,6 +2575,7 @@ ol{
 }
 .btn.btn_telega{
     background-color: #54a9eb !important;
+    font-size: 14px;
     &:hover{
         background-color: #336891 !important;
     }
@@ -3128,6 +3129,17 @@ input[type=number] {
             background: #8e8e8e;
             bottom: -2px;
         }
+        &:hover{
+            color: #fff;
+            &:before{
+                background: transparent;
+            }
+        }
+    }
+}
+.card{
+    a{
+        transition: $transition;
         &:hover{
             color: #fff;
             &:before{
