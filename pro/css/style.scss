@@ -3141,7 +3141,7 @@ input[type=number] {
     }
 }
 .card{
-    a{
+    a:not(.btn){
         transition: $transition;
         position: relative;
         &:before {
