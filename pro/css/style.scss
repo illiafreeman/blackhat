@@ -3362,6 +3362,7 @@ footer.footer {
     flex-direction: column;
     min-height: 110px;
     justify-content: flex-start;
+    font-size: 17px;
     svg{
         margin: 0 0 20px;
         width: 50px;
@@ -3539,7 +3540,9 @@ footer.footer {
 .specs__wrap ul {
     padding-left: 30px;
 }
-
+.specs__wrap .card-header {
+    padding: 45px 1.5rem 3px;
+}
 
 
 
