@@ -48,6 +48,8 @@ $(document).ready(function() {
         arrows: false,
         fade: true,
         adaptiveHeight: true,
+        infinite: false,
+        initialSlide: 4,
         asNavFor: '.slider-nav'
     });
 
@@ -57,11 +59,13 @@ $(document).ready(function() {
         asNavFor: '.slider-for',
         dots: false,
         focusOnSelect: true,
+        infinite: false,
+        initialSlide: 4,
         responsive: [{
             breakpoint: 1199,
             settings: {
                 slidesToShow: 1,
-                infinite: true
+                infinite: false
             }
 
         }, {

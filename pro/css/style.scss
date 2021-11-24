@@ -3564,7 +3564,10 @@ footer.footer a{
         margin-right: 20px;
     }
 }
-
+.slick-arrow.slick-disabled{
+    opacity: .5;
+    cursor: not-allowed !important;
+}
 
 
 
