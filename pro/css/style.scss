@@ -3567,8 +3567,16 @@ footer.footer a{
 .slider-wrap .slider-nav .slick-arrow.slick-disabled{
     display: none !important;
 }
-
-
+.article.specs, .article.roadmap{
+    .card{
+        margin-bottom: 0;
+    }
+}
+.features__list{
+    .card:last-child{
+        margin-bottom: 0;
+    }
+}
 
 
 
