@@ -2606,7 +2606,7 @@ ol{
 .tooltip{
     .arrow{
         &:before{
-            border-left: 5px solid #ddd !important;
+            border-top: 5px solid #ddd !important;
         }
     }
 
@@ -3303,7 +3303,7 @@ input[type=number] {
     }
     &__desc{
         font-size: 16px;
-        max-height: 60px;
+        height: 60px;
         overflow: hidden;
         display: -webkit-box;
         -webkit-line-clamp: 2;
@@ -3321,10 +3321,16 @@ input[type=number] {
         overflow: hidden;
         text-overflow: ellipsis;
         color: #969696;
+        display: flex;
+        .rest{
+            width: 20px;
+            height: 20px;
+            fill: #999;
+        }
     }
     &__price{
         color: #bbb7b7;
-        font-size: 18px;
+        font-size: 19px;
         font-weight: 800;
         small{
             font-size: 12px;

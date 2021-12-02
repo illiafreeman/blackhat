@@ -36,7 +36,7 @@ $('#terms_link').click(function () {
 });
 $('[data-toggle="tooltip"]').tooltip({
     //delay: { "show": 500, "hide": 100000 },
-    placement: 'left'
+    placement: 'top'
 });
 $( window ).on("load", function() {
     setTimeout(function () {
