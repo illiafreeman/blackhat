@@ -24,6 +24,9 @@ $(document).ready(function() {
             $('.login').addClass('login_dis')
         }
     });
+    $('.product__like').click(function(){
+        $(this).toggleClass('add')
+    });
 })
 
 $('#terms_link').click(function () {
