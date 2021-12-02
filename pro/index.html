@@ -643,29 +643,7 @@
 <script src="js/app.min.js" type="text/javascript"></script>
 <script type="text/javascript" src="js/select2.full.min.js"></script>
 <script src="js/custom.js"></script>
-<script>
-    $("#sell-select").select2({
-        placeholder: "Sell",
-        allowClear: true
-    });
-    $("#buy-select").select2({
-        placeholder: "Buy",
-        allowClear: true
-    });
-    function showCog(){
-        $('.show-cog, .input_cog').toggleClass('act')
-    }
-    function showCogTd(){
 
-    }
-    $(document).on("click", ".load-more-data", function(){
-        var t = $(this);
-        t.remove();
-        $('.td_button').toggleClass('act');
-        $('.load-more-data__wrap .load-icon').toggleClass('hidden');
-    });
-
-</script>
 
 </body>
 </html>

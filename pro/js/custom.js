@@ -25,7 +25,15 @@ $(document).ready(function() {
         }
     });
     $('.product__like').click(function(){
-        $(this).toggleClass('add')
+
+        if($(this).hasClass('add')){
+            $(this).removeClass('add');
+            toastr.success('Removed from cart');
+        }
+        else {
+            $(this).addClass('add');
+            toastr.success('Added to cart');
+        }
     });
 })
 
