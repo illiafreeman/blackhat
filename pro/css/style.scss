@@ -3465,93 +3465,131 @@ html body .content.app-content {
 }
 .card_desc{
     width: calc(100% - 480px);
-}
-.prod-quantity{
-    span {
-        cursor:pointer;
-    }
-    .number{
-        margin:100px;
-    }
-    .minus, .plus{
-        width:20px;
-        height:20px;
-        background:#f2f2f2;
-        border-radius:4px;
-        padding:8px 5px 8px 5px;
-        border:1px solid #ddd;
-        display: inline-block;
-        vertical-align: middle;
-        text-align: center;
-    }
-    input {
-        height: 34px;
-        width: 100px;
-        text-align: center;
-        font-size: 26px;
-        border: 1px solid #ddd;
-        border-radius: 4px;
-        display: inline-block;
-        vertical-align: middle;
-    }
-}
-.card_desc{
     .card-title{
-
+        line-height: 27px !important;
+        font-size: 16px !important;
+        text-transform: none;
     }
 }
 .prod{
     &-price{
+        text-align: center;
+        margin-bottom: 40px;
         span{
-
+            display: block;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            font-size: 12px;
         }
         h4{
+            color: #bbb7b7;
+            font-size: 28px;
+            font-weight: 800;
             small{
-
+                font-size: 14px;
+                font-weight: 400;
             }
         }
 
     }
     &-stock{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 40px;
         span{
-
+            text-transform: uppercase;
+            font-size: 12px;
         }
         svg{
-
+            fill: #999;
+            width: 40px;
+            height: 40px;
         }
         b{
-
+            text-transform: uppercase;
+            font-weight: 400;
+            text-transform: uppercase;
+            font-size: 12px;
         }
     }
     &-size{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 40px;
         p{
-
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 12px;
         }
         label{
+            display: inline-flex;
+            cursor: pointer;
+            margin-right: 10px;
+            &:last-child{
+                margin-right: 0;
+            }
             input{
-
+                margin-right: 5px;
+                cursor: pointer;
             }
         }
     }
     &-quantity{
+        margin-bottom: 40px;
+        p{
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 12px;
+        }
         .number{
-            .minus{
-
+            display: flex;
+            justify-content: center;
+            .minus, .plus{
+                height: 41px;
+                width: 41px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid rgb(153, 153, 153);
+                font-size: 20px;
+                cursor: pointer;
+                transition: $transition;
+                &:hover{
+                    border-color: #fff;
+                    color: #fff;
+                }
             }
             .plus{
-
+                border-top-right-radius: 0.25rem;
+                border-bottom-right-radius: 0.25rem;
+            }
+            .minus{
+                border-top-left-radius: 0.25rem;
+                border-bottom-left-radius: 0.25rem;
             }
             input{
-
+                color: #fff;
+                width: 60px;
+                text-align: center;
+                border-radius: 0;
+                border-left: 0;
+                border-right: 0;
+                border-color: rgb(153, 153, 153);
             }
         }
     }
     &-cart{
-
+        margin-bottom: 40px;
     }
     &-desc{
         li{
-
+            line-height: 17px;
+            margin-bottom: 10px;
+            &:last-child{
+                margin-bottom: 0;
+            }
         }
     }
 }
