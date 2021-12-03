@@ -3401,14 +3401,160 @@ input[type=number] {
         display: none;
     }
 }
+.slick-initialized {
+    .slick-slide{
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        border-radius: 0.35rem;
+        img{
+            max-width: 100%;
+            transition: $transition;
+            filter: grayscale(100%);
+            opacity: .5;
+/*            &:hover{
+                filter: none;
+                opacity: 1;
+            }*/
+        }
+    }
+    &:hover{
+        img{
+            filter: none;
+            opacity: 1;
+        }
+    }
+}
+.card_slider{
+    width: 400px;
+    //margin: 0 auto;
+    //padding: 50px;
+}
+.card__slider{
+    .slick-arrow {
+        position: absolute;
+        display: block;
+        height: 54px;
+        width: 54px;
+        border: none;
+        color: transparent;
+        margin-top: -22px;
+        top: 50%;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border-radius: 0;
+        cursor: pointer;
+        &.slick-prev {
+            left: -54px;
+            background: transparent url(../img/icon_left.svg) 50% no-repeat;
+        }
+        &.slick-next {
+            right: -54px;
+            background: transparent url(../img/icon_right.svg) 50% no-repeat;
+        }
+    }
+}
+html body .content.app-content {
+    overflow: visible;
+}
+.card-page{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.card_desc{
+    width: calc(100% - 480px);
+}
+.prod-quantity{
+    span {
+        cursor:pointer;
+    }
+    .number{
+        margin:100px;
+    }
+    .minus, .plus{
+        width:20px;
+        height:20px;
+        background:#f2f2f2;
+        border-radius:4px;
+        padding:8px 5px 8px 5px;
+        border:1px solid #ddd;
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;
+    }
+    input {
+        height: 34px;
+        width: 100px;
+        text-align: center;
+        font-size: 26px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+.card_desc{
+    .card-title{
 
+    }
+}
+.prod{
+    &-price{
+        span{
 
+        }
+        h4{
+            small{
 
+            }
+        }
 
+    }
+    &-stock{
+        span{
 
+        }
+        svg{
 
+        }
+        b{
 
+        }
+    }
+    &-size{
+        p{
 
+        }
+        label{
+            input{
+
+            }
+        }
+    }
+    &-quantity{
+        .number{
+            .minus{
+
+            }
+            .plus{
+
+            }
+            input{
+
+            }
+        }
+    }
+    &-cart{
+
+    }
+    &-desc{
+        li{
+
+        }
+    }
+}
 
 
 
