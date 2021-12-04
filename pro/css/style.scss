@@ -3622,8 +3622,73 @@ html body .content.app-content {
 .h1-main {
     margin: 20px 0 66px;
 }
+.basket-page{
 
+}
+.basket{
+    display: flex;
+    flex-direction: row;
+    &__name{
+        display: flex;
+        align-items: flex-start;
+        img{
+            width: 80px;
+        }
+        span{
 
+        }
+    }
+    &__quantity{
+        .number{
+            display: flex;
+            justify-content: center;
+            .minus, .plus{
+                height: 30px;
+                width: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid rgb(153, 153, 153);
+                font-size: 20px;
+                cursor: pointer;
+                transition: $transition;
+                &:hover{
+                    border-color: #fff;
+                    color: #fff;
+                }
+            }
+            .plus{
+                border-top-right-radius: 0.25rem;
+                border-bottom-right-radius: 0.25rem;
+            }
+            .minus{
+                border-top-left-radius: 0.25rem;
+                border-bottom-left-radius: 0.25rem;
+            }
+            input.form-control{
+                color: #fff;
+                width: 40px;
+                text-align: center;
+                border-radius: 0;
+                border-left: 0;
+                border-right: 0;
+                border-color: rgb(153, 153, 153);
+                padding: 8px;
+                height: 30px;
+            }
+        }
+    }
+    &__total{
+        small{
+
+        }
+    }
+    &__remove{
+        svg{
+
+        }
+    }
+}
 
 
 
