@@ -3643,6 +3643,7 @@ html body .content.app-content {
             transition: all 0.2s ease-in-out;
             filter: grayscale(100%);
             opacity: .5;
+            margin-right: 15px;
         }
         &:hover{
             img{
@@ -3657,6 +3658,8 @@ html body .content.app-content {
     &__quantity{
         display: flex;
         align-items: center;
+        justify-content: center;
+        padding: 0 15px;
         .number{
             display: flex;
             justify-content: center;
@@ -3700,16 +3703,22 @@ html body .content.app-content {
         display: flex;
         align-items: center;
         justify-content: center;
+        color: #bbb7b7;
+        font-size: 20px;
+        font-weight: 800;
         small{
-
+            font-size: 13px;
+            transform: translateY(2px);
         }
     }
     &__remove{
         display: flex;
         align-items: center;
+        justify-content: center;
+        padding-left: 15px;
         svg{
-            width: 30px;
-            height: 30px;
+            width: 20px;
+            height: 20px;
             fill: #919191;
             transition: all .2s ease-in-out;
             cursor: pointer;
@@ -3718,8 +3727,28 @@ html body .content.app-content {
             }
         }
     }
+    &-total{
+        padding: 15px;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        span{
+            font-size: 18px;
+            padding-right: 5px;
+            letter-spacing: 1px;
+            transform: translateY(1px);
+        }
+        b{
+            color: #bbb7b7;
+            font-size: 24px;
+            font-weight: 800;
+        }
+        small{
+            font-size: 13px;
+            transform: translateY(3px);
+        }
+    }
 }
-
 
 
 
