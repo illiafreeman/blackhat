@@ -3553,7 +3553,7 @@ html body .content.app-content {
                 justify-content: center;
                 align-items: center;
                 border: 1px solid rgb(153, 153, 153);
-                font-size: 20px;
+                font-size: 18px;
                 cursor: pointer;
                 transition: $transition;
                 &:hover{
@@ -3570,7 +3570,7 @@ html body .content.app-content {
                 border-bottom-left-radius: 0.25rem;
             }
             input.form-control{
-                color: #fff;
+                color: #999;
                 width: 40px;
                 text-align: center;
                 border-radius: 0;
@@ -3626,19 +3626,37 @@ html body .content.app-content {
 
 }
 .basket{
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 4fr 1fr 2fr .3fr;
+    padding: 25px;
     &__name{
         display: flex;
-        align-items: flex-start;
+        align-items: center;
+        &:before{
+            display: none !important;
+        }
         img{
             width: 80px;
+            -webkit-border-radius: 0.35rem;
+            -moz-border-radius: 0.35rem;
+            border-radius: 0.35rem;
+            transition: all 0.2s ease-in-out;
+            filter: grayscale(100%);
+            opacity: .5;
+        }
+        &:hover{
+            img{
+                filter: none;
+                opacity: 1;
+            }
         }
         span{
 
         }
     }
     &__quantity{
+        display: flex;
+        align-items: center;
         .number{
             display: flex;
             justify-content: center;
@@ -3649,7 +3667,7 @@ html body .content.app-content {
                 justify-content: center;
                 align-items: center;
                 border: 1px solid rgb(153, 153, 153);
-                font-size: 20px;
+                font-size: 18px;
                 cursor: pointer;
                 transition: $transition;
                 &:hover{
@@ -3666,7 +3684,7 @@ html body .content.app-content {
                 border-bottom-left-radius: 0.25rem;
             }
             input.form-control{
-                color: #fff;
+                color: #999;
                 width: 40px;
                 text-align: center;
                 border-radius: 0;
@@ -3679,13 +3697,25 @@ html body .content.app-content {
         }
     }
     &__total{
+        display: flex;
+        align-items: center;
+        justify-content: center;
         small{
 
         }
     }
     &__remove{
+        display: flex;
+        align-items: center;
         svg{
-
+            width: 30px;
+            height: 30px;
+            fill: #919191;
+            transition: all .2s ease-in-out;
+            cursor: pointer;
+            &:hover{
+                fill: #fff;
+            }
         }
     }
 }
