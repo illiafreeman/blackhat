@@ -2912,9 +2912,122 @@ input[type=number] {
         margin-bottom: 20px;
     }
 }
+.h1-main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 20px 0 66px;
+    span{
 
+    }
+    a{
+        padding: 0;
+        margin: 10px 0 0;
+        font-size: 10px;
+        color: #bfbfbf;
+        margin-left: 10px;
+        transform: translateY(-4px);
+        transition: all .2s ease-in-out;
+        display: block;
+        border-bottom: 1px solid #888787;
+        &:hover {
+            color: #fff;
+            border-bottom-color: #000;
+        }
+    }
+}
+.shop-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+.shop{
+    display: flex;
+    flex-direction: column;
+    width: calc(25% - 23px);
+    position: relative;
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid #000;
+    box-shadow: -1px -1px 3px 1px #424242 inset;
+    border-radius: 0.35rem;
+    overflow: hidden;
+    &__link{
+        display: block;
+        &:hover{
+            .shop__pic {
+                filter: none;
+                opacity: 1;
+            }
+        }
+    }
+    &__pic-wrap{
+        overflow: hidden;
+        display: block;
+        margin-bottom: 10px;
+    }
+    &__pic{
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: block;
+        transition: all 0.2s ease-in-out;
+        filter: grayscale(100%);
+        opacity: .5;
+        &:after {
+            content: '';
+            display: block;
+            padding-bottom: 108%;
+        }
+    }
+    &__name{
+        font-size: 16px;
+        height: 60px;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        margin-bottom: 10px;
+        padding: 10px 15px 0;
+        text-align: center;
+    }
+    &__id{
+        padding: 10px 15px 20px;
+        text-align: center;
+        display: block;
+        b{
 
-
+        }
+    }
+    &__edit{
+        width: 40px;
+        height: 40px;
+        background-color: #000;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        svg{
+            width: 20px;
+            height: 20px;
+            transition: all 0.2s ease-in-out;
+            fill: #999;
+        }
+        &:hover{
+            svg{
+                fill: #ddd;
+            }
+        }
+    }
+}
 
 
 
