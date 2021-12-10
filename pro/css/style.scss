@@ -2877,7 +2877,41 @@ input[type=number] {
 .btn.btn_telega {
     font-size: 14px;
 }
-
+.add-shop{
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    a{
+        display: inline-flex;
+        align-items: center;
+        flex-direction: column;
+        margin: 20px 0;
+        span{
+            transition: $transition;
+            margin-bottom: 10px;
+        }
+        &:before{
+            display: none !important;
+        }
+        svg{
+            transition: $transition;
+            width: 70px;
+            height: 70px;
+        }
+        &:hover{
+            span{
+                color: #fff;
+            }
+            svg{
+                fill: #fff;
+            }
+        }
+    }
+    h6{
+        font-size: 13px;
+        margin-bottom: 20px;
+    }
+}
 
 
 
