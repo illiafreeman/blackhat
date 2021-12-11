@@ -3033,11 +3033,49 @@ input[type=number] {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+        padding-right: 15px;
     }
 }
-
-
-
+.card-body .nav.nav-tabs .nav-item .nav-link {
+    padding: 12px 20px;
+}
+.form-label-group textarea:not(:placeholder-shown) ~ label {
+    color: #999;
+    padding-top: 1px;
+    padding-top: -webkit-calc(var(--input-padding-y) / 3);
+    padding-top: -moz-calc(var(--input-padding-y) / 3);
+    padding-top: calc(var(--input-padding-y) / 3);
+    padding-bottom: -webkit-calc(var(--input-padding-y) / 3);
+    padding-bottom: -moz-calc(var(--input-padding-y) / 3);
+    padding-bottom: calc(var(--input-padding-y) / 3);
+    font-size: 11px;
+}
+.form-label-group textarea:not(:placeholder-shown) {
+    padding: 21px 12px 8px;
+}
+.pseudoinput{
+    padding: 22px 10px 10px;
+    border: 1px solid #999;
+    border-radius: 0.25rem;
+    background-color: #2b2b2b;
+    cursor: not-allowed;
+    img{
+        margin: 0 auto;
+        max-width: 100%;
+        display: block;
+    }
+    label{
+        color: #999;
+        padding-top: 1px;
+        padding-top: -webkit-calc(var(--input-padding-y) / 3);
+        padding-top: -moz-calc(var(--input-padding-y) / 3);
+        padding-top: calc(var(--input-padding-y) / 3);
+        padding-bottom: -webkit-calc(var(--input-padding-y) / 3);
+        padding-bottom: -moz-calc(var(--input-padding-y) / 3);
+        padding-bottom: calc(var(--input-padding-y) / 3);
+        font-size: 11px;
+    }
+}
 
 
 
