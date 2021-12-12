@@ -368,7 +368,7 @@
     sort.forEach(symbol => {
         div.insertAdjacentHTML("beforeend", `
                 <div style="margin: 10px;width: 100px; display: flex;align-items: center;justify-content: center; flex-direction: column">
-                    <span style="order:2; text-align: center">${symbol.id}</span>
+                    <span style="order:2; text-align: center">${symbol.id.substr(5)}</span>
                     <svg width="50" height="50">
                         <use xlink:href="#${symbol.id}" />
                   </div>
