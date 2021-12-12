@@ -352,10 +352,20 @@
     const sprite = document.querySelector("#sprite");
     const div = document.querySelector("#div");
     const symbols = sprite.querySelectorAll("symbol");
-    var arr = Array.prototype.slice.call(symbols);
-    var sort = arr.sort((a, b) => parseFloat(a.attributes.id) - parseFloat(b.attributes.id));
+    var arr = Array.prototype.slice.call(symbols, 0);
 
-    symbols.forEach(symbol => {
+
+    var sort = arr.sort(function (a, b) {
+        if (a.id > b.id) {
+            return 1;
+        }
+        if (a.id < b.id) {
+            return -1;
+        }
+        return 0;
+    });
+
+    sort.forEach(symbol => {
         div.insertAdjacentHTML("beforeend", `
                 <div style="margin: 10px;width: 100px; display: flex;align-items: center;justify-content: center; flex-direction: column">
                     <span style="order:2; text-align: center">${symbol.id}</span>
