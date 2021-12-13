@@ -283,22 +283,25 @@
                 <div class="invoice-table card">
                     <div class="card-header card-header_filter">
                         <h6 class="card-title">Invoices History</h6>
-                        <div class="filter-wrap">
-                            <div class="btn btn_min btn_filter">
-                                Filter
-                                <b></b>
+                        <div class="card-header_filter-filter">
+                            <div class="filter-wrap">
+                                <div class="btn btn_min btn_filter">
+                                    Filter
+                                    <b></b>
+                                </div>
+                                <div style="display: none" class="filter">
+                                    <input type="text" class="daterange form-control">
+                                    <fieldset class="form-label-group">
+                                        <select class="form-control">
+                                            <option value="" active="">All</option>
+                                            <option value="">Transparent</option>
+                                            <option value="">Shielded</option>
+                                        </select>
+                                    </fieldset>
+                                    <div class="btn">Apply</div>
+                                </div>
                             </div>
-                            <div style="display: none" class="filter">
-                                <input type="text" class="daterange form-control">
-                                <fieldset class="form-label-group">
-                                    <select class="form-control">
-                                        <option value="" active="">All</option>
-                                        <option value="">Transparent</option>
-                                        <option value="">Shielded</option>
-                                    </select>
-                                </fieldset>
-                                <div class="btn">Apply</div>
-                            </div>
+                            <div class="btn btn_min">Export CSV</div>
                         </div>
                     </div>
 

@@ -3220,6 +3220,12 @@ input[type=number] {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    &-filter{
+        display: flex;
+        .filter-wrap{
+            margin-right: 10px;
+        }
+    }
 }
 .btn.btn_min {
     font-size: 1rem;
