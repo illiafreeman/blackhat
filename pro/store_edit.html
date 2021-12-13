@@ -248,31 +248,15 @@
     <div class="content-wrapper">
         <div class="content-body justify-content-center">
             <div class="invoice-page clearfix">
-                <div class="invoice-form add_node card login">
+                <div class="invoice-form add_node card editcard">
                     <div class="card-header">
-                        <h6 class="card-title text-center">Shop edit</h6>
+                        <h4 class="card-title text-center">Shop edit</h4>
                     </div>
                     <div class="card-body">
                         <form action="">
-                            <ul class="nav nav-tabs" id="myTab" role="tablist">
-                                <li class="nav-item">
-                                    <a class="nav-link active show" data-toggle="tab" href="#tab_common" role="tab" aria-controls="home" aria-selected="true">
-                                        Common
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" data-toggle="tab" href="#tab_contacts" role="tab" aria-controls="profile" aria-selected="false">
-                                        Contacts
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" data-toggle="tab" href="#tab_api" role="tab" aria-controls="profile" aria-selected="false">
-                                        API
-                                    </a>
-                                </li>
-                            </ul>
-                            <div class="tab-content tab-edit" id="myTabContent">
-                                <div class="tab-pane fade active show" id="tab_common" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="editcard__catlist">
+                                <div class="editcard__cat">
+                                    <h6>Common</h6>
                                     <fieldset class="form-label-group has-error">
                                         <input type="text" id="name" class="form-control" placeholder="Name" value="">
                                         <label for="name">Name</label>
@@ -287,28 +271,34 @@
                                         <label for="image">Image</label>
                                     </fieldset>
                                 </div>
-                                <div class="tab-pane fade" id="tab_contacts" role="tabpanel" aria-labelledby="home-tab">
+                                <div class="editcard__cat">
+                                    <h6>Contacts</h6>
                                     <fieldset class="form-label-group">
                                         <input type="text" id="address" class="form-control" placeholder="Address" value="">
                                         <label for="address">Address</label>
                                     </fieldset>
-                                    <fieldset class="form-label-group">
+                                    <fieldset class="form-label-group has-error">
                                         <input type="text" id="site" class="form-control" placeholder="Site" value="">
                                         <label for="site">Site</label>
+                                        <div class="error-text">Site is invalid</div>
                                     </fieldset>
                                     <fieldset class="form-label-group">
                                         <input type="text" id="telega" class="form-control" placeholder="Telega" value="">
                                         <label for="telega">Telega</label>
                                     </fieldset>
                                 </div>
-                                <div class="tab-pane fade" id="tab_api" role="tabpanel" aria-labelledby="home-tab">
+                                <div class="editcard__cat editcard__cat_last">
+                                    <h6>API</h6>
                                     <fieldset class="form-label-group">
                                         <input type="text" id="white" class="form-control" placeholder="White List" value="">
                                         <label for="white">White List</label>
                                     </fieldset>
                                     <fieldset class="form-label-group">
-                                        <input type="text" id="pass" class="form-control" placeholder="Secret Key" value="">
+                                        <input type="text" id="pass" class="form-control form-control_icon" placeholder="Secret Key" disabled value="asdasdasd">
                                         <label for="pass">Secret Key</label>
+                                        <svg class="help-icon icon-copy" onclick="toastr.success('Copied to clipboard');">
+                                            <use xlink:href="img/sprite.svg#icon-copy"></use>
+                                        </svg>
                                     </fieldset>
                                 </div>
                             </div>
