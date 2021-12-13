@@ -3146,6 +3146,76 @@ input[type=number] {
         }
     }
 }
+.wrap{
+    white-space: normal !important;
+    min-width: 300px;
+}
+.filter{
+    width: 250px;
+    margin: 0 auto 40px;
+}
+.daterange{
+    color: #999;
+    transition: $transition;
+    &:focus{
+        color: #fff;
+    }
+}
+.daterangepicker{
+    background-color: #000;
+    //border-color: #999;
+    .calendar-table{
+        background-color: #2b2b2b;
+    }
+}
+.daterangepicker td.off, .daterangepicker td.off.in-range, .daterangepicker td.off.start-date, .daterangepicker td.off.end-date {
+    background-color: transparent;
+    color: #606060;
+}
+.daterangepicker .calendar-table {
+    border: 1px solid #717171;
+}
+
+.daterangepicker td.available:hover, .daterangepicker th.available:hover {
+    background-color: #686868;
+}
+.daterangepicker td.in-range {
+    background-color: #8a8a8a;
+}
+.daterangepicker td.active, .daterangepicker td.active:hover {
+    background-color: #686868;
+}
+.daterangepicker .calendar-table .next span, .daterangepicker .calendar-table .prev span {
+    color: #fff;
+    border-color: #b5b5b5;
+}
+.daterangepicker.show-calendar .drp-buttons{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.btn-primary{
+    border-color: #FFF !important;
+    background-color: #000 !important;
+    &:hover{
+        border-color: #FFF !important;
+        background-color: #000 !important;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
