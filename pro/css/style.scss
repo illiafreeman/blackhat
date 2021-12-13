@@ -3108,7 +3108,41 @@ input[type=number] {
         }
     }
 }
-
+.add_node .form-label-group .uploader{
+    pointer-events: initial;
+    border: 1px solid #999;
+    height: 44px;
+    padding: 10px;
+    line-height: 1.5rem;
+    font-size: 1rem;
+    position: relative;
+    b{
+        font-weight: 400;
+    }
+    &.act{
+        b{
+            position: absolute;
+            top: 0;
+            left: 10px;
+            display: block;
+            width: 100%;
+            margin-bottom: 0;
+            line-height: 1.5;
+            font-size: 11px;
+        }
+        span{
+            display: block;
+            color: #fff;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            max-width: calc(100% - 20px);
+            position: absolute;
+            top: 16px;
+            left: 10px;
+        }
+    }
+}
 
 
 
