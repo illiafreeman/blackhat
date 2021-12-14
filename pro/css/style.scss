@@ -3460,6 +3460,13 @@ input[type=number] {
     .editcard__cat_last{
         grid-column: 1;
     }
+    .card-header_filter{
+        flex-direction: column;
+    }
+    .filter{
+        right: auto;
+        left: 0;
+    }
 }
 
 @media only screen and (max-width: 480px) {
