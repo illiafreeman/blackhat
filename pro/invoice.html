@@ -289,7 +289,7 @@
                                     Filter
                                     <b></b>
                                 </div>
-                                <div style="display: none" class="filter">
+                                <div class="filter">
                                     <input type="text" class="daterange form-control">
                                     <fieldset class="form-label-group">
                                         <select class="form-control">
@@ -298,7 +298,7 @@
                                             <option value="">Shielded</option>
                                         </select>
                                     </fieldset>
-                                    <div class="btn">Apply</div>
+                                    <div class="btn btn_min">Apply</div>
                                 </div>
                             </div>
                             <div class="btn btn_min">Export CSV</div>
@@ -316,6 +316,26 @@
                                         <th class="ac">Amount</th>
                                         <th>Description</th>
                                         <th class="ac">Status</th>
+                                    </tr>
+                                    <tr>
+                                        <td class="datetime">
+                                            <div>2020-01-30</div>
+                                            <div>12:34:12</div>
+                                        </td>
+                                        <td class="ac">1</td>
+                                        <td class="ac">12 565</td>
+                                        <td class="wrap">Copyright © 2021 Black Hat, Kripta eto puzyr i piramida</td>
+                                        <td class="color_pos ac">confirmed</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="datetime">
+                                            <div>2020-01-30</div>
+                                            <div>12:34:12</div>
+                                        </td>
+                                        <td class="ac">100500</td>
+                                        <td class="ac">65 326 652</td>
+                                        <td class="wrap">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur eligendi exercitationem ipsam,</td>
+                                        <td class="color_neg ac">cancelled</td>
                                     </tr>
                                     <tr>
                                         <td class="datetime">
@@ -383,7 +403,29 @@
         $('.td_button').toggleClass('act');
         $('.load-more-data__wrap .load-icon').toggleClass('hidden');
     });
-    $('.daterange').daterangepicker();
+    $('.daterange').daterangepicker({
+        "opens": "center"
+    });
+    $(document).on("click", ".filter-wrap", function(){
+        var t = $(this);
+        t.addClass('open');
+    });
+/*    $(document).on("click", function (event) {
+        if ($(event.target).closest('.filter-wrap').length === 0) {
+            $('.filter-wrap').removeClass('open');
+        }
+    });*/
+    $(document).on("click", ".daterangepicker", function(e){
+        e.stopPropagation();
+    });
+     $(document).on("click", function (event) {
+         if (
+             ( $(event.target).closest('.filter-wrap').length === 0) && (!$(event.target).is('.daterangepicker'))
+         ) {
+             $('.filter-wrap').removeClass('open');
+             //console.log('click');
+         }
+     });
 </script>
 
 </body>
