@@ -3335,10 +3335,61 @@ input[type=number] {
     }
 
 }
+.faq-body .card-title {
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    &:before{
+        display: none !important;
+    }
+}
 
+.faq-body .card-title:hover {
+    color: #fff;
+    svg{
+        fill: #fff;
+    }
+}
 
+.faq-body .card-title svg {
+    transition: all 0.2s ease-in-out;
+    margin-right: 10px;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    //transform: translateY(7px);
+}
 
+.faq-body .card-title:not(.collapsed) {
+    color: #fff;
+    svg {
+        transform: rotate(180deg);
+        fill: #fff;
+    }
+}
 
+.faq-body .form-label-group {
+    margin-bottom: 0;
+}
+
+.faq-body .form-label-group:first-child .card-header {
+    padding-top: 0;
+}
+
+.faq-body .card-header .card-title {
+    display: inline-flex;
+}
+.inline-link{
+    color: #bfbfbf !important;
+    text-decoration: underline;
+    &:before{
+        display: none !important;
+    }
+}
+.faq-body .card-body{
+    line-height: 150%;
+    font-size: 14px;
+}
 
 
 
@@ -3447,9 +3498,6 @@ input[type=number] {
     }
 }
 @media only screen and (max-width: 768px) {
-    .collapse:not(.show) {
-        display: flex;
-    }
     .header-navbar.navbar-with-menu .navbar-container {
         width: 100%;
         display: block;
@@ -3550,6 +3598,11 @@ input[type=number] {
     }
     .invoice-wrap .half{
         gap: 0;
+    }
+    .faq-body{
+        .card-header {
+            padding: 30px 0 10px !important;
+        }
     }
 }
 @media only screen and (max-width: 360px) {
