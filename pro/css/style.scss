@@ -3390,6 +3390,7 @@ input[type=number] {
 .faq-body .card-body{
     line-height: 150%;
     font-size: 14px;
+    padding: 0 15px 40px 57px;
 }
 
 
@@ -3502,6 +3503,11 @@ input[type=number] {
     .collapse:not(.show) {
         display: flex;
     }
+    .faq-body{
+        .collapse:not(.show) {
+            display: none;
+        }
+    }
     .header-navbar.navbar-with-menu .navbar-container {
         width: 100%;
         display: block;
@@ -3606,6 +3612,9 @@ input[type=number] {
     .faq-body{
         .card-header {
             padding: 30px 0 10px !important;
+        }
+        .card-body {
+            padding-left: 36px;
         }
     }
 }
