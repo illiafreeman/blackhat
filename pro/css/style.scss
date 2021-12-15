@@ -3355,6 +3355,7 @@ input[type=number] {
     transition: all 0.2s ease-in-out;
     margin-right: 10px;
     width: 25px;
+    min-width: 25px;
     height: 25px;
     display: inline-block;
     //transform: translateY(7px);
@@ -3498,6 +3499,9 @@ input[type=number] {
     }
 }
 @media only screen and (max-width: 768px) {
+    .collapse:not(.show) {
+        display: flex;
+    }
     .header-navbar.navbar-with-menu .navbar-container {
         width: 100%;
         display: block;
