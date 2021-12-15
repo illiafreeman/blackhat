@@ -3296,8 +3296,45 @@ input[type=number] {
         }
     }
 }
+.invoice-wrap{
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .card{
+        flex: 1 0 auto;
+    }
+    .half{
+        display: flex;
+        gap: 15px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        fieldset{
+            flex: 1 0 auto;
+        }
+    }
+    .balance_table svg {
+        width: 30px;
+        height: 30px;
+        fill: #999;
+    }
+    .blkc_wrap{
+        margin-top: 20px;
+        padding: 0 10px;
+        div{
+            color: #c1c1c1;
+            font-size: 20px;
+            font-weight: 600;
+        }
+    }
+}
+.form {
+    .form-control, select.form-control:not([size]):not([multiple]){
+        line-height: 1.5rem;
+        height: 44px;
+    }
 
-
+}
 
 
 
@@ -3508,7 +3545,12 @@ input[type=number] {
     .shop__pic::after {
         padding-bottom: 90%;
     }
-
+    .invoice-wrap .half fieldset {
+        flex: 1 0 100%;
+    }
+    .invoice-wrap .half{
+        gap: 0;
+    }
 }
 @media only screen and (max-width: 360px) {
 
