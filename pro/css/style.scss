@@ -3392,9 +3392,19 @@ input[type=number] {
     font-size: 14px;
     padding: 0 15px 40px 57px;
 }
-
-
-
+.form-control_textarea{
+    min-height: 120px;
+}
+.go_ahead{
+    padding-top: 40px;
+    & > p{
+        font-size: 16px;
+        margin-bottom: 16px;
+    }
+}
+.form-label-group.or{
+    margin: 40px 0;
+}
 
 
 
