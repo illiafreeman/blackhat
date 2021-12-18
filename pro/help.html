@@ -486,22 +486,32 @@
 <script src="js/app.min.js" type="text/javascript"></script>
 <script src="js/custom.js"></script>
 <script>
+
     $(function(){
         if ( window.location.hash != '' ){
             $('.collapse').removeClass('in');
             $(window.location.hash).collapse('show');
             var scroll = $(window.location.hash).offset().top;
-            window.scrollTo(0, scroll-150)
+            console.log(scroll);
+            window.scrollTo({
+                top: scroll,
+                behavior: "smooth"
+            });
+
+            setTimeout(function() {
+
+
+            }, 2000);
         }
 
-        var uri = window.location.toString();
+/*        var uri = window.location.toString();
         if (uri.indexOf("#") > 0) {
             var clean_uri = uri.substring(0,
                 uri.indexOf("#"));
 
             window.history.replaceState({},
                 document.title, clean_uri);
-        }
+        }*/
     });
 
 </script>
