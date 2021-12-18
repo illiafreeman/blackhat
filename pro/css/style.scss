@@ -3577,7 +3577,19 @@ footer.footer a{
         margin-bottom: 0 !important;
     }
 }
-
+.tm-gr-text{
+    .alert-link.text-white{
+        color: #ddd !important;
+        transition: all .2s ease-in-out;
+        display: inline-block;
+        border-bottom: 1px solid #888787;
+        font-weight: 600;
+        &:hover{
+            border-color: transparent;
+            color: #fff !important;
+        }
+    }
+}
 
 
 
