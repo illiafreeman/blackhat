@@ -490,28 +490,27 @@
     $(function(){
         if ( window.location.hash != '' ){
             $('.collapse').removeClass('in');
-            $(window.location.hash).collapse('show');
-            var scroll = $(window.location.hash).offset().top;
-            console.log(scroll);
-            window.scrollTo({
-                top: scroll,
-                behavior: "smooth"
-            });
-
+            var hash = location.hash.replace("#head","#heading");
+            //console.log(hash);
+            var scroll = $(hash).offset().top;
+            //console.log(scroll);
+            $(hash).next().collapse('show');
             setTimeout(function() {
-
-
-            }, 2000);
+                window.scrollTo({
+                    top: scroll-80,
+                    behavior: "smooth"
+                });
+            }, 500);
         }
 
-/*        var uri = window.location.toString();
+        var uri = window.location.toString();
         if (uri.indexOf("#") > 0) {
             var clean_uri = uri.substring(0,
                 uri.indexOf("#"));
 
             window.history.replaceState({},
                 document.title, clean_uri);
-        }*/
+        }
     });
 
 </script>
