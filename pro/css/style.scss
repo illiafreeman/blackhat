@@ -2833,11 +2833,7 @@ pre {
 .tx-out .tx-own .tx-amt, .text-success {
     color: #329B76 !important;
 }
-#qrcode{
-    img{
-        width: 100%;
-    }
-}
+
 select.form-control, textarea.form-control{
     color: #999;
 }
@@ -3334,6 +3330,42 @@ td.expired {
 .btn:hover svg, .btn:focus svg {
     fill: #fff;
 }
+.qrcode{
+    display: flex;
+    justify-content: center;
+    canvas{
+        max-width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
