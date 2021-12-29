@@ -133,6 +133,7 @@
     <!--common styles-->
     <link rel="stylesheet" type="text/css" href="css/vendors.css">
     <link rel="stylesheet" type="text/css" href="css/app.css">
+    <link rel="stylesheet" type="text/css" href="css/daterangepicker.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <!--end common styles-->
 </head>
@@ -374,7 +375,132 @@
                         </form>
                     </div>
                 </div>
-            </div>
+                <div class="invoice-form add_node claim card">
+                    <div class="card-header">
+                        <h6 class="card-title text-center">create check</h6>
+                    </div>
+                    <div class="card-body form">
+                        <fieldset class="form-label-group">
+                            <input type="number" id="Amount" class="form-control" placeholder="Amount" value="">
+                            <label for="Amount">Amount</label>
+                            <div class="error-text">Amount is invalid</div>
+                        </fieldset>
+                        <div class="half-form">
+                            <fieldset class="form-label-group flex-grow-1">
+                                <select class="form-control">
+                                    <option value="" active="">Transparent</option>
+                                    <option value="">Shielded</option>
+                                </select>
+                            </fieldset>
+                            <fieldset class="form-label-group flex-grow-0">
+                                <input type="text" id="Network_Fee2" class="form-control" placeholder="Network Fee" disabled="" value="12">
+                                <label for="Network_Fee2">Network Fee</label>
+                                <svg class="help-icon" data-toggle="tooltip" title="" data-original-title="Network Fee">
+                                    <use xlink:href="img/sprite.svg#icon-help"></use>
+                                </svg>
+                            </fieldset>
+                        </div>
+                        <fieldset class="form-label-group total-alarm_wrap has-error" id="error">
+                            <div class="error-text total-alarm">
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#icon-exclamation-triangle"></use>
+                                </svg>
+                                Ошибка Password one more timePassword one more timePassword one more timePassword one more time
+                            </div>
+                        </fieldset>
+                        <fieldset class="form-label-group">
+                            <div class="button_wrap button_wrap_padding ac">
+                                <button type="submit" class="btn">
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#icon-check"></use>
+                                    </svg>
+                                    Create
+                                </button>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="invoice-table card">
+                    <div class="card-header card-header_filter">
+                        <h6 class="card-title">check History</h6>
+                        <div class="card-header_filter-filter">
+                            <div class="filter-wrap">
+                                <div class="btn btn_min btn_filter">
+                                    Filter
+                                    <b></b>
+                                </div>
+                                <div class="filter">
+                                    <input type="text" class="daterange form-control">
+                                    <fieldset class="form-label-group">
+                                        <select class="form-control">
+                                            <option value="" active="">All</option>
+                                            <option value="">Transparent</option>
+                                            <option value="">Shielded</option>
+                                        </select>
+                                    </fieldset>
+                                    <div class="btn btn_min">Apply</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-body">
+
+                        <div class="card-body__inner">
+                            <table>
+                                <tbody>
+                                <tr>
+                                    <th>Date</th>
+                                    <th class="ac">Amount</th>
+                                    <th class="ac">Status</th>
+                                    <th class="ac"></th>
+                                </tr>
+                                <tr>
+                                    <td class="datetime">
+                                        <div>2020-01-30</div>
+                                        <div>12:34:12</div>
+                                    </td>
+                                    <td class="ac">12 565</td>
+                                    <td class="color_pos ac">confirmed</td>
+                                    <td class="ac basket__remove">
+                                        <svg data-toggle="tooltip" data-original-title="Remove">
+                                            <use xlink:href="img/sprite.svg#icon-times-circle"></use>
+                                        </svg>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="datetime">
+                                        <div>2020-01-30</div>
+                                        <div>12:34:12</div>
+                                    </td>
+                                    <td class="ac">65 326 652</td>
+                                    <td class="color_neg ac">cancelled</td>
+                                    <td class="ac basket__remove">
+                                        <svg data-toggle="tooltip" data-original-title="Remove">
+                                            <use xlink:href="img/sprite.svg#icon-times-circle"></use>
+                                        </svg>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="6" class="button-cell">
+                                        <div class="load-more-data__wrap">
+                                            <button type="submit" class="btn load-more-data">
+                                                <svg>
+                                                    <use xlink:href="img/sprite.svg#icon-angle-down"></use>
+                                                </svg>
+                                                Load More
+                                            </button>
+                                            <svg class="load-icon hidden">
+                                                <use xlink:href="img/sprite.svg#icon-cog"></use>
+                                            </svg>
+                                        </div>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
         </div>
     </div>
     <!--end block to reload-->
@@ -389,9 +515,40 @@
 <script src="js/vendors.min.js" type="text/javascript"></script>
 <script src="js/app-menu.min.js" type="text/javascript"></script>
 <script src="js/app.min.js" type="text/javascript"></script>
-<script src="js/jquery.scrollTo.min.js" type="text/javascript"></script>
+<script src="js/moment.min.js" type="text/javascript"></script>
+<script src="js/daterangepicker.js" type="text/javascript"></script>
 <script src="js/custom.js"></script>
-
+    <script>
+        $(document).on("click", ".load-more-data", function(){
+            var t = $(this);
+            t.remove();
+            $('.td_button').toggleClass('act');
+            $('.load-more-data__wrap .load-icon').toggleClass('hidden');
+        });
+        $('.daterange').daterangepicker({
+            "opens": "center"
+        });
+        $(document).on("click", ".filter-wrap", function(){
+            var t = $(this);
+            t.addClass('open');
+        });
+        /*    $(document).on("click", function (event) {
+                if ($(event.target).closest('.filter-wrap').length === 0) {
+                    $('.filter-wrap').removeClass('open');
+                }
+            });*/
+        $(document).on("click", ".daterangepicker", function(e){
+            e.stopPropagation();
+        });
+        $(document).on("click", function (event) {
+            if (
+                ( $(event.target).closest('.filter-wrap').length === 0) && (!$(event.target).is('.daterangepicker'))
+            ) {
+                $('.filter-wrap').removeClass('open');
+                //console.log('click');
+            }
+        });
+    </script>
 
 </body>
 </html>

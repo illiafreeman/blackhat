@@ -2876,9 +2876,177 @@ input[type=number] {
 .btn.btn_telega {
     font-size: 14px;
 }
+.half-form{
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+    //flex-wrap: wrap;
+    flex-direction: row;
+    select.form-control{
+        padding-right: 25px;
+    }
+    .flex-grow-0{
+        input{
+            max-width: 130px;
+        }
+    }
+}
+.filter{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    .form-label-group{
+        margin: 0;
+    }
+    .form-control{
+        width: auto;
+    }
+    select{
+        color: #999;
+        padding-right: 20px;
+        &:focus, &:active{
+            color: #999;
+        }
+    }
+}
+.daterange{
+    color: #999;
+    transition: $transition;
+    &:focus{
+        color: #fff;
+    }
+}
+.daterangepicker{
+    background-color: #000;
+    //border-color: #999;
+    .calendar-table{
+        background-color: #2b2b2b;
+    }
+}
+.daterangepicker td.off, .daterangepicker td.off.in-range, .daterangepicker td.off.start-date, .daterangepicker td.off.end-date {
+    background-color: transparent;
+    color: #606060;
+}
+.daterangepicker .calendar-table {
+    border: 1px solid #717171;
+}
 
+.daterangepicker td.available:hover, .daterangepicker th.available:hover {
+    background-color: #686868;
+}
+.daterangepicker td.in-range {
+    background-color: #8a8a8a;
+}
+.daterangepicker td.active, .daterangepicker td.active:hover {
+    background-color: #686868;
+}
+.daterangepicker .calendar-table .next span, .daterangepicker .calendar-table .prev span {
+    color: #fff;
+    border-color: #b5b5b5;
+}
+.daterangepicker.show-calendar .drp-buttons{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.btn-primary{
+    border-color: #FFF !important;
+    background-color: #000 !important;
+    &:hover{
+        border-color: #FFF !important;
+        background-color: #000 !important;
+    }
+}
+.card-header_filter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-filter{
+        display: flex;
+        .filter-wrap{
+            //margin-right: 10px;
+        }
+    }
+}
+.btn.btn_min {
+    font-size: 1rem;
+    line-height: 1.25;
+}
+.btn_min {
+    padding: 3px 8px 3px 10px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    b {
+        border-color: #888 transparent transparent transparent;
+        border-style: solid;
+        border-width: 5px 4px 0 4px;
+        height: 0;
+        left: 50%;
+        margin-left: 5px;
+        transition: all 0.2s ease-in-out;
+        top: 50%;
+        width: 0;
+    }
+    &:hover b {
+        border-color: #fff transparent transparent transparent;
+    }
+}
+.btn_filter{
 
-
+}
+.filter-wrap{
+    position: relative;
+    &.open{
+        .btn_min{
+            b{
+                transform: rotate(180deg);
+            }
+        }
+        .filter{
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(5px);
+        }
+    }
+}
+.filter{
+    position: absolute;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    background: #000;
+    border: 1px solid #ddd;
+    //box-shadow: -1px -1px 3px 1px #424242 inset;
+    padding: 15px;
+    border-radius: 0.35rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease-in-out;
+    transform: translateY(40px);
+    //align-items: stretch;
+    .form-label-group{
+        width: 100%;
+        .form-control{
+            width: 100%;
+        }
+    }
+}
+.basket__remove svg {
+    width: 20px;
+    height: 20px;
+    fill: #919191;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+    &:hover {
+        fill: #fff;
+    }
+}
 
 
 
@@ -3016,6 +3184,21 @@ input[type=number] {
         width: 100%;
     }
 }
+@media only screen and (max-width: 600px) {
+    .card-header_filter {
+        flex-direction: column;
+    }
+    .filter {
+        right: auto;
+        left: -85px;
+        z-index: 1000;
+    }
+}
+
+
+
+
+
 @media only screen and (max-width: 480px) {
     .nav.navbar-nav.float-right .hambu {
         -webkit-transform: translateX(18px);
