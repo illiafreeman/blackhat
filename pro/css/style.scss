@@ -3064,7 +3064,41 @@ input[type=number] {
     text-overflow: ellipsis;
     padding-right: 50px !important;
 }
-
+.form-label-group .uploader {
+    pointer-events: initial  !important;
+    border: 1px solid #999;
+    height: 44px;
+    padding: 10px;
+    line-height: 1.5rem;
+    font-size: 1rem;
+    position: relative;
+    b {
+        font-weight: 400;
+    }
+    &.act span {
+        display: block;
+        color: #fff;
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        max-width: -webkit-calc(100% - 20px);
+        max-width: calc(100% - 20px);
+        position: absolute;
+        top: 16px;
+        left: 10px;
+    }
+    &.act b {
+        position: absolute;
+        top: 0;
+        left: 10px;
+        display: block;
+        width: 100%;
+        margin-bottom: 0;
+        line-height: 1.5;
+        font-size: 11px;
+    }
+}
 
 
 
