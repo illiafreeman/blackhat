@@ -332,7 +332,7 @@ html body .content .content-wrapper{
 }
 .modal-confirm{
     .modal-body{
-        text-align: center;
+        //text-align: center;
         h4{
             font-weight: 300;
             margin: 20px 0;
@@ -1997,6 +1997,11 @@ html body .content .content-wrapper{
     border: 1px solid #680000;
     color: #e27070 !important;
 }
+.btn-outline-ok:hover {
+    background: #192b12;
+    border: 1px solid #317725;
+    color: #98e270 !important;
+}
 .modal-header .close{
     padding-top: 10px;
 }
@@ -2169,11 +2174,6 @@ html body .content .content-wrapper{
         &:last-child{
             margin-bottom: 0;
         }
-    }
-}
-.modal{
-    img{
-        width: 100%;
     }
 }
 .form-label-group_telega{
@@ -3037,18 +3037,33 @@ input[type=number] {
         }
     }
 }
-.basket__remove svg {
-    width: 20px;
-    height: 20px;
-    fill: #919191;
-    transition: all .2s ease-in-out;
-    cursor: pointer;
-    &:hover {
-        fill: #fff;
+.basket__remove  {
+    svg{
+        width: 20px;
+        height: 20px;
+        fill: #919191;
+        transition: all .2s ease-in-out;
+        cursor: pointer;
+        &:hover {
+            fill: #fff;
+        }
+    }
+    span{
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        margin: 0 5px;
     }
 }
-
-
+.modal-header, .modal-footer {
+    border-color: #37383A;
+}
+.input-over{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-right: 50px !important;
+}
 
 
 
@@ -3228,6 +3243,10 @@ input[type=number] {
         &:before{
             opacity: 1;
         }
+    }
+    .half-form_resp{
+        flex-direction: column;
+        gap: 0;
     }
 }
 @media only screen and (max-width: 360px) {
