@@ -525,8 +525,12 @@
             $('.td_button').toggleClass('act');
             $('.load-more-data__wrap .load-icon').toggleClass('hidden');
         });
+        var start = moment().subtract(30, 'days');
+        var end = moment();
         $('.daterange').daterangepicker({
-            "opens": "center"
+            "opens": "center",
+            startDate: start,
+            endDate: end
         });
         $(document).on("click", ".filter-wrap", function(){
             var t = $(this);
