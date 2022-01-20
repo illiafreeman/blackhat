@@ -1735,21 +1735,20 @@ html body .content .content-wrapper {
         &-wrap{
             margin-right: 5px !important;
         }
-        *{
-            transition: $transition;
-
-        }
         svg {
             width: 40px;
             height: 40px;
+            transition: $transition;
         }
         &-val{
             //text-align: center;
             div{
                 font-size: 12px;
+                transition: $transition;
             }
             span{
                 font-weight: 700;
+                transition: $transition;
             }
         }
         &:hover{
@@ -2421,7 +2420,7 @@ html body .content .content-wrapper{
     &:focus, &:active{
         background-color: #000;
     }
-    background-color: #000;
+    background-color: transparent;
 }
 .select2-container--default .select2-selection--single, form .form-control{
     border-color: #999;
@@ -3099,10 +3098,18 @@ input[type=number] {
         font-size: 11px;
     }
 }
-
-
-
-
+.mb_30{
+    margin-bottom: 30px;
+}
+.or_min{
+    margin: 15px 0;
+}
+select.form-control+.help-icon{
+    right: 29px;
+}
+input.form-control, select.form-control{
+    height: 44px !important;
+}
 
 
 
