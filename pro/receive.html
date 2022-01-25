@@ -390,6 +390,9 @@
                                 <input type="file" id="img" hidden="">
                                 <b>QR Code Image</b>
                                 <span id="file-chosen"></span>
+                                <svg id="file-remove" class="help-icon" data-toggle="tooltip" title="Remove">
+                                    <use xlink:href="img/sprite.svg#icon-times-circle"></use>
+                                </svg>
                             </label>
                         </fieldset>
                         <div class="or or_min">OR</div>
@@ -424,10 +427,17 @@
     let actualBtn = document.getElementById('img');
     let uploader = document.querySelector('.uploader');
     let fileChosen = document.getElementById('file-chosen');
+    let fileRemove = document.getElementById('file-remove');
 
     actualBtn.addEventListener('change', function(){
         fileChosen.textContent = this.files[0].name;
         uploader.classList.add("act");
+    })
+    fileRemove.addEventListener('click', function(e){
+        e.preventDefault();
+        actualBtn.value = '';
+        fileChosen.textContent = '';
+        uploader.classList.remove("act");
     })
 </script>
 
