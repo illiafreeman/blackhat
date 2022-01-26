@@ -128,8 +128,10 @@
             }
         }
     </style>
-
-    <link rel="stylesheet" type="text/css" href="css/style.min.css">
+    <link rel="preload" href="css/style.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="css/style.min.css">
+    </noscript>
 
 </head>
 <body data-spy="scroll" data-target="#navigation" class="vertical-layout vertical-compact-menu content-detached-right-sidebar menu-expanded fixed-navbar"
