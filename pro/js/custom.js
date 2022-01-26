@@ -39,5 +39,5 @@ $( window ).on("load", function() {
     setTimeout(function () {
         $('body').removeClass('oh');
         $('.preload').removeClass('vis');
-    }, 100);
+    }, 2000);
 });

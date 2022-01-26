@@ -2001,35 +2001,6 @@ html body .content .content-wrapper{
 .modal-header .close{
     padding-top: 10px;
 }
-
-
-
-
-
-
-
-
-
-
-.preload{
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    left: 0;
-    background: rgba(0,0,0, .9);
-    z-index: 10000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    visibility: hidden;
-    opacity: 0;
-    transition: $transition;
-    &.vis{
-        visibility: visible;
-        opacity: 1;
-    }
-}
 .filterlabel{
     display: flex;
     align-items: center;
