@@ -136,14 +136,22 @@
 </head>
 <body data-spy="scroll" data-target="#navigation" class="vertical-layout vertical-compact-menu content-detached-right-sidebar menu-expanded fixed-navbar"
       data-open="click" data-menu="vertical-compact-menu" data-col="content-detached-right-sidebar">
-
+    <picture>
+        <source class="bg" srcset="img/wall_2.webp" type="image/webp">
+        <source class="bg" srcset="img/wall_2.jpg" type="image/jpg">
+        <img class="bg" src="img/wall_2.jpg" alt="">
+    </picture>
 <!-- fixed-top-->
 <nav class="header-navbar navbar-expand-md navbar navbar-with-menu navbar-without-dd-arrow fixed-top navbar-light navbar-bg-color">
     <div class="navbar-wrapper">
         <div class="navbar-container">
             <div id="navigation" class="collapse navbar-collapse topnav">
                 <a class="logo" href="">
-                    <img class="brand-logo" alt="" src="img/logo.png">
+                    <picture>
+                        <source class="brand-logo" srcset="img/logo.webp" type="image/webp">
+                        <source class="brand-logo" srcset="img/logo.png" type="image/png">
+                        <img class="brand-logo" src="img/logo.png" alt="BlackHat Logo">
+                    </picture>
                 </a>
                 <ul class="nav navbar-nav navleft mr-auto float-left">
                     <li >
@@ -289,7 +297,11 @@
             <img src="img/bg.svg" alt="">
         </div>
         <div class="subsection">
-            <img src="img/pic5.png" alt="">
+            <picture>
+                <source srcset="img/pic5.webp" type="image/webp">
+                <source srcset="img/pic5.png" type="image/png">
+                <img src="img/pic5.png" alt="Edward Snowden">
+            </picture>
             <h4>
                 <i>
                     “Arguing that you don't care about the right to privacy because you have nothing to hide is no different
@@ -783,10 +795,34 @@
             </h2>
 
             <div class="exchanges__wrap">
-                <a href=""><img src="img/service_mnbiz.png" alt=""></a>
-                <a href=""><img src="img/service_crypos.png" alt=""></a>
-                <a href=""><img src="img/service_ihostmn.png" alt=""></a>
-                <a href=""><img src="img/service_mnpostree.png" alt=""></a>
+                <a href="">
+                    <picture>
+                        <source srcset="img/service_mnbiz.webp" type="image/webp">
+                        <source srcset="img/service_mnbiz.png" type="image/png">
+                        <img src="img/service_mnbiz.png" alt="masternodes.biz">
+                    </picture>
+                </a>
+                <a href="">
+                    <picture>
+                        <source srcset="img/service_crypos.webp" type="image/webp">
+                        <source srcset="img/service_crypos.png" type="image/png">
+                        <img src="img/service_crypos.png" alt="crypos.io">
+                    </picture>
+                </a>
+                <a href="">
+                    <picture>
+                        <source srcset="img/service_ihostmn.webp" type="image/webp">
+                        <source srcset="img/service_ihostmn.png" type="image/png">
+                        <img src="img/service_ihostmn.png" alt="ihostmn.com">
+                    </picture>
+                </a>
+                <a href="">
+                    <picture>
+                        <source srcset="img/service_mnpostree.webp" type="image/webp">
+                        <source srcset="img/service_mnpostree.png" type="image/png">
+                        <img src="img/service_mnpostree.png" alt="mnpostree.com">
+                    </picture>
+                </a>
             </div>
         </div>
     </div>

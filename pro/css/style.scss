@@ -1861,9 +1861,17 @@ html body.fixed-navbar {
     background: -webkit-linear-gradient(left,  #585858 0%,#000000 100%);
     background: linear-gradient(to right,  #585858 0%,#000000 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#585858', endColorstr='#000000',GradientType=1 );*/
-    background: #000 url("../img/wall_2.jpg") center top no-repeat;
-    background-attachment: fixed;
 
+
+    .bg{
+        display: block;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        right: 0;
+    }
 
 
 }
@@ -3020,6 +3028,8 @@ html body.fixed-navbar{
 }
 footer.footer {
     padding: 50px 0 20px;
+    z-index: 100;
+    position: relative;
     div{
         padding: 10px 0 0;
     }
