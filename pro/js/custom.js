@@ -68,5 +68,5 @@ $( window ).on("load", function() {
     setTimeout(function () {
         $('body').removeClass('oh');
         $('.preload').removeClass('vis');
-    }, 10);
+    }, 2000);
 });
