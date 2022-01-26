@@ -1,6 +1,5 @@
 @import 'plugins/app.css';
-@import 'plugins/bootstrap.css';
-@import 'plugins/bootstrap-extended.css';
+
 @import 'plugins/components.css';
 @import 'plugins/slick.css';
 @import 'plugins/vendors.css';
@@ -3925,7 +3924,8 @@ footer.footer a{
         }
     }
 }
-
+@import 'plugins/bootstrap.css';
+@import 'plugins/bootstrap-extended.css';
 
 
 
