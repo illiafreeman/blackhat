@@ -1,8 +1,9 @@
-@import 'plugins/app.css';
-
-@import 'plugins/components.css';
+//@import 'plugins/app.css';
+@import 'plugins/bootstrap.css';
+//@import 'plugins/bootstrap-extended.css';
+//@import 'plugins/components.css';
 @import 'plugins/slick.css';
-@import 'plugins/vendors.css';
+//@import 'plugins/vendors.css';
 @import 'plugins/vertical-compact-menu.min.css';
 
 @font-face {
@@ -3924,8 +3925,7 @@ footer.footer a{
         }
     }
 }
-@import 'plugins/bootstrap.css';
-@import 'plugins/bootstrap-extended.css';
+
 
 
 
