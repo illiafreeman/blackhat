@@ -1,10 +1,12 @@
 //@import 'plugins/app.css';
-@import 'plugins/bootstrap.css';
+//@import 'plugins/bootstrap.css';
 //@import 'plugins/bootstrap-extended.css';
 //@import 'plugins/components.css';
 @import 'plugins/slick.css';
 //@import 'plugins/vendors.css';
-@import 'plugins/vertical-compact-menu.min.css';
+//@import 'plugins/vertical-compact-menu.min.css';
+
+
 
 
 
@@ -1862,8 +1864,6 @@ html body.fixed-navbar {
         transform: translateX(-50%);
         right: 0;
     }
-
-
 }
 .topnav{
     align-items: stretch;

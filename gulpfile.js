@@ -18,8 +18,8 @@ gulp.task('sass', function(){
         .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
         .pipe(sourcemaps.write())
         .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], {cascade: true}))
-        .pipe(cssnano())
-        .pipe(rename({suffix: '.min'}))
+        //.pipe(cssnano())
+        //.pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('pro/css'))
         .pipe(browserSync.reload({stream: true}));
 });
