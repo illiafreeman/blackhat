@@ -20,6 +20,8 @@
     <meta name="theme-color" content="#ffffff">
 
     <style>
+
+        /*start preloader*/
         .preload {
             position: fixed;
             top: 0;
@@ -51,18 +53,15 @@
             -o-transition: all 0.2s ease-in-out;
             transition: all 0.2s ease-in-out;
         }
-
         .preload.vis {
             visibility: visible;
             opacity: 1;
         }
-
         .preload .jump {
             -webkit-animation: jump 1.5s infinite ease;
             animation: jump 1.5s infinite ease;
             position: relative;
         }
-
         @-webkit-keyframes jump {
             0% {
                 top: 0;
@@ -74,7 +73,6 @@
                 top: 0;
             }
         }
-
         @keyframes jump {
             0% {
                 top: 0;
@@ -86,7 +84,6 @@
                 top: 0;
             }
         }
-
         .preload .shadow {
             width: 150px;
             height: 15px;
@@ -99,7 +96,6 @@
             -webkit-animation: swift 1.5s infinite ease;
             animation: swift 1.5s infinite ease;
         }
-
         @-webkit-keyframes swift {
             0% {
                 opacity: 0.8;
@@ -113,7 +109,6 @@
                 opacity: 0.8;
             }
         }
-
         @keyframes swift {
             0% {
                 opacity: 0.8;
@@ -127,28 +122,47 @@
                 opacity: 0.8;
             }
         }
+        /*end preloader*/
+
+        /*start first screen*/
         @font-face {
             font-family: 'Comfortaa';
             src: url('css/font.ttf') format('truetype');
             font-display: swap;
         }
         body *{
-            font-family: 'Comfortaa', "Helvetica Neue";
+            font-family: 'Comfortaa', "Helvetica Neue", serif;
         }
         .header-navbar{
             position: fixed;
             top: 0;
             right: 0;
             left: 0;
+            height: 70px;
             z-index: 1030;
             background: #000;
             box-shadow: inset 0 -1px 3px 1px #424242;
         }
-        .topnav{
+        .header-navbar:before, .header-navbar:after{
+            display: block;
+            content: '';
+            position: absolute;
+            width: 3px;
+            background: #000;
+            top: 0;
+            bottom: 0;
+            left: 0;
+        }
+        .header-navbar:after{
+            left: auto;
+            right: 0;
+        }
+        .container{
             width: 1000px;
-            height: 70px;
             margin: 0 auto;
             padding: 0 18px;
+        }
+        .container_nav{
             display: flex;
             justify-content: space-between;
         }
@@ -156,6 +170,23 @@
             display: flex;
             padding: 0;
         }
+        .logo {
+            display: flex;
+            width: 130px;
+            min-width: 130px;
+            height: 140px;
+            align-items: center;
+            float: left;
+            margin-right: 40px;
+            transition: all 0.2s ease-in-out;
+                }
+        .brand-logo {
+            width: 100%;
+        }
+        .header-navbar.navbar-shadow .logo {
+            width: 60px;
+            height: 70px;
+        }
 
 
 
@@ -168,16 +199,13 @@
 
 
 
-
-
-
+        /*end first screen*/
     </style>
 
     <link rel="stylesheet" href="css/style.min.css">
 
 </head>
-<body data-spy="scroll" data-target="#navigation" class="vertical-layout vertical-compact-menu content-detached-right-sidebar menu-expanded fixed-navbar"
-      data-open="click" data-menu="vertical-compact-menu" data-col="content-detached-right-sidebar">
+<body class="fixed-navbar">
 
     <picture>
         <source class="bg" srcset="img/wall_2.webp" type="image/webp">
@@ -186,7 +214,7 @@
     </picture>
 
     <nav class="header-navbar">
-        <div class="topnav">
+        <div class="container container_nav">
             <a class="logo" href="">
                 <picture>
                     <source class="brand-logo" srcset="img/logo.webp" type="image/webp">
@@ -194,9 +222,9 @@
                     <img class="brand-logo" src="img/logo.png" alt="BlackHat Logo">
                 </picture>
             </a>
-            <ul class="nav navbar-nav navleft">
+            <ul class="nav">
                 <li >
-                    <a id="link_home" class="menu" href="#section_1">
+                    <a class="menu" href="#section_1">
                         <svg class="menu-icon">
                             <use xlink:href="img/sprite.svg#icon-home"></use>
                         </svg>
@@ -204,7 +232,7 @@
                     </a>
                 </li>
                 <li>
-                    <a id="link_features" class="menu menu_ref" href="#section_2">
+                    <a class="menu" href="#section_2">
                         <svg class="menu-icon">
                             <use xlink:href="img/sprite.svg#icon-star"></use>
                         </svg>
@@ -212,7 +240,7 @@
                     </a>
                 </li>
                 <li>
-                    <a id="link_roadmap" class="menu" href="#section_3">
+                    <a class="menu" href="#section_3">
                         <svg class="menu-icon">
                             <use xlink:href="img/sprite.svg#icon-marker"></use>
                         </svg>
@@ -220,7 +248,7 @@
                     </a>
                 </li>
                 <li>
-                    <a id="link_specs" class="menu" href="#section_4">
+                    <a class="menu" href="#section_4">
                         <svg class="menu-icon">
                             <use xlink:href="img/sprite.svg#icon-cog"></use>
                         </svg>
@@ -228,7 +256,7 @@
                     </a>
                 </li>
                 <li>
-                    <a id="link_wallet" class="menu" href="#section_5">
+                    <a class="menu" href="#section_5">
                         <svg class="menu-icon">
                             <use xlink:href="img/sprite.svg#icon-wallet"></use>
                         </svg>
@@ -236,7 +264,7 @@
                     </a>
                 </li>
                 <li>
-                    <a id="link_exchanges" class="menu" href="#section_6">
+                    <a class="menu" href="#section_6">
                         <svg class="menu-icon">
                             <use xlink:href="img/sprite.svg#icon-sync"></use>
                         </svg>
@@ -257,15 +285,13 @@
                     </ul>
                 </li>
             </ul>
-            <ul class="nav navbar-nav navright float-right">
-            <li class="nav-item hambu">
+            <div class="hambu">
                 <div id="nav-icon4">
                     <span></span>
                     <span></span>
                     <span></span>
                 </div>
-            </li>
-        </ul>
+            </div>
         </div>
 </nav>
 
@@ -880,9 +906,11 @@
     </footer>
 
     <script src="js/plugins/1jquery.min.js"></script>
-    <script src="js/plugins/app-menu.min.js"></script>
-    <script src="js/plugins/app.min.js"></script>
+<!--    <script src="js/plugins/app-menu.min.js"></script>
+    <script src="js/plugins/app.min.js"></script>-->
+<!--
     <script src="js/plugins/bootstrap.bundle.min.js"></script>
+-->
     <script src="js/plugins/click-scroll.js"></script>
     <script src="js/plugins/jquery.app.js"></script>
     <script src="js/plugins/jquery.easing.min.js"></script>

@@ -103,7 +103,8 @@ $( window ).on("load", function() {
         $('.preload').removeClass('vis');
     }, 100);
 });
+/*
 $('[data-toggle="tooltip"]').tooltip({
     //delay: { "show": 500, "hide": 100000 },
     placement: 'left'
-});
+});*/
