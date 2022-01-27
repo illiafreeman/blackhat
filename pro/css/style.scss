@@ -1609,6 +1609,7 @@ html body .content .content-wrapper {
     //width: 60px;
     //height: 5rem;
     width: 130px;
+    min-width: 130px;
     height: 140px;
     align-items: center;
     float: left;
@@ -1846,15 +1847,6 @@ html body .content .content-wrapper {
 }
 html body.fixed-navbar {
     padding-top: 12rem;
-
-
-/*    background: #585858;
-    background: -moz-linear-gradient(left,  #585858 0%, #000000 100%);
-    background: -webkit-linear-gradient(left,  #585858 0%,#000000 100%);
-    background: linear-gradient(to right,  #585858 0%,#000000 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#585858', endColorstr='#000000',GradientType=1 );*/
-
-
     .bg{
         display: block;
         position: fixed;
