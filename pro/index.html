@@ -128,15 +128,22 @@
         @font-face {
             font-family: 'Comfortaa';
             src: url('css/font.ttf') format('truetype');
+
             font-display: swap;
         }
+
         body{
             background: #000 url(img/wall_2.jpg) top no-repeat;
             background-attachment: fixed;
+            font-size: 14px;
+            line-height: 22px;
+            font-weight: 300;
         }
         body *{
             font-family: 'Comfortaa', "Helvetica Neue", serif;
+            color: #999;
         }
+
         .header{
             position: fixed;
             top: 0;
@@ -205,24 +212,134 @@
             margin-right: 24px;
             display: flex;
             align-items: center;
+            white-space: nowrap;
+            text-decoration: none;
         }
         .nav__link:last-child{
             margin-right: 0;
         }
         .nav__link-icon{
             width: 20px;
+            min-width: 20px;
             height: 20px;
             margin-right: 6px;
             fill: #919191;
             display: block;
             transition: all .2s ease-in-out;
         }
+        .hamburger{
+            display: none;
+        }
+        .hamburger__inner {
+            width: 24px;
+            height: 18px;
+            position: relative;
+            -webkit-transform: rotate(0deg);
+            -moz-transform: rotate(0deg);
+            -o-transform: rotate(0deg);
+            transform: rotate(0deg);
+            -webkit-transition: .5s ease-in-out;
+            -moz-transition: .5s ease-in-out;
+            -o-transition: .5s ease-in-out;
+            transition: .5s ease-in-out;
+            cursor: pointer;
+        }
+        .hamburger__inner span {
+            display: block;
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            background: #919191;
+            border-radius: 1px;
+            opacity: 1;
+            left: 0;
+            -webkit-transform: rotate(0deg);
+            -moz-transform: rotate(0deg);
+            -o-transform: rotate(0deg);
+            transform: rotate(0deg);
+            -webkit-transition: .25s ease-in-out;
+            -moz-transition: .25s ease-in-out;
+            -o-transition: .25s ease-in-out;
+            transition: .25s ease-in-out;
+        }
+        .hamburger__inner span:nth-child(1) {
+            top: 0px;
+            -webkit-transform-origin: left center;
+            -moz-transform-origin: left center;
+            -o-transform-origin: left center;
+            transform-origin: left center;
+        }
+        .hamburger__inner span:nth-child(2) {
+            top: 8px;
+            -webkit-transform-origin: left center;
+            -moz-transform-origin: left center;
+            -o-transform-origin: left center;
+            transform-origin: left center;
+        }
+        .hamburger__inner span:nth-child(3) {
+            top: 16px;
+            -webkit-transform-origin: left center;
+            -moz-transform-origin: left center;
+            -o-transform-origin: left center;
+            transform-origin: left center;
+        }
+        .hamburger__inner.open span:nth-child(1) {
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+            top: 0px;
+            left: 4px;
+        }
+        .hamburger__inner.open span:nth-child(2) {
+            width: 0%;
+            opacity: 0;
+        }
+        .hamburger__inner.open span:nth-child(3) {
+            -webkit-transform: rotate(-45deg);
+            -moz-transform: rotate(-45deg);
+            -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+            top: 17px;
+            left: 4px;
+        }
+        .dropdown{
+            display: flex;
+            position: relative;
+        }
+        .dropdown__name{
+            display: flex;
+            align-items: center;
+        }
+        .dropdown__icon{
+            width: 20px;
+            min-width: 20px;
+            height: 20px;
+            margin-right: 6px;
+            fill: #919191;
+            display: block;
+            transition: all .2s ease-in-out;
+        }
+        .dropdown__inner{
+            position: absolute;
+            top: 84px;
+            background: rgba(0,0,0,.9) !important;
+            border: 1px solid #000;
+            box-shadow: inset 0 -1px 6px -1px #424242;
+            border-radius: 5px;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: all .2s ease-in-out;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 2;
+            padding: 0 0 0 44px;
+        }
+        .dropdown__item{
 
-
-
-
-
-
+        }
 
 
 
@@ -233,7 +350,7 @@
     <link rel="stylesheet" href="css/style.min.css">
 
 </head>
-<body class="fixed-navbar">
+<body>
 
 
 
@@ -283,31 +400,28 @@
                     </svg>
                     Exchanges
                 </a>
-
-<!--
-                <div class="nav__link nav__link_parent">
-                    <div class="nav__link-sub" >
-                        <svg class="menu-icon">
+                <div class="dropdown">
+                    <div class="dropdown__name" >
+                        <svg class="dropdown__icon">
                             <use xlink:href="img/sprite.svg#icon-arrow-circle-down"></use>
                         </svg>
                         Resources
                     </div>
-                    <ul class="nav__link-subnav">
-                        <li class="menu-subnav__item"><a class="menu-subnav__link" href="">Block Explorer</a></li>
-                        <li class="menu-subnav__item"><a class="menu-subnav__link" href="">Forum</a></li>
-                        <li class="menu-subnav__item"><a class="menu-subnav__link" id="section_7_link" href="#section_7">Services</a></li>
-                    </ul>
+                    <div class="dropdown__inner">
+                        <a class="dropdown__item" href="">Block Explorer</a>
+                        <a class="dropdown__item" href="">Forum</a>
+                        <a class="dropdown__item" href="">Services</a>
+                        <a class="dropdown__item" href="">OTC Exchange</a>
+                    </div>
                 </div>
--->
-
             </nav>
-<!--            <div class="hamburger">
-                <div id="nav-icon4">
+            <div class="hamburger">
+                <div class="hamburger__inner">
                     <span></span>
                     <span></span>
                     <span></span>
                 </div>
-            </div>-->
+            </div>
         </div>
     </header>
 
