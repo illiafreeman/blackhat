@@ -130,10 +130,14 @@
             src: url('css/font.ttf') format('truetype');
             font-display: swap;
         }
+        body{
+            background: #000 url(img/wall_2.jpg) top no-repeat;
+            background-attachment: fixed;
+        }
         body *{
             font-family: 'Comfortaa', "Helvetica Neue", serif;
         }
-        .header-navbar{
+        .header{
             position: fixed;
             top: 0;
             right: 0;
@@ -143,7 +147,7 @@
             background: #000;
             box-shadow: inset 0 -1px 3px 1px #424242;
         }
-        .header-navbar:before, .header-navbar:after{
+        .header:before, .header:after{
             display: block;
             content: '';
             position: absolute;
@@ -153,24 +157,24 @@
             bottom: 0;
             left: 0;
         }
-        .header-navbar:after{
+        .header:after{
             left: auto;
             right: 0;
+        }
+        .header.top .logo {
+            width: 60px;
+            height: 70px;
         }
         .container{
             width: 1000px;
             margin: 0 auto;
-            padding: 0 18px;
+            padding: 0 10px;
         }
         .container_nav{
             display: flex;
             justify-content: space-between;
         }
-        .nav.navbar-nav.navleft{
-            display: flex;
-            padding: 0;
-        }
-        .logo {
+        .header__logo {
             display: flex;
             width: 130px;
             min-width: 130px;
@@ -179,16 +183,40 @@
             float: left;
             margin-right: 40px;
             transition: all 0.2s ease-in-out;
-                }
-        .brand-logo {
-            width: 100%;
         }
-        .header-navbar.navbar-shadow .logo {
+        .header__logo_min{
             width: 60px;
+            min-width: 60px;
             height: 70px;
         }
-
-
+        .header__logo-inner{
+            display: block;
+            width: 100%;
+        }
+        .header__logo-pic{
+            width: 100%;
+        }
+        .nav{
+            display: flex;
+            padding: 0;
+            height: 70px;
+        }
+        .nav__link{
+            margin-right: 24px;
+            display: flex;
+            align-items: center;
+        }
+        .nav__link:last-child{
+            margin-right: 0;
+        }
+        .nav__link-icon{
+            width: 20px;
+            height: 20px;
+            margin-right: 6px;
+            fill: #919191;
+            display: block;
+            transition: all .2s ease-in-out;
+        }
 
 
 
@@ -207,96 +235,84 @@
 </head>
 <body class="fixed-navbar">
 
-    <picture>
-        <source class="bg" srcset="img/wall_2.webp" type="image/webp">
-        <source class="bg" srcset="img/wall_2.jpg" type="image/jpg">
-        <img class="bg" src="img/wall_2.jpg" alt="">
-    </picture>
 
-    <nav class="header-navbar">
+
+    <header class="header">
         <div class="container container_nav">
-            <a class="logo" href="">
-                <picture>
-                    <source class="brand-logo" srcset="img/logo.webp" type="image/webp">
-                    <source class="brand-logo" srcset="img/logo.png" type="image/png">
-                    <img class="brand-logo" src="img/logo.png" alt="BlackHat Logo">
+            <a class="header__logo" href="">
+                <picture class="header__logo-inner">
+                    <source class="header__logo-pic" srcset="img/logo.webp" type="image/webp">
+                    <source class="header__logo-pic" srcset="img/logo.png" type="image/png">
+                    <img class="header__logo-pic" src="img/logo.png" alt="BlackHat Logo">
                 </picture>
             </a>
-            <ul class="nav">
-                <li >
-                    <a class="menu" href="#section_1">
-                        <svg class="menu-icon">
-                            <use xlink:href="img/sprite.svg#icon-home"></use>
-                        </svg>
-                        Home
-                    </a>
-                </li>
-                <li>
-                    <a class="menu" href="#section_2">
-                        <svg class="menu-icon">
-                            <use xlink:href="img/sprite.svg#icon-star"></use>
-                        </svg>
-                        Features
-                    </a>
-                </li>
-                <li>
-                    <a class="menu" href="#section_3">
-                        <svg class="menu-icon">
-                            <use xlink:href="img/sprite.svg#icon-marker"></use>
-                        </svg>
-                        Roadmap
-                    </a>
-                </li>
-                <li>
-                    <a class="menu" href="#section_4">
-                        <svg class="menu-icon">
-                            <use xlink:href="img/sprite.svg#icon-cog"></use>
-                        </svg>
-                        Coin Specs
-                    </a>
-                </li>
-                <li>
-                    <a class="menu" href="#section_5">
-                        <svg class="menu-icon">
-                            <use xlink:href="img/sprite.svg#icon-wallet"></use>
-                        </svg>
-                        Wallet
-                    </a>
-                </li>
-                <li>
-                    <a class="menu" href="#section_6">
-                        <svg class="menu-icon">
-                            <use xlink:href="img/sprite.svg#icon-sync"></use>
-                        </svg>
-                        Exchanges
-                    </a>
-                </li>
-                <li class="menu_parent">
-                    <div class="menu-sub" >
+            <nav class="nav">
+                <a class="nav__link" href="#section_intro">
+                    <svg class="nav__link-icon">
+                        <use xlink:href="img/sprite.svg#icon-home"></use>
+                    </svg>
+                    Home
+                </a>
+                <a class="nav__link" href="#section_features">
+                    <svg class="nav__link-icon">
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                    </svg>
+                    Features
+                </a>
+                <a class="nav__link" href="#section_roadmap">
+                    <svg class="nav__link-icon">
+                        <use xlink:href="img/sprite.svg#icon-marker"></use>
+                    </svg>
+                    Roadmap
+                </a>
+                <a class="nav__link" href="#section_specs">
+                    <svg class="nav__link-icon">
+                        <use xlink:href="img/sprite.svg#icon-cog"></use>
+                    </svg>
+                    Coin Specs
+                </a>
+                <a class="nav__link" href="#section_wallet">
+                    <svg class="nav__link-icon">
+                        <use xlink:href="img/sprite.svg#icon-wallet"></use>
+                    </svg>
+                    Wallet
+                </a>
+                <a class="nav__link" href="#section_exchanges">
+                    <svg class="nav__link-icon">
+                        <use xlink:href="img/sprite.svg#icon-sync"></use>
+                    </svg>
+                    Exchanges
+                </a>
+
+<!--
+                <div class="nav__link nav__link_parent">
+                    <div class="nav__link-sub" >
                         <svg class="menu-icon">
                             <use xlink:href="img/sprite.svg#icon-arrow-circle-down"></use>
                         </svg>
                         Resources
                     </div>
-                    <ul class="menu-subnav">
+                    <ul class="nav__link-subnav">
                         <li class="menu-subnav__item"><a class="menu-subnav__link" href="">Block Explorer</a></li>
                         <li class="menu-subnav__item"><a class="menu-subnav__link" href="">Forum</a></li>
                         <li class="menu-subnav__item"><a class="menu-subnav__link" id="section_7_link" href="#section_7">Services</a></li>
                     </ul>
-                </li>
-            </ul>
-            <div class="hambu">
+                </div>
+-->
+
+            </nav>
+<!--            <div class="hamburger">
                 <div id="nav-icon4">
                     <span></span>
                     <span></span>
                     <span></span>
                 </div>
-            </div>
+            </div>-->
         </div>
-</nav>
+    </header>
 
 
-    <div class="app-content content">
+    <main class="main">
         <div class="preload vis">
             <img class="jump" src="data:image/jpeg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAABZAAD/4QMvaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjYtYzE0NSA3OS4xNjM0OTksIDIwMTgvMDgvMTMtMTY6NDA6MjIgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDQyAyMDE5IChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpDMzRFODVGQzJBQzYxMUVDOTI1NUZDRURBRTVDN0IzMiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpDMzRFODVGRDJBQzYxMUVDOTI1NUZDRURBRTVDN0IzMiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkMzNEU4NUZBMkFDNjExRUM5MjU1RkNFREFFNUM3QjMyIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkMzNEU4NUZCMkFDNjExRUM5MjU1RkNFREFFNUM3QjMyIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+/+4ADkFkb2JlAGTAAAAAAf/bAIQAAQEBAQEBAQEBAQIBAQEC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"
                  alt="">
@@ -304,7 +320,12 @@
         </div>
         <!--block to reload-->
         <div class="content-wrapper">
-            <div id="section_1" class="article intro">
+            <div id="section_intro" class="article intro">
+                <picture>
+                    <source class="bg" srcset="img/wall_2.webp" type="image/webp">
+                    <source class="bg" srcset="img/wall_2.jpg" type="image/jpg">
+                    <img class="bg" src="img/wall_2.jpg" alt="">
+                </picture>
                 <div class="intro__text">
                     <h1>BlackHat Coin git</h1>
                     <h2>Private, secure, fast and available for everyone</h2>
@@ -375,7 +396,7 @@
                 </h4>
 
             </div>
-            <div id="section_2" class="article features">
+            <div id="section_features" class="article features">
                 <h2 class="article__title">features</h2>
                 <div class="features__head">
                     <div class="features__head-item card">
@@ -509,7 +530,7 @@
                     </div>
                 </div>
             </div>
-            <div id="section_3" class="article roadmap">
+            <div id="section_roadmap" class="article roadmap">
                 <h2 class="article__title">Roadmap</h2>
                 <div class="slider-wrap">
                     <div class="slider slider-nav">
@@ -687,7 +708,7 @@
                     </div>
                 </div>
             </div>
-            <div id="section_4" class="article specs">
+            <div id="section_specs" class="article specs">
                 <h2 class="article__title">Specifications</h2>
                 <div class="specs__wrap">
                     <div class="card">
@@ -738,7 +759,7 @@
                     </div>
                 </div>
             </div>
-            <div id="section_5" class="article wallet">
+            <div id="section_wallet" class="article wallet">
                 <h2 class="article__title">
                     <span>Wallets</span>
                     <a href="wallets.html">Learn more</a>
@@ -839,7 +860,7 @@
                     </div>
                 </div>
             </div>
-            <div id="section_6" class="article exchanges">
+            <div id="section_exchanges" class="article exchanges">
                 <h2 class="article__title">
                     <span>Exchanges</span>
                     <a href="exchanges.html">Learn more</a>
@@ -851,7 +872,7 @@
                     <a href=""><img src="img/logo-vindax.svg" alt=""></a>
                 </div>
             </div>
-            <div id="section_7" class="article exchanges">
+            <div id="section_services" class="article exchanges">
                 <h2 class="article__title">
                     <span>Services</span>
                     <p>(Masternode hosting, etc.)</p>
@@ -892,7 +913,7 @@
         </div>
         <!--end block to reload-->
 
-    </div>
+    </main>
 
     <footer class="footer footer-static footer-transparent text-center">
         <a href="https://coinmarketcap.com/currencies/blackhat/" target="_blank">

@@ -13,10 +13,10 @@
     $(window).scroll(function() {
         var scroll = $(window).scrollTop();
 
-        if (scroll >= 50) {
-            $(".sticky").addClass("nav-sticky");
+        if (scroll >= 70) {
+            $(".header__logo").addClass("header__logo_min");
         } else {
-            $(".sticky").removeClass("nav-sticky");
+            $(".header__logo").removeClass("header__logo_min");
         }
         
     });

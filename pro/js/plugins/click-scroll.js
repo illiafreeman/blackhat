@@ -1,5 +1,5 @@
 
-var sectionArray = [1, 2, 3, 4, 5, 6, 7];
+var sectionArray = ['intro', 'features', 'roadmap', 'specs', 'wallet', 'exchanges', 'services'];
 
 $.each(sectionArray, function(index, value){
           
