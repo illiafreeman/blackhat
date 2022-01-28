@@ -128,7 +128,6 @@
         @font-face {
             font-family: 'Comfortaa';
             src: url('css/font.ttf') format('truetype');
-
             font-display: swap;
         }
 
@@ -187,8 +186,22 @@
             min-width: 130px;
             height: 140px;
             align-items: center;
-            float: left;
             margin-right: 40px;
+            transition: all 0.2s ease-in-out;
+        }
+        .header__logo-inner{
+            display: block;
+            width: 130px;
+            height: 140px;
+        }
+        .header__logo-pic{
+            width: 130px;
+            transition: all 0.2s ease-in-out;
+        }
+        .header__logo-inner *{
+            transform: translateY(-50%);
+            position: relative;
+            top: 50%;
             transition: all 0.2s ease-in-out;
         }
         .header__logo_min{
@@ -196,12 +209,13 @@
             min-width: 60px;
             height: 70px;
         }
-        .header__logo-inner{
-            display: block;
-            width: 100%;
+        .header__logo_min .header__logo-inner{
+            width: 60px;
+            min-width: 60px;
+            height: 70px;
         }
-        .header__logo-pic{
-            width: 100%;
+        .header__logo_min .header__logo-inner .header__logo-pic{
+            width: 60px;
         }
         .nav{
             display: flex;
