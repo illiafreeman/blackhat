@@ -385,6 +385,14 @@
                             <label for="Amount">Amount</label>
                             <div class="error-text">Amount is invalid</div>
                         </fieldset>
+                        <fieldset class="form-label-group">
+                            <input type="text" id="time" class="form-control" placeholder="Expired" value="">
+                            <label for="time">Expired</label>
+                            <div class="error-text">time is invalid</div>
+                            <svg class="help-icon" data-toggle="tooltip" title="time">
+                                <use xlink:href="img/sprite.svg#icon-help"></use>
+                            </svg>
+                        </fieldset>
                         <div class="half-form">
                             <fieldset class="form-label-group flex-grow-1">
                                 <select class="form-control">
@@ -603,6 +611,15 @@
             "locale": {
                 "applyLabel": "Set",
                 "cancelLabel": "Cancel",
+            }
+        });
+        $('#time').daterangepicker({
+            "opens": "center",
+            "singleDatePicker": true,
+            "timePicker": true,
+            "timePicker24Hour": true,
+            locale: {
+                format: 'DD/MM/YYYY HH:mm'
             }
         });
         $('.daterange').on('apply.daterangepicker', function(ev, picker) {
