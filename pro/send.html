@@ -618,9 +618,18 @@
             "singleDatePicker": true,
             "timePicker": true,
             "timePicker24Hour": true,
+            autoUpdateInput: false,
             locale: {
-                format: 'DD/MM/YYYY HH:mm'
+                format: 'DD/MM/YYYY HH:mm',
+                cancelLabel: 'Clear'
             }
+        });
+        $('#time').on('apply.daterangepicker', function(ev, picker) {
+            $(this).val(picker.startDate.format('DD/MM/YYYY HH:mm'));
+        });
+
+        $('#time').on('cancel.daterangepicker', function(ev, picker) {
+            $(this).val('');
         });
         $('.daterange').on('apply.daterangepicker', function(ev, picker) {
             console.log(picker.startDate.format('YYYY-MM-DD'));
