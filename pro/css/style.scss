@@ -2621,6 +2621,22 @@ ol{
     width: 24px;
     height: 24px;
     fill: #999;
+    &_inline{
+        position: relative;
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        margin-left: 5px;
+        top: 2px;
+        right: 0;
+
+    }
+}
+.nowrap{
+    white-space: nowrap;
+}
+.vam{
+    vertical-align: middle !important;
 }
 .form-control:disabled, .form-control[readonly] {
     background-color: #2b2b2b;
