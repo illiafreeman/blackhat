@@ -2444,6 +2444,9 @@ label:focus{
     div:last-child{
         font-size: 10px;
     }
+    &_exp{
+        width: 100px;
+    }
 }
 .toast-success {
     background-color: #254f12;
@@ -2885,6 +2888,9 @@ input[type=number] {
     transition: $transition;
     &:focus{
         color: #fff;
+    }
+    &::placeholder{
+        color: #999;
     }
 }
 .daterangepicker{

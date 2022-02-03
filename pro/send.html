@@ -441,7 +441,7 @@
                                     <b></b>
                                 </div>
                                 <div class="filter">
-                                    <input type="text" class="daterange form-control">
+                                    <input type="text" class="daterange form-control" placeholder="Set Interval">
                                     <fieldset class="form-label-group">
                                         <select class="form-control">
                                             <option value="">All</option>
@@ -469,12 +469,17 @@
                                 <tbody>
                                 <tr>
                                     <th>Date</th>
+                                    <th>Expiration Date</th>
                                     <th class="ac">Amount</th>
                                     <th class="ac">Status</th>
                                     <th class="ac"></th>
                                 </tr>
                                 <tr>
                                     <td class="datetime">
+                                        <div>2020-01-30</div>
+                                        <div>12:34:12</div>
+                                    </td>
+                                    <td class="datetime datetime_exp">
                                         <div>2020-01-30</div>
                                         <div>12:34:12</div>
                                     </td>
@@ -495,6 +500,10 @@
                                 </tr>
                                 <tr>
                                     <td class="datetime">
+                                        <div>2020-01-30</div>
+                                        <div>12:34:12</div>
+                                    </td>
+                                    <td class="datetime datetime_exp">
                                         <div>2020-01-30</div>
                                         <div>12:34:12</div>
                                     </td>
@@ -608,6 +617,7 @@
             "opens": "center",
             startDate: start,
             endDate: end,
+            autoUpdateInput: false,
             "locale": {
                 "applyLabel": "Set",
                 "cancelLabel": "Cancel",
@@ -632,8 +642,10 @@
             $(this).val('');
         });
         $('.daterange').on('apply.daterangepicker', function(ev, picker) {
-            console.log(picker.startDate.format('YYYY-MM-DD'));
-            console.log(picker.endDate.format('YYYY-MM-DD'));
+            $(this).val((picker.startDate.format('DD/MM/YYYY')) + " - " + (picker.endDate.format('DD/MM/YYYY')));
+        });
+        $('.daterange').on('cancel.daterangepicker', function(ev, picker) {
+            $(this).val('');
         });
         $(document).on("click", ".filter-wrap", function(){
             var t = $(this);
