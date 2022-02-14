@@ -265,13 +265,32 @@
                             <textarea type="text" id="desc" class="form-control form-control_textarea" placeholder="Description"></textarea>
                             <label for="desc">Description</label>
                         </fieldset>
+                        если аватар еще не выбран
                         <fieldset class="form-label-group">
                             <label id="uploader" class="uploader">
                                 <input type="file" id="img" hidden/>
                                 <b>Avatar Image</b>
                                 <span id="file-chosen"></span>
+                                <svg id="file-remove" class="help-icon" data-toggle="tooltip" title="Remove">
+                                    <use xlink:href="img/sprite.svg#icon-times-circle"></use>
+                                </svg>
                             </label>
                         </fieldset>
+                        если аватар уже выбран
+                        <fieldset class="form-label-group">
+                            <label id="uploader2" class="uploader act">
+                                <input type="file" id="img2" hidden/>
+                                <b>Avatar Image</b>
+                                <span id="file-chosen2">shop_1.jpg</span>
+                                <svg id="file-remove2" class="help-icon" data-toggle="tooltip" title="Remove">
+                                    <use xlink:href="img/sprite.svg#icon-times-circle"></use>
+                                </svg>
+                            </label>
+                        </fieldset>
+                        <fieldset class="form-label-group">
+                            <img class="ava_cur" src="img/shop_1.jpg" alt="">
+                        </fieldset>
+
                         <fieldset class="form-label-group">
                             <input type="text" id="address" class="form-control" placeholder="Address" value="">
                             <label for="address">Address</label>
@@ -337,10 +356,17 @@
     let actualBtn = document.getElementById('img');
     let uploader = document.querySelector('.uploader');
     let fileChosen = document.getElementById('file-chosen');
+    let fileRemove = document.getElementById('file-remove');
 
     actualBtn.addEventListener('change', function(){
         fileChosen.textContent = this.files[0].name;
         uploader.classList.add("act");
+    })
+    fileRemove.addEventListener('click', function(e){
+        e.preventDefault();
+        actualBtn.value = '';
+        fileChosen.textContent = '';
+        uploader.classList.remove("act");
     })
 </script>
 
