@@ -3018,7 +3018,16 @@ input[type=number] {
 .card-body .nav.nav-tabs .nav-item .nav-link {
     padding: 12px 20px;
 }
-.form-label-group textarea:not(:placeholder-shown) ~ label {
+.form-control_textarea:placeholder-shown ~ label {
+    color: #999;
+    padding-top: 8px;
+    padding-left: 12px;
+    font-size: 14px;
+}
+.form-control_textarea::placeholder{
+    opacity: 0;
+}
+.form-control_textarea:not(:placeholder-shown) ~ label {
     color: #999;
     padding-top: 1px;
     padding-top: -webkit-calc(var(--input-padding-y) / 3);
@@ -3028,13 +3037,22 @@ input[type=number] {
     padding-bottom: -moz-calc(var(--input-padding-y) / 3);
     padding-bottom: calc(var(--input-padding-y) / 3);
     font-size: 11px;
-    background-color: #2b2b2b;
+    //background-color: #2b2b2b;
     margin: 1px 1px 0;
     width: calc(100% - 2px);
 }
-.form-label-group textarea:not(:placeholder-shown) {
+.form-control_textarea:not(:placeholder-shown) {
     padding: 21px 12px 8px;
 }
+
+
+
+
+
+
+
+
+
 .pseudoinput{
     padding: 22px 10px 10px;
     border: 1px solid #999;
@@ -3376,7 +3394,9 @@ input[type=number] {
 .form-label-group.or{
     margin: 40px 0;
 }
-
+.mb40{
+    margin-bottom: 40px;
+}
 
 
 
