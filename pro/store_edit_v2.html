@@ -278,7 +278,7 @@
                         </fieldset>
                         если аватар уже выбран
                         <fieldset class="form-label-group">
-                            <label id="uploader2" class="uploader act">
+                            <label id="uploader2" class="uploader2 act">
                                 <input type="file" id="img2" hidden/>
                                 <b>Avatar Image</b>
                                 <span id="file-chosen2">shop_1.jpg</span>
@@ -358,6 +358,11 @@
     let fileChosen = document.getElementById('file-chosen');
     let fileRemove = document.getElementById('file-remove');
 
+    let actualBtn2 = document.getElementById('img2');
+    let uploader2 = document.querySelector('.uploader2');
+    let fileChosen2 = document.getElementById('file-chosen2');
+    let fileRemove2 = document.getElementById('file-remove2');
+
     actualBtn.addEventListener('change', function(){
         fileChosen.textContent = this.files[0].name;
         uploader.classList.add("act");
@@ -367,6 +372,17 @@
         actualBtn.value = '';
         fileChosen.textContent = '';
         uploader.classList.remove("act");
+    })
+
+    actualBtn2.addEventListener('change', function(){
+        fileChosen2.textContent = this.files[0].name;
+        uploader2.classList.add("act");
+    })
+    fileRemove2.addEventListener('click', function(e){
+        e.preventDefault();
+        actualBtn2.value = '';
+        fileChosen2.textContent = '';
+        uploader2.classList.remove("act");
     })
 </script>
 
