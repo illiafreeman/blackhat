@@ -3144,6 +3144,9 @@ input[type=number] {
             cursor: pointer;
             top: 9px;;
         }
+        .help-icon_camera{
+            display: none !important;
+        }
     }
 }
 .wrap{
@@ -3413,7 +3416,9 @@ input[type=number] {
     max-width: 100%;
     display: block;
 }
-
+.help-icon_camera{
+    display: block !important;
+}
 
 
 
