@@ -3422,7 +3422,16 @@ input[type=number] {
 .no-tooltip{
     padding-right: 10px !important;
 }
-
+.fieldset{
+    border: 1px solid #484848;
+    padding: 10px;
+    legend{
+        font-size: 14px;
+        display: inline-block;
+        width: auto;
+        padding: 5px;
+    }
+}
 
 
 
