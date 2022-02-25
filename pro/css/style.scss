@@ -3442,7 +3442,14 @@ input[type=number] {
 .select2-container--default .select2-selection--single, form .form-control {
     border-color: #999;
 }
-
+.error_2{
+    text-align: center;
+    .menu-icon{
+        margin: 20px auto 0;
+        width: 40px;
+        height: 40px;
+    }
+}
 
 
 
