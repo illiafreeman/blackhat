@@ -3450,11 +3450,35 @@ input[type=number] {
         height: 40px;
     }
 }
-
-
-
-
-
+.id-wrap{
+    max-width: 80px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: default;
+}
+.basket__remove span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+}
+.basket__remove svg {
+    width: 20px;
+    height: 20px;
+    fill: #919191;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+.modal-confirm .modal-body {
+    text-align: left;
+}
+.btn-outline-ok:hover {
+    background: #192b12;
+    border: 1px solid #317725;
+    color: #98e270 !important;
+}
 
 
 
