@@ -3482,10 +3482,17 @@ input[type=number] {
 select.form-control + .help-icon {
     right: 29px;
 }
+.select_fieldset .help-icon {
+    right: 35px;
+}
 input.form-control, select.form-control {
     height: 44px !important;
+    background-color: #000;
+    padding-left: 10px;
 }
-
+.select_fieldset.select_fieldset-tooltip .select2-container .select2-selection--single .select2-selection__clear{
+    right: 58px;
+}
 
 
 

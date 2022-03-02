@@ -267,10 +267,11 @@
                                 <label for="coin-type">Your Timezone</label>
                                 <div class="error-text">Your Timezone is invalid</div>
                             </fieldset>
-                            <fieldset class="form-label-group">
-                                <select class="form-control">
-                                    <option value="" active="">Transparent</option>
-                                    <option value="">Shielded</option>
+                            <fieldset class="form-label-group select_fieldset select_fieldset-tooltip">
+                                <select class="tooltip-select custom-select" style="width: 100%">
+                                    <option value="" hidden>&mdash;</option>
+                                    <option value="1">Transparent</option>
+                                    <option value="2">Shielded</option>
                                 </select>
                                 <svg class="help-icon" data-toggle="tooltip" title="" data-original-title="tooltip tooltip tooltip tooltip tooltip tooltip tooltip tooltip tooltip tooltip tooltip tooltip tooltip ">
                                     <use xlink:href="img/sprite.svg#icon-help"></use>
@@ -515,7 +516,11 @@
         placeholder: "Your ",
         allowClear: true
     });
-
+    $(".tooltip-select").select2({
+        placeholder: "Select Something",
+        allowClear: true,
+        minimumResultsForSearch: Infinity
+    });
 </script>
 
 </body>
