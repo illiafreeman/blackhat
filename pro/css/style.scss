@@ -3479,8 +3479,12 @@ input[type=number] {
     border: 1px solid #317725;
     color: #98e270 !important;
 }
-
-
+select.form-control + .help-icon {
+    right: 29px;
+}
+input.form-control, select.form-control {
+    height: 44px !important;
+}
 
 
 
