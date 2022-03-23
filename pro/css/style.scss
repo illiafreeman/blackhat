@@ -3570,7 +3570,9 @@ input.form-control, select.form-control {
     fill: #388f46;
     margin-left: 5px;
 }
-
+.add_node-big{
+    width: 500px;
+}
 
 
 
@@ -3742,6 +3744,9 @@ input.form-control, select.form-control {
     .filter{
         right: auto;
         left: 0;
+    }
+    .add_node-big {
+        width: 100%;
     }
 }
 
