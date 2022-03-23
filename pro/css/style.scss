@@ -3497,13 +3497,79 @@ input.form-control, select.form-control {
 .card_mb{
     margin-bottom: 300px;
 }
+.form-key{
+    font-size: 12px;
+}
+.form-val{
+    font-size: 17px;
+    font-weight: 600;
+    color: #bbb;
+    &_min{
+        font-size: 15px;
+        font-weight: 500;
+    }
+    &_big{
+        font-size: 18px;
+    }
+    &_icon{
+        display: inline-flex;
+        align-items: center;
+    }
 
-
-
-
-
-
-
+}
+.form-fieldset{
+    margin-bottom: 30px;
+    &_close{
+        margin-bottom: 10px;
+    }
+}
+.form-details{
+    svg{
+        transition: all 0.2s ease-in-out;
+        width: 20px;
+        min-width: 20px;
+        height: 20px;
+        transform: translateY(1px);
+    }
+    .card-header{
+        padding: 0 !important;
+        .card-title{
+            display: inline-flex;
+            align-items: center;
+            font-size: 13px;
+            font-weight: 400;
+            &:before{
+                display: none;
+            }
+            &:hover svg {
+                fill: #fff;
+            }
+            &:not(.collapsed) svg {
+                transform: rotate(180deg);
+                fill: #fff;
+            }
+            &:not(.collapsed) {
+                color: #fff;
+            }
+        }
+    }
+    .card-body{
+        padding-top: 10px;
+        .form-val {
+            font-size: 15px;
+            line-height: 18px;
+            color: #a6a6a6;
+        }
+        .form-fieldset:last-child{
+            margin-bottom: 0;
+        }
+    }
+    margin-bottom: 30px;
+}
+.icon-official{
+    fill: #388f46;
+    margin-left: 5px;
+}
 
 
 
