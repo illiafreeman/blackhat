@@ -3292,6 +3292,7 @@ input[type=number] {
     visibility: hidden;
     transition: all 0.2s ease-in-out;
     transform: translateY(40px);
+    z-index: 100;
     //align-items: stretch;
     .form-label-group{
         width: 100%;
