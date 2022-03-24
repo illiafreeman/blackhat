@@ -3227,7 +3227,18 @@ input.form-control, select.form-control{
         font-size: 19px;
     }
 }
-
+.form_ok{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h6{
+        color: #84bf83;
+    }
+    svg{
+        fill: #40713f;
+        margin-bottom: 20px;
+    }
+}
 
 
 

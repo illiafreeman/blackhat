@@ -9,7 +9,7 @@
     <meta name="keywords" content="Black Hat">
     <meta name="author" content="Black Hat">
 
-    <title>Payment</title>
+    <title>Add Shop</title>
 
 
 
@@ -133,7 +133,6 @@
     <!--common styles-->
     <link rel="stylesheet" type="text/css" href="css/vendors.css">
     <link rel="stylesheet" type="text/css" href="css/app.css">
-    <link rel="stylesheet" type="text/css" href="css/daterangepicker.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <!--end common styles-->
 </head>
@@ -252,78 +251,15 @@
     <div class="content-wrapper">
         <div class="content-body justify-content-center">
             <div class="invoice-page clearfix">
-                <div class="invoice-form add_node card login add_node-big">
+                <div class="invoice-form add_node claim card">
                     <div class="card-header">
                         <h6 class="card-title text-center">Payment</h6>
                     </div>
-                    <div class="card-body tab-edit">
-                        <fieldset class="form-fieldset form-fieldset_close">
-                            <div class="form-key">Pay To:</div>
-                            <div class="form-val">Destination User Name</div>
-                        </fieldset>
-                        <fieldset class="form-fieldset form-details">
-                            <div class="card-header" id="heading1">
-                                <a class="card-title lead collapsed" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1" href="#">
-                                    View Details
-                                    <svg class="menu-icon">
-                                        <use xlink:href="img/sprite.svg#icon-angle-down"></use>
-                                    </svg>
-                                </a>
-                            </div>
-                            <div id="collapse1" class="collapse" aria-labelledby="heading1" data-parent="#accordion" style="">
-                                <div class="card-body">
-                                    <fieldset class="form-fieldset">
-                                        <div class="form-key">Description:</div>
-                                        <div class="form-val">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aspernatur cum facere fuga hic illo molestias porro quas repudiandae saepe? Dolor, harum modi? Laborum minus odit quibusdam quod repellendus tenetur?</div>
-                                    </fieldset>
-                                    <fieldset class="form-fieldset">
-                                        <div class="form-key">Address:</div>
-                                        <div class="form-val">Сяоми Корпорейшн. Пекин-Уэст-Роуд, Чаоян</div>
-                                    </fieldset>
-                                    <fieldset class="form-fieldset">
-                                        <div class="form-key">Site:</div>
-                                        <div class="form-val form-val_icon">
-                                            <a href="">https://catalog.onliner.by</a>
-                                            <svg class="icon-official" data-toggle="tooltip" title="Official address">
-                                                <use xlink:href="img/sprite.svg#icon-check"></use>
-                                            </svg>
-                                        </div>
-                                    </fieldset>
-                                    <fieldset class="form-fieldset">
-                                        <div class="form-key">Telega:</div>
-                                        <div class="form-val form-val_icon">
-                                            <a href="">https://t.me/onlinerby</a>
-                                            <svg class="icon-official" data-toggle="tooltip" title="Official address">
-                                                <use xlink:href="img/sprite.svg#icon-check"></use>
-                                            </svg>
-                                        </div>
-                                    </fieldset>
-                                </div>
-                            </div>
-                        </fieldset>
-                        <fieldset class="form-fieldset">
-                            <div class="form-key">Amount:</div>
-                            <div class="form-val form-val_big">100500 BLKC</div>
-                        </fieldset>
-                        <fieldset class="form-fieldset ">
-                            <div class="form-key">Invoice Description:</div>
-                            <div class="form-val form-val_min">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aspernatur cum facere fuga hic illo molestias porro quas repudiandae saepe? Dolor, harum modi? Laborum minus odit quibusdam quod repellendus tenetur?</div>
-                        </fieldset>
-                        <fieldset class="form-label-group">
-                            <div class="invoice-amount">Current Balance:<b>35 BTC</b></div>
-                        </fieldset>
-                        <fieldset class="form-label-group total-alarm_wrap has-error">
-                            <div class="error-text alert-text total-alarm">
-                                <h6>Alarm!</h6>
-                                <div>Insufficient Funds To Pay</div>
-                            </div>
-                        </fieldset>
-
-                        <div class="button_wrap ac">
-                            <button type="submit" class="btn btn_dis">
-                                Pay 100500 BLKC
-                            </button>
-                        </div>
+                    <div class="card-body form_ok">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#icon-check"></use>
+                        </svg>
+                        <h6>Successfully paid!</h6>
                     </div>
                 </div>
             </div>
@@ -336,46 +272,14 @@
 
 
 <footer class="footer footer-static footer-transparent text-center">
-    Copyright&nbsp;&copy;&nbsp;2021 <a class="link" href="">Black Hat</a>, Kripta eto puzyr i piramida
+    Copyright&nbsp;&copy;&nbsp;2021 <a class="link" target="_blank" href="help.html#head5">Black Hat</a>, Kripta eto puzyr i piramida
 </footer>
 
 <script src="js/vendors.min.js" type="text/javascript"></script>
 <script src="js/app-menu.min.js" type="text/javascript"></script>
 <script src="js/app.min.js" type="text/javascript"></script>
-<script src="js/moment.min.js" type="text/javascript"></script>
-<script src="js/daterangepicker.js" type="text/javascript"></script>
 <script src="js/custom.js"></script>
-<script>
-    $(document).on("click", ".load-more-data", function(){
-        var t = $(this);
-        t.remove();
-        $('.td_button').toggleClass('act');
-        $('.load-more-data__wrap .load-icon').toggleClass('hidden');
-    });
-    $('.daterange').daterangepicker({
-        "opens": "center"
-    });
-    $(document).on("click", ".filter-wrap", function(){
-        var t = $(this);
-        t.addClass('open');
-    });
-/*    $(document).on("click", function (event) {
-        if ($(event.target).closest('.filter-wrap').length === 0) {
-            $('.filter-wrap').removeClass('open');
-        }
-    });*/
-    $(document).on("click", ".daterangepicker", function(e){
-        e.stopPropagation();
-    });
-     $(document).on("click", function (event) {
-         if (
-             ( $(event.target).closest('.filter-wrap').length === 0) && (!$(event.target).is('.daterangepicker'))
-         ) {
-             $('.filter-wrap').removeClass('open');
-             //console.log('click');
-         }
-     });
-</script>
+
 
 </body>
 </html>
