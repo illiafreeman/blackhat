@@ -294,10 +294,14 @@
                                     <fieldset class="form-label-group">
                                         <input type="text" id="site" class="form-control" placeholder="Site" disabled value="https://catalog.onliner.by">
                                         <label for="site">Site</label>
+                                        <svg class="icon-official icon-official_checked" data-toggle="tooltip" title="" data-original-title="Official address">
+                                            <use xlink:href="img/sprite.svg#icon-check"></use>
+                                        </svg>
                                     </fieldset>
                                     <fieldset class="form-label-group">
                                         <input type="text" id="telega" class="form-control" placeholder="Telega" disabled value="https://t.me/onlinerby">
                                         <label for="telega">Telega</label>
+                                        <div class="btn btn_min btn_confirm">Confirm</div>
                                     </fieldset>
                                 </div>
                                 <div class="tab-pane fade" id="tab_api" role="tabpanel" aria-labelledby="home-tab">
@@ -306,8 +310,21 @@
                                         <label for="white">White List</label>
                                     </fieldset>
                                     <fieldset class="form-label-group">
-                                        <input type="text" id="pass" class="form-control" placeholder="Secret Key" disabled value="rakamakafon">
+                                        <input type="password" id="pass" class="form-control form-control_icon-eye" placeholder="Secret Key" disabled value="rakamakafon">
                                         <label for="pass">Secret Key</label>
+
+                                        <div id="btn" class="icon-toggler show">
+                                            <svg class="icon-eye">
+                                                <use xlink:href="img/sprite.svg#icon-eye"></use>
+                                            </svg>
+                                            <svg class="icon-eye-slash">
+                                                <use xlink:href="img/sprite.svg#icon-eye-slash"></use>
+                                            </svg>
+                                        </div>
+
+                                        <svg class="help-icon icon-copy" onclick="toastr.success('Copied to clipboard');">
+                                            <use xlink:href="img/sprite.svg#icon-copy"></use>
+                                        </svg>
                                     </fieldset>
                                 </div>
                             </div>
@@ -339,6 +356,30 @@
 <script src="js/app-menu.min.js" type="text/javascript"></script>
 <script src="js/app.min.js" type="text/javascript"></script>
 <script src="js/custom.js"></script>
+<script>
+    let btn = document.querySelector('#btn');
+    let input = document.querySelector('#pass');
+
+    btn.addEventListener('click',()=> {
+        if ( input.type === "password") {
+            input.type = "text";
+            btn.classList.remove("show");
+
+        } else {
+            input.type = "password";
+            btn.classList.add("show");
+
+        }
+    })
+/*    $(".icon-toggler").on("click", function () {
+        $(this).toggleClass('show');
+        if ($(this).hasClass("show")) {
+            $(this).siblings("#pass").attr("type", "text");
+        } else {
+            $(this).siblings("#pass").attr("type", "password");
+        }
+    });*/
+</script>
 
 
 </body>

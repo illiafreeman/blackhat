@@ -3588,10 +3588,51 @@ input.form-control, select.form-control {
 .und_mt{
     margin-top: 20px;
 }
+.icon-toggler{
+    right: 38px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
 
-
-
-
+    svg{
+        fill: #999;
+        display: block;
+        width: 24px;
+        height: 24px;
+    }
+    .icon-eye-slash{
+        display: block;
+    }
+    .icon-eye{
+        display: none;
+    }
+    &.show{
+        .icon-eye-slash{
+            display: none;
+        }
+        .icon-eye{
+            display: block;
+        }
+    }
+}
+.form-control_icon-eye{
+     padding-right: 70px !important;
+ }
+.btn_confirm{
+    position: absolute;
+    top: 9px;
+    right: 6px;
+}
+.icon-official_checked{
+    transition: all 0.2s ease-in-out;
+    width: 20px;
+    min-width: 20px;
+    height: 20px;
+    transform: translateY(1px);
+    position: absolute;
+    top: 11px;
+    right: 7px;
+}
 
 
 
