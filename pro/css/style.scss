@@ -3640,9 +3640,64 @@ input.form-control, select.form-control {
     top: 11px;
     right: 7px;
 }
-
-
-
+.modal-check{
+    padding: 20px;
+    a{
+        transition: all 0.2s ease-in-out;
+        position: relative;
+        display: inline-block;
+        margin-top: 10px;
+        &:before {
+            position: absolute;
+            display: block;
+            content: '';
+            width: 100%;
+            height: 1px;
+            left: 0;
+            background: #828282;
+            bottom: -1px;
+            transition: all 0.2s ease-in-out;
+        }
+        &:hover{
+            color: #fff;
+            &:before {
+                background: transparent;
+            }
+        }
+    }
+}
+.modal-body .has-error .error-text.total-alarm {
+    background: #220a0a;
+    font-size: 14px;
+    color: #e19494;
+    border-color: #680000;
+    padding: 15px;
+    height: auto;
+    svg {
+        margin-right: 10px;
+        width: 20px;
+        min-width: 20px;
+        height: 20px;
+        min-height: 20px;
+        fill: #e19494;
+    }
+}
+.modal-body .has-error .error-text.total-ok {
+    background: #11220a;
+    font-size: 14px;
+    color: #429532;
+    border-color: #1a510d;
+    padding: 15px;
+    height: auto;
+    svg {
+        margin-right: 10px;
+        width: 20px;
+        min-width: 20px;
+        height: 20px;
+        min-height: 20px;
+        fill: #429532;
+    }
+}
 
 
 
