@@ -3391,10 +3391,7 @@ input.form-control, select.form-control{
         left: -85px;
         z-index: 1000;
     }
-    .ava_cur{
-        max-width: 80%;
-        max-height: 80%;
-    }
+
 }
 
 
@@ -3434,6 +3431,10 @@ input.form-control, select.form-control{
     .half-form_resp{
         flex-direction: column;
         gap: 0;
+    }
+    .ava_cur{
+        max-width: 80%;
+        max-height: 80%;
     }
 }
 @media only screen and (max-width: 360px) {
