@@ -3817,6 +3817,7 @@ input.form-control, select.form-control {
     .add_node-big {
         width: 100%;
     }
+
 }
 
 @media only screen and (max-width: 480px) {
@@ -3871,6 +3872,10 @@ input.form-control, select.form-control {
         .card-body {
             padding-left: 36px;
         }
+    }
+    .ava_cur{
+        max-width: 80%;
+        max-height: 80%;
     }
 }
 @media only screen and (max-width: 360px) {
