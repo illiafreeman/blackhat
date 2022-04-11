@@ -3515,7 +3515,13 @@ input.form-control, select.form-control {
         display: inline-flex;
         align-items: center;
     }
-
+    .icon-official{
+        transition: all 0.2s ease-in-out;
+        width: 20px;
+        min-width: 20px;
+        height: 20px;
+        transform: translateY(4px);
+    }
 }
 .form-fieldset{
     margin-bottom: 30px;
