@@ -3414,8 +3414,9 @@ input[type=number] {
 }
 .ava_cur{
     margin: 0 auto;
-    max-width: 100%;
     display: block;
+    max-width: 260px;
+    max-height: 260px;
 }
 .help-icon_camera{
     display: block !important;
