@@ -3705,12 +3705,16 @@ input.form-control, select.form-control {
 .form-control.copy {
     white-space: nowrap;
     overflow: hidden;
-    -o-text-overflow: ellipsis;
     text-overflow: ellipsis;
     padding-right: 50px !important;
 }
 .mark-text{
     color: #b9b9b9;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-flex;
+    max-width: 100%;
 }
 
 
