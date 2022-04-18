@@ -3272,13 +3272,17 @@ input.form-control, select.form-control{
     &__wrap{
         display: flex;
         justify-content: center;
+        gap: 15px;
     }
-    &__item{
+    &__item.card{
         width: 50%;
         display: flex;
         justify-content: center;
         flex-direction: column;
         align-items: center;
+        box-shadow: -1px -1px 3px 1px #424242 inset !important;
+        padding: 40px 15px;
+        margin-bottom: 0;
         p{
             text-transform: uppercase;
             font-size: 12px;
@@ -3473,10 +3477,10 @@ input.form-control, select.form-control{
     .pay__wrap{
        flex-direction: column;
     }
-    .pay__item {
+    .pay__item.card{
         width: 100%;
         &:first-child{
-            margin-bottom: 60px;
+            margin-bottom: 10px;
         }
     }
 }
