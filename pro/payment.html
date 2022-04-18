@@ -317,21 +317,31 @@
                             <div class="form-key">Invoice Description:</div>
                             <div class="form-val form-val_min">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aspernatur cum facere fuga hic illo molestias porro quas repudiandae saepe? Dolor, harum modi? Laborum minus odit quibusdam quod repellendus tenetur?</div>
                         </fieldset>
-                        <fieldset class="form-label-group">
-                            <div class="invoice-amount">Current Balance:<b>35 BTC</b></div>
-                        </fieldset>
+                        <div class="pay mb40">
+                            <div class="pay__title">Your Balances</div>
+                            <div class="pay__wrap">
+                                <div class="pay__item">
+                                    <p>Public</p>
+                                    <b>35 BLKC</b>
+                                    <button type="submit" class="btn btn_dis">
+                                        Pay Public
+                                    </button>
+                                </div>
+                                <div class="pay__item">
+                                    <p>Private</p>
+                                    <b>100500 BLKC</b>
+                                    <button type="submit" class="btn">
+                                        Pay Private
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
                         <fieldset class="form-label-group total-alarm_wrap has-error">
                             <div class="error-text alert-text total-alarm">
                                 <h6>Alarm!</h6>
                                 <div>Insufficient Funds To Pay</div>
                             </div>
                         </fieldset>
-
-                        <div class="button_wrap ac">
-                            <button type="submit" class="btn btn_dis">
-                                Pay 100500 BLKC
-                            </button>
-                        </div>
                     </div>
                 </div>
             </div>
