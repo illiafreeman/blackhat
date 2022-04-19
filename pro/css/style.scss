@@ -3291,6 +3291,13 @@ input.form-control, select.form-control{
             font-size: 19px;
             color: #fff;
             margin-bottom: 30px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            width: 100%;
+            max-width: 100%;
+            text-align: center;
+            word-break: break-all;
         }
         .btn{
 
