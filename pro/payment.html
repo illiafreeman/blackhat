@@ -309,20 +309,62 @@
                                 </div>
                             </div>
                         </fieldset>
-                        <fieldset class="form-fieldset">
-                            <div class="form-key">Amount:</div>
-                            <div class="form-val form-val_big">100500 BLKC&nbsp;<small>(3% fee included)</small></div>
-                        </fieldset>
                         <fieldset class="form-fieldset ">
                             <div class="form-key">Invoice Description:</div>
                             <div class="form-val form-val_min">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aspernatur cum facere fuga hic illo molestias porro quas repudiandae saepe? Dolor, harum modi? Laborum minus odit quibusdam quod repellendus tenetur?</div>
                         </fieldset>
+                        <fieldset class="form-fieldset form-fieldset_amount">
+                            <div class="form-key">Amount:</div>
+                            <div class="form-val form-val_big">
+                                100500 BLKC
+                            </div>
+                            <small>(3% fee included)</small>
+                        </fieldset>
+                        <div class="invoice-form add_node claim card pay">
+                            <div class="card-header">
+                                <h6 class="card-title text-center">Your balances</h6>
+                            </div>
+                            <div class="card-body">
+                                <table class="balance_table">
+                                    <tbody><tr>
+                                        <th>
+                                            <svg>
+                                                <use xlink:href="img/sprite.svg#icon-coin-transparent"></use>
+                                            </svg>
+                                            <br>Transparent
+                                        </th>
+                                        <th>
+                                            <svg>
+                                                <use xlink:href="img/sprite.svg#icon-shield-check"></use>
+                                            </svg>
+                                            <br>Shielded
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="blkc_wrap">
+                                                <div>123,347394856</div>
+                                                <span>BLKC</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="blkc_wrap">
+                                                <div>100500,943856740</div>
+                                                <span>BLKC</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    </tbody></table>
+                            </div>
+                        </div>
+
                         <div class="pay mb40">
-                            <div class="pay__title">Your Balances</div>
+                            <div class="pay__title">You Can Pay</div>
                             <div class="pay__wrap">
                                 <div class="pay__item card">
                                     <p>Public</p>
                                     <b>35 BLKC</b>
+                                    <small>(3% fee included)</small>
                                     <button type="submit" class="btn btn_dis">
                                         Pay Public
                                     </button>
@@ -330,6 +372,7 @@
                                 <div class="pay__item card">
                                     <p>Private</p>
                                     <b>100500,943856740862343474 BLKC</b>
+                                    <small>(0.01% fee included)</small>
                                     <button type="submit" class="btn">
                                         Pay Private
                                     </button>

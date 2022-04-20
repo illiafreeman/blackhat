@@ -3277,7 +3277,7 @@ input.form-control, select.form-control{
     &__item.card{
         width: 50%;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         flex-direction: column;
         align-items: center;
         box-shadow: -1px -1px 3px 1px #424242 inset !important;
@@ -3290,7 +3290,7 @@ input.form-control, select.form-control{
         b{
             font-size: 19px;
             color: #fff;
-            margin-bottom: 30px;
+            margin-bottom: 0;
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
@@ -3298,6 +3298,9 @@ input.form-control, select.form-control{
             max-width: 100%;
             text-align: center;
             word-break: break-all;
+        }
+        small{
+            margin-bottom: 30px;
         }
         .btn{
 
@@ -3314,6 +3317,32 @@ input.form-control, select.form-control{
 }
 .form-val_big small{
     font-size: 12px;
+}
+.form-fieldset_amount{
+    flex-direction: column !important;
+    align-items: center;
+    display: flex;
+    margin: 60px 0;
+    .form-key{
+        text-transform: uppercase;
+    }
+    small{
+        display: flex;
+        justify-content: center;
+    }
+    .form-val_big{
+        margin: 20px 0 0;
+        font-size: 26px;
+        font-weight: 600;
+    }
+}
+.card.pay{
+    box-shadow: -1px -1px 3px 1px #424242 inset !important;
+    margin: 0 0 auto;
+    width: 100%;
+    svg {
+        fill: #acacac;
+    }
 }
 
 @media only screen and (min-width: 1100px) {
