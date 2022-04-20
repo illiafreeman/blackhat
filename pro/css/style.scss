@@ -3305,6 +3305,15 @@ input.form-control, select.form-control{
         .btn{
 
         }
+        .note{
+            font-size: 11px;
+            margin-top: 10px;
+            color: #df6767;
+        }
+        &.insufficient{
+            border: 1px solid #642020;
+            background: #221313;
+        }
     }
 }
 .error_2 .menu-icon {
