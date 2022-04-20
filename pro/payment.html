@@ -320,7 +320,6 @@
                             </div>
                             <small>(3% fee included)</small>
                         </fieldset>
-<!--
                         <div class="invoice-form add_node claim card pay">
                             <div class="card-header">
                                 <h6 class="card-title text-center">Your balances</h6>
@@ -358,13 +357,15 @@
                                     </tbody></table>
                             </div>
                         </div>
--->
 
                         <div class="pay mb40">
                             <div class="pay__title">You Can Pay</div>
                             <div class="pay__wrap">
                                 <div class="pay__item card insufficient">
-                                    <p>Public</p>
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#icon-coin-transparent"></use>
+                                    </svg>
+                                    <p>Transparent</p>
                                     <b>35 BLKC</b>
                                     <small>(3% fee included)</small>
                                     <button type="submit" class="btn btn_dis">
@@ -373,7 +374,10 @@
                                     <div class="note">insufficient funds</div>
                                 </div>
                                 <div class="pay__item card">
-                                    <p>Private</p>
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#icon-shield-check"></use>
+                                    </svg>
+                                    <p>Shielded</p>
                                     <b>100500,943856740862343474 BLKC</b>
                                     <small>(0.01% fee included)</small>
                                     <button type="submit" class="btn">
