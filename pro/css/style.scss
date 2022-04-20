@@ -3299,6 +3299,10 @@ input.form-control, select.form-control{
             max-width: 100%;
             text-align: center;
             word-break: break-all;
+            span{
+                white-space: nowrap;
+                padding-left: 6px;
+            }
         }
         small{
             margin-bottom: 40px;
