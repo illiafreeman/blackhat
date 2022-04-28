@@ -3408,9 +3408,12 @@ input.form-control, select.form-control{
 }
 .mn-list{
     display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 .add_node-mn{
     margin: 0 !important;
+    width: calc(33.333% - 10px);
     .form-fieldset{
         margin-bottom: 10px;
     }
