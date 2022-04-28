@@ -3195,9 +3195,9 @@ input.form-control, select.form-control{
     .card-body{
         padding-top: 10px;
         .form-val {
-            font-size: 15px;
+            font-size: 14px;
             line-height: 18px;
-            color: #a6a6a6;
+            color: #d0d0d0;
         }
         .form-fieldset:last-child{
             margin-bottom: 0;
@@ -3263,6 +3263,11 @@ input.form-control, select.form-control{
 .dfc{
     display: flex;
     align-items: center;
+}
+.dfcc{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .ava_cur{
     margin: 0 auto;
@@ -3441,6 +3446,12 @@ input.form-control, select.form-control{
                 }
             }
         }
+        .form-val{
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+
+        }
     }
     .form-details {
         margin: 30px 0 0;
@@ -3452,7 +3463,28 @@ input.form-control, select.form-control{
 .header-navbar{
     transition: none;
 }
-
+.mn-status{
+    text-transform: uppercase;
+    font-size: 15px;
+    svg{
+        width: 20px;
+        height: 20px;
+        fill: #919191;
+        margin-right: 5px;
+    }
+    &_pos{
+        color: #388f46;
+        svg{
+            fill: #388f46;
+        }
+    }
+    &_neg{
+        color: #b54a4a;
+        svg{
+            fill: #b54a4a;
+        }
+    }
+}
 
 
 
