@@ -3365,6 +3365,36 @@ input.form-control, select.form-control{
         fill: #acacac;
     }
 }
+.nav.navbar-nav .notification{
+    margin-right: 0 !important;
+    width: 70px;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    .menu{
+        width: 40px;
+        height: 40px;
+        svg {
+            width: 30px;
+            height: 26px;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media only screen and (min-width: 1100px) {
 
