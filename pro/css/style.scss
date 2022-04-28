@@ -2709,10 +2709,16 @@ select.form-control{
     }
 }
 .color_pos{
-    color: #388f46;
+    color: #388f46 !important;
 }
 .color_neg{
-    color: #b54a4a;
+    color: #b54a4a !important;
+}
+.fill_pos{
+    fill: #388f46 !important;
+}
+.fill_neg{
+    fill: #b54a4a !important;
 }
 .over{
     max-width: 300px;
@@ -3152,6 +3158,9 @@ input.form-control, select.form-control{
     &_close{
         margin-bottom: 10px;
     }
+    &_title{
+        margin: 15px 0 40px;
+    }
 }
 .form-details{
     svg{
@@ -3374,14 +3383,54 @@ input.form-control, select.form-control{
     .menu{
         width: 40px;
         height: 40px;
+        position: relative;
         svg {
             width: 30px;
             height: 26px;
         }
+        span{
+            position: absolute;
+            top: 7px;
+            right: -1px;
+            background-color: #AE3141;
+            display: flex;
+            width: 16px;
+            height: 16px;
+            color: #fff;
+            justify-content: center;
+            align-items: center;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            font-size: 10px;
+        }
     }
 }
-
-
+.mn-list{
+    display: flex;
+}
+.add_node-mn{
+    margin: 0 !important;
+    .form-fieldset{
+        margin-bottom: 10px;
+    }
+    .form-fieldset_title {
+        position: relative;
+        padding-right: 30px;
+        margin: 15px 0 30px;
+        .icon-official{
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+    .form-details {
+        margin: 30px 0 0;
+        .card-body {
+            padding-bottom: 0;
+        }
+    }
+}
 
 
 

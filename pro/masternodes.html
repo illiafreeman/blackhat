@@ -180,6 +180,7 @@
                                     <svg class="menu-icon">
                                         <use xlink:href="img/sprite.svg#icon-bell"></use>
                                     </svg>
+                                    <span>10</span>
                                 </a>
                             </li>
                             <li class="dropdown dropdown-language nav-item">
@@ -232,23 +233,24 @@
     <!--block to reload-->
     <div class="content-wrapper">
         <div class="content-body justify-content-center">
-            <div class="invoice-page clearfix">
-                <div class="invoice-form add_node card login add_node-big">
-                    <div class="card-header">
-                        <h6 class="card-title text-center">Payment</h6>
-                    </div>
+            <div class="invoice-page mn-list clearfix">
+                <div class="invoice-form add_node card login add_node-mn">
                     <div class="card-body tab-edit">
-                        <fieldset class="form-label-group">
-                            <img class="ava_cur" src="img/shop_2.jpg" alt="">
-                        </fieldset>
-                        <fieldset class="form-fieldset form-fieldset_close">
-                            <div class="form-key">Pay To:</div>
+                        <fieldset class="form-fieldset form-fieldset_title">
                             <div class="form-val">
-                                Destination User Name
-                                <svg class="icon-official" data-toggle="tooltip" title="Official address">
+                                Oolong masternode name Oolong masternode name name name
+                                <svg class="icon-official" data-toggle="tooltip" title="Active">
                                     <use xlink:href="img/sprite.svg#icon-check"></use>
                                 </svg>
                             </div>
+                        </fieldset>
+                        <fieldset class="form-fieldset">
+                            <div class="form-key">Active time:</div>
+                            <div class="form-val form-val_min">1y 5m 4d 1h</div>
+                        </fieldset>
+                        <fieldset class="form-fieldset">
+                            <div class="form-key">Last payment:</div>
+                            <div class="form-val form-val_min">2019-06-25 12:45:11</div>
                         </fieldset>
                         <fieldset class="form-fieldset form-details">
                             <div class="card-header" id="heading1">
@@ -260,6 +262,52 @@
                                 </a>
                             </div>
                             <div id="collapse1" class="collapse accord" aria-labelledby="heading1" data-parent="#accordion" style="">
+                                <div class="card-body">
+                                    <fieldset class="form-fieldset">
+                                        <div class="form-key">txID:</div>
+                                        <div class="form-val">9d9f4eeac6e1a62962232ed7f600a3de426a627fcbf58900985a34b1ae41ba1d</div>
+                                    </fieldset>
+                                    <fieldset class="form-fieldset">
+                                        <div class="form-key">Wallet:</div>
+                                        <div class="form-val">address AJdm3u5oUEhVPaGWRXG9dv5edP4QT5tkz3</div>
+                                    </fieldset>
+                                    <fieldset class="form-fieldset">
+                                        <div class="form-key">Last activity time:</div>
+                                        <div class="form-val">2019-06-26 21:41:12</div>
+                                    </fieldset>
+                                    <fieldset class="form-fieldset">
+                                        <div class="form-key">Version:</div>
+                                        <div class="form-val">72010</div>
+                                    </fieldset>
+                                    <fieldset class="form-fieldset">
+                                        <div class="form-key">Rank:</div>
+                                        <div class="form-val">99999</div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="invoice-form add_node card login add_node-mn">
+                    <div class="card-body tab-edit">
+                        <fieldset class="form-fieldset form-fieldset_title">
+                            <div class="form-val">
+                                masternode name
+                                <svg class="icon-official fill_neg" data-toggle="tooltip" title="Errore">
+                                    <use xlink:href="img/sprite.svg#icon-exclamation-triangle"></use>
+                                </svg>
+                            </div>
+                        </fieldset>
+                        <fieldset class="form-fieldset form-details">
+                            <div class="card-header" id="heading2">
+                                <a class="card-title lead collapsed" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2" href="#">
+                                    View Details
+                                    <svg class="menu-icon">
+                                        <use xlink:href="img/sprite.svg#icon-angle-down"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div id="collapse2" class="collapse accord" aria-labelledby="heading1" data-parent="#accordion" style="">
                                 <div class="card-body">
                                     <fieldset class="form-fieldset">
                                         <div class="form-key">Description:</div>
@@ -294,47 +342,7 @@
                             <div class="form-key">Invoice Description:</div>
                             <div class="form-val form-val_min">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aspernatur cum facere fuga hic illo molestias porro quas repudiandae saepe? Dolor, harum modi? Laborum minus odit quibusdam quod repellendus tenetur?</div>
                         </fieldset>
-                        <fieldset class="form-fieldset form-fieldset_amount">
-                            <div class="form-key">Amount:</div>
-                            <div class="form-val form-val_big">
-                                100500 BLKC
-                            </div>
-                            <small>(3% fee included)</small>
-                        </fieldset>
-                        <div class="pay mb40">
-                            <div class="pay__title">You Can Pay</div>
-                            <div class="pay__wrap">
-                                <div class="pay__item card insufficient">
-                                    <svg>
-                                        <use xlink:href="img/sprite.svg#icon-coin-transparent"></use>
-                                    </svg>
-                                    <p>Transparent</p>
-                                    <b>35<span>BLKC</span></b>
-                                    <small>(3% fee included)</small>
-                                    <button type="submit" class="btn btn_dis">
-                                        Pay Public
-                                    </button>
-                                    <div class="note">insufficient funds</div>
-                                </div>
-                                <div class="pay__item card">
-                                    <svg>
-                                        <use xlink:href="img/sprite.svg#icon-shield-check"></use>
-                                    </svg>
-                                    <p>Shielded</p>
-                                    <b>100500,943856740862343474<span>BLKC</span></b>
-                                    <small>(0.01% fee included)</small>
-                                    <button type="submit" class="btn">
-                                        Pay Private
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <fieldset class="form-label-group total-alarm_wrap has-error">
-                            <div class="error-text alert-text total-alarm">
-                                <h6>Alarm!</h6>
-                                <div>Insufficient Funds To Pay</div>
-                            </div>
-                        </fieldset>
+
                     </div>
                 </div>
             </div>
