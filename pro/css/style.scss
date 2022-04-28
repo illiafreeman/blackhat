@@ -3520,7 +3520,41 @@ input.form-control, select.form-control{
         }
     }
 }
-
+.add-shop {
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    h6 {
+        font-size: 13px;
+        margin-bottom: 20px;
+    }
+    a {
+        display: inline-flex;
+        align-items: center;
+        flex-direction: column;
+        margin: 20px 0;
+        span {
+            transition: all 0.2s ease-in-out;
+            margin-bottom: 10px;
+        }
+        svg {
+            transition: all 0.2s ease-in-out;
+            width: 70px;
+            height: 70px;
+        }
+        &:hover{
+            svg {
+                fill: #fff;
+            }
+            span{
+                color: #fff;
+            }
+        }
+        &:before{
+            display: none !important;
+        }
+    }
+}
 
 
 
