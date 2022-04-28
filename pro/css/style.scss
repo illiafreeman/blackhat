@@ -3415,16 +3415,31 @@ input.form-control, select.form-control{
     margin: 0 !important;
     width: calc(33.333% - 10px);
     .form-fieldset{
-        margin-bottom: 10px;
+        margin-bottom: 16px;
     }
     .form-fieldset_title {
         position: relative;
         padding-right: 30px;
         margin: 15px 0 30px;
-        .icon-official{
+        .mn-del{
             position: absolute;
-            top: 0;
+            top: 3px;
             right: 0;
+            display: flex;
+            width: 20px;
+            height: 20px;
+            svg{
+                width: 20px;
+                height: 20px;
+                fill: #919191;
+                transition: all .2s ease-in-out;
+                cursor: pointer;
+            }
+            &:hover{
+                svg{
+                    fill: #fff;
+                }
+            }
         }
     }
     .form-details {
@@ -3434,7 +3449,9 @@ input.form-control, select.form-control{
         }
     }
 }
-
+.header-navbar{
+    transition: none;
+}
 
 
 
