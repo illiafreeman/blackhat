@@ -2155,6 +2155,7 @@ html body .content .content-wrapper{
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 40px 0;
     .load-more-data{
         cursor: pointer;
     }
@@ -3381,7 +3382,7 @@ input.form-control, select.form-control{
 }
 .nav.navbar-nav .notification{
     margin-right: 0 !important;
-    width: 70px;
+    width: 46px;
     display: flex !important;
     justify-content: center;
     align-items: center;
@@ -3653,8 +3654,33 @@ pre {
 .card-title_empty{
     padding-bottom: 15px !important;
 }
+.form-control{
+    color: #fff;
+    &:focus{
+        color: #fff;
+    }
+    &::placeholder{
+        color: #999;
+    }
+}
+.search-wrap{
+    display: flex;
+    align-items: center;
+    .form-control{
 
-
+    }
+    label{
+        display: flex;
+        white-space: nowrap;
+        margin: 0;
+        align-items: center;
+        margin-left: 15px;
+        cursor: pointer;
+        div{
+            margin-left: 5px;
+        }
+    }
+}
 
 
 

@@ -180,7 +180,6 @@
                                     <svg class="menu-icon">
                                         <use xlink:href="img/sprite.svg#icon-bell"></use>
                                     </svg>
-                                    <span>10</span>
                                 </a>
                             </li>
                             <li class="dropdown dropdown-language nav-item">
@@ -242,303 +241,327 @@
                     create new
                 </a>
             </div>
-            <div class="invoice-page mn-list clearfix">
+            <div class="invoice-page clearfix">
 
-                <div class="invoice-form add_node card login add_node-mn">
-                    <div class="card-body tab-edit">
-                        <fieldset class="form-fieldset form-fieldset_title">
-                            <div class="form-val">
-                                Oooolong masternode name masternode name name name
-                                <span class="mn-del" data-toggle="modal" data-target="#infoModal">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="search-wrap">
+                            <input type="text" class="form-control" name="s" placeholder="Search Masternodes by TX or Address">
+                            <label>
+                                <input type="checkbox">
+                                <div>with error only</div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mn-list"> <!--block for ajax -->
+
+                    <div class="invoice-form add_node card login add_node-mn">
+                        <div class="card-body tab-edit">
+                            <fieldset class="form-fieldset form-fieldset_title">
+                                <div class="form-val">
+                                    Oooolong masternode name masternode name name name
+                                    <span class="mn-del" data-toggle="modal" data-target="#infoModal">
                                     <svg data-toggle="tooltip" data-original-title="Remove">
                                         <use xlink:href="img/sprite.svg#icon-trash"></use>
                                     </svg>
                                 </span>
-                            </div>
-                        </fieldset>
-                        <fieldset class="dfcc mn-status__wrap">
-                            <div class="dfcc mn-status mn-status_pos">
-                                <svg>
-                                    <use xlink:href="img/sprite.svg#icon-check"></use>
-                                </svg>
-                                active
-                            </div>
-                        </fieldset>
-                        <fieldset class="form-fieldset">
-                            <div class="form-key">Active time:</div>
-                            <div class="form-val form-val_min"><b>15</b> days</div>
-                        </fieldset>
-
-                        <fieldset class="form-fieldset">
-                            <div class="form-key">Last payment:</div>
-                            <div class="form-val form-val_min"><b>7</b> hours ago</div>
-                        </fieldset>
-                        <fieldset class="form-fieldset">
-                            <div class="form-key">Last check:</div>
-                            <div class="form-val form-val_min"><b>7</b> hours ago</div>
-                        </fieldset>
-                        <fieldset class="form-fieldset">
-                            <div class="form-key">Nex check will be:</div>
-                            <div class="form-val form-val_min"><b>1</b> minute</div>
-                        </fieldset>
-                        <fieldset class="form-fieldset form-details">
-                            <div class="card-header" id="heading1">
-                                <a class="card-title lead collapsed" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1" href="#">
-                                    View Details
-                                    <svg class="menu-icon">
-                                        <use xlink:href="img/sprite.svg#icon-angle-down"></use>
-                                    </svg>
-                                </a>
-                            </div>
-                            <div id="collapse1" class="collapse accord" aria-labelledby="heading1" data-parent="#accordion" style="">
-                                <div class="card-body">
-                                    <fieldset class="form-fieldset">
-                                        <div class="form-key">txID:</div>
-                                        <div class="form-val">9d9f4eeac6e1a62962232ed7f600a3de426a627fcbf58900985a34b1ae41ba1d</div>
-                                    </fieldset>
-                                    <fieldset class="form-fieldset">
-                                        <div class="form-key">Wallet:</div>
-                                        <div class="form-val">address AJdm3u5oUEhVPaGWRXG9dv5edP4QT5tkz3</div>
-                                    </fieldset>
-                                    <fieldset class="form-fieldset">
-                                        <div class="form-key">Last activity time:</div>
-                                        <div class="form-val">2019-06-26 21:41:12</div>
-                                    </fieldset>
-                                    <fieldset class="form-fieldset">
-                                        <div class="form-key">Version:</div>
-                                        <div class="form-val">72010</div>
-                                    </fieldset>
-                                    <fieldset class="form-fieldset">
-                                        <div class="form-key">Rank:</div>
-                                        <div class="form-val">99999</div>
-                                    </fieldset>
                                 </div>
-                            </div>
-                        </fieldset>
+                            </fieldset>
+                            <fieldset class="dfcc mn-status__wrap">
+                                <div class="dfcc mn-status mn-status_pos">
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#icon-check"></use>
+                                    </svg>
+                                    active
+                                </div>
+                            </fieldset>
+                            <fieldset class="form-fieldset">
+                                <div class="form-key">Active time:</div>
+                                <div class="form-val form-val_min"><b>15</b>days</div>
+                            </fieldset>
+                            <fieldset class="form-fieldset">
+                                <div class="form-key">Last payment:</div>
+                                <div class="form-val form-val_min"><b>7</b>hours ago</div>
+                            </fieldset>
+                            <fieldset class="form-fieldset">
+                                <div class="form-key">Last check:</div>
+                                <div class="form-val form-val_min"><b>7</b>hours ago</div>
+                            </fieldset>
+                            <fieldset class="form-fieldset">
+                                <div class="form-key">Nex check will be:</div>
+                                <div class="form-val form-val_min"><b>1</b>minute</div>
+                            </fieldset>
+                            <fieldset class="form-fieldset form-details">
+                                <div class="card-header" id="heading1">
+                                    <a class="card-title lead collapsed" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1" href="#">
+                                        View Details
+                                        <svg class="menu-icon">
+                                            <use xlink:href="img/sprite.svg#icon-angle-down"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div id="collapse1" class="collapse accord" aria-labelledby="heading1" data-parent="#accordion" style="">
+                                    <div class="card-body">
+                                        <fieldset class="form-fieldset">
+                                            <div class="form-key">txID:</div>
+                                            <div class="form-val">9d9f4eeac6e1a62962232ed7f600a3de426a627fcbf58900985a34b1ae41ba1d</div>
+                                        </fieldset>
+                                        <fieldset class="form-fieldset">
+                                            <div class="form-key">Wallet:</div>
+                                            <div class="form-val">address AJdm3u5oUEhVPaGWRXG9dv5edP4QT5tkz3</div>
+                                        </fieldset>
+                                        <fieldset class="form-fieldset">
+                                            <div class="form-key">Last activity time:</div>
+                                            <div class="form-val">2019-06-26 21:41:12</div>
+                                        </fieldset>
+                                        <fieldset class="form-fieldset">
+                                            <div class="form-key">Version:</div>
+                                            <div class="form-val">72010</div>
+                                        </fieldset>
+                                        <fieldset class="form-fieldset">
+                                            <div class="form-key">Rank:</div>
+                                            <div class="form-val">99999</div>
+                                        </fieldset>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
                     </div>
-                </div>
 
-                <div class="invoice-form add_node card login add_node-mn">
-                    <div class="card-body tab-edit">
-                        <fieldset class="form-fieldset form-fieldset_title">
-                            <div class="form-val">
-                                masternode name
-                                <span class="mn-del" data-toggle="modal" data-target="#infoModal">
+                    <div class="invoice-form add_node card login add_node-mn">
+                        <div class="card-body tab-edit">
+                            <fieldset class="form-fieldset form-fieldset_title">
+                                <div class="form-val">
+                                    masternode name
+                                    <span class="mn-del" data-toggle="modal" data-target="#infoModal">
                                     <svg data-toggle="tooltip" data-original-title="Remove">
                                         <use xlink:href="img/sprite.svg#icon-trash"></use>
                                     </svg>
                                 </span>
-                            </div>
-                        </fieldset>
-                        <fieldset class="dfcc mb_30">
-                            <div class="dfcc mn-status mn-status_neg">
-                                <svg>
-                                    <use xlink:href="img/sprite.svg#icon-exclamation-triangle"></use>
-                                </svg>
-                                errore
-                            </div>
-                        </fieldset>
-                        <fieldset class="form-fieldset">
-                            <div class="form-key">Active time:</div>
-                            <div class="form-val form-val_min">15 days</div>
-                        </fieldset>
-
-                        <fieldset class="form-fieldset">
-                            <div class="form-key">Last payment:</div>
-                            <div class="form-val form-val_min">7 hours ago</div>
-                        </fieldset>
-                        <fieldset class="form-fieldset">
-                            <div class="form-key">Last check:</div>
-                            <div class="form-val form-val_min">7 hours ago</div>
-                        </fieldset>
-                        <fieldset class="form-fieldset">
-                            <div class="form-key">Nex check will be:</div>
-                            <div class="form-val form-val_min">1 minute</div>
-                        </fieldset>
-                        <fieldset class="form-fieldset form-details">
-                            <div class="card-header" id="heading2">
-                                <a class="card-title lead collapsed" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2" href="#">
-                                    View Details
-                                    <svg class="menu-icon">
-                                        <use xlink:href="img/sprite.svg#icon-angle-down"></use>
-                                    </svg>
-                                </a>
-                            </div>
-                            <div id="collapse2" class="collapse accord" aria-labelledby="heading1" data-parent="#accordion" style="">
-                                <div class="card-body">
-                                    <fieldset class="form-fieldset">
-                                        <div class="form-key">txID:</div>
-                                        <div class="form-val">9d9f4eeac6e1a62962232ed7f600a3de426a627fcbf58900985a34b1ae41ba1d</div>
-                                    </fieldset>
-                                    <fieldset class="form-fieldset">
-                                        <div class="form-key">Wallet:</div>
-                                        <div class="form-val">address AJdm3u5oUEhVPaGWRXG9dv5edP4QT5tkz3</div>
-                                    </fieldset>
-                                    <fieldset class="form-fieldset">
-                                        <div class="form-key">Last activity time:</div>
-                                        <div class="form-val">2019-06-26 21:41:12</div>
-                                    </fieldset>
-                                    <fieldset class="form-fieldset">
-                                        <div class="form-key">Version:</div>
-                                        <div class="form-val">72010</div>
-                                    </fieldset>
-                                    <fieldset class="form-fieldset">
-                                        <div class="form-key">Rank:</div>
-                                        <div class="form-val">99999</div>
-                                    </fieldset>
                                 </div>
-                            </div>
-                        </fieldset>
+                            </fieldset>
+                            <fieldset class="dfcc mb_30">
+                                <div class="dfcc mn-status mn-status_neg">
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#icon-exclamation-triangle"></use>
+                                    </svg>
+                                    errore
+                                </div>
+                            </fieldset>
+                            <fieldset class="form-fieldset">
+                                <div class="form-key">Active time:</div>
+                                <div class="form-val form-val_min"><b>15</b>days</div>
+                            </fieldset>
+                            <fieldset class="form-fieldset">
+                                <div class="form-key">Last payment:</div>
+                                <div class="form-val form-val_min"><b>7</b>hours ago</div>
+                            </fieldset>
+                            <fieldset class="form-fieldset">
+                                <div class="form-key">Last check:</div>
+                                <div class="form-val form-val_min"><b>7</b>hours ago</div>
+                            </fieldset>
+                            <fieldset class="form-fieldset">
+                                <div class="form-key">Nex check will be:</div>
+                                <div class="form-val form-val_min"><b>1</b>minute</div>
+                            </fieldset>
+                            <fieldset class="form-fieldset form-details">
+                                <div class="card-header" id="heading2">
+                                    <a class="card-title lead collapsed" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2" href="#">
+                                        View Details
+                                        <svg class="menu-icon">
+                                            <use xlink:href="img/sprite.svg#icon-angle-down"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div id="collapse2" class="collapse accord" aria-labelledby="heading1" data-parent="#accordion" style="">
+                                    <div class="card-body">
+                                        <fieldset class="form-fieldset">
+                                            <div class="form-key">txID:</div>
+                                            <div class="form-val">9d9f4eeac6e1a62962232ed7f600a3de426a627fcbf58900985a34b1ae41ba1d</div>
+                                        </fieldset>
+                                        <fieldset class="form-fieldset">
+                                            <div class="form-key">Wallet:</div>
+                                            <div class="form-val">address AJdm3u5oUEhVPaGWRXG9dv5edP4QT5tkz3</div>
+                                        </fieldset>
+                                        <fieldset class="form-fieldset">
+                                            <div class="form-key">Last activity time:</div>
+                                            <div class="form-val">2019-06-26 21:41:12</div>
+                                        </fieldset>
+                                        <fieldset class="form-fieldset">
+                                            <div class="form-key">Version:</div>
+                                            <div class="form-val">72010</div>
+                                        </fieldset>
+                                        <fieldset class="form-fieldset">
+                                            <div class="form-key">Rank:</div>
+                                            <div class="form-val">99999</div>
+                                        </fieldset>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
                     </div>
-                </div>
 
-                <div class="invoice-form add_node card login add_node-mn">
-                    <div class="card-body tab-edit">
-                        <fieldset class="form-fieldset form-fieldset_title">
-                            <div class="form-val">
-                                node 77
-                                <span class="mn-del" data-toggle="modal" data-target="#infoModal">
+                    <div class="invoice-form add_node card login add_node-mn">
+                        <div class="card-body tab-edit">
+                            <fieldset class="form-fieldset form-fieldset_title">
+                                <div class="form-val">
+                                    node 77
+                                    <span class="mn-del" data-toggle="modal" data-target="#infoModal">
                                     <svg data-toggle="tooltip" data-original-title="Remove">
                                         <use xlink:href="img/sprite.svg#icon-trash"></use>
                                     </svg>
                                 </span>
-                            </div>
-                        </fieldset>
-                        <fieldset class="dfcc mb_30">
-                            <div class="dfcc mn-status mn-status_neg">
-                                <svg>
-                                    <use xlink:href="img/sprite.svg#icon-exclamation-triangle"></use>
-                                </svg>
-                                errore
-                            </div>
-                        </fieldset>
-                        <fieldset class="form-fieldset">
-                            <div class="form-key">Active time:</div>
-                            <div class="form-val form-val_min">15 days</div>
-                        </fieldset>
-
-                        <fieldset class="form-fieldset">
-                            <div class="form-key">Last payment:</div>
-                            <div class="form-val form-val_min">7 hours ago</div>
-                        </fieldset>
-                        <fieldset class="form-fieldset">
-                            <div class="form-key">Last check:</div>
-                            <div class="form-val form-val_min">7 hours ago</div>
-                        </fieldset>
-                        <fieldset class="form-fieldset">
-                            <div class="form-key">Nex check will be:</div>
-                            <div class="form-val form-val_min">1 minute</div>
-                        </fieldset>
-                        <fieldset class="form-fieldset form-details">
-                            <div class="card-header" id="heading3">
-                                <a class="card-title lead collapsed" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3" href="#">
-                                    View Details
-                                    <svg class="menu-icon">
-                                        <use xlink:href="img/sprite.svg#icon-angle-down"></use>
-                                    </svg>
-                                </a>
-                            </div>
-                            <div id="collapse3" class="collapse accord" aria-labelledby="heading3" data-parent="#accordion" style="">
-                                <div class="card-body">
-                                    <fieldset class="form-fieldset">
-                                        <div class="form-key">txID:</div>
-                                        <div class="form-val">9d9f4eeac6e1a62962232ed7f600a3de426a627fcbf58900985a34b1ae41ba1d</div>
-                                    </fieldset>
-                                    <fieldset class="form-fieldset">
-                                        <div class="form-key">Wallet:</div>
-                                        <div class="form-val">address AJdm3u5oUEhVPaGWRXG9dv5edP4QT5tkz3</div>
-                                    </fieldset>
-                                    <fieldset class="form-fieldset">
-                                        <div class="form-key">Last activity time:</div>
-                                        <div class="form-val">2019-06-26 21:41:12</div>
-                                    </fieldset>
-                                    <fieldset class="form-fieldset">
-                                        <div class="form-key">Version:</div>
-                                        <div class="form-val">72010</div>
-                                    </fieldset>
-                                    <fieldset class="form-fieldset">
-                                        <div class="form-key">Rank:</div>
-                                        <div class="form-val">99999</div>
-                                    </fieldset>
                                 </div>
-                            </div>
-                        </fieldset>
+                            </fieldset>
+                            <fieldset class="dfcc mb_30">
+                                <div class="dfcc mn-status mn-status_neg">
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#icon-exclamation-triangle"></use>
+                                    </svg>
+                                    errore
+                                </div>
+                            </fieldset>
+                            <fieldset class="form-fieldset">
+                                <div class="form-key">Active time:</div>
+                                <div class="form-val form-val_min"><b>15</b>days</div>
+                            </fieldset>
+                            <fieldset class="form-fieldset">
+                                <div class="form-key">Last payment:</div>
+                                <div class="form-val form-val_min"><b>7</b>hours ago</div>
+                            </fieldset>
+                            <fieldset class="form-fieldset">
+                                <div class="form-key">Last check:</div>
+                                <div class="form-val form-val_min"><b>7</b>hours ago</div>
+                            </fieldset>
+                            <fieldset class="form-fieldset">
+                                <div class="form-key">Nex check will be:</div>
+                                <div class="form-val form-val_min"><b>1</b>minute</div>
+                            </fieldset>
+                            <fieldset class="form-fieldset form-details">
+                                <div class="card-header" id="heading3">
+                                    <a class="card-title lead collapsed" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3" href="#">
+                                        View Details
+                                        <svg class="menu-icon">
+                                            <use xlink:href="img/sprite.svg#icon-angle-down"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div id="collapse3" class="collapse accord" aria-labelledby="heading3" data-parent="#accordion" style="">
+                                    <div class="card-body">
+                                        <fieldset class="form-fieldset">
+                                            <div class="form-key">txID:</div>
+                                            <div class="form-val">9d9f4eeac6e1a62962232ed7f600a3de426a627fcbf58900985a34b1ae41ba1d</div>
+                                        </fieldset>
+                                        <fieldset class="form-fieldset">
+                                            <div class="form-key">Wallet:</div>
+                                            <div class="form-val">address AJdm3u5oUEhVPaGWRXG9dv5edP4QT5tkz3</div>
+                                        </fieldset>
+                                        <fieldset class="form-fieldset">
+                                            <div class="form-key">Last activity time:</div>
+                                            <div class="form-val">2019-06-26 21:41:12</div>
+                                        </fieldset>
+                                        <fieldset class="form-fieldset">
+                                            <div class="form-key">Version:</div>
+                                            <div class="form-val">72010</div>
+                                        </fieldset>
+                                        <fieldset class="form-fieldset">
+                                            <div class="form-key">Rank:</div>
+                                            <div class="form-val">99999</div>
+                                        </fieldset>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
                     </div>
-                </div>
 
-                <div class="invoice-form add_node card login add_node-mn">
-                    <div class="card-body tab-edit">
-                        <fieldset class="form-fieldset form-fieldset_title">
-                            <div class="form-val">
-                                name
-                                <span class="mn-del" data-toggle="modal" data-target="#infoModal">
+                    <div class="invoice-form add_node card login add_node-mn">
+                        <div class="card-body tab-edit">
+                            <fieldset class="form-fieldset form-fieldset_title">
+                                <div class="form-val">
+                                    name
+                                    <span class="mn-del" data-toggle="modal" data-target="#infoModal">
                                     <svg data-toggle="tooltip" data-original-title="Remove">
                                         <use xlink:href="img/sprite.svg#icon-trash"></use>
                                     </svg>
                                 </span>
-                            </div>
-                        </fieldset>
-                        <fieldset class="dfcc mb_30">
-                            <div class="dfcc mn-status mn-status_pos">
-                                <svg>
-                                    <use xlink:href="img/sprite.svg#icon-check"></use>
-                                </svg>
-                                active
-                            </div>
-                        </fieldset>
-                        <fieldset class="form-fieldset">
-                            <div class="form-key">Active time:</div>
-                            <div class="form-val form-val_min">15 days</div>
-                        </fieldset>
-
-                        <fieldset class="form-fieldset">
-                            <div class="form-key">Last payment:</div>
-                            <div class="form-val form-val_min">7 hours ago</div>
-                        </fieldset>
-                        <fieldset class="form-fieldset">
-                            <div class="form-key">Last check:</div>
-                            <div class="form-val form-val_min">7 hours ago</div>
-                        </fieldset>
-                        <fieldset class="form-fieldset">
-                            <div class="form-key">Nex check will be:</div>
-                            <div class="form-val form-val_min">1 minute</div>
-                        </fieldset>
-                        <fieldset class="form-fieldset form-details">
-                            <div class="card-header" id="heading4">
-                                <a class="card-title lead collapsed" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4" href="#">
-                                    View Details
-                                    <svg class="menu-icon">
-                                        <use xlink:href="img/sprite.svg#icon-angle-down"></use>
-                                    </svg>
-                                </a>
-                            </div>
-                            <div id="collapse4" class="collapse accord" aria-labelledby="heading4" data-parent="#accordion" style="">
-                                <div class="card-body">
-                                    <fieldset class="form-fieldset">
-                                        <div class="form-key">txID:</div>
-                                        <div class="form-val">9d9f4eeac6e1a62962232ed7f600a3de426a627fcbf58900985a34b1ae41ba1d</div>
-                                    </fieldset>
-                                    <fieldset class="form-fieldset">
-                                        <div class="form-key">Wallet:</div>
-                                        <div class="form-val">address AJdm3u5oUEhVPaGWRXG9dv5edP4QT5tkz3</div>
-                                    </fieldset>
-                                    <fieldset class="form-fieldset">
-                                        <div class="form-key">Last activity time:</div>
-                                        <div class="form-val">2019-06-26 21:41:12</div>
-                                    </fieldset>
-                                    <fieldset class="form-fieldset">
-                                        <div class="form-key">Version:</div>
-                                        <div class="form-val">72010</div>
-                                    </fieldset>
-                                    <fieldset class="form-fieldset">
-                                        <div class="form-key">Rank:</div>
-                                        <div class="form-val">99999</div>
-                                    </fieldset>
                                 </div>
-                            </div>
-                        </fieldset>
+                            </fieldset>
+                            <fieldset class="dfcc mb_30">
+                                <div class="dfcc mn-status mn-status_pos">
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#icon-check"></use>
+                                    </svg>
+                                    active
+                                </div>
+                            </fieldset>
+                            <fieldset class="form-fieldset">
+                                <div class="form-key">Active time:</div>
+                                <div class="form-val form-val_min"><b>15</b>days</div>
+                            </fieldset>
+                            <fieldset class="form-fieldset">
+                                <div class="form-key">Last payment:</div>
+                                <div class="form-val form-val_min"><b>7</b>hours ago</div>
+                            </fieldset>
+                            <fieldset class="form-fieldset">
+                                <div class="form-key">Last check:</div>
+                                <div class="form-val form-val_min"><b>7</b>hours ago</div>
+                            </fieldset>
+                            <fieldset class="form-fieldset">
+                                <div class="form-key">Nex check will be:</div>
+                                <div class="form-val form-val_min"><b>1</b>minute</div>
+                            </fieldset>
+                            <fieldset class="form-fieldset form-details">
+                                <div class="card-header" id="heading4">
+                                    <a class="card-title lead collapsed" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4" href="#">
+                                        View Details
+                                        <svg class="menu-icon">
+                                            <use xlink:href="img/sprite.svg#icon-angle-down"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div id="collapse4" class="collapse accord" aria-labelledby="heading4" data-parent="#accordion" style="">
+                                    <div class="card-body">
+                                        <fieldset class="form-fieldset">
+                                            <div class="form-key">txID:</div>
+                                            <div class="form-val">9d9f4eeac6e1a62962232ed7f600a3de426a627fcbf58900985a34b1ae41ba1d</div>
+                                        </fieldset>
+                                        <fieldset class="form-fieldset">
+                                            <div class="form-key">Wallet:</div>
+                                            <div class="form-val">address AJdm3u5oUEhVPaGWRXG9dv5edP4QT5tkz3</div>
+                                        </fieldset>
+                                        <fieldset class="form-fieldset">
+                                            <div class="form-key">Last activity time:</div>
+                                            <div class="form-val">2019-06-26 21:41:12</div>
+                                        </fieldset>
+                                        <fieldset class="form-fieldset">
+                                            <div class="form-key">Version:</div>
+                                            <div class="form-val">72010</div>
+                                        </fieldset>
+                                        <fieldset class="form-fieldset">
+                                            <div class="form-key">Rank:</div>
+                                            <div class="form-val">99999</div>
+                                        </fieldset>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
                     </div>
+
                 </div>
+                <div class="load-more-data__wrap">
+                    <button type="submit" class="btn load-more-data">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#icon-angle-down"></use>
+                        </svg>
+                        Load More
+                    </button>
+                    <svg class="load-icon hidden">
+                        <use xlink:href="img/sprite.svg#icon-cog"></use>
+                    </svg>
+                </div>
+
 
             </div>
         </div>
