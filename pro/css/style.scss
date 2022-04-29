@@ -1597,6 +1597,7 @@ html body .content .content-wrapper {
     margin-right: 40px;
     transition: all 0.2s ease-in-out;
     position: relative;
+    z-index: 100000;
     .brand-logo {
         width: 100%;
     }
@@ -3591,7 +3592,9 @@ input.form-control, select.form-control{
     display: flex;
     h6 {
         font-size: 13px;
+        line-height: 1.4;
         margin-bottom: 20px;
+        text-align: center;
     }
     a {
         display: inline-flex;
@@ -3759,6 +3762,7 @@ pre {
         & >li{
             ul{
                 flex-direction: column;
+                align-items: center;
                 li{
 
                 }
@@ -3767,6 +3771,12 @@ pre {
         &.navlogin{
             justify-content: flex-start;
         }
+        .notification{
+            height: 70px;
+        }
+    }
+    .add_node-mn {
+        width: calc(50% - 8px);
     }
 
 }
@@ -3804,6 +3814,9 @@ pre {
         width: 100%;
     }
 }
+@media only screen and (max-width: 700px) {
+
+}
 @media only screen and (max-width: 600px) {
     .card-header_filter {
         flex-direction: column;
@@ -3816,7 +3829,16 @@ pre {
     .add_node-big {
         width: 100%;
     }
-
+    .search-wrap{
+        flex-direction: column;
+        label{
+            margin: 15px 0 0 0;
+            align-self: flex-end;
+        }
+    }
+    .add_node-mn {
+        width: 100%;
+    }
 }
 
 
