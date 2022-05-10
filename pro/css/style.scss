@@ -3410,6 +3410,12 @@ input.form-control, select.form-control{
             -moz-border-radius: 50%;
             border-radius: 50%;
             font-size: 10px;
+            transition: $transition;
+        }
+        &:hover{
+            span{
+                background-color: #d45566;
+            }
         }
     }
 }

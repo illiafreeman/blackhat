@@ -234,54 +234,67 @@
             <div class="invoice-page clearfix">
                 <h1 class="h1-main">Notifications</h1>
 
-                <div class="invoice-form add_node claim card w600">
-                    <div class="card-header">
-                        <div class="card-title card-title_notify">
-                            <svg class="icon icon_info">
-                                <use xlink:href="img/sprite.svg#icon-info-circle"></use>
-                            </svg>
-                            <h6>Overall staking pool statistics</h6>
+                <div class="nf-list">
+                    <div class="invoice-form add_node claim card w600">
+                        <div class="card-header">
+                            <div class="card-title card-title_notify">
+                                <svg class="icon icon_info">
+                                    <use xlink:href="img/sprite.svg#icon-info-circle"></use>
+                                </svg>
+                                <h6>Overall staking pool statistics</h6>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p><span>Masternode Name:</span> MasterNode name is here</p>
+                            <p><span>Old status:</span> PRE_ENABLED</p>
+                            <p><span>New status:</span> ENABLED</p>
                         </div>
                     </div>
-                    <div class="card-body">
-                        <p><span>Masternode Name:</span> MasterNode name is here</p>
-                        <p><span>Old status:</span> PRE_ENABLED</p>
-                        <p><span>New status:</span> ENABLED</p>
+                    <div class="invoice-form add_node claim card w600">
+                        <div class="card-header">
+                            <div class="card-title card-title_notify">
+                                <svg class="icon icon_alert">
+                                    <use xlink:href="img/sprite.svg#icon-exclamation-triangle"></use>
+                                </svg>
+                                <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci animi consequuntur</h6>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p>
+                                Выберите тариф, который удовлетворяет ваши потребности. Вы можете сделать это на <a data-rel="ajaxlink" href="/billing" data-processed="1">странице Биллинга</a>
+                            </p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam ea, ipsam modi necessitatibus possimus quae quam quisquam reiciendis sunt voluptas? Aspernatur ea labore laborum modi mollitia natus non rerum sit.</p>
+                        </div>
+                    </div>
+                    <div class="invoice-form add_node claim card w600">
+                        <div class="card-header">
+                            <div class="card-title card-title_notify">
+                                <svg class="icon icon_confirm">
+                                    <use xlink:href="img/sprite.svg#icon-check"></use>
+                                </svg>
+                                <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci animi consequuntur, debitis dolores ea esse fuga fugiat illo ipsam iusto laborum nesciunt pariatur</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="invoice-form add_node claim card">
+                        <div class="card-header">
+                            <h6 class="card-title card-title_empty">
+                                no notifications yet
+                            </h6>
+                        </div>
                     </div>
                 </div>
 
-                <div class="invoice-form add_node claim card w600">
-                    <div class="card-header">
-                        <div class="card-title card-title_notify">
-                            <svg class="icon icon_alert">
-                                <use xlink:href="img/sprite.svg#icon-exclamation-triangle"></use>
-                            </svg>
-                            <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci animi consequuntur</h6>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <p>
-                            Выберите тариф, который удовлетворяет ваши потребности. Вы можете сделать это на <a data-rel="ajaxlink" href="/billing" data-processed="1">странице Биллинга</a>
-                        </p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam ea, ipsam modi necessitatibus possimus quae quam quisquam reiciendis sunt voluptas? Aspernatur ea labore laborum modi mollitia natus non rerum sit.</p>
-                    </div>
-                </div>
-                <div class="invoice-form add_node claim card w600">
-                    <div class="card-header">
-                        <div class="card-title card-title_notify">
-                            <svg class="icon icon_confirm">
-                                <use xlink:href="img/sprite.svg#icon-check"></use>
-                            </svg>
-                            <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci animi consequuntur, debitis dolores ea esse fuga fugiat illo ipsam iusto laborum nesciunt pariatur</h6>
-                        </div>
-                    </div>
-                </div>
-                <div class="invoice-form add_node claim card">
-                    <div class="card-header">
-                        <h6 class="card-title card-title_empty">
-                            no notifications yet
-                        </h6>
-                    </div>
+                <div class="load-more-data__wrap">
+                    <button type="submit" class="btn load-more-data">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#icon-angle-down"></use>
+                        </svg>
+                        Load More
+                    </button>
+                    <svg class="load-icon hidden">
+                        <use xlink:href="img/sprite.svg#icon-cog"></use>
+                    </svg>
                 </div>
             </div>
         </div>
