@@ -3495,6 +3495,16 @@ input.form-control, select.form-control{
             .form-val{
                 color: #a6a6a6;
                 font-size: 14px;
+                a{
+                    display: block;
+                    text-decoration: underline;
+                    &:before{
+                        display: none !important;
+                    }
+                    &:hover{
+                        text-decoration: transparent;
+                    }
+                }
             }
         }
         .card-body {
