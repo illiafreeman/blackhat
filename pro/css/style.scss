@@ -3423,6 +3423,22 @@ input.form-control, select.form-control{
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
+    &__empty{
+        width: 100%;
+        .card{
+            width: 400px;
+            margin: 20px 0;
+            .card-body{
+                padding: 20px;
+            }
+            .card-title_empty{
+                line-height: 35px !important;
+            }
+            .error-text{
+                margin-bottom: 0;
+            }
+        }
+    }
 }
 .add_node-mn{
     margin: 0 !important;
