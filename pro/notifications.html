@@ -248,7 +248,7 @@
                                 <svg class="icon icon_info">
                                     <use xlink:href="img/sprite.svg#icon-info-circle"></use>
                                 </svg>
-                                <h6 onclick="toastr.info('Copied to clipboard');">
+                                <h6 onclick="toastr.info(`${info}`);">
                                     Overall staking pool statistics
                                     <span>2 hours ago</span>
                                 </h6>
@@ -266,7 +266,7 @@
                                 <svg class="icon icon_alert">
                                     <use xlink:href="img/sprite.svg#icon-exclamation-triangle"></use>
                                 </svg>
-                                <h6 onclick="toastr.success('Copied to clipboard');">
+                                <h6 onclick="toastr.success(`${info}`);">
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci animi consequuntur
                                     <span>10 minutes ago</span>
                                 </h6>
@@ -285,7 +285,7 @@
                                 <svg class="icon icon_confirm">
                                     <use xlink:href="img/sprite.svg#icon-check"></use>
                                 </svg>
-                                <h6 onclick="toastr.error('Copied to clipboard');">
+                                <h6 onclick="toastr.error(`${info}`);">
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci animi consequuntur,
                                     debitis dolores ea esse fuga fugiat illo ipsam iusto laborum nesciunt pariatur
                                     <span>10 minutes ago</span>
@@ -337,6 +337,16 @@
         $('.td_button').toggleClass('act');
         $('.load-more-data__wrap .load-icon').toggleClass('hidden');
     });
+    var info = `<h6 class="media-heading">Masternode issue</h6>
+                    <div class="notification-text font-small-3">
+                    <p>
+                        <span>Masternode Name:</span> node1234
+                    </p>
+                    <p>
+                        <span>Old status:</span> VIN_SPENT</p>
+                    <p>
+                        <span>New status:</span> ENABLED</p>
+                    </div>`
 </script>
 
 </body>

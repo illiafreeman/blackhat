@@ -13,7 +13,10 @@ $(document).ready(function() {
     toastr.options = {
         closeButton: true,
         "positionClass": "toast-bottom-right",
-        "timeOut": "300000"/*too long timeout for test*/
+        "showMethod": 'slideDown',
+        "hideMethod": 'slideUp',
+        "timeOut": "300000",
+        "extendedTimeOut": "300000"
     };
     /*end toastr options*/
     $('#agree').click(function(){
