@@ -3674,6 +3674,14 @@ pre {
         text-align: left !important;
         line-height: 26px !important;
         font-size: 16px !important;
+        span{
+            display: block;
+            font-size: 11px;
+            line-height: 12px;
+            text-transform: none;
+            letter-spacing: normal;
+            color: #757575;
+        }
     }
     .icon{
         width: 30px;
