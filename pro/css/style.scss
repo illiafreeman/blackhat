@@ -2455,9 +2455,10 @@ label:focus{
     border: 1px solid green;
     box-shadow: none !important;
     opacity: 1 !important;
-    .toast-message{
-        color: #fff;
-    }
+
+}
+.toast-message{
+    color: #fff;
 }
 .select2-container--default .select2-results__option--highlighted[aria-selected] {
     background-color: #8e8c8c;
@@ -3730,7 +3731,13 @@ pre {
         }
     }
 }
-
+.nf-list{
+    .card-body{
+        p:last-child{
+            margin-bottom: 0;
+        }
+    }
+}
 
 
 
