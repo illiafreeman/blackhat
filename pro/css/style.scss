@@ -3583,6 +3583,12 @@ input.form-control, select.form-control{
             fill: #9f3a3a;
         }
     }
+    &_inf{
+        color: #999;
+        svg{
+            fill: #999;
+        }
+    }
     &__wrap{
         margin: 25px 0;
     }
