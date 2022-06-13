@@ -133,6 +133,7 @@
     <!--common styles-->
     <link rel="stylesheet" type="text/css" href="css/vendors.css">
     <link rel="stylesheet" type="text/css" href="css/app.css">
+    <link rel="stylesheet" type="text/css" href="css/select2.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <!--end common styles-->
 </head>
@@ -384,11 +385,93 @@
                                                         </button>
                                                     </div>
                                                 </fieldset>
-                                            </form>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                                </div>
+                                <div class="otc-list_item act">
+                                    <div class="otc-list_item-table">
+                                        <div>
+                                            <img src="img/eth.png" alt="">
+                                            Efir (BTC)
+                                        </div>
+                                        <div>123434534535</div>
+                                        <div>
+                                            <button type="submit" class="btn btn_min btn_deposit-closed">
+                                                <span>Deposit</span>
+                                                <b></b>
+                                                <svg class="cog">
+                                                    <use xlink:href="img/sprite.svg#icon-cog"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <div>
+                                            <button type="submit" class="btn btn_min btn_deposit-closed">
+                                                <span>Withdraw</span>
+                                                <b></b>
+                                                <svg class="cog">
+                                                    <use xlink:href="img/sprite.svg#icon-cog"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="otc-list_item-inner">
+                                        <div class="add_node centered">
+                                            <div>
+                                                <fieldset class="form-label-group">
+                                                    <input type="text" id="destination" class="form-control"
+                                                           placeholder="Destination address" value="">
+                                                    <label for="destination">Destination address</label>
+                                                </fieldset>
+                                                <fieldset class="form-label-group">
+                                                    <input type="text" id="Amount" class="form-control"
+                                                           placeholder="Amount" value="">
+                                                    <label for="Amount">Amount</label>
+                                                </fieldset>
+                                                <div class="amount_fee">
+                                                    <fieldset class="form-label-group select_fieldset">
+                                                        <select id="sell-select" class="custom-select"  style="width: 100%">
+                                                            <option value="" hidden>&mdash;</option>
+                                                            <option selected value="1">BTC</option>
+                                                            <option value="2">LTC</option>
+                                                            <option value="3">USDT</option>
+                                                            <option value="3">Credit Card</option>
+                                                        </select>
+                                                        <label for="sell-select">You Sell Coins</label>
+                                                        <div class="error-text">You Sell Coins is invalid</div>
+                                                        <div class="available">
+                                                            Pay Fee With
+                                                        </div>
+                                                    </fieldset>
+                                                    <fieldset class="form-label-group">
+                                                        <input type="text" id="Network_Fee" class="form-control"
+                                                               placeholder="Network Fee" disabled value="12">
+                                                        <label for="Network_Fee">Network Fee</label>
+                                                    </fieldset>
+                                                </div>
+                                                <fieldset class="form-label-group">
+                                                    <div class="invoice-amount">To withdraw:<b>35 BTC</b></div>
+                                                </fieldset>
+                                                <label class="und">
+                                                    <input id="agree" type="checkbox">
+                                                    <div>I understand that if I lose my login and password I will lose my coins</div>
+                                                </label>
+                                                <fieldset class="form-label-group mb-0">
+                                                    <div class="button_wrap ac">
+                                                        <button type="submit" class="btn">
+                                                            <svg>
+                                                                <use xlink:href="img/sprite.svg#icon-upload"></use>
+                                                            </svg>
+                                                            Withdraw
+                                                        </button>
+                                                    </div>
+                                                </fieldset>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -451,7 +534,7 @@
 <script src="js/vendors.min.js" type="text/javascript"></script>
 <script src="js/app-menu.min.js" type="text/javascript"></script>
 <script src="js/app.min.js" type="text/javascript"></script>
-<script src="js/jquery.scrollTo.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/select2.full.min.js"></script>
 <script src="js/custom.js"></script>
 <script>
     $(document).on("click", ".btn_deposit-closed", function(){
@@ -466,6 +549,10 @@
         var t = $(this);
         t.removeClass('btn_deposit-open add').addClass('btn_deposit-closed');
         t.parents('.otc-list_item').removeClass('act');
+    });
+    $("#sell-select").select2({
+        placeholder: "Sell",
+        allowClear: true
     });
 </script>
 </body>
