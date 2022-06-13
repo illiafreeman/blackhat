@@ -9,7 +9,7 @@
     <meta name="keywords" content="Black Hat">
     <meta name="author" content="Black Hat">
 
-    <title>Exchange</title>
+    <title>Swap</title>
 
 
 
@@ -161,7 +161,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a class="menu menu_pur active" href="">
+                                <a class="menu menu_pur " href="">
                                     <svg class="menu-icon">
                                         <use xlink:href="img/sprite.svg#icon-sync"></use>
                                     </svg>
@@ -169,7 +169,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a class="menu menu_pur" href="">
+                                <a class="menu menu_pur active" href="">
                                     <svg class="menu-icon">
                                         <use xlink:href="img/sprite.svg#icon-right-left"></use>
                                     </svg>
@@ -249,7 +249,7 @@
             <div class="invoice-page clearfix">
                 <div class="invoice-form add_node card">
                     <div class="card-header">
-                        <h6 class="card-title text-center">exchange</h6>
+                        <h6 class="card-title text-center">swap</h6>
                     </div>
                     <div class="card-body">
                         <div class="exchange-group">
@@ -296,9 +296,6 @@
                             </svg>
                         </fieldset>
                         <fieldset class="form-label-group">
-                            <div class="invoice-amount">You Get:<b>35 BTC</b></div>
-                        </fieldset>
-                        <fieldset class="form-label-group">
                             <div class="button_wrap button_wrap_padding ac">
                                 <button type="submit" class="btn" onclick="showCog();">
                                     <svg class="menu-icon">
@@ -320,7 +317,7 @@
                 </div>
                 <div class="invoice-table card">
                     <div class="card-header">
-                        <h6 class="card-title">Exchange deals</h6>
+                        <h6 class="card-title">Swap history</h6>
                     </div>
                     <div class="card-body">
                         <div class="card-body__inner">
@@ -328,11 +325,10 @@
                                 <tbody>
                                     <tr>
                                         <th>ID</th>
-                                        <th>Expires</th>
+                                        <th>Date</th>
                                         <th>Amount</th>
-                                        <th>You Get</th>
-                                        <th>Rate</th>
-                                        <th class="ac">Status</th>
+                                        <th>You Get From</th>
+                                        <th>You Get To или как там</th>
                                     </tr>
                                     <tr>
                                         <td>1</td>
@@ -343,7 +339,6 @@
                                         <td>0.1234 BTC</td>
                                         <td>12345 BLKC</td>
                                         <td>0.0001234 BTC</td>
-                                        <td class="color_pos ac">Completed</td>
                                     </tr>
                                     <tr>
                                         <td>2</td>
@@ -354,7 +349,6 @@
                                         <td>54654658 BTC</td>
                                         <td>58232469874563 BLKC</td>
                                         <td>0.000000001234 BTC</td>
-                                        <td class="color_neg ac">Cancelled</td>
                                     </tr>
                                     <tr>
                                         <td>659</td>
@@ -365,7 +359,6 @@
                                         <td>175 BTC</td>
                                         <td>36 BLKC</td>
                                         <td>0.01 BTC</td>
-                                        <td class="color_neu ac">Expired</td>
                                     </tr>
                                     <tr>
                                         <td>659</td>
@@ -376,28 +369,9 @@
                                         <td>175 BTC</td>
                                         <td>36 BLKC</td>
                                         <td>0.01 BTC</td>
-                                        <td class="color_neu ac">
-                                            <div class="df td_button">
-                                                <button type="submit" class="btn btn_min pos">
-                                                    <svg class="btn_min-svg">
-                                                        <use xlink:href="img/sprite.svg#icon-check"></use>
-                                                    </svg>
-                                                    Approve
-                                                </button>
-                                                <button type="submit" class="btn btn_min neg">
-                                                    <svg class="btn_min-svg">
-                                                        <use xlink:href="img/sprite.svg#icon-cross"></use>
-                                                    </svg>
-                                                    Cancel
-                                                </button>
-                                                <svg class="load-icon_td">
-                                                    <use xlink:href="img/sprite.svg#icon-cog"></use>
-                                                </svg>
-                                            </div>
-                                        </td>
                                     </tr>
                                     <tr>
-                                        <td colspan="6" class="button-cell">
+                                        <td colspan="5" class="button-cell">
                                             <div class="load-more-data__wrap">
                                                 <button type="submit" class="btn load-more-data">
                                                     <svg>
