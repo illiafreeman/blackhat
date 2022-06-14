@@ -2910,7 +2910,7 @@ input[type=number] {
                 margin-bottom: 20px;
             }
             .qrcode {
-                margin-right: 25px;
+                margin: 0 auto 20px;
             }
             .has-error .error-text.alert-text {
                 background: #221e14;
@@ -3186,7 +3186,9 @@ input[type=number] {
     font-size: 1rem;
     line-height: 1.25;
 }
-
+.mb20{
+    margin-bottom: 20px !important;
+}
 
 
 
@@ -3323,7 +3325,7 @@ input[type=number] {
             align-items: center;
         }
         .qrcode{
-            margin: 0 0 15px;
+            //margin: 0 0 15px;
         }
     }
     .otc-list_item_head {
