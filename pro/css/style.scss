@@ -2661,11 +2661,6 @@ ol{
     color: #999;
     padding-top: 1px;
 }
-.qrcode{
-    margin: 0 auto;
-    width: 160px;
-    height: 160px;
-}
 select.form-control{
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -2912,7 +2907,9 @@ input[type=number] {
                 margin-bottom: 20px;
             }
             .qrcode {
-                margin: 0 auto 20px;
+                margin-bottom: 20px;
+                display: flex;
+                justify-content: center;
             }
             .has-error .error-text.alert-text {
                 background: #221e14;
@@ -3338,9 +3335,6 @@ select.custom-select {
         .df{
             flex-direction: column;
             align-items: center;
-        }
-        .qrcode{
-            //margin: 0 0 15px;
         }
     }
     .otc-list_item_head {
