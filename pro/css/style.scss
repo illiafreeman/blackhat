@@ -2427,6 +2427,8 @@ a:active,
 a:focus,
 input:active,
 input:focus,
+select:active,
+select:focus,
 textarea:active,
 textarea:focus,
 button:active,
@@ -3189,7 +3191,20 @@ input[type=number] {
 .mb20{
     margin-bottom: 20px !important;
 }
-
+select.custom-select {
+    background: #000;
+    color: #999;
+    padding-top: 3px !important;
+    height: 41px !important;
+}
+.select-arr{
+    position: absolute;
+    top: 19px;
+    right: 10px;
+    border-top: 5px solid #888;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+}
 
 
 

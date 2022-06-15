@@ -306,15 +306,14 @@
                                         </fieldset>
                                         <div class="add_node centered">
                                             <fieldset class="form-label-group select_fieldset">
-                                                <select id="sell-select3" class="custom-select"  style="width: 100%">
+                                                <select class="custom-select form-control">
                                                     <option value="" hidden>&mdash;</option>
                                                     <option selected value="1">BTC</option>
                                                     <option value="2">LTC</option>
                                                     <option value="3">USDT</option>
                                                     <option value="3">Credit Card</option>
                                                 </select>
-                                                <label for="sell-select">You Sell Coins</label>
-                                                <div class="error-text">You Sell Coins is invalid</div>
+                                                <div class="select-arr"></div>
                                                 <div class="available">
                                                     Select Net To Pay
                                                 </div>
@@ -376,15 +375,14 @@
                                         <div class="add_node centered">
                                             <div>
                                                 <fieldset class="form-label-group select_fieldset">
-                                                    <select id="sell-select2" class="custom-select"  style="width: 100%">
+                                                    <select class="custom-select form-control">
                                                         <option value="" hidden>&mdash;</option>
                                                         <option selected value="1">BTC</option>
                                                         <option value="2">LTC</option>
                                                         <option value="3">USDT</option>
                                                         <option value="3">Credit Card</option>
                                                     </select>
-                                                    <label for="sell-select">You Sell Coins</label>
-                                                    <div class="error-text">You Sell Coins is invalid</div>
+                                                    <div class="select-arr"></div>
                                                     <div class="available">
                                                         Select Net To Pay
                                                     </div>
@@ -587,7 +585,7 @@
         t.removeClass('btn_deposit-open add').addClass('btn_deposit-closed');
         t.parents('.otc-list_item').removeClass('act');
     });
-    $("#sell-select, #sell-select2, #sell-select3").select2({
+    $("#sell-select").select2({
         placeholder: "Sell",
         allowClear: true
     });
