@@ -2852,7 +2852,7 @@ input[type=number] {
 }
 .amount_fee{
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 2fr 1fr;
     gap: 15px;
 }
 .otc-list{
@@ -3365,7 +3365,8 @@ select.custom-select {
         width: 100%;
     }
     .amount_fee {
-        grid-template-columns: 2fr 1fr;
+        grid-template-columns: 1fr;
+        gap: 0;
     }
 }
 
