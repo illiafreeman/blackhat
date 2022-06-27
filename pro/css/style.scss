@@ -3244,12 +3244,17 @@ select.custom-select {
         border: 1px solid #4d4d4d;
         padding: 8px;
         white-space: nowrap;
+        text-align: center;
     }
     th{
         border-bottom: 2px solid #6f6f6f;
     }
     tr{
 
+    }
+    &_min{
+        margin: 20px auto;
+        width: auto;
     }
 }
 
