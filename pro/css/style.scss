@@ -2712,7 +2712,7 @@ select.form-control{
     color: #b54a4a;
 }
 .over{
-    max-width: 300px;
+    max-width: 200px;
     .wal.max {
         width: 100% !important;
     }
@@ -3202,11 +3202,33 @@ select.custom-select {
     border-left: 4px solid transparent;
     border-right: 4px solid transparent;
 }
-
-
-
-
-
+.form-control_copy{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.faq-body .card-title svg {
+    transition: all 0.2s ease-in-out;
+    margin-right: 10px;
+    width: 25px;
+    min-width: 25px;
+    height: 25px;
+    display: inline-block;
+}
+.faq-body .card-header .card-title {
+    display: inline-flex;
+    &:before{
+        display: none;
+    }
+}
+.faq-body .card-body {
+    line-height: 150%;
+    font-size: 14px;
+    padding: 0 15px 40px 57px;
+}
+.faq-body .card-title:not(.collapsed) {
+    color: #fff;
+}
 
 
 
