@@ -3229,7 +3229,10 @@ select.custom-select {
 .faq-body .card-title:not(.collapsed) {
     color: #fff;
 }
-
+.faq-body .card-title:not(.collapsed) svg {
+    transform: rotate(180deg);
+    fill: #fff;
+}
 
 
 
